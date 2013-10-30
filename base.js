@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 	$('.confirm').click(function(event) {
 		if (!confirm('Are you sure?')) {
 			event.preventDefault();
@@ -14,7 +13,6 @@ $(document).ready(function() {
 
 	$('.comments[data-enable="true"]').removeClass('hide');
 	$('.comments.hide').remove()
-
 });
 
 function urlize(input) {
@@ -24,7 +22,6 @@ function urlize(input) {
 }
 
 function tweep(input) {
-
 	var exp = /(\@([\w|_]+))/ig;
 	output = input.replace(exp,'<a href="http://www.twitter.com/$2" target="_blank">$1</a> ');
 	//alert(input.replace(exp,'<a href="http://www.twitter.com/$2" target="_blank">$1</a> '));

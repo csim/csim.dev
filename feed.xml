@@ -30,7 +30,7 @@ permalink: /feed.xml
       {% endfor %}{% for cat in post.categories %}<category>{{ cat | xml_escape }}</category>
       {% endfor %}<guid isPermaLink="false">{{ post.id }}</guid>
       <description><![CDATA[ {{ post.content }} ]]></description>
-    </item>
-    {% endfor %}
-  </channel>
+  </item>
+  {% endfor %}
+</channel>
 </rss>
