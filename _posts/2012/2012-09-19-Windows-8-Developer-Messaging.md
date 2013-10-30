@@ -6,7 +6,9 @@ categories: [ "Windows 8" ]
 
 Bit of a rant here. I received this message today Microsoft.
 
-<div class="vinette"><img src="/images/ms_win8_dev_marketing.png" /></div>
+<div class="vinette"><img src=
+
+"{{ site.url }}/images/ms_win8_dev_marketing.png" /></div>
 
 Do you think the average developer knows that "Windows 8 GA" means?
 

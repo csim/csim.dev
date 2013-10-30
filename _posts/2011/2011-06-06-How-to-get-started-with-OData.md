@@ -18,7 +18,7 @@ OData sources are broken into top level elements called collections. You can thi
 
 You can see that in our Netflix service endpoint there are several collections that define the dimensions tracked within the catalog. Genres, People, Titles, etc. This is where the cool starts. You can now construct LINQ queries against the Netflix catalog by typing some LINQ syntax into the main windows and hitting F5.
 
-![](files/images/image_thumb5.png)
+![](/images/image_thumb5.png)
 
 If you are unfamiliar with LINQ syntax, here are tons of examples: 
 http://msdn.microsoft.com/en-us/vcsharp/aa336746

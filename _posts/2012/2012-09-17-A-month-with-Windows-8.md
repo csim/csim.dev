@@ -14,7 +14,9 @@ Coming into this experiment, I had my doubts. As a developer, how would I fair i
 ### The Start Screen
 The start menu is full-screen now and it has some animation built into it. It did take me a little while to get used to it but really this is just a new UI on top of the same start menu that we are all used to. As a developer I stay mostly in the desktop but the metro start screen is a necessary evil once in a while. 
 
-<div class="vinette"><img src="/images/start_screen.png" /></div>
+<div class="vinette"><img src=
+
+"{{ site.url }}/images/start_screen.png" /></div>
 
 I'll admit it took me a few days to get used to it. My advice is to embrace this right away and enjoy it for what it is - some UI sugar that plays nicely with tablets. It still works well with mouse and keyboard. You can still search for applications or settings by simply typing and you can still pin your most used applications. Once there are more useful metro apps, the start screen will be much more useful.
 
@@ -28,7 +30,9 @@ The desktop is mostly unchanged from Windows 7, with just a few exceptions. Firs
 
 Secondly, the task manager has been completely rebuilt and redesigned. This thing is awesome. A quantum leap upgrade. You can now see disk usage, app history, startup cost for apps and services. Remember all those time you thought "What the hell is going on with my machine?". Well, now you can answer that question.
 
-<div class="vinette"><img src="/images/task_manager.png" /></div>
+<div class="vinette"><img src=
+
+"{{ site.url }}/images/task_manager.png" /></div>
 
 
 ### Metro Apps
@@ -44,7 +48,9 @@ Numerous small UI enhancement have been incorporated into Windows 8. There are t
 
 The file copy dialog is a thing of beauty. Notice the transfer graph over time and the spark line for the current transfer speed. Very cool. You can also pause the file copy which is really convenient when you need to go offline temporarily.
 
-<div class="vinette"><img src="/images/file_copy_dialog.png" /></div>
+<div class="vinette"><img src=
+
+"{{ site.url }}/images/file_copy_dialog.png" /></div>
 
 Windows 8 is noticeable faster in almost all aspects. Boot times are particularly impressive. I have seen at least a 50% increase in startup speed. Everything is snappy - changing windows, opening applications
 

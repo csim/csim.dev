@@ -8,7 +8,9 @@ You are probably familiar with the fact that SharePoint now has the capability t
 Note the document library permission settings menu:
 
 <div class="vinette">
-<img src="/images/sp1.png" />
+<img src=
+
+"{{ site.url }}/images/sp1.png" />
 </div>
 
 Here's the same menu for an item which is not inheriting permissions from the parent library:

@@ -24,10 +24,12 @@ Now pick the type of project you want to create. For now this is not an importan
 For you first project, choose the Panorama application, it's the best looking and you do want to impress your friends, right?
 
 <div class="vinette">
-<img src="files/images/image2.png" />
+<img src=
+
+"{{ site.url }}/images/image2.png" />
 </div>
 
-![](files/images/image1_1.png)
+![](/images/image1_1.png)
 
 Once you have created the project, take a look at the contents. Might familiar if you have done any work with C# projects. It's a basic Silverlight 3 application with some extra juice added to run on the phone. Don't worry about the juice for now. MainPage.xaml is the entry point for the application. My default it uses MVVM or the Model View View Model pattern. This pattern is somewhat new but it is a way to separate the presentation from the data and logic, which is a good thing. Nice to see the Microsoft is being a bit progressive.
 
@@ -36,20 +38,24 @@ Drumroll please ...
 Just hit F5. You now have a running WP7 application in under 2 minutes. Notice all the details: fluid animations, scrolling, sample data. In short, this is a working application that you can simply start to customize. This could not be easier. To me this is the power of Microsoft at work in a real way. They have brought together a strong set of technologies here, dev tools,Silverlight and the phone OS. The OS still need to mature a bit, but I think you can see that this is a baseline for building great mobile applications.
 
 <div class="vinette">
-<img src="files/images/image2_1.png" />
+<img src=
+
+"{{ site.url }}/images/image2_1.png" />
 </div>
 
 ###Will it blend?
 One more thing (like that? I borrowed it from a famous guy I won't mention here), Expression Blend is in the mix also. For those unfamiliar, Expression Blend is like Visual Studio for designers. It lets creative types work on the same xaml file that developers work on, it understands visual studio projects and it can churn out all the animations, icons and motion that are available in Silverlight and WPF. If you want to develop WP7 applications, make Blend your friend.
 
-![](files/images/image_thumb3.png)
+![](/images/image_thumb3.png)
 
 To launch Blend, right click on the project inside Visual Studio and choose "Open with Expression Blend".
 
 You will be greeted with a design surface with tons of bells and whistles. Blend can be daunting when you open it for the first time. It is one of those tools that you will probably never learn in totality because it is complex. The best way to learn is to tackle it.
 
 <div class="vinette">
-<img src="files/images/image_thumb4.png" />
+<img src=
+
+"{{ site.url }}/images/image_thumb4.png" />
 </div>
 
 ###Building more complex apps
