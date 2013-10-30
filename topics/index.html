@@ -1,0 +1,31 @@
+---
+layout: default
+title: Topics
+---
+
+<div class="topics">
+    <ul class="topic-toc">
+        {% for category in site.categories order:ascending %}
+            {% capture cat %}{{ category | first }}{% endcapture %}
+            <li><a href="#{{ cat | slugify }}">{{ cat }}</a> ({{ site.categories.[cat] | size }})</li>
+        {% endfor %}
+    </ul>
+
+    <div class="archive">
+        {% for category in site.categories %}
+            {% capture cat %}{{ category | first }}{% endcapture %}
+            <a name="{{ cat | slugify }}"></a>
+            <h1>{{ cat }}</h1>
+            <table>
+                {% for post in site.categories.[cat] %}
+                    <tr>
+                        <td class="month tk-museo-sans">{% ifchanged %}{{ post.date | date: '%b %Y' }}{% endifchanged %}</td>
+                        <td class="link tk-museo-sans"><a href="{{ post.url }}">{{ post.title }}</a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        {% endfor %}
+    </div>
+</div>
+
+<br /><br />
