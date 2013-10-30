@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>
-        {% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}
+        Customize the web.config with a SharePoint XML customization - csim
     </title>
-    <!-- generated {{ site.time | date_to_xmlschema  }} -->
+    <!-- generated 2013-10-30T18:59:28+01:00 -->
 
     <link rel="icon" href="/favicon.ico">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -29,14 +29,47 @@
 
     <div id="masthead">
         <div id="masthead-inner">
-            <a class="title" href="/">{{ site.name }}</a>
+            <a class="title" href="/">csim</a>
         </div>
     </div>
 
     <div class="container">
         <div class="row">
             <div class="span9 content">
-              {{ content }}
+              <a name="/2008/08/16/Customize-the-web.config-with-a-SharePoint-customization"></a>
+<h1><a href="/2008/08/16/Customize-the-web.config-with-a-SharePoint-customization">Customize the web.config with a SharePoint XML customization</a></h1>
+<div class="post-date">16 August 2008</div>
+
+<p>It is possible to manipulate the web.config file globally by using a little known feature in SharePoint that allows developers to describe a set of changes by using an XML customization file. In fact, both SharePoint and MOSS use this mechanism to publish web.config changes when a web application is created.</p>
+
+<h3>Create the customization file</h3>
+
+<p>The customization file is used by SharePoint to apply changes to the web.config file when a web application is created. Any changes that are inside the customization file will be applied to all web applications globally. This method of customization does not work for cases where you would like to apply web.config changes to only a specific web application. </p>
+
+<p>In this case I am adding a custom HttpModule to the web.config file. The web.config node will be appended as a child to the configuration/system.web/httpModules node. The id attribute needs to be unique. Everything inside the add node will be appened as a child to the node specified in the path attribute. </p>
+
+<div class="highlight"><pre><code class="xml"><span class="lineno"> 1</span> <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</span>
+<span class="lineno"> 2</span> <span class="nt">&lt;actions&gt;</span>
+<span class="lineno"> 3</span> 
+<span class="lineno"> 4</span>  <span class="nt">&lt;add</span> <span class="na">path=</span><span class="s">&quot;configuration/system.web/httpModules&quot;</span> 
+<span class="lineno"> 5</span>      <span class="na">id=</span><span class="s">&quot;{8DD2A7B1-0223-4be8-B1B5-339B642EFB21}&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 6</span>      <span class="nt">&lt;add</span> <span class="na">name=</span><span class="s">&quot;MyHttpModule&quot;</span> 
+<span class="lineno"> 7</span>      <span class="na">type=</span><span class="s">&quot;MyHttpModule, MyAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a1df43608d33992f&quot;</span> <span class="nt">/&gt;</span>
+<span class="lineno"> 8</span>  <span class="nt">&lt;/add&gt;</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span> <span class="nt">&lt;/actions&gt;</span>
+</code></pre></div>
+
+<h3>Copy the customization file to the web front-end</h3>
+
+<p>The xml customization file needs to be placed the <sharepoint install root>\12\Config directory and it needs to be named webconfig.<custom name>.xml where <custom name> is a name specified to your customization. </p>
+
+<p>You can take a look at the 12\Config directory to see examples of web.config customizations that are applied by SharePoint and MOSS. You will see that you can not only add nodes to the web.config but also remove or update nodes that exist in the web.config file. </p>
+
+	
+<div class="post-separator"></div>
+
+
           </div>
 
           <div class="span3 sidebar">
@@ -47,14 +80,14 @@
                     <li><a href="/topics/">Topics</a></li>
                 </ul>
                 <div class="social-icons">
-                    <a href="http://www.facebook.com/{{ site.facebook_username }}">
+                    <a href="http://www.facebook.com/techhike">
                         <img src="/images/facebook.png" style="width: 30px;" alt="Facebook" /></a>
-                        <a href="http://www.twitter.com/{{ site.twitter_username }}">
+                        <a href="http://www.twitter.com/clintsim">
                             <img src="/images/twitter.png" style="width: 30px;" alt="Twitter" /></a>
                             <br />
                             <a href="http://www.linkedin.com/profile/view?id=2238939&amp;trk=tab_pro">
                                 <img src="/images/linkedin.png" style="width: 30px;" alt="Linkedin" /></a>
-                                <a href="http://github.com/{{ site.github_username }}">
+                                <a href="http://github.com/csim">
                                     <img src="/images/github.png" style="width: 30px;" alt="GitHub" /></a>
                                     <br />
                                     <a href="/feed.xml"><img src="/images/rss.gif" style="width: 29px; height: 31px;" alt="Feed" /></a>

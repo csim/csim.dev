@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        Using the SharePoint content database as a cache - csim
+    </title>
+    <!-- generated 2013-10-30T18:59:28+01:00 -->
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="http://lh3.googleusercontent.com/-Ea8xoWWt_P8/ToKxKe5jkjI/AAAAAAAAC24/4pXdtIm0k7E/techhike_favicon.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Clint Simon">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="google-site-verification" content="9122UHrLTdTksyNCp_xG5dypMZu2evQmgwu43GVHjOo" />
+
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Ubuntu+Condensed|Orbitron:400" rel="stylesheet" type="text/css" />
+
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/base.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="masthead">
+        <div id="masthead-inner">
+            <a class="title" href="/">csim</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="span9 content">
+              <a name="/2008/09/12/Using-the-SharePoint-content-database-as-a-cache"></a>
+<h1><a href="/2008/09/12/Using-the-SharePoint-content-database-as-a-cache">Using the SharePoint content database as a cache</a></h1>
+<div class="post-date">12 September 2008</div>
+
+<p>Data caching is a core concept in the web dominated world that we live in. The premise is that we should not have to go back to retrieve data from a data store for every single web request when the data is unchanged, thereby sharing data across web requests. This offers huge performance advantages because all latency related to data fetching, query processing and transmission is eliminated for requests that use the same data. In the SharePoint world this can be a very valuable technique when querying MOSS page libraries or any data stored in the content database. For high traffic sites, the performance of the SPQuery or SPSiteDataQuery api is not acceptable when executing queries for each request.</p>
+
+<p>The most common data caching implementation is using the HttpContext.Cache collection. This is an ASP.NET facility that allows as an in-memory object cache associated with the ASP.NET application domain (w3wp.exe). For SharePoint applications this cache works great when caching can be scoped to the HttpContext. For applications that need caching that is not scoped based on the HttpContext it is necessary find a different solution. The most common case non-HttpContext caching would be any instance where you are consuming data outside of the ASP.NET context such as SPTimer jobs, stsadm commands, winform applications or console applications. For these cases it is not possible to use the HttpContext cache.</p>
+
+<p>There are a few potential solutions to this problem including using the <a href="http://weblogs.asp.net/pjohnson/archive/2006/02/06/437559.aspx">HttpRuntime static cache</a>, but the best solution (in my opinion) is to use the SPSite instance as a data cache. The idea is that by using the SPSite.RootWeb.AllProperties hashtable, we can store cached data into the content database for later retrieval. This solves the HttpContext problem because for any application to operate it will need to have a SPSite object to provided context for it&#39;s operation no matter where it may be running. Because the SPSite object provides context, the data cache is always available.</p>
+
+<p>Here&#39;s the class signatures for my implementation of SPSite data caching. By creating a subclass from this base you can implement application independent caching of any data type. <a href="http://code.google.com/p/rapid-tools/source/browse/trunk/Rapid.Tools/Domain/RapidCachedDataAdapterBase.cs">The full implement can be found here</a>.</p>
+
+<div class="highlight"><pre><code class="csharp"><span class="lineno"> 1</span> <span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">RapidCachedDataAdapterBase</span><span class="p">&lt;</span><span class="n">TData</span><span class="p">&gt;</span> <span class="k">where</span> <span class="n">TData</span> <span class="p">:</span> <span class="k">class</span>
+<span class="lineno"> 2</span> <span class="err">{</span>
+<span class="lineno"> 3</span>  <span class="k">protected</span> <span class="n">Guid</span> <span class="n">SiteID</span><span class="p">;</span>
+<span class="lineno"> 4</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="kt">bool</span> <span class="n">AutoRefreshCache</span><span class="p">;</span>
+<span class="lineno"> 5</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="kt">string</span> <span class="n">CacheKey</span><span class="p">;</span>
+<span class="lineno"> 6</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="kt">string</span> <span class="n">CacheExpireKey</span><span class="p">;</span>
+<span class="lineno"> 7</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="kt">int</span> <span class="n">CacheTimeoutMinutes</span><span class="p">;</span>
+<span class="lineno"> 8</span> 
+<span class="lineno"> 9</span>  <span class="k">public</span> <span class="k">virtual</span> <span class="n">TData</span> <span class="n">CachedData</span><span class="p">;</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span>  <span class="k">public</span> <span class="nf">RapidCachedDataAdapterBase</span><span class="p">(</span><span class="n">Guid</span> <span class="n">siteID</span><span class="p">);</span>
+<span class="lineno">12</span>  <span class="k">public</span> <span class="nf">RapidCachedDataAdapterBase</span><span class="p">(</span><span class="n">SPSite</span> <span class="n">site</span><span class="p">);</span>
+<span class="lineno">13</span> 
+<span class="lineno">14</span>  <span class="k">protected</span> <span class="k">abstract</span> <span class="n">TData</span> <span class="nf">GetNativeData</span><span class="p">();</span>
+<span class="lineno">15</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="n">TData</span> <span class="nf">GetData</span><span class="p">();</span>
+<span class="lineno">16</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="n">TData</span> <span class="nf">GetCache</span><span class="p">();</span>
+<span class="lineno">17</span> 
+<span class="lineno">18</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="k">void</span> <span class="nf">SetCache</span><span class="p">(</span><span class="n">TData</span> <span class="n">data</span><span class="p">);</span>
+<span class="lineno">19</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="kt">string</span> <span class="nf">Serialize</span><span class="p">(</span><span class="n">TData</span> <span class="n">data</span><span class="p">);</span>
+<span class="lineno">20</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="n">TData</span> <span class="nf">Deserialize</span><span class="p">(</span><span class="kt">string</span> <span class="n">data</span><span class="p">);</span>
+<span class="lineno">21</span> 
+<span class="lineno">22</span>  <span class="k">protected</span> <span class="kt">string</span> <span class="nf">SerializeInternal</span><span class="p">(</span><span class="kt">object</span> <span class="n">data</span><span class="p">);</span>
+<span class="lineno">23</span>  <span class="k">protected</span> <span class="n">T</span> <span class="n">DeserializeInternal</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="kt">string</span> <span class="n">data</span><span class="p">);</span>
+<span class="lineno">24</span> 
+<span class="lineno">25</span>  <span class="k">public</span> <span class="k">virtual</span> <span class="k">void</span> <span class="nf">InvalidateCache</span><span class="p">();</span>
+<span class="lineno">26</span> <span class="p">}</span>
+</code></pre></div>
+
+<p>Notes:</p>
+
+<ul>
+<li><strong>GetNativeData() is the only method you must override when creating a subclass.</strong> GetNaiveData() provides data from the native datastore to feed the cache, it is called any time that data needs to be retrieved from the native data store.</li>
+<li><strong>Serialization to a string is necessary for all cached data types.</strong> Since SPSite.RootWeb.AllProperties accepts only limited data types (date, int and string), it is necessary for us to convert our data into a string. My default the base class uses the standard XmlSerializer class. If you are caching a data type that is not xml serializable (such as Hashtable, Dictionary &amp; DataTable) then you need to implement the Serialize() and Deserialize() method within your subclass. You can choose to serialize your data any way you like as long as it can be represented as a string.</li>
+<li><strong>The CacheTimeoutMinutes property determines how long the cached data will live.</strong> An automatic refresh will be triggered when the timeout period expires. The timeout period is set to 20 minutes by default but you can override this in your subclass.</li>
+<li><strong>You need to handle cache invalidation when native data changes.</strong> Cache invalidation is supported by the base class, but it is only called automatically if the cache expires due to a cache timeout. You will need to identify the cases where you would like to invalidate the cache and call InvalidateCache() at the appropriated time. Usually you would invalidate the cache when you detect that data has changed, such as when a user changes a list item. In this case you would need to have a feature receiver to detect the change and call InvalidateCache().</li>
+<li><strong>The CachedData property used for data access.</strong> The CachedData property will either load the cache or retrieve the cache depending on the situation. You can use the CachedData property as the single access for data.</li>
+<li><strong>Using SPSite.RootWeb.AllProperties does carry a cost.</strong> Because we need to load and manipulate an SPSite object, there is an implied cost associated with this approach. Anytime SPSite is loaded or saved SharePoint needs to communicate with the content database and that takes cycles. This is in sharp contrast to the HttpContext.Cache approach where all data is stored in memory. To mitigate this cost the base class uses the HttpContext.Items collection to cache data for each http request. This means that the SPSite object will only be loaded used once per request.</li>
+</ul>
+
+<p>Here&#39;s a sample subclass:</p>
+
+<div class="highlight"><pre><code class="csharp"><span class="lineno"> 1</span> <span class="k">public</span> <span class="k">class</span> <span class="nc">FaqDataAdapter</span> <span class="p">:</span> <span class="n">RapidCachedDataAdapterBase</span><span class="p">&lt;</span><span class="n">DataTable</span><span class="p">&gt;</span>
+<span class="lineno"> 2</span> <span class="p">{</span>
+<span class="lineno"> 3</span>  <span class="k">public</span> <span class="nf">FaqDataAdapter</span><span class="p">()</span>    <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">SPContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Site</span><span class="p">.</span><span class="n">ID</span><span class="p">)</span>
+<span class="lineno"> 4</span>  <span class="p">{</span>
+<span class="lineno"> 5</span>  <span class="p">}</span>
+<span class="lineno"> 6</span> 
+<span class="lineno"> 7</span>  <span class="k">public</span> <span class="nf">FaqDataAdapter</span><span class="p">(</span><span class="n">Guid</span> <span class="n">siteID</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">siteID</span><span class="p">)</span>
+<span class="lineno"> 8</span>  <span class="p">{</span>
+<span class="lineno"> 9</span>  <span class="p">}</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span>  <span class="k">public</span> <span class="nf">FaqDataAdapter</span><span class="p">(</span><span class="n">SPSite</span> <span class="n">site</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">site</span><span class="p">)</span>
+<span class="lineno">12</span>  <span class="p">{</span>
+<span class="lineno">13</span>  <span class="p">}</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span>  <span class="k">protected</span> <span class="k">override</span> <span class="n">DataTable</span> <span class="nf">GetNativeData</span><span class="p">()</span>
+<span class="lineno">16</span>  <span class="p">{</span>
+<span class="lineno">17</span>      <span class="n">DataTable</span> <span class="n">table</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="lineno">18</span> 
+<span class="lineno">19</span>      <span class="n">SPSecurity</span><span class="p">.</span><span class="n">RunWithElevatedPrivileges</span><span class="p">(()</span> <span class="p">=&gt;</span>
+<span class="lineno">20</span>      <span class="p">{</span>
+<span class="lineno">21</span>          <span class="k">using</span> <span class="p">(</span><span class="n">SPSite</span> <span class="n">esite</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SPSite</span><span class="p">(</span><span class="n">SiteID</span><span class="p">))</span>
+<span class="lineno">22</span>          <span class="p">{</span>
+<span class="lineno">23</span>              <span class="n">SPList</span> <span class="n">list</span> <span class="p">=</span> <span class="n">esite</span><span class="p">.</span><span class="n">RootWeb</span><span class="p">.</span><span class="n">GetList</span><span class="p">(</span><span class="s">&quot;faq&quot;</span><span class="p">);</span>
+<span class="lineno">24</span>              <span class="n">table</span> <span class="p">=</span> <span class="n">list</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">GetDataTable</span><span class="p">();</span>
+<span class="lineno">25</span>          <span class="p">}</span>
+<span class="lineno">26</span>      <span class="p">});</span>
+<span class="lineno">27</span> 
+<span class="lineno">28</span>      <span class="k">return</span> <span class="n">table</span><span class="p">;</span>
+<span class="lineno">29</span>  <span class="p">}</span>
+<span class="lineno">30</span> 
+<span class="lineno">31</span>  <span class="k">protected</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">Serialize</span><span class="p">(</span><span class="n">DataTable</span> <span class="n">data</span><span class="p">)</span>
+<span class="lineno">32</span>  <span class="p">{</span>
+<span class="lineno">33</span>      <span class="k">if</span> <span class="p">(</span><span class="n">data</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+<span class="lineno">34</span>          <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="lineno">35</span> 
+<span class="lineno">36</span>      <span class="kt">var</span> <span class="n">ds</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DataSet</span><span class="p">();</span>
+<span class="lineno">37</span>      <span class="n">ds</span><span class="p">.</span><span class="n">Tables</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<span class="lineno">38</span>      <span class="k">return</span> <span class="nf">SerializeInternal</span><span class="p">(</span><span class="n">ds</span><span class="p">);</span>
+<span class="lineno">39</span>  <span class="p">}</span>
+<span class="lineno">40</span> 
+<span class="lineno">41</span>  <span class="k">protected</span> <span class="k">override</span> <span class="n">DataTable</span> <span class="nf">Deserialize</span><span class="p">(</span><span class="kt">string</span> <span class="n">data</span><span class="p">)</span>
+<span class="lineno">42</span>  <span class="p">{</span>
+<span class="lineno">43</span>      <span class="k">if</span> <span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="lineno">44</span>          <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="lineno">45</span> 
+<span class="lineno">46</span>      <span class="kt">var</span> <span class="n">ds</span> <span class="p">=</span> <span class="n">DeserializeInternal</span><span class="p">&lt;</span><span class="n">DataSet</span><span class="p">&gt;(</span><span class="n">data</span><span class="p">);</span>
+<span class="lineno">47</span>      <span class="k">return</span> <span class="n">ds</span><span class="p">.</span><span class="n">Tables</span><span class="p">[</span><span class="m">0</span><span class="p">];</span>
+<span class="lineno">48</span>  <span class="p">}</span>
+<span class="lineno">49</span> <span class="p">}</span>
+</code></pre></div>
+
+	
+<div class="post-separator"></div>
+
+
+          </div>
+
+          <div class="span3 sidebar">
+            <div class="well sidebar-nav">
+                <ul class="nav nav-list">
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/archive/">Archive</a></li>
+                    <li><a href="/topics/">Topics</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="http://www.facebook.com/techhike">
+                        <img src="/images/facebook.png" style="width: 30px;" alt="Facebook" /></a>
+                        <a href="http://www.twitter.com/clintsim">
+                            <img src="/images/twitter.png" style="width: 30px;" alt="Twitter" /></a>
+                            <br />
+                            <a href="http://www.linkedin.com/profile/view?id=2238939&amp;trk=tab_pro">
+                                <img src="/images/linkedin.png" style="width: 30px;" alt="Linkedin" /></a>
+                                <a href="http://github.com/csim">
+                                    <img src="/images/github.png" style="width: 30px;" alt="GitHub" /></a>
+                                    <br />
+                                    <a href="/feed.xml"><img src="/images/rss.gif" style="width: 29px; height: 31px;" alt="Feed" /></a>
+                                </div>
+                    <!--<a class="twitter-timeline" href="https://twitter.com/TechHike" data-widget-id="250295447481098241">Tweets by @@TechHike</a>
+                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>-->
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="//code.jquery.com/jquery-1.6.2.min.js"></script>
+    <script src="/base.js"></script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-25860409-1']);
+        _gaq.push(['_setDomainName', 'techhike.net']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+</html>

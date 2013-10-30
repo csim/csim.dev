@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        Tech Interview Question: The Clock Problem - csim
+    </title>
+    <!-- generated 2013-10-30T18:59:28+01:00 -->
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="http://lh3.googleusercontent.com/-Ea8xoWWt_P8/ToKxKe5jkjI/AAAAAAAAC24/4pXdtIm0k7E/techhike_favicon.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Clint Simon">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="google-site-verification" content="9122UHrLTdTksyNCp_xG5dypMZu2evQmgwu43GVHjOo" />
+
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Ubuntu+Condensed|Orbitron:400" rel="stylesheet" type="text/css" />
+
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/base.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="masthead">
+        <div id="masthead-inner">
+            <a class="title" href="/">csim</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="span9 content">
+              <a name="/2012/10/12/Clock-Problem"></a>
+<h1><a href="/2012/10/12/Clock-Problem">Tech Interview Question: The Clock Problem</a></h1>
+<div class="post-date">12 October 2012</div>
+
+<p>&quot;The Clock Problem&quot; is an interview question that I have been using for a few years. I first learned about it when I was being interviewed. I have now adopted it as my first line of defense against imposters. :)</p>
+
+<p>It&#39;s a simple problem that can be used to determine a candidate&#39;s capacity for analytical problem solving. The beauty is that the problem has a simple and elegant solution which can be found in less than 10 minutes. More importantly it forces the candidate to think about a problem that he or she has not likely considered before. The problem domain is also easily understood, everyone knows how a clock works.</p>
+
+<h3>Problem Statement</h3>
+
+<p>Write a function that can compute the angle between the hands of a clock given a time of day. Take your time and think it through, then we will walk-through your solution.</p>
+
+<h3>Solution</h3>
+
+<ol>
+<li>Deduce that for each hour on the clock there are 30 degrees. 360 degrees divided by 12 hours.</li>
+<li>Deduce that for each minute on the clock there are 6 degrees. 360 degrees divided by 60 minutes.</li>
+<li>Compute the angle with respect to 12 o&#39;clock for both the hour hand and the minute hand. For the hour hand the formula is: hour * 30, for the minute hand: minute * 6</li>
+<li>Subtract the hour angle from the minute angle to get the solution. Ensure that the result is less than 180 degrees.</li>
+<li>Extra Credit: The hour hand doesn&#39;t point directly to the hour, it moves proportionally to the minute value between hours. This can be computed by adding a factor to the hour hand position. This factor is computed based on the minute value and added to the hour hand angle (see solution below). </li>
+</ol>
+
+<h3>Full solution in JavaScript</h3>
+
+<p><a href="http://jsfiddle.net/ctrl1024/2Mk24/">http://jsfiddle.net/ctrl1024/2Mk24/</a></p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span>     <span class="kd">var</span> <span class="nx">angle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">hour</span><span class="p">,</span> <span class="nx">minute</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 2</span>         <span class="kd">var</span> <span class="nx">hourAngle</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">hour</span> <span class="o">*</span> <span class="mi">30</span><span class="p">);</span>
+<span class="lineno"> 3</span>         <span class="c1">// take into account the movement of the hour hand between hours</span>
+<span class="lineno"> 4</span>         <span class="nx">hourAngle</span> <span class="o">=</span> <span class="nx">hourAngle</span> <span class="o">+</span> <span class="nb">parseFloat</span><span class="p">((</span><span class="nx">minute</span> <span class="o">/</span> <span class="mi">60</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span><span class="p">);</span>
+<span class="lineno"> 5</span>         <span class="kd">var</span> <span class="nx">minuteAngle</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">minute</span> <span class="o">*</span> <span class="mi">6</span><span class="p">);</span>
+<span class="lineno"> 6</span>         <span class="kd">var</span> <span class="nx">angle</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">hourAngle</span> <span class="o">-</span> <span class="nx">minuteAngle</span><span class="p">);</span>
+<span class="lineno"> 7</span>         <span class="k">return</span> <span class="p">(</span><span class="nx">angle</span> <span class="o">&gt;</span> <span class="mi">180</span><span class="p">)</span> <span class="o">?</span> <span class="mi">360</span> <span class="o">-</span> <span class="nx">angle</span> <span class="o">:</span> <span class="nx">angle</span><span class="p">;</span>
+<span class="lineno"> 8</span>     <span class="p">};</span>
+<span class="lineno"> 9</span>     <span class="nx">alert</span><span class="p">(</span><span class="nx">angle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
+<span class="lineno">10</span>     <span class="nx">alert</span><span class="p">(</span><span class="nx">angle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">));</span>
+<span class="lineno">11</span>     <span class="nx">alert</span><span class="p">(</span><span class="nx">angle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">30</span><span class="p">));</span>
+<span class="lineno">12</span>     <span class="nx">alert</span><span class="p">(</span><span class="nx">angle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">40</span><span class="p">));</span>
+<span class="lineno">13</span>     <span class="nx">alert</span><span class="p">(</span><span class="nx">angle</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">33</span><span class="p">));</span>
+</code></pre></div>
+
+<h3>Likely outcomes</h3>
+
+<p>After giving this problem dozens of times, I have noticed responses that roughly fall into these categories:</p>
+
+<ol>
+<li><p>Candidate goes quiet for about 5 minutes. Then says that he/she would create a lookup table where given an hour or minute, they would retrieve the angle. This is skirting the exercise entirely, my response is that we should take a few minutes and compute some of the lookup values. If this doesn&#39;t work then I ask if there is a mathematical way to relate the hand position to an angle. </p></li>
+<li><p>Candidate understands that there is a mathematical solution but struggles to find the relationship between hand position and angle. I wait about 10 minutes, then start to give hints like: How many minutes per rotation? How many degrees per rotation? The important thing here is not to give away the solution but just enough information to direct the candidate towards the solution.</p></li>
+<li><p>Candidate struggles at each stage. I give small hints and eventually the solution is found. I try to determine if nerves are a factor or if there is a lack of skill. Usually I would pass on the candidate unless there are other factors at play. I may give another coding problem to find a pattern if one exists.</p></li>
+<li><p>Candidate gives up after about 10 minutes of floundering. This is a total fail and I usually end the interview politely but quickly.  In my opinion this problem can be solved by 8th grader (without coding) and any developer with some experience should be able to solve.</p></li>
+</ol>
+
+<h3>Conclusion</h3>
+
+<p>This may sound like a simple problem but I believe it really does show analytical ability. Most importantly it allows for discussion and discourse in the context of an interview. This will tell you how the candidate reacts to a real-time challenge.</p>
+
+	
+<div class="post-separator"></div>
+
+
+          </div>
+
+          <div class="span3 sidebar">
+            <div class="well sidebar-nav">
+                <ul class="nav nav-list">
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/archive/">Archive</a></li>
+                    <li><a href="/topics/">Topics</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="http://www.facebook.com/techhike">
+                        <img src="/images/facebook.png" style="width: 30px;" alt="Facebook" /></a>
+                        <a href="http://www.twitter.com/clintsim">
+                            <img src="/images/twitter.png" style="width: 30px;" alt="Twitter" /></a>
+                            <br />
+                            <a href="http://www.linkedin.com/profile/view?id=2238939&amp;trk=tab_pro">
+                                <img src="/images/linkedin.png" style="width: 30px;" alt="Linkedin" /></a>
+                                <a href="http://github.com/csim">
+                                    <img src="/images/github.png" style="width: 30px;" alt="GitHub" /></a>
+                                    <br />
+                                    <a href="/feed.xml"><img src="/images/rss.gif" style="width: 29px; height: 31px;" alt="Feed" /></a>
+                                </div>
+                    <!--<a class="twitter-timeline" href="https://twitter.com/TechHike" data-widget-id="250295447481098241">Tweets by @@TechHike</a>
+                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>-->
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="//code.jquery.com/jquery-1.6.2.min.js"></script>
+    <script src="/base.js"></script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-25860409-1']);
+        _gaq.push(['_setDomainName', 'techhike.net']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+</html>

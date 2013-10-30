@@ -1,0 +1,1679 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+  >
+  <channel>
+    <title xml:lang="en">TechHike</title>
+    <atom:link type="application/atom+xml" href="http://csim.me}/feed.xml" rel="self"/>
+    <link>http://techhike.net</link>
+    <pubDate>Wed, 30 Oct 2013 18:59:28 +0100</pubDate>
+    <lastBuildDate>Wed, 30 Oct 2013 18:59:28 +0100</lastBuildDate>
+    <language>en-US</language>
+    <description></description>
+    
+    <item>
+      <title>How I learned to code</title>
+      <link>http://csim.me/2013/08/10/how-I-learned-to-code</link>
+      <pubDate>Sat, 10 Aug 2013 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>programming</category>
+      <guid isPermaLink="false">/2013/08/10/how-I-learned-to-code</guid>
+      <description><![CDATA[ <p>I&#39;m not a long-term planner. I&#39;ve never made a &quot;5 year plan&quot; or thought about where I want to be 10 years from now. I simply look at what my options are and make a decision about what to do next. </p>
+
+<p>I only learned to code because my dad needed a problem solved. He ran a consulting business where he needed to perform regular equipment maintenance. It was 1996 and the web was new. It seemed like it might be possible to track schedules and log maintenance activities via the World Wide Web.</p>
+
+<p>I was young and foolish, so I started right away. I knew very little about programming having only built very simple programs in basic on my commodore 64 roughly 10 years earlier. I picked Perl because it was available with my college computer lab account which was the right price (free). I could also expose the script to the web, score!</p>
+
+<p>Looking back, I was a pretty awful programmer at that time. I had about 5 tricks in my bag and writing a function was not one of them. The Perl script became one long if statement with print statements to emit HTML. Around 800 lines of code with no functions. Wow, does this seem backwards to me now. To top it off, I wrote a rudimentary serialization process to save my in-memory Hashtable to a text file. </p>
+
+<p>To be fair, I did not know the word &quot;serialization&quot; at the time. I just knew that I needed to save some data and have it available on the next web request. I happily wrote some code at the end of my script to store the text file after each request was rendered and some code at the top to read the file. Done.</p>
+
+<p>I was absolutely intoxicated by the process of coding my first web application. I literally could not get enough. I worked on the script with every sliver of free time that I had and when I wasn&#39;t working on it, I was thinking about it or dreaming about it.</p>
+
+<p>How could I get this element to render? How could I get the code to run faster? What do I do with this data? Can I build a calendar?</p>
+
+<p>I was great. I probably learned more in those 6 weeks than at any other time in my career. But more than that, it forged my desire to be a programmer. I am still chasing the high that I felt over 15 years ago on the first project. There is nothing like having an idea, building it and watching it grow into something valuable.</p>
+
+<p>That little application that I built went on to run a substantial part of my dad&#39;s business for a few years until I replaced it with a new version that was more professional. It was great to see it work for so long but the larger net effect was that I was hooked on coding. I haven&#39;t looked back once.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Rediscovering Code</title>
+      <link>http://csim.me/2013/08/07/Rediscovering-Code</link>
+      <pubDate>Wed, 07 Aug 2013 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>programming</category>
+      <guid isPermaLink="false">/2013/08/07/Rediscovering-Code</guid>
+      <description><![CDATA[ <p>Over the past year or so, my career has taken a turn toward what I would call &quot;pure consulting&quot; or put more plainly, &quot;giving people my opinion&quot;. During this time I really hadn&#39;t written any code to speak of, minus some small side projects. There just wasn&#39;t a need for it and frankly I had my hands full.</p>
+
+<p>All that changed when I started a new project and took ownership of a large chunk of functionality. As the development lead I sure as hell wanted to get my hands dirty with the code, setup the framework, etc. So I jumped in head first and started coding.</p>
+
+<p>I honestly forgot how cool it is to code something from scratch and see it grow from an idea to a fully functional application. It was total invigorating to see things take shape and evolve, each step of the way becoming more intricate and complex.</p>
+
+<p>I never get tired of the code manipulation cycle. Making a code change, seeing the result and making another change, over and over again. It&#39;s just one of those things that never gets old. It really feels like a disease is some ways. Your mind is consumed, all your thoughts spent strategizing on the next set of changes and thinking of the long term implications. </p>
+
+<p>It&#39;s a skill that feels intrinsic, not a learned behavior but something must have been inside you from the beginning. How lucky am I that I get paid to do this? Pretty cool.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Data Migration is Hard</title>
+      <link>http://csim.me/2013/08/06/Data-Migration-is-Hard</link>
+      <pubDate>Tue, 06 Aug 2013 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>consulting</category>
+      <category>programming</category>
+      <guid isPermaLink="false">/2013/08/06/Data-Migration-is-Hard</guid>
+      <description><![CDATA[ <p>Data migration can sink your project. It lurks around the edges of your estimation model, hiding deep dark secrets that will only be uncovered at the very end of the project. Nothing could be worse. Discovering that you need to increase the migration schedule 5 fold at the 11th hour can not only derail your project but if it happens too often it might derail your career.</p>
+
+<p>I have learned a few lesson on this topic:</p>
+
+<p><strong>Re-estimate your migration scope of work when there are significant changes in the new application.</strong> At the beginning of the project, migration seems easy. A new system with like functionality should have a similar data model with a one-to-one mapping against the old data model.</p>
+
+<p>Often times the new system will morph into something completely different, creating complex transforms for the data migration process. Not only is this extra work for the data migration but you have to <em>define</em> this extra work.</p>
+
+<p>Ideally when changes creep into the new system build, the data migration estimates are updated and timelines are adjusted. Having a designated data migration subject matter expert helps to spot trouble on the horizon and alert the team to data migration impact.</p>
+
+<p><strong>Run your migration on the real data.</strong> There is no substitute for real migration data. Often times, sample data is used for too long which engenders a false sense of confidence. When you finally use the real data, there are a boat load of issues that you could not have predicted.</p>
+
+<p>Use the real customer data as soon as possible in the process. Look at the outcomes in the new application, run scenario testing early and often. You simply have no idea what issues you will bump into.</p>
+
+<p><strong>Think about performance.</strong> No matter how elegant your code or how perfect you attribute mappings are, there will come a time when performance is paramount. If the migration takes 10 days to complete, most likely you have failed.</p>
+
+<p>Have a focus on performance from the beginning of the development effort. Identify the total number of source records to be transformed. Then get some baseline throughput numbers from you migration process. This will tell you how long the migration execution will take. You can also use a known duration to calculate how many records per second you need to achieve.</p>
+
+<p>Once you know the desired parameters, you can start to optimize your code. Optimizing performance is an <a href="http://www.amazon.com/NET-Performance-Testing-Optimization-Complete/dp/1906434409">art form</a>. </p>
+
+<p>Multithread is a good way to improve performance but it comes with major pitfalls. The saying goes: You implemented multithreading to solve your problem, now you have two problems. If you understand thread safety and the basics of multithreaded software design, then multithreading is a good option, otherwise stay away from it.</p>
+
+<p><strong>Think about the execution plan &amp; timings.</strong> What time window is available to perform the migration? How much down time can you afford? Put together a timeline that clearly delineates the time allotted for each phase of the migration. </p>
+
+<p>Often times one way around performance and timing issues is to implement a &quot;delta&quot; load where only the changed data is migrated. First you run the full load, then the delta process moves only the data that has changed since the last migration pass. This breaks the migration process into smaller pieces and allows for those pieces to be spread across a longer period of time. When it&#39;s time to go live, you only need to run the delta process once more to bring the data into synchronization, then you can launch the new system.</p>
+
+<p><strong>Understand the differences between legacy and new systems with regard to business use cases.</strong> Don&#39;t just think about data model differences, think about business process differences. The business context around data attributes is important when the situation dictates a complex transformation.</p>
+
+<p><strong>Document all data gaps for the customer.</strong> Inevitably you will run into data that simple cannot be directly mapped, transformed or converted to the new system. It is of the utmost importance to document these gaps, triage these issues with the client and work toward some form of resolution.</p>
+
+<p>There are general three things that the client may decide:</p>
+
+<ol>
+<li>Ignore the data attribute. It is not important in the new system. Keep a backup of the old database just in case.</li>
+<li>Map the attribute to a different attribute in the new system. Things have been simplified or consolidated and the new system recognizes this attribute in a different way.</li>
+<li>Force the new system to consume the old attribute. Make a change request to add the old attribute to the new system. This usually stems from a mistake where important data attributes have been lost in the new system.</li>
+</ol>
+
+<p><strong>Plan for surprises.</strong> Your source and destination are fixed, therefore scope is fixed. The causes more timeline risk, therefore you need to counter with rigor in estimation, planning, engineering and additional timeline contingency. There is no room to remove features or functionality from the migration process.</p>
+
+<p>I have seen one scope reduction approach work, which is to propose the reduction of data volume by the process of archiving old data. This does not reduce the data mapping scope but reduces the timeline because migration execution time is reduced.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Keeping Up with Technology</title>
+      <link>http://csim.me/2012/11/14/Keeping-Up-with-Technology</link>
+      <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <category>consulting</category>
+      <category>programming</category>
+      <guid isPermaLink="false">/2012/11/14/Keeping-Up-with-Technology</guid>
+      <description><![CDATA[ <p>Learning new technologies and techniques is a part of life for any software developer. Programming is a quest for knowledge and understanding which lasts your entire lifetime. No other profession has a more dynamic working environment. Tools change and evolve on a daily basis it seems.  Learning is incumbent on all developers. Darwin&#39;s law applies, adapt or perish.</p>
+
+<p>Luckily most of us are used to this environment and thrive on the constantly changing landscape. I have found over my career that the pace of change has only increased, particularly in the past few years. The move to cloud computing is a big driver and the open source movement is creating a climate of rapid discovery and change. Thousands of new approaches to old problems are being forged this very moment.</p>
+
+<p>Benefits can be reaped if you are efficient with your time and energy. Your value as an employee can be traced back to your technology aptitude and that aptitude is greatly affected by your knowledge of the technology spectrum which you apply to a project. This doesn&#39;t mean that you need to have the deepest knowledge on a particular technology but instead you need a broad view of how technology fits together and how to choose the right pieces to solve a problem. Suggesting the pieces can be more important that understanding how each pieces works.</p>
+
+<p>Generally I try to follow a few key rules which keep me in touch with new technology:</p>
+
+<ol>
+<li><p><strong>Find quality sources.</strong> Find the best possible sources which apply to the technology space where you work. Each source should have excellent content covering a set of topics that could potentially apply to your daily work.</p></li>
+<li><p><strong>Organize the channels.</strong> Create channels to monitor your sources, <a href="http://reader.google.com">Google reader</a> works well, <a href="http://twitter.com">twitter</a> a bit noisy. You want these streams to have a high signal to noise ratio. Don&#39;t add pundits or 24-hour tech news into this mix. They are too noisy. Add sources that you know produce great topical content. For me, technology specific tech blogs work best.</p></li>
+<li><p><strong>Read your channels regularly.</strong> I try to read through my sources at least once per day. Some days there isn&#39;t much to learn but other days I have multiple &quot;holy cow&quot; moments. If this becomes a chore then you might want to look for a new line of work :)</p></li>
+</ol>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Using IE10 with Dynamics CRM Online</title>
+      <link>http://csim.me/2012/11/14/CRM-IE10</link>
+      <pubDate>Wed, 14 Nov 2012 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <category>crm</category>
+      <guid isPermaLink="false">/2012/11/14/CRM-IE10</guid>
+      <description><![CDATA[ <p>It appears that <a href="http://crm.dynamics.com">Dynamics CRM Online</a> does not play well with Internet Explorer 10. In fact, it downright does not work with IE10. Many of the web dialogs are unusable and when you receive an error, the error dialog exhibits bazaar behavior.</p>
+
+<p>This is an absolute tragedy. Windows 8 launched 3 weeks ago with IE10 included and the Dynamics product team was not prepared. The user experience on a windows 8 machine for Dynamics CRM is basically unusable.</p>
+
+<p>However, there is an easy way to fix this. For IE10, hit ALT. Then go to Tools -&gt; Compatibility View Settings. </p>
+
+<div class="vinette">
+<img src=
+
+"http://csim.me/images/ie10_1.png" width="325" height="514" />
+</div>
+
+<p>Then add your CRM Online URL to the list. Below I am using the default dynamics.com domain. This will force IE10 to render the CRM application in compatibility mode.</p>
+
+<div class="vinette">
+<img src=
+
+"http://csim.me/images/ie10_2.png" width="391" height="488" />
+</div>
+
+<p>Maybe Microsoft should make dynamics.com automatically render in compatibility mode? Or would that be too big of a black eye?</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Remember, Software is Soft</title>
+      <link>http://csim.me/2012/11/09/Remember-Software-is-Soft</link>
+      <pubDate>Fri, 09 Nov 2012 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <category>programming</category>
+      <guid isPermaLink="false">/2012/11/09/Remember-Software-is-Soft</guid>
+      <description><![CDATA[ <p>There are times when I have witness (and participated in) arguments about trade-offs between scope and effort. Sometimes developers tend to push back fairly hard with the perception is that the effort is too high for a particular feature change.</p>
+
+<p>Coders can become downright defensive when you are talking about changing the fundamentals of an application. After all, this is their baby and someone just through it out with the bathwater.</p>
+
+<p>As programmers, we need to remember that software is soft. Meaning that it can be changed and it should be changed to conform to whatever the application requirements dictate. We are not talking about destroying a building to change the wall color. We are talking about changing <strong>soft</strong>ware to meet new requirements.</p>
+
+<p>By the way, we are <em>paid</em> to make these changes. </p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Be Lazy and Smart</title>
+      <link>http://csim.me/2012/11/07/Be-Lazy-and-Smart</link>
+      <pubDate>Wed, 07 Nov 2012 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <category>consulting</category>
+      <category>programming</category>
+      <guid isPermaLink="false">/2012/11/07/Be-Lazy-and-Smart</guid>
+      <description><![CDATA[ <p>One of the best things that you can do as a developer is to be equal parts lazy and smart. This is an art that can be mastered to great effect. I don&#39;t mean that you should abandon your passion for programming or stop being focused and goal driven. I mean that you should avoid work that is not absolutely necessary. To do that you need to be both lazy and smart in equal parts.</p>
+
+<p>There are pitfalls. Laziness without being smart leads to inaction. Being smart without laziness leads to constantly reinventing the wheel. Ultimately the value you deliver needs to increase as a result of being lazy and smart.</p>
+
+<p>Laziness means that you don&#39;t want to do work that is unnecessary. You would rather copy and paste a known good solution rather than write it from scratch. You would rather ask a colleague for a quick answer than search for the same answer for hours. You would rather do a quick prototype rather than spending days in meetings arguing about how the application should look.</p>
+
+<p>Being lazy means that you are constantly looking for <em>congruent efficiency</em>. You want to find a better way to get a goal accomplished with the same quality but less effort. You want to spend more time making great software with great user experiences, and less time doing mundane tasks. Mundane tasks are like the scourge of software development. Luckily new tools and techniques are eliminating mundane tasks but there are still area where you can make significant time savings. </p>
+
+<p>Being smart is the most important part of the equation. If you are just lazy, then you really don&#39;t get anywhere quickly. But put lazy and smart together, and you get magic. That elusive balance where you are practically cheating. Things are so easy and yet so effective. Smart makes your laziness seem like genius.</p>
+
+<p>Some Ideas:</p>
+
+<ul>
+<li><strong>Eliminate unnecessary meetings.</strong> Keep meetings short and to the point. Focus meetings on working software with demos.</li>
+<li><strong>Have a code library for common patterns.</strong> Copy/paste from the library when you come across a pattern that you have used before. Keep the library up to date with latest practices and new patterns.</li>
+<li><strong>Leverage co-workers.</strong> When you have a hard problem, you may be surprised to learn that your colleagues have solved this problem in the past. Ask early in the cycle to avoid duplicate work and potential mistakes based on a potentially flawed approach. Hold code reviews so that you can validate your solutions.</li>
+<li><strong>Search the internet.</strong> Sounds silly but I&#39;ve seen people plug away at a problem without looking for a solution online first. Google is your friend.</li>
+</ul>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>It doesn't matter what it is. Start Now.</title>
+      <link>http://csim.me/2012/10/30/Start-Now</link>
+      <pubDate>Tue, 30 Oct 2012 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>life</category>
+      <category>programming</category>
+      <guid isPermaLink="false">/2012/10/30/Start-Now</guid>
+      <description><![CDATA[ <p>It&#39;s funny, I put off writing this post for over a week. That might make me a hypocrite but it doesn&#39;t mean that the truth is less important. Procrastination is the enemy.</p>
+
+<p>If you want to get something done, start immediately and <a href="http://www.economist.com/node/18557776">fail often</a>.</p>
+
+<p>There are a million reasons not to start right away. Maybe you won&#39;t be any good at it, or you have more important things to do. Maybe you are just plain scared of judgment from your peers.</p>
+
+<p>The truth is that starting a task is the most important step to finishing a task. If it&#39;s something simple then just knock it out quickly. If it&#39;s a more complicated task, then engaging your mind is the pathway to completion. Engaging your mind on a particular task acts like a channel, forcing thoughts to form around a central idea. Once your mind is engaged in problem solving there is a very low chance that you will slip on into procrastination. </p>
+
+<p>There are some exceptions to this. When there is a hard problem that I can&#39;t seem to solve with conventional methods, I sometimes allow myself to completely forget about the topic altogether. This is not procrastination but rather a way to utilize my sub-conscious mind. My letting the topic ferment in the deep recesses of my mind I can afford</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>When your company breaks bad</title>
+      <link>http://csim.me/2012/10/23/When-your-company-breaks-bad</link>
+      <pubDate>Tue, 23 Oct 2012 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>consulting</category>
+      <guid isPermaLink="false">/2012/10/23/When-your-company-breaks-bad</guid>
+      <description><![CDATA[ <p>You have been working here for about 3 years. Life is good. You come in as late as you like and leave late because the work is challenging and rewarding. No one is watching over your shoulder, most days you sling code until your mind goes numb. At any moment a nerf gun war can break out in the office. When Halo 3 was released, all work stopped and there was an all-nighter in the game room. Company parties are amazing, the Christmas party was at a rock-n-roll museum last year and you have an annual company awards ceremony at a hot night club.</p>
+
+<p>The company has been growing at a rapid rate.  The employee count has doubled in the past year and the year before that it almost tripled. There are about 20 new people joining the company each month. Extending this growth out over the next couple of years, you can&#39;t help but think that the company will be a huge player in the market. Can we go public? Won&#39;t we all be rich?</p>
+
+<p>One fine day, you notice that there are a few new people who just aren&#39;t fitting in. They come from larger competitors. Their idea of productivity is waving their hands in meetings talking about &quot;enterprise scale&quot; and &quot;web 2.0&quot;. Some others are clearly sub-par coders, quality is suffering. What is going on? You brush it off and continue with your daily routine.</p>
+
+<p>Over time, you realize that the company has made some bad bets. It turns out that those misfit new hires where actually making two times what they were delivering in value. Those Christmas parties and award ceremonies cost in the millions of dollars. Worse yet, the company is insolvent, living off debt and investments my a lone angel investor. Wow, look how far this place has fallen. Your morale fads, this is not fun anymore. What are you going to do? You love this place and you can&#39;t bare to start looking for another job when all you friends work here.</p>
+
+<p>This is a story all to familiar to anyone who has been around the consulting industry for a number of years. All to quickly the company that you grew to love changes right underneath your feet. Who is to blame? How did this happen?</p>
+
+<p>This is part of the journey and an opportunity to do some growing up. First and foremost, understand that your beloved company is a <em>business</em>. And businesses have to make money or they don&#39;t exist for very long. You may have become emotionally attach to the company and assumed that you would work here in perpetuity, having fun with your friends. Reality is that unless a service business is run at a profit sooner or later it bites the dust.</p>
+
+<p>The interesting part is that morale has a large influence on the trajectory that a company takes. In the beginning morale acts as a buoy, lifting the company to new heights. Good morale is contagious, each new person that enters the company is quickly infected with enthusiasm as soon as they walk in the door. You recruit your friends, everyone is cheerful and bright. Clients see this and are drawn to your energy and zest for details. Bottom line is that everyone believes in the company and you are all working towards a higher goal: your collective professional happiness.</p>
+
+<p>The opposite is true in the declining phase of a company. No one wants to put in the extra effort that was once automatic. Meetings are pure hell, distrust in management is normal, projects fail, pride is lost. Bad morale is even more contagious. People love to complain and focus on the negatives.</p>
+
+<p>Looking back at my career, I can say that I have been through this cycle at least 3 times. During the first 2, I had no idea what was happening. The last one I understood and tried to divorce myself from the situation by taking a clinical approach. I&#39;ve learned that this is the cycle of life at small consulting companies. You cannot change it or expect different results with the same inputs.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Tech Interview Question: The Clock Problem</title>
+      <link>http://csim.me/2012/10/12/Clock-Problem</link>
+      <pubDate>Fri, 12 Oct 2012 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>programming</category>
+      <category>interviews</category>
+      <guid isPermaLink="false">/2012/10/12/Clock-Problem</guid>
+      <description><![CDATA[ <p>&quot;The Clock Problem&quot; is an interview question that I have been using for a few years. I first learned about it when I was being interviewed. I have now adopted it as my first line of defense against imposters. :)</p>
+
+<p>It&#39;s a simple problem that can be used to determine a candidate&#39;s capacity for analytical problem solving. The beauty is that the problem has a simple and elegant solution which can be found in less than 10 minutes. More importantly it forces the candidate to think about a problem that he or she has not likely considered before. The problem domain is also easily understood, everyone knows how a clock works.</p>
+
+<h3>Problem Statement</h3>
+
+<p>Write a function that can compute the angle between the hands of a clock given a time of day. Take your time and think it through, then we will walk-through your solution.</p>
+
+<h3>Solution</h3>
+
+<ol>
+<li>Deduce that for each hour on the clock there are 30 degrees. 360 degrees divided by 12 hours.</li>
+<li>Deduce that for each minute on the clock there are 6 degrees. 360 degrees divided by 60 minutes.</li>
+<li>Compute the angle with respect to 12 o&#39;clock for both the hour hand and the minute hand. For the hour hand the formula is: hour * 30, for the minute hand: minute * 6</li>
+<li>Subtract the hour angle from the minute angle to get the solution. Ensure that the result is less than 180 degrees.</li>
+<li>Extra Credit: The hour hand doesn&#39;t point directly to the hour, it moves proportionally to the minute value between hours. This can be computed by adding a factor to the hour hand position. This factor is computed based on the minute value and added to the hour hand angle (see solution below). </li>
+</ol>
+
+<h3>Full solution in JavaScript</h3>
+
+<p><a href="http://jsfiddle.net/ctrl1024/2Mk24/">http://jsfiddle.net/ctrl1024/2Mk24/</a></p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span>     <span class="kd">var</span> <span class="nx">angle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">hour</span><span class="p">,</span> <span class="nx">minute</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 2</span>         <span class="kd">var</span> <span class="nx">hourAngle</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">hour</span> <span class="o">*</span> <span class="mi">30</span><span class="p">);</span>
+<span class="lineno"> 3</span>         <span class="c1">// take into account the movement of the hour hand between hours</span>
+<span class="lineno"> 4</span>         <span class="nx">hourAngle</span> <span class="o">=</span> <span class="nx">hourAngle</span> <span class="o">+</span> <span class="nb">parseFloat</span><span class="p">((</span><span class="nx">minute</span> <span class="o">/</span> <span class="mi">60</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span><span class="p">);</span>
+<span class="lineno"> 5</span>         <span class="kd">var</span> <span class="nx">minuteAngle</span> <span class="o">=</span> <span class="nb">parseFloat</span><span class="p">(</span><span class="nx">minute</span> <span class="o">*</span> <span class="mi">6</span><span class="p">);</span>
+<span class="lineno"> 6</span>         <span class="kd">var</span> <span class="nx">angle</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">hourAngle</span> <span class="o">-</span> <span class="nx">minuteAngle</span><span class="p">);</span>
+<span class="lineno"> 7</span>         <span class="k">return</span> <span class="p">(</span><span class="nx">angle</span> <span class="o">&gt;</span> <span class="mi">180</span><span class="p">)</span> <span class="o">?</span> <span class="mi">360</span> <span class="o">-</span> <span class="nx">angle</span> <span class="o">:</span> <span class="nx">angle</span><span class="p">;</span>
+<span class="lineno"> 8</span>     <span class="p">};</span>
+<span class="lineno"> 9</span>     <span class="nx">alert</span><span class="p">(</span><span class="nx">angle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">0</span><span class="p">));</span>
+<span class="lineno">10</span>     <span class="nx">alert</span><span class="p">(</span><span class="nx">angle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">10</span><span class="p">));</span>
+<span class="lineno">11</span>     <span class="nx">alert</span><span class="p">(</span><span class="nx">angle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">30</span><span class="p">));</span>
+<span class="lineno">12</span>     <span class="nx">alert</span><span class="p">(</span><span class="nx">angle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">40</span><span class="p">));</span>
+<span class="lineno">13</span>     <span class="nx">alert</span><span class="p">(</span><span class="nx">angle</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">33</span><span class="p">));</span>
+</code></pre></div>
+
+<h3>Likely outcomes</h3>
+
+<p>After giving this problem dozens of times, I have noticed responses that roughly fall into these categories:</p>
+
+<ol>
+<li><p>Candidate goes quiet for about 5 minutes. Then says that he/she would create a lookup table where given an hour or minute, they would retrieve the angle. This is skirting the exercise entirely, my response is that we should take a few minutes and compute some of the lookup values. If this doesn&#39;t work then I ask if there is a mathematical way to relate the hand position to an angle. </p></li>
+<li><p>Candidate understands that there is a mathematical solution but struggles to find the relationship between hand position and angle. I wait about 10 minutes, then start to give hints like: How many minutes per rotation? How many degrees per rotation? The important thing here is not to give away the solution but just enough information to direct the candidate towards the solution.</p></li>
+<li><p>Candidate struggles at each stage. I give small hints and eventually the solution is found. I try to determine if nerves are a factor or if there is a lack of skill. Usually I would pass on the candidate unless there are other factors at play. I may give another coding problem to find a pattern if one exists.</p></li>
+<li><p>Candidate gives up after about 10 minutes of floundering. This is a total fail and I usually end the interview politely but quickly.  In my opinion this problem can be solved by 8th grader (without coding) and any developer with some experience should be able to solve.</p></li>
+</ol>
+
+<h3>Conclusion</h3>
+
+<p>This may sound like a simple problem but I believe it really does show analytical ability. Most importantly it allows for discussion and discourse in the context of an interview. This will tell you how the candidate reacts to a real-time challenge.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Take Pride in Your Work</title>
+      <link>http://csim.me/2012/10/10/Pride-in-Your-Work</link>
+      <pubDate>Wed, 10 Oct 2012 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>consulting</category>
+      <category>programming</category>
+      <guid isPermaLink="false">/2012/10/10/Pride-in-Your-Work</guid>
+      <description><![CDATA[ <p>In my daily work, I lead teams that build software. These are &quot;line of business&quot; or &quot;enterprise&quot; software systems. I come into contact with a lot of developers, all with differing backgrounds, experience levels and personalities. I see the good and the bad. Pride generally stands out as the most accurate quality indicator of the individual developer.</p>
+
+<p>Having pride in your work makes you want to improve. If you are mindful of the effects that your work has on others, that can only lead to a better career path. First, you need to be self-aware and able to see your work through the eyes of a co-worker. Then you need to have the foresight to adjust your behavior accordingly.</p>
+
+<p>Ask your self these questions, they all show pride in your work:</p>
+
+<h3>How can I communicate more effectively with the team?</h3>
+
+<p>Be clear and concise. Don&#39;t ramble. Stay on topic, avoid distractions. Drive the conversation forward. Don&#39;t speak if you have nothing to say. When you speak, add value. Listen. Yield to the experts. Challenge but don&#39;t create conflict. Keep everything on a business level. Take time understand context. Provide context.</p>
+
+<h3>How can I make my self more valuable to the team?</h3>
+
+<p>Follow through on your commitments. Don&#39;t get in over your head. Mentor others. Give constructive feedback. Call out issues early. Be proactive. Always give 100%. Be consistent. Take ownership. Take responsibility for mistakes.</p>
+
+<h3>What can I do to help others more easily discover the design of this component?</h3>
+
+<p>Use descriptive variable names (even on private / local members). Add comments to code that is not obviously understood. Use the built-in documentation conventions of your language. Name classes, properties and methods in a <em>logical and consistent</em> way.</p>
+
+<p>All of this ultimately forms your reputation as a developer. All you have is your reputation. I have moved jobs a fews times in my career and I can tell you that having a network of people who are aware of your capabilities is the best possible resource when it&#39;s time for job hunting.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Good Addictions</title>
+      <link>http://csim.me/2012/10/07/Good-Addictions</link>
+      <pubDate>Sun, 07 Oct 2012 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>life</category>
+      <guid isPermaLink="false">/2012/10/07/Good-Addictions</guid>
+      <description><![CDATA[ <p>Ever since I can remember I have been an addict. Over the years my addictions have come and gone. But one thing has always remained: I have an addictive personality. Luckily for me all my addictions have been mostly productive.</p>
+
+<p>It started when I got my first computer, the Commodore 64. At the age of 10 I got the C64 for Christmas and soon after I learned the BASIC programming language so that I could study my Spanish vocabulary words. I know that sounds strange, and it probably is. I didn&#39;t know it yet but I would soon be spending more time coding the Spanish test than learning the Spanish words. It was the first addiction in a long string.</p>
+
+<p>Later in college, I discovered the World Wide Web (remember that?) and my addictive personality struck again. I started to build an application in Perl 3, and before I knew it I was in deep. This time it was much worse. I started to skip class to build the application. Luckily the skills that I formed during that time have served me well but the truth is that I really had no self-control or cognizant influence. Once I started to build that app, the runaway train had left the station. </p>
+
+<p>There was a burning in my gut that I could not quench. The cycle of changing the script and seeing the results was like a drug. Over and over and over I would pound at the keyboard and wait for the results like a junkie waits for the next hit. It was hypnotic and I was absolutely hooked.</p>
+
+<p>Programming has taught me so much throughout my life. Persistent, dedication, thoughtfulness, selflessness. And it all started with that Perl script which I stumbled into. There is still something so pure about making the computer do exactly what you want it to do. <em>Today this fire is still burning within me.</em></p>
+
+<p>But that&#39;s not the end of the story. After my career became stable, I found other outlets. First it was gaming. StarCraft, Quake/Quakeworld and later World of Warcraft. It was the same, I couldn&#39;t get enough. There was always more to accomplish, mountains to climb and opponents to vanquish.</p>
+
+<p>And that brings us to my latest addiction. <a href="http://www.crossfit.com">Crossfit</a>. All I want to do is exercise, which is strange. After being an athlete in high school I seldom had any meaningful physical activity (outside of hiking) for over 15 years. It&#39;s the damnedest thing, all I want to do now is work my butt off in the gym. The addiction gene has struck again. And again the results have been positive. </p>
+
+<blockquote>
+<p>Find what you love and let it kill you. - Charles Bukowski</p>
+</blockquote>
+
+<p>Well killing me is a little extreme. I often wonder how these good addictions come to me. Did I seek them out or have I just been lucky? </p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Link Roundup</title>
+      <link>http://csim.me/2012/09/20/Link-Roundup</link>
+      <pubDate>Thu, 20 Sep 2012 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>links</category>
+      <guid isPermaLink="false">/2012/09/20/Link-Roundup</guid>
+      <description><![CDATA[ <h3><a href="http://www.geekwire.com/2012/microsoft-employees-surface-tablets-work-pcs-windows-phone-8/">Microsoft employees getting free Surface tablets, new work PCs, Windows Phone 8</a></h3>
+
+<p>Quite a company meeting this year.</p>
+
+<div class="clear"></div>
+
+<h3><a href="http://arstechnica.com/information-technology/2012/09/intel-researchers-put-wifi-inside-the-processor-that-is/">Intel researchers put WiFi inside - the processor, that is</a></h3>
+
+<p>Makes sense. It&#39;s fascinating that analog components in almost all mobile phones.</p>
+
+<h3><a href="http://spectrum.ieee.org/tech-talk/energy/nuclear/japan-commits-to-eliminating-nuclear-power">Japan Commits to Eliminating Nuclear Power</a></h3>
+
+<p>Remember when nuclear power was the future? Mother nature issued a veto.</p>
+
+<h3><a href="http://www.imore.com/ios-6-review">iOS 6 review</a></h3>
+
+<p>Love these &quot;just the facts&quot; reviews.</p>
+
+<h3><a href="http://news.yahoo.com/science-someday-rule-possibility-god-115945479.html">Will Science Someday Rule Out the Possibility of God?</a></h3>
+
+<p>Controversy!</p>
+
+<h3><a href="http://www.bbc.co.uk/news/science-environment-19634700">Dark energy camera opens its eyes</a></h3>
+
+<p>It&#39;s just a matter of time before we have the anti-matter drive. (pun intended)</p>
+
+<h3><a href="http://blog.cloudflare.com/65gbps-ddos-no-problem">How to Launch a 65Gbps DDoS, and How to Stop One</a></h3>
+
+<p>It&#39;s interesting that enough machines are compromised around the world to generate 65Gbps of traffic.</p>
+
+<h3><a href=""></a></h3>
+
+<h3><a href=""></a></h3>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Windows 8 Developer Messaging</title>
+      <link>http://csim.me/2012/09/19/Windows-8-Developer-Messaging</link>
+      <pubDate>Wed, 19 Sep 2012 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>windows 8</category>
+      <guid isPermaLink="false">/2012/09/19/Windows-8-Developer-Messaging</guid>
+      <description><![CDATA[ <p>Bit of a rant here. I received this message today Microsoft.</p>
+
+<div class="vinette"><img src=
+
+"http://csim.me/images/ms_win8_dev_marketing.png" /></div>
+
+<p>Do you think the average developer knows that &quot;Windows 8 GA&quot; means?</p>
+
+<p>GA stands for &quot;Generally Availability&quot;. Put yourself in the position of the Microsoft marketer who composed this message. Why on Earth won&#39;t you just write out the words instead of using the abbreviation?</p>
+
+<p>This doesn&#39;t need to be a secret handshake. Granted, if you <a href="http://www.collegehumor.com/video/5072264/googling-with-bing">Google it on bing</a>, you&#39;ll get an answer fairly quickly. But really?!? Do we need to be put through this?</p>
+
+<p>Microsoft -- just type it out next time.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>A Month with Windows 8</title>
+      <link>http://csim.me/2012/09/17/A-month-with-Windows-8</link>
+      <pubDate>Mon, 17 Sep 2012 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>windows 8</category>
+      <guid isPermaLink="false">/2012/09/17/A-month-with-Windows-8</guid>
+      <description><![CDATA[ <p>I got my hands on a copy of Windows 8 through <a href="http://msdn.com">MSDN</a> about a month ago and installed it immediately. I&#39;ve used it since then as my daily working machine on my main laptop.</p>
+
+<p>First of all the speed of Windows 8 is apparent from the start. Everything feels faster - boot time, application launch, etc. I am working on a 3 year old Lenovo W500 and I can honestly say that Windows 8 has extended its life by at least 6 months. It was fast enough under Win7 but with Win8, it seems to have legs.</p>
+
+<p>Coming into this experiment, I had my doubts. As a developer, how would I fair in the land of the Metro UI and deprioritize desktop?</p>
+
+<h3>The Start Screen</h3>
+
+<p>The start menu is full-screen now and it has some animation built into it. It did take me a little while to get used to it but really this is just a new UI on top of the same start menu that we are all used to. As a developer I stay mostly in the desktop but the metro start screen is a necessary evil once in a while. </p>
+
+<div class="vinette"><img src=
+
+"http://csim.me/images/start_screen.png" /></div>
+
+<p>I&#39;ll admit it took me a few days to get used to it. My advice is to embrace this right away and enjoy it for what it is - some UI sugar that plays nicely with tablets. It still works well with mouse and keyboard. You can still search for applications or settings by simply typing and you can still pin your most used applications. Once there are more useful metro apps, the start screen will be much more useful.</p>
+
+<p>I found that pinning my most used applications to the desktop task bar almost entirely eliminates the need to open the start screen at all. As a developer this is exactly what I want, just get out of my way. If you just can&#39;t live without the Windows 7 start menu, take a look at <a href="http://lee-soft.com/vistart/">ViStart</a>.</p>
+
+<h3>Everyday Tasks</h3>
+
+<p>I mostly stay in the desktop. In fact, I would say that at least 90% of my time is spent there. The first thing you should do is pin everything that you use to the taskbar. This will help you avoid the start screen. Mind you, there is nothing wrong with the start screen but you probably don&#39;t want to go there too often.</p>
+
+<p>The desktop is mostly unchanged from Windows 7, with just a few exceptions. First the glass aero desktop is gone, no more see-through window chrome. It has been sacrificed in the name of battery life.</p>
+
+<p>Secondly, the task manager has been completely rebuilt and redesigned. This thing is awesome. A quantum leap upgrade. You can now see disk usage, app history, startup cost for apps and services. Remember all those time you thought &quot;What the hell is going on with my machine?&quot;. Well, now you can answer that question.</p>
+
+<div class="vinette"><img src=
+
+"http://csim.me/images/task_manager.png" /></div>
+
+<h3>Metro Apps</h3>
+
+<p>Let&#39;s face it, metro apps have not arrived yet. I have no doubt that they will when Windows 8 goes mainstream after the global launch on October 25th. I can see the utility, even on a desktop, but for now it&#39;s just promises.</p>
+
+<p>The UI looks descent on a desktop and even usable, but metro will only shine when tablets and touch are in the mainstream. Microsoft&#39;s bet here is palpable. Interface unification of Xbox, Windows Desktop and Windows Phone is the holy grail for which Microsoft is betting the company. As everyone has said for years, it has a lot of promise. </p>
+
+<p>If you are a developer and don&#39;t care for Metro, don&#39;t use it. The only time you&#39;ll need it is when you press the windows key and if you configure your machine correctly, you won&#39;t be hitting the windows key very often.</p>
+
+<h3>User Interface</h3>
+
+<p>Numerous small UI enhancement have been incorporated into Windows 8. There are too many to list and it&#39;s better if you find them yourself. I am still finding new tidbits almost daily. Little flourishes which add flavor to the experience</p>
+
+<p>The file copy dialog is a thing of beauty. Notice the transfer graph over time and the spark line for the current transfer speed. Very cool. You can also pause the file copy which is really convenient when you need to go offline temporarily.</p>
+
+<div class="vinette"><img src=
+
+"http://csim.me/images/file_copy_dialog.png" /></div>
+
+<p>Windows 8 is noticeable faster in almost all aspects. Boot times are particularly impressive. I have seen at least a 50% increase in startup speed. Everything is snappy - changing windows, opening applications</p>
+
+<h3>Shortcut Keys</h3>
+
+<p>Here&#39;s a few shortcut keys that I have found to be invaluable.</p>
+
+<p>Most useful:</p>
+
+<ul>
+<li><strong>Windows + X</strong>
+Opens an administration context menu in the bottom left corner of the screen. This is indispensable for power users, it lets you jump to a bunch of useful tools.</li>
+<li><strong>Windows + C</strong>
+Opens the charm menu at the right edge of the screen. You don&#39;t have to point the most at the upper right corner.</li>
+</ul>
+
+<p>Others:</p>
+
+<ul>
+<li><strong>Windows + Q</strong> - Show all apps</li>
+<li><strong>Windows + W</strong>  - Search settings</li>
+<li><strong>Windows + R</strong> - Run a command</li>
+<li><strong>Windows + I</strong> - Settings slide out</li>
+<li><strong>Windows + P</strong> - Monitor configuration (extend, duplicate)</li>
+<li><strong>Windows + L</strong> - Lock session</li>
+<li><strong>Windows + K</strong> - Devices slide out</li>
+<li><strong>Windows + H</strong> - Share slide out</li>
+<li><strong>Windows + F</strong> - Search Files</li>
+<li><strong>Windows + D</strong> - Show the desktop</li>
+<li><strong>Windows + .</strong> - Toggle through snapping</li>
+<li><strong>Windows + E</strong> - Opens file explorer</li>
+<li><strong>Windows + ,</strong> - Desktop peek</li>
+</ul>
+
+<h3>Conclusion</h3>
+
+<p>I can honestly say that I would not go back to Windows 7. Win8 feels like a winner. Good performance and it gets out of my way. It has a solid future as a touch screen operating system to boot.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Link Roundup</title>
+      <link>http://csim.me/2012/09/15/Link-Roundup</link>
+      <pubDate>Sat, 15 Sep 2012 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>links</category>
+      <guid isPermaLink="false">/2012/09/15/Link-Roundup</guid>
+      <description><![CDATA[ <h3><a href="http://www.fastcodesign.com/1670705/microsoft-new-design-strategy">Windows 8: The Boldest, Biggest Redesign In Microsoft&#39;s History</a></h3>
+
+<p>Fast company with a mostly positive article on Windows 8. Refreshing.</p>
+
+<h3><a href="http://www.wired.com/gadgetlab/2012/09/the-iphone-5-is-boring-and-amazing/">The iPhone 5 Is Completely Amazing and Utterly Boring</a></h3>
+
+<p>I could not agree more. As Louis CK would say -- <a href="http://www.youtube.com/watch?v=8r1CZTLk-Gk">Everything is amazing and nobody is happy</a>.</p>
+
+<h3><a href="http://joel.is/post/31582795753/the-power-of-ignoring-mainstream-news?utm_source=feedburner&amp;utm_medium=twitter&amp;utm_campaign=Feed%3A+hnycombinator+%28HN+-+hnycombinator%29">The power of ignoring mainstream news</a></h3>
+
+<blockquote>
+<p>When I first started ignoring news, I felt that I was simply making an excuse, that if I had more time I should read the news. Today, however, it is a very deliberate choice and I feel consistently happier every single day due to ignoring the mainstream news. It just so happens that the last 2 years have also been the most enjoyable and productive of my entire life, and have contained some of my greatest achievements. Here are a few reasons I think we should stop consuming mainstream news:</p>
+</blockquote>
+
+<p>Interesting article, I wish I could say that I follow this advice. I think it&#39;s important to know the details that matter most in your life and filter out the noise. Most of the news is noise. I can&#39;t stand 24-hour news channels.</p>
+
+<h3><a href="http://arstechnica.com/information-technology/2012/09/is-it-true-that-not-everyone-can-be-a-programmer/">Is it true that &quot;not everyone can be a programmer&quot;?</a></h3>
+
+<p>Interesting that this is debatable. In this day and age, we have high level languages that are not only approachable but down right easy. Anyone can learn to be a programmer but only a small percentage can be passionate enough about it to carve out a career. The single biggest factor is how bad you want it.</p>
+
+<h3><a href="http://www.zdnet.com/whats-microsofts-father-of-cs-next-trick-7000004226/">What&#39;s Microsoft&#39;s father of C#&#39;s next trick?</a></h3>
+
+<p>I say Anders is bringing Linq to javascript.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Link Roundup</title>
+      <link>http://csim.me/2012/09/11/Link-Roundup</link>
+      <pubDate>Tue, 11 Sep 2012 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>links</category>
+      <guid isPermaLink="false">/2012/09/11/Link-Roundup</guid>
+      <description><![CDATA[ <h3><a href="http://en.wikipedia.org/wiki/September_11_attacks">Never Forget</a></h3>
+
+<blockquote>
+<p>The attacks resulted in the death of 2,996 people, including the 19 hijackers and 2,977 victims. The victims included 246 on the four planes (from which there were no survivors), 2,606 in New York City in the towers and on the ground, and 125 at the Pentagon. Nearly all of the victims were civilians; 55 military personnel were among those killed at the Pentagon.</p>
+</blockquote>
+
+<h3><a href="http://mashable.com/2012/09/07/windows-8-is-not-going-to-save-pc-industry/">Sorry, Windows 8 Is Not Going to Save the PC Industry</a></h3>
+
+<p>Another article bashing Windows 8 and the Microsoft strategy around it. It seems that because of Apple&#39;s success, Microsoft is in a no-win situation according to the pundits.</p>
+
+<p>Personally I quite like Windows 8 and I think it will most certainly have an impact. There is no doubt that Microsoft is behind the innovation curve, but Windows 8 is a step in the right direction. Time will tell if Microsoft can capture the rapidly merging business and consumer IT space. First and foremost Windows 8 needs apps, and lots of them.</p>
+
+<h3><a href="https://attachments.me/skydrive">Access to your SkyDrive, even from Gmail</a></h3>
+
+<p>I am still a <a href="http://db.tt/E0TluzT">dropbox</a> fan but SkyDrive is becoming more attractive with Windows 8 on the horizon. <a href="Attachments.me">Attachments.me</a> offers a way to manage you GMail attachment through SkyDrive.</p>
+
+<h3><a href="http://www.kurzweilai.net/physicists-solve-uncertainty-about-uncertainty-principle">Physicists solve uncertainty about uncertainty principle</a></h3>
+
+<p>Deep explanation of the Heisenberg principle and the efforts of a team of graduate student to disprove the theory. You might think that this is in the theoretical physics realm, but actually <a href="http://www.hawking.org.uk/does-god-play-dice.html">God plays dice</a>.</p>
+
+<p>P.S. I can&#39;t help but wonder how this will affect the next season of <a href="http://www.amctv.com/shows/breaking-bad">Breaking Bad</a></p>
+
+<h3><a href="http://www.youtube.com/watch?v=FFhjDX-DUew&amp;feature=player_embedded">Shit Apple Fanatics Say</a></h3>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/FFhjDX-DUew" frameborder="0" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/kTTSsB92L_s" frameborder="0" allowfullscreen></iframe>
+
+<h3><a href="http://foundation.kr/20/">Foundation - Elon Musk</a></h3>
+
+<p>Elon Musk is a founder at <a href="http://teslamotors.com/">Tesla</a>, <a href="http://spacex.com/">SpaceX</a> &amp; <a href="http://paypal.com/">PayPal</a></p>
+
+<h3><a href="http://mashable.com/2012/09/07/apple-fix-itunes/">Hey Apple, Fix iTunes First</a></h3>
+
+<p>Yes!</p>
+
+<h3><a href="http://www.riagenic.com/archives/960?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+MsMossyblog+%28MS+MossyBlog%29">The Unofficial Windows 8 Developer FAQ</a></h3>
+
+<blockquote>
+<p>What we are seeing is Microsoft power brokers asleep at the helm, specifically their evangelism is dead and lastly their messaging around the transition for Silverlight/WPF has been fumbled to the point where its easy now to believe Microsoft has hit &quot;Shift+Delete&quot; on these two products than it is to read the above (to much carnage on the roadmap now).</p>
+
+<p>If Microsoft had of come out and said something to the effect - &quot;Look you asked us to fix WPF and Silverlight. We did that, we came up with a way now that lets you develop for our platform in three ways. The first is C++ if you want deeper access to Windows then we&#39;ve tided up our Com++ API&#39;s to a way that C# developers have found palatable. If you don&#39;t want to do native code then you can build applications like you have done with SilverLight in the past but the difference is it will now only be Windows only (sorry). If you then want to build apps that are cross-platform then again we&#39;ve got HTML5 and Internet Explorer story brewing whilst its important to understand that we will not be looking to expand our developer story beyond Windows anymore (there is a certain amount of control HTML5 will give but we still believe Internet Explorer is a better bet overall).</p>
+</blockquote>
+
+<p>Interesting rundown delivered from a Windows 8 platform insider.</p>
+
+<h3><a href="http://kotaku.com/5936535/windows-8-is-not-good-for-gamers">Windows 8 Is Not Good For Gamers</a></h3>
+
+<blockquote>
+<p>It&#39;s not exactly that Windows 8 doesn&#39;t work. It&#39;s fast and, from my still-limited experience, stable. Programs, once open, run well. The major issues are twofold: first, Microsoft has inserted several extra steps into the process of performing basic functions like &quot;launching a program&quot; or &quot;shutting down the system.&quot; Second, the parallel tracks of the &quot;Metro&quot; and Desktop environments give it what feels like a split personality. The overall result makes it challenging to navigate smoothly, and will likely frustrate many gamers.</p>
+</blockquote>
+
+<p>Frank recap and opinion. It is obvious that software and hardware is becoming more specialized and traditional outlets (PCs and phones) are more squarely focused on casual gaming. </p>
+
+<p>Valve is correctly recognizing this and guiding their business accordingly. This is not the fault of Windows 8 but an industry trend. I just don&#39;t see the conflict with Windows 8 directly.</p>
+
+<h3><a href="http://seattletimes.nwsource.com/html/businesstechnology/2018972097_microsoftlogo23.html?prmid=4939">Microsoft gets a new logo for the first time since 1987</a></h3>
+
+<blockquote>
+<p>For the first time in 25 years, Microsoft is changing its corporate logo.</p>
+
+<p>Microsoft, which has used its solid, boldfaced, italicized logo since 1987, is expected to unveil its new, more colorful logo Thursday at the Boston opening of the 23rd Microsoft store. It will also appear Thursday at the Seattle and Bellevue Microsoft stores, as well as on the Microsoft.com home page.</p>
+</blockquote>
+
+<h3><a href="http://blogs.msdn.com/b/windowsazure/archive/2012/09/06/webmatrix-2-is-released-new-windows-azure-features.aspx">WebMatrix 2 is Released! + New Windows Azure Features</a></h3>
+
+<p>Solid update to WebMatrix. </p>
+
+<h3><a href="http://www.youtube.com/watch?v=gHbYJfwFgOU&amp;feature=player_embedded">Bill Nye: Creationism Is Not Appropriate For Children</a></h3>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/gHbYJfwFgOU" frameborder="0" allowfullscreen></iframe>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Link Roundup</title>
+      <link>http://csim.me/2012/07/23/Link-Roundup</link>
+      <pubDate>Mon, 23 Jul 2012 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>links</category>
+      <guid isPermaLink="false">/2012/07/23/Link-Roundup</guid>
+      <description><![CDATA[ <h3><a href="http://blogs.msdn.com/b/jasonz/archive/2012/07/23/my-favorite-features-entity-framework-code-first-and-asp-net-web-api.aspx">My Favorite Features: Entity Framework Code First and ASP.NET Web API</a></h3>
+
+<p>Great overview of the EF5 release with summary and coding samples.</p>
+
+<p>Jason Zander:</p>
+
+<blockquote>
+<p>New features in Entity Framework 5:</p>
+
+<ul>
+<li>Enum support is a long awaited feature for EF and allows you to have enum properties in your domain classes. EF5 makes enum support available in the EF Designer and Code First.</li>
+<li>Table-valued functions in an existing database can now be included in models that are created using the EF Designer.</li>
+<li>Spatial data types can now be exposed in your model using the DbGeography and DbGeometry types. Spatial data can be included in models created with the EF Designer or Code First.</li>
+<li>EF5 also includes some significant performance improvements which you can find out more about on the ADO.NET Blog.</li>
+</ul>
+
+<p>The EF Designer, which is included in Visual Studio 2012, also has some new features:</p>
+
+<ul>
+<li><p>Models can now be split up into multiple diagrams, which is great for working with larger models. You can also apply coloring to entities to help identify subsections of your model.</p></li>
+<li><p>Improvements to the wizard that reverse engineers a model from a database make it easier and quicker to batch import stored procedures for querying data.</p></li>
+</ul>
+</blockquote>
+
+<h3><a href="http://www.youtube.com/watch?v=7ImvlS8PLIo">A Universe From Nothing</a></h3>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/7ImvlS8PLIo" frameborder="0" allowfullscreen></iframe>
+
+<blockquote>
+<p>Lawrence Krauss gives a talk on our current picture of the universe, how it will end, and how it could have come from nothing. Krauss is the author of many bestselling books on Physics and Cosmology, including &quot;The Physics of Star Trek.&quot;</p>
+</blockquote>
+
+<h3><a href="http://blogs.msdn.com/b/windowsstore/archive/2012/07/20/making-money-with-your-apps-through-the-windows-store.aspx">Making money with your apps through the Windows Store</a></h3>
+
+<blockquote>
+<p>With more than 630 million licenses sold to date, across 200+ countries and regions around the world, Windows has an unrivaled global reach. Combined with the flexibility of monetization options that the Store provides, Windows 8 represents the single biggest developer opportunity for any platform.</p>
+
+<p>We look forward to seeing the apps you create!</p>
+</blockquote>
+
+<h3><a href="http://arstechnica.com/information-technology/2012/07/windows-8-gpu-acceleration-good-news-for-metro/">Windows 8 GPU acceleration: good news for Metro</a></h3>
+
+<blockquote>
+<p>Direct2D is a 2D graphics API that is built on top of Direct3D, enabling it to take advantage of the powerful GPU hardware that is now a feature of every PC. It allows programmers to deal with 2D concepts-lines, rectangles, ellipses-and converts them behind the scenes into the fundamental 3D objects, points, lines, and triangles, so that the GPU can draw them.</p>
+</blockquote>
+
+<p>Here, here.</p>
+
+<h3><a href="http://techcrunch.com/2012/07/20/microsofts-terrible-horrible-no-good-very-bad-decade/">Microsoft&#39;s Terrible, Horrible, No Good, Very Bad Decade</a></h3>
+
+<p>John Biggs for TechCrunch:</p>
+
+<blockquote>
+<p>Microsoft had many wins. The Xbox is a notable success and Windows 8 could lead to a sea change in user interface and user experience. However, given the steady stream of duds popped out by MS over the past few years - Zune, C#, Vista, and the Kin phone family (not to mention their insistent failure to capitalize on touch or web infrastructure servers) - it&#39;s not hard to see why the bloom is off the Microsoft rose. The company is huge - 94,290 according to the official ledger - and as Kurt Eichenwald notes in Vanity Fair, the company&#39;s strange bell curve ranking system has frustrated their best and brightest engineers. Freshly minted MBAs and CS majors have been shown, time and time again, that there is no value in going after Microsoft millions when Google and the rest of Silicon Valley is right down the coast.</p>
+</blockquote>
+
+<p>Serious bile from Techcrunch (and vanity fair). They seem to completely overlook the enterprise software market (where Microsoft dominates) to focus on consumer and startup technologies. Fair enough that Microsoft struggles in these areas, but at least paint a complete picture.</p>
+
+<p>By the way, C# is ranked <a href="http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html">5th in the Tiobe programming index</a>. Failure, eh?</p>
+
+<h3><a href="http://www.youtube.com/watch?v=dK0qkkjimfo">The discovery of the Higgs Boson? Garrett Lisi explains</a></h3>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/dK0qkkjimfo" frameborder="0" allowfullscreen></iframe>
+
+<h3><a href="http://www.youtube.com/watch?v=BhtgINeaJWg">We Are All Related (vsauce)</a></h3>
+
+<iframe width="560" height="315" src="http://www.youtube.com/embed/BhtgINeaJWg" frameborder="0" allowfullscreen></iframe>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Training People</title>
+      <link>http://csim.me/2012/07/17/Training-People</link>
+      <pubDate>Tue, 17 Jul 2012 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>consulting</category>
+      <guid isPermaLink="false">/2012/07/17/Training-People</guid>
+      <description><![CDATA[ <p>Whether you know it or not, you are training everyone you interact with each day. When you answer that email at midnight or take that call at 8PM, you are sending a message. The message is that you work any time and you are willing to sacrifice your personal life for the job.</p>
+
+<p>In typical over-achiever fashion, you are reacting to each request without regard for your personal well-being. After following this pattern for years, I have realized that I need to stop the vicious cycle.</p>
+
+<div class="vinette"><img src=
+
+"http://csim.me/images/vicious-cycle-Zzbbc.jpg" />you can't win</div>
+
+<p>Here are a few things that I have learned:</p>
+
+<ul>
+<li><p><strong>Prioritize and focus</strong>. Understand the actions that are most beneficial to your career advancement. Many times I have found myself chasing the shiny object without understanding why.</p></li>
+<li><p><strong>Say no gracefully.</strong> When enough is enough, just politely say no. Set your boundaries. Be reasonable but firm, anyone worth their salt will respect your boundaries.</p></li>
+<li><p><strong>Ignore when possible.</strong> There are times when saying nothing is the best thing to do. Add value where you can but don&#39;t drive down a path that you cannot sustain. Under promise and over deliver.</p></li>
+</ul>
+
+<p>To be clear, I am not advocating begin lazy or apathetic. Quite the opposite, I am saying that with the right priorities you can focus doubly on what matter to achieve twice the effect.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>The case of the 30 day memcache timeout on app engine</title>
+      <link>http://csim.me/2011/10/28/The-case-of-the-30-day-memcache-timeout-on-app-engine</link>
+      <pubDate>Fri, 28 Oct 2011 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>app engine</category>
+      <category>programming</category>
+      <guid isPermaLink="false">/2011/10/28/The-case-of-the-30-day-memcache-timeout-on-app-engine</guid>
+      <description><![CDATA[ <p>I ran into an interesting problem with Google app engine. It seems that the memcache time limit is enforced differently on the development server versus the production servers.</p>
+
+<p><a href="http://code.google.com/p/memcached/wiki/FAQ#What_are_the_limits_on_setting_expire_time?_(why_is_there_a_30_d">The documentation</a> says that the time limit for a memcache key is 30 days. The behavior that I have observed is that if you set a memcache key to timeout at 30 days, the development server (on windows) will happily persist the data as expected.</p>
+
+<p>On the production servers, it seems that the behavior is much different. I have notice with a timeout of 30 days, that memcache will not only ignore the persisted key but it will also cause erratic behavior for instances in your application.</p>
+
+<p>Under these conditions a new instance of my application was start for each request! Obviously this adversely effects performance.</p>
+
+<p>Once I changed the memcache timeout to a lesser value (under 30 days), the problem stopped.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Should you be a platform developer?</title>
+      <link>http://csim.me/2011/10/04/Should-I-be-a-platform-developer</link>
+      <pubDate>Tue, 04 Oct 2011 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>consulting</category>
+      <category>programming</category>
+      <guid isPermaLink="false">/2011/10/04/Should-I-be-a-platform-developer</guid>
+      <description><![CDATA[ <p>Over the past few years I have seen many developers struggle with a growing dilemma, do I devote my time to platform development?</p>
+
+<p>When I say &quot;platform development&quot; I mean building application on products such as <a href="http://sharepoint.microsoft.com/en-us/Pages/default.aspx">Microsoft SharePoint</a> and <a href="http://crm.dynamics.com/online/default.aspx?tabid=fits-your-business&amp;fbid=gnPbjZqF5wO">Microsoft CRM</a>. The IT world is rapidly moving toward standardizing on platforms such as these. They offer lower IT costs, standardized infrastructure and overall lower cost of ownership. It makes sense from a business perspective, but what do you do as a developer?</p>
+
+<p>The problem here is that we have all been devoting all of our time to becoming better coders, designing systems and generally attacking every problem from the ground up. Not so in the platform world. You begin with a packaged software product, then extend it to meet a customers needs. These extensions can be simply point and click configurations, embedded code such as HTML, CSS and JavaScript, or compiled code which changes behavior in the product.</p>
+
+<p>In the new world of platforms, we are asked to live in a box. That box is called a platform. They bring limitations, boundaries and a sense that we can&#39;t use all the tools that we have worked so hard to learn and build over the years. </p>
+
+<p>Most of my experience is with <a href="http://sharepoint.microsoft.com/en-us/Pages/default.aspx">Microsoft SharePoint</a> and <a href="http://crm.dynamics.com/online/default.aspx?tabid=fits-your-business&amp;fbid=gnPbjZqF5wO">Microsoft CRM</a> but the trend is industry-wide. IT shops have been burned by custom software and they want some predictability over time. I get it.</p>
+
+<p>Customers generally expect the platform to host a wide range of applications and act as a clearing house for all future development activities. The problem comes in when requirements don&#39;t match up to the platforms capabilities. This can be a scale issue, or a mismatch of the smallest detail. These gaps are extremely painful for developers because the client is expecting the fully baked solution, but the platform doesn&#39;t entirely deliver. It&#39;s up to us to build that last 10% of the solution, which takes 50% of the effort. Blarg!</p>
+
+<p>In other scenarios, the product (particularly <a href="http://sharepoint.microsoft.com/en-us/Pages/default.aspx">SharePoint</a>) is a really &quot;big hammer&quot; that solves lots of problems and you have no choice but to use the entire platform. For instance, say a client wants Content Management. Well, <a href="http://sharepoint.microsoft.com/en-us/Pages/default.aspx">SharePoint</a> certainly does that, but it also comes with collaboration, profiling, personalization, single sign-on, search, etc. Sometimes it can feel like you boiling the ocean for a cup of tea.</p>
+
+<p>I have struggled to reconcile these issues and come to the conclusion that there are really two options for developers.</p>
+
+<h3>First Option</h3>
+
+<p>Swallow your pride and start learning a platform. There are a ton of opportunities right now for platform work, that work is not going to end any time soon and you might as well take the plunge sooner than later. There will be some limitations but in return you will get some opportunities that were not possible before. </p>
+
+<p>Usually enterprises have a portfolio of systems, and your project is just one of them. In the platform world you will need to integrate with other systems in a more reliable and sensible way. Sometimes this integration work is custom (cha-ching!) other times it is not. But the point is that the platform allows you to think at a higher level without being mired in minutia of coding all the components yourself. The upside is that you can use you brain cycles to think about solving bigger problems and delivering more value.</p>
+
+<h3>Second Option</h3>
+
+<p>Punt. Find a product company you want to work for, or a start-up that seems interesting. If you are in consulting there is a majority chance that you will be moved in to a platform role. If that&#39;s not where you want to be, get out immediately. </p>
+
+<p>I&#39;ve seen too many people struggle through the transition. Always battling to get the custom application development work on any project and generally hating life. Don&#39;t get swept away in the idealized vision that you can buck the trend. See this transition for what it is to you, either a way to move in a new direction or get out before you cause yourself a lot of heartache.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Personal Backup Strategy</title>
+      <link>http://csim.me/2011/10/03/Personal-backup-Strategy</link>
+      <pubDate>Mon, 03 Oct 2011 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <guid isPermaLink="false">/2011/10/03/Personal-backup-Strategy</guid>
+      <description><![CDATA[ <p>There are a million and one ways to backup files from your hard drive. For me, the most important things are making sure that the files that cannot be replaced are safe. </p>
+
+<p>Rather than opt for a relatively complicated system image based backup system such as <a href="http://www.microsoft.com/windows/products/winfamily/windowshomeserver/default.mspx">Windows Home Server</a> or a automated file copy utility such <a href="https://www.sugarsync.com/">SugarSync</a>, I instead prefer good old fashioned <a href="http://en.wikipedia.org/wiki/Robocopy">Robocopy</a> and physical DVD media. This might sound archaic in the age of cloud computing but I have found it to be the best way to ensure that I will not lose the most important files and have the least amount of headaches.</p>
+
+<h3>My setup</h3>
+
+<p>I have a portable 1TB drive which holds all of my media and working files. This includes family pictures, videos and virtual machines. I also have a non-portable 1TB drive that I use for only backups. </p>
+
+<p>For everyday files like word docs, excel spreadsheets, etc. I use <a href="http://dropbox.com">Dropbox</a>. These files are important enough that I want then accessible anywhere, anytime but they are not important enough to warrant a physical copy on DVD. <a href="http://dropbox.com">Dropbox</a> is great for this purpose, but it&#39;s a big pricey when you go above the 2GB free limit. It runs $99 for 50GB/year and $199 for 100GB/year.</p>
+
+<h3>My strategy</h3>
+
+<p>Once a week I use <a href="http://en.wikipedia.org/wiki/Robocopy">Robocopy</a> to backup all important files from my laptop and the portable drive to the backup drive. When a backup is done, all important files are duplicated to the desktop drive. This covers the potential case where my portable drive is either lost or stolen.</p>
+
+<p>Once a month I copy all the very important files to physical DVD discs. These include family photos and videos. I use <a href="http://hcidesign.com/dvdspan/">DVDSpan</a> to burn a set of folders a set of DVD discs. This utility is rather old but it is very useful and has worked fantastically for me. It takes a folder or set of folders and writes them across a set of DVD discs. Granted this won&#39;t work if you have hundreds of Gigabytes to backup.</p>
+
+<p>In my case I am only looking to backup around 50GB of media files. To make things even easier the media files don&#39;t change over time. once a file is archive, it does not need to be archived again.</p>
+
+<p>Then writing files using <a href="http://hcidesign.com/dvdspan/">DVDSpan</a>, it helps to have the files organized into date folders. For example /Photos/2011/2011-01. This way when it&#39;s time to write DVDs, I can simply burn the recent files that have not been archived and ignore the files that I have already archived.</p>
+
+<p>The new discs get sent to the safe-deposit box for safe keeping. I have researched various methods of storing files off site such as <a href="http://aws.amazon.com/s3/">Amazon S3</a> or <a href="http://www.keepvault.com/">KeepVault</a>. So far nothing beats driving down to the safe deposit box at the local bank. I have around 60GB of Gigabytes of photos and videos, but the net new data is less than 10GB per month. That means that I can get away with burning roughly 2 DVD discs for each month.</p>
+
+<p>As cloud backup system mature, I may change my approach but for now I&#39;m staying old school.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Why Google Chrome wins</title>
+      <link>http://csim.me/2011/09/30/Why-Google-Chrome-wins</link>
+      <pubDate>Fri, 30 Sep 2011 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>review</category>
+      <guid isPermaLink="false">/2011/09/30/Why-Google-Chrome-wins</guid>
+      <description><![CDATA[ <p>Google&#39;s chrome browser is quickly gaining momentum and market share. Recently it has even been projected the before the end of 2011 chrome will surpass firefox as the second most used browser, behind Internet Explorer. </p>
+
+<p>Here&#39;s what I think is great about Google Chrome:</p>
+
+<ul>
+<li><strong>It gets out of your way</strong>. As the name indicates, the browser is not in your way at all. The content is front and center and the browser is an afterthought.</li>
+<li><strong>Excellent JavaScript performance</strong>. JavaScript has become the way all web applications are written. <em>In practice</em>, chrome has the best JavaScript performance that I have seen. It blows away Internet explorer, event IE9 (although IE9 has come a long way).</li>
+<li><strong>The release schedule rocks.</strong> Major versions are released every 6 months and the upgrade process is completely seamless. Chrome is already on version 14. Granted the major releases are not as major as a new IE release, but it is clear that Google is committed to an aggressive release schedule.</li>
+<li><strong>Great development tools</strong>. The developer tools in Chrome are second only to <a href="http://getfirebug.com/">Firebug</a>. That&#39;s saying a lot, firebug is incredible but Chrome is a close second. In some ways I like Chrome better, especially the DOM explorer.</li>
+<li><strong>Sync everything</strong>. All browser settings, bookmarks and passwords can be stored in the Google cloud. If you roam across machines or rebuild your machines often, this is a big time saver.</li>
+<li><strong>HTML5 and CSS3 support</strong>. Support for new technologies is great in Chrome, thanks in part to the fact that it is built on top of the popular open source <a href="http://www.webkit.org/">WebKit</a> framework.</li>
+</ul>
+
+<p>This is interesting in a lot of ways. First, Google is not generally thought of as a desktop software company. This is changing and Chrome is a part of that. </p>
+
+<p>For Google, Chrome is strategic in that it gives Google some control (and consistency) over how their services are presented on the desktop. Google is a web software company and Chrome is an attempt at controlling the &quot;<a href="http://en.wikipedia.org/wiki/Last_mile">last mile</a>&quot; problem. This is important as it gives Google a foot hold on the desktop and a fighting chance against Microsoft.</p>
+
+<p><a href="http://www.google.com/chromebook/">Chromebooks</a> are also an interesting concept. A computer that is basically just a browser, in a lightweight package. Chrome is obviously a huge part of these machines and Google is banking on the fact that Chrome can become an everyday part of your web experience.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>How to add your last tweet to your blog</title>
+      <link>http://csim.me/2011/09/30/How-to-add-your-last-tweet-to-your-blog</link>
+      <pubDate>Fri, 30 Sep 2011 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>programming</category>
+      <guid isPermaLink="false">/2011/09/30/How-to-add-your-last-tweet-to-your-blog</guid>
+      <description><![CDATA[ <p>I thought it would be nice to see my last tweet on my blog. It turns out that there is an easy way to do this using jquery and the twitter api. These instructions may not work for you if your blogging platform does not allow embedded JavaScript (wordpress.com does not).</p>
+
+<p>To get the tweets for any user in JSON format you can visit http://api.twitter.com/1/statuses/user_timeline/username.json?callback=?</p>
+
+<p>Where username is the twitter username.</p>
+
+<p>Make sure that you first have jquery included in your page like this:</p>
+
+<div class="highlight"><pre><code class="xml"><span class="lineno">1</span>     <span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-1.6.2.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+
+<p>Then add this script to pull the last tweet for a username:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+<span class="lineno"> 2</span>     <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno"> 3</span>      <span class="kd">var</span> <span class="nx">u</span> <span class="o">=</span> <span class="s1">&#39;techhike&#39;</span><span class="p">;</span>
+<span class="lineno"> 4</span>      <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;http://api.twitter.com/1/statuses/user_timeline/&#39;</span>
+<span class="lineno"> 5</span>              <span class="o">+</span> <span class="nx">u</span> <span class="o">+</span> <span class="s1">&#39;.json?callback=?&#39;</span><span class="p">;</span>
+<span class="lineno"> 6</span>      <span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>       
+<span class="lineno"> 7</span>          <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#tweet&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">text</span><span class="p">));</span>
+<span class="lineno"> 8</span>      <span class="p">});</span> 
+<span class="lineno"> 9</span>     <span class="p">});</span>
+<span class="lineno">10</span> <span class="o">&lt;</span><span class="err">/script&gt;</span>
+</code></pre></div>
+
+<p>Replace techhike with the twitter username that you are interested in.</p>
+
+<p>Next add this markup to your page:</p>
+
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;tweet&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div>
+
+<p>This will act as a container for your last tweet.</p>
+
+<p>As an added bonus I decided to write a little javascript to convert URLs in the tweet to hyperlinks. This mimics the behavior on twitter.com. Also, I added a function that creates hyperlinks for twitter handles such as (@TechHike). This link points to the appropriate profile on twitter.com.</p>
+
+<div class="highlight"><pre><code class="csharp"><span class="lineno"> 1</span> <span class="p">&lt;</span><span class="n">script</span> <span class="n">type</span><span class="p">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
+<span class="lineno"> 2</span>     <span class="n">function</span> <span class="nf">urlize</span><span class="p">(</span><span class="n">input</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 3</span>      <span class="kt">var</span> <span class="n">exp</span> <span class="p">=</span> <span class="p">/(</span><span class="err">\</span><span class="n">b</span><span class="p">(</span><span class="n">https</span><span class="p">?|</span><span class="n">ftp</span><span class="p">|</span><span class="n">file</span><span class="p">):</span><span class="err">\</span><span class="p">/</span><span class="err">\</span><span class="p">/([-</span><span class="n">A</span><span class="p">-</span><span class="n">Z0</span><span class="p">-</span><span class="m">9</span><span class="p">+&amp;</span><span class="err">@#\</span><span class="p">/%?=~</span><span class="n">_</span><span class="p">|!:,.;]*[-</span><span class="n">A</span><span class="p">-</span><span class="n">Z0</span><span class="p">-</span><span class="m">9</span><span class="p">+&amp;</span><span class="err">@#\</span><span class="p">/%=~</span><span class="n">_</span><span class="p">|]))/</span><span class="n">ig</span><span class="p">;</span>
+<span class="lineno"> 4</span>      <span class="n">output</span> <span class="p">=</span> <span class="n">input</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">exp</span><span class="p">,</span><span class="err">&#39;</span><span class="p">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="p">=</span><span class="s">&quot;$1&quot;</span><span class="p">&gt;</span><span class="err">$</span><span class="m">3</span><span class="p">&lt;/</span><span class="n">a</span><span class="p">&gt;</span><span class="err">&#39;</span><span class="p">);</span>
+<span class="lineno"> 5</span>      <span class="k">return</span> <span class="n">output</span><span class="p">;</span>
+<span class="lineno"> 6</span>     <span class="p">}</span>
+<span class="lineno"> 7</span>  
+<span class="lineno"> 8</span>     <span class="n">function</span> <span class="nf">tweep</span><span class="p">(</span><span class="n">input</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 9</span>      <span class="kt">var</span> <span class="n">exp</span> <span class="p">=</span> <span class="p">/(</span><span class="err">\@</span><span class="p">(</span><span class="err">\</span><span class="n">w</span><span class="p">+?))</span> <span class="p">/</span><span class="n">ig</span><span class="p">;</span>
+<span class="lineno">10</span>      <span class="n">output</span> <span class="p">=</span> <span class="n">input</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">exp</span><span class="p">,</span><span class="err">&#39;</span><span class="p">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="p">=</span><span class="s">&quot;http://www.twitter.com/$2&quot;</span><span class="p">&gt;</span><span class="err">$</span><span class="m">1</span><span class="p">&lt;/</span><span class="n">a</span><span class="p">&gt;</span> <span class="err">&#39;</span><span class="p">);</span>
+<span class="lineno">11</span>      <span class="k">return</span> <span class="n">output</span><span class="p">;</span>
+<span class="lineno">12</span>     <span class="p">}</span>
+<span class="lineno">13</span> <span class="p">&lt;/</span><span class="n">script</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>The final javascript looks like this:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+<span class="lineno">2</span>     <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>     
+<span class="lineno">3</span>       <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;http://api.twitter.com/1/statuses/user_timeline/&lt;username&gt;.json?callback=?&#39;</span>
+<span class="lineno">4</span>       <span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>       
+<span class="lineno">5</span>           <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#tweet&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">tweep</span><span class="p">(</span><span class="nx">urlize</span><span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">text</span><span class="p">)));</span>    
+<span class="lineno">6</span>       <span class="p">});</span> 
+<span class="lineno">7</span>     <span class="p">});</span>
+<span class="lineno">8</span> <span class="o">&lt;</span><span class="err">/script&gt;</span>
+</code></pre></div>
+
+<p>Cheers!</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Google's new App Engine pricing</title>
+      <link>http://csim.me/2011/09/29/Googles-new-App-Engine-pricing</link>
+      <pubDate>Thu, 29 Sep 2011 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>app engine</category>
+      <guid isPermaLink="false">/2011/09/29/Googles-new-App-Engine-pricing</guid>
+      <description><![CDATA[ <p>Google App engine is in the process of changing it&#39;s pricing model. At present this new pricing model goes into effect on December 1, 2011. There has been quite an uproar among App engine developers. In some cases the new billing model raises monthly costs by more than 300%. This has cause quite a reaction among the community and the backlash is very real</p>
+
+<h3>What is changing?</h3>
+
+<p>The primary change is that Google is moving from a model where you are charged by CPU time to a model where you are charged by &quot;instance time&quot;. This means that google charges are not necessarily based on pure CPU use but rather on the amount of instances of your application the Google scheduler decides to run. To magnify matters, most web applications are IO bound and the current version of Python supported by App Engine is single threaded. </p>
+
+<p>That means that your application is probably using more instances that you think. Because one instance can only handle a fixed amount of traffic based on IO and threading, the scheduler is forced to create instances more often for Python applications. All of these circumstances add up to a much higher cost for developers.</p>
+
+<p>Google has added sliders that allow you to tweak the scheduler behavior. You can now change the maximum number of idle instances and the minimum pending wait time. This allow us to dictate how long is a acceptable waiting time per request and how many instances show be available for traffic spikes. </p>
+
+<p>I&#39;m personally glad these are available, although others disagree. I have found them to be helpful for my small(ish) application because latency is not a concern, so I can set the min latency up to around 700ms. This means that requests can wait to be served from an <em>existing</em> instance. Basically all output from my application is cached, so my request processing time is under 100ms. Setting the min pending latency to 700ms basically means that my application can remain free. I like free.</p>
+
+<p>It appears as though CPU billing was a bad idea in the first place and Google is now correcting for this by changing to instance based billing. In the end, Google needs to pay for the physical resources an application uses and as it turns out web applications use very little CPU as compared to IO with the datastore or other APIs. </p>
+
+<p>So, is the dream of a true &quot;Platform as a Service&quot; dead? Yes and No. The precise billing aspect of PaaS is dead at Google for the moment, but App Engine (and PaaS for that matter) is not defined by this shortcoming. Ultimately Google has recognized that having an instance running costs money even if the CPU usage for that instance is zero. Said another way, memory costs money. An instance will always consume memory if it is running. And not only will it consume memory but Google will need to reserve all the memory that it <em>may</em> need. This is a reality of physics.</p>
+
+<p>I think we have become a little spoiled in that we have come to expect that computing will always become cheaper over time. I wonder how much it would cost to build your own ultra scalable, redundant, highly replicated system?</p>
+
+<h3>Optimization</h3>
+
+<p>In the new world of App Engine where instances are charged, the emphasis is now on eliminating IO bound activities. That means eliminate datastore calls, URL fetch call, etc. If you have instances that are waiting around for IO activities to complete, then you are running to many instances.</p>
+
+<p>Here are a few ideas:</p>
+
+<ul>
+<li>Don&#39;t pull more data than you need for the data store. Use &quot;Select <em>key</em>&quot; where possible. Limit your fetches to the smallest possible row sets.</li>
+<li>Cache results when ever possible. If you are displaying the same data, then cache it per page, per user or per application.</li>
+<li>Use a Task Queue. Can this operation run in the background? Task queues can eliminate instances by way of pushing work for a dedicated backend.</li>
+</ul>
+
+<h3>The good news...</h3>
+
+<p>App Engine was not decommissioned. I know this sounds like little consolation, but many Google projects have been scrapped over the past 6 months and App Engine is not one of them. This shows that Google is willing to make difficult decisions when it comes to App Engine and that they are committed to having a PaaS offering for the long term. </p>
+
+<p>The bottom line is that Google has a right to at least break even on App Engine. The service is incredible, the free tier still exists and the new <a href="http://code.google.com/appengine/sla.html">SLA terms</a> are top notch. App Engine is still a worth competitor in the PaaS market, even with the new pricing.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>If This then That</title>
+      <link>http://csim.me/2011/09/26/If-This-then-That</link>
+      <pubDate>Mon, 26 Sep 2011 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>review</category>
+      <guid isPermaLink="false">/2011/09/26/If-This-then-That</guid>
+      <description><![CDATA[ <p>I just started to use a new service that allows you to automate your social life. It&#39;s called &quot;If this then that&quot; (<a href="http://ifttt.com">http://ifttt.com</a>). </p>
+
+<p>You can setup rules that says things like, if I post a link to twitter then create link post on Facebook. Or, if someone tags me in a picture on Facebook, copy that photo to my dropbox account. These are just a couple of the thousands of possibilities. Serivices can be combined in a multitude of cominations, these even include phone, sms and email.</p>
+
+<div class="vinette">
+    <img src="files/images/untitled_picture.png" />
+</div>
+
+<p>How would you like to save a voice message to your dropbox by calling ifttt.com? That&#39;s possible.</p>
+
+<p>I&#39;ve done some experiments and found the service to be relatively fast but not exactly &quot;realtime&quot;.  Most of the time processing happens within about 10 minutes. </p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Types of consultancies and how to pick one</title>
+      <link>http://csim.me/2011/07/21/Types-of-consultancies-and-how-to-pick-one</link>
+      <pubDate>Thu, 21 Jul 2011 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>consulting</category>
+      <guid isPermaLink="false">/2011/07/21/Types-of-consultancies-and-how-to-pick-one</guid>
+      <description><![CDATA[ <p>Over the years I have come across software consulting companies in various states. It occurs to me that there must be a finite set of categories that defines the culture of a consultancy. Here&#39;s a few that I have recognized.</p>
+
+<p><strong>The oak tree.</strong> This company is rock solid and has been that way for many years. After establishing itself initially, stable but modest growth has lead to a consistency over time. To be successful at this company, you must deeply agree with the culture and value system. This can be a great place to have a long tenure and create long term professional relationship. Rebels and change agents need not apply.</p>
+
+<p><strong>The Butterfly.</strong> This company is always morphing into something new. Things that are important today may have less valuable in the future. Hot and cold streaks plague the company&#39;s history. Take a job here only if you think that the experience you will gain out weighs the risk of a left turn when you least expect it. Often very few people know when the left turn is coming.</p>
+
+<p><strong>The junkyard dog.</strong> This company will do anything to keep busy and stay in business. Web site? Mobile? ASP.NET? LAMP? Yep they do that. Take a job here if you want to be a jack of all trades. These are usually good resume builders and companies where you can figure out what technologies you are most passionate about. The downside can be randomization and lack of direction, usually the technology leadership is not necessarily that deeply technical because it is very difficult to be deep in all technologies.</p>
+
+<p><strong>The Corporation.</strong> They are Enterprise. They are monumental. They will put a complex plan into place and deliver solid results on time and on budget through deliberate and consistent execution. You&#39;ll excel here if you enjoy structure and thrive when things are planned out to microscopic detail. Here&#39;s to &quot;synergy&quot;!</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Spotify First impressions</title>
+      <link>http://csim.me/2011/07/19/Spotify-First-Imperessions</link>
+      <pubDate>Tue, 19 Jul 2011 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>review</category>
+      <guid isPermaLink="false">/2011/07/19/Spotify-First-Imperessions</guid>
+      <description><![CDATA[ <p><a href="http://spotify.com">Spotify</a> launched in the U.S. on July 14th. Given the hoopla around the service I decided to give it a try. Spotify is a music service that allows users to stream or download music, includes social integration and has support for offline listening. Many people have raved about the service in Europe and there has been a constant chorus for an american launch.</p>
+
+<p>After 5 days of use, here&#39;s my impressions:</p>
+
+<p>Great value. You get all the music you can handle, offline downloading (including offline for iPhone) for just $10 a month. That is fantastic. I have found that most if not all of the music I care about is available. Spotify has deals with all the major labels, so there is a good chance that it will always have the latest music. There is also a $5 per month option when doesn&#39;t allow offline listening and a free ad supported version.</p>
+
+<p>Version 1 application. The Spotify application for windows is good, fast and stable. It is lacking features though. There is no drill down-down by artist or album. Come on, that is obvious and available in all competing products.</p>
+
+<p>I would say the social integration is fairly simple as well. You can see all your Facebook friends who have a Spotify account and view their shared playlists. This seems like the simplest possible social implementation.</p>
+
+<p>Bottom line is that Spotify needs to catch up to Zune and iTunes in terms of features for desktop.</p>
+
+<p>Fast! I have found that playback is extremely fast and reliable. Streaming is particularly good, you mostly can&#39;t tell that a song is streaming at all. Playback of streaming is almost as good as local playback. Skipping and scrubbing are instantaneous, searches are</p>
+
+<p>Many people, including Sean Parker (who is a Spotify investor) say that Spotify is the anwser to music piracy. I think that Spotify has a lot of potential and will be very popular in the short term but it remains to be seen who will win the cloud music wars.</p>
+
+<p>Further reading:</p>
+
+<ul>
+<li><a href="http://mashable.com/2011/07/20/spotify-infographic/">Music Subscription Faceoff: How Does Spotify Measure Up?</a></li>
+<li><a href="http://www.geekwire.com/2011/amazon-alters-prices-storage-cloud-drive-digital-music-war-escalates">Amazon alters prices on Cloud Drive amid digital music war</a></li>
+<li><a href="http://crave.cnet.co.uk/gadgets/zune-vs-spotify-50001134/">Zune vs Spotify</a></li>
+<li><a href="http://www.uisgeek.com/2011/07/14/spotifyitunes-or-zune-with-ads/">Spotify-iTunes or Zune with ads</a></li>
+</ul>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>First Marathon Complete</title>
+      <link>http://csim.me/2011/07/01/First-Marathon-Complete</link>
+      <pubDate>Fri, 01 Jul 2011 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>fitness</category>
+      <guid isPermaLink="false">/2011/07/01/First-Marathon-Complete</guid>
+      <description><![CDATA[ <p>My marathon journey started in the summer of 2009. I got pneumonia and spent 3 days in the hospital. After recovering, I knew that I needed to get fit and running seemed like a good idea. I started to run regularly, not really thinking that I would get involved in long distance competitive running.</p>
+
+<p>A few months later, I was running 20+ miles a week. I began to think that I may want to do some races in the area, just for fun. I tried a 5K and a 10K. I quickly realized that competitive racing is very different from training. I was surprised at the energy that I had on race day. Lining up with a few hundred people is a exhilarating experience. It gave me a boost that I was not expecting.</p>
+
+<p>In 2010, I ran 2 half marathons. These were a bit of a challenge but I thoroughly enjoyed the challenge and the feeling of accomplishment. By this time, it became clear to me that I was capable of running a full marathon. Why not give it a try?</p>
+
+<p>I choose to run the <a href="http://runrocknroll.competitor.com/seattle">Seattle Rock n Roll Marathon</a>. The rock n roll marathon has grown to be the largest organized series of competitive running races in the United States. The Seattle event was close to home and I had run the half-marathon there in 2010.</p>
+
+<p>I used <a href="http://www.amazon.com/Non-Runners-Marathon-Trainer-David-Whitsett/dp/1570281823/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1318267602&amp;sr=1-1">The Non-Runner&#39;s Marathon Trainer</a> as a guide. This is a 16 week program which is based on a college course taught with the purpose of turning anyone into a marathoner. I highly recommend the book. It has a solid training schedule and many stories of people from all walks of like that eventually completed a marathon.</p>
+
+<p>I followed the program (mostly). I did skip some of the shorter distance running toward the later part of the program, but I did all the long runs. After the program works its way toward an 18 mile run on week 14, it tapers off to race day.</p>
+
+<p>The training was difficult. From a timing perspective fitting a 3 hour run into my schedule was not easy. Plus there is the recover time, which can be considerable. I could not have pulled this off without support for the wife and family.</p>
+
+<p>As I built up to longer distances, I realized a few things. First and foremost, your body is capable of much more than your mind will allow. One of the most important things is to believe in yourself and use the power of positive thinking. Once negative thoughts creep into your head, you are finished. Giving up is the easiest thing to do. Stay positive and don&#39;t allow your mind to dwell on physical pain or </p>
+
+<p>I found that on long runs, it is most important to set a solid pace and  short term goals. Running 18 miles can be daunting, especially when you are on mile 3. I generally try to break the run into 3 mile segments and set a time goal for each. Early to middle distances (1 to 10 miles), I try to run each 3 mile segment in 30 minutes each. This gives me a target pace of 10 minutes per mile. I try to block all thoughts outside of meeting these short term goals.</p>
+
+<p>Another interesting thing for <a href="http://www.amazon.com/Non-Runners-Marathon-Trainer-David-Whitsett/dp/1570281823/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1318267602&amp;sr=1-1">the book</a>, is to have some positive phrases that you repeat to yourself when the going gets tough. My favorite is to say to yourself &quot;Hello ______, come run with me.&#39; As in &quot;Hello knee pain, come run with me.&quot; This works beautifully when you are deflated and thinking of giving up on a run. It implies that you will overcome any and all obstacles on the way to completing your goal. </p>
+
+<p>There could be 1,000 reasons to stop but it&#39;s up to you to stay the course and complete the run by not accepting failure. This has helped me tremendously in life. If I can fight through these challenges, then nothing can stand in my way.</p>
+
+<p>For training, I ran mostly on the hills of Snoqualmie Ridge, in the cascade foothills of Washington. The training was brutal, although running in the hills would pay off in the end. </p>
+
+<p>Then came race day. I felt prepared, I was ready. Still there was some doubt, the longest training run in 18 miles and the race in 26 miles. <a href="http://www.amazon.com/Non-Runners-Marathon-Trainer-David-Whitsett/dp/1570281823/ref=sr_1_1?s=books&amp;ie=UTF8&amp;qid=1318267602&amp;sr=1-1">The book</a> claims a 99.9% success rate for people who follow the training, but there was still a lingering doubt at the back of my logical mind. I pushed that aside and the race started.</p>
+
+<p>I was one of 26,000 people starting the race in Tukwilla, WA. What a scene at the starting line!</p>
+
+<div class="vinette">
+    <img src=
+
+"http://csim.me/images/Start-5-640x575.jpg" />
+    the start
+</div>
+
+<p>For the first 13 miles, I stayed on pace and only stopped to drink. I passed the half way point (13.1 miles) in 2 hours, 6 minutes. My best half-marathon is 1 hour, 54 minutes. Needless to say, I was pleased. :)</p>
+
+<p>Feeling good, I tackled the last half of the course. The going got tough around mile 15, with a steep climb. I started to alternate between walking and running, trying to run at least half a mile, then walking a quarter of a mile.</p>
+
+<p>Luckily at mile 18 the course doubles back for a smooth 2 mile downhill run. I focused on hydration, drinking 8 ounces of water or sport drink every 30 minutes. Around mile 19, my stomach became upset and it was hard to drink anything but water.</p>
+
+<p>After mile 20, I was tested severely. At this point, there was a general sense among all runners that we were in for a serious test from here on out. I saw many people pulling out with cramps or sitting/laying down from pure exhaustion. I soldiered through, using my walk/run strategy.</p>
+
+<p>The cruelest part of the race came at mile 22. Here the course weaves close enough to the finish line that I could see people finishing the race at around 3 hours and 45 minutes. My first thought was, &quot;YES!&quot; it&#39;s almost over. My mind was not functioning clearly, we had 5 miles to go.</p>
+
+<p>Soon, I crested a hill and was able to see the last turnaround, almost 2 miles down the road. My heart sunk. I was not sure if my legs could travel that far after such a long day. I recovered about 10 minutes later.</p>
+
+<p>I realized that I could finish the race in under 5 hours if I ran those 5 miles is under 1 hour. It was a slog. I cramped just above the knee in both legs. I was running as far as I could before cramping and getting only about 2 tenths of a mile at a time. I kept plugging away and finally I turned for home.</p>
+
+<p>Just before the finish line, I saw my wife, my 2 kids and my parents cheering me on. It was the best thing I had seen all day.</p>
+
+<div class="vinette">
+    <img src=
+
+"http://csim.me/images/20110625-IMG_1769.jpg" />
+    me on mile 26
+</div>
+
+<p>After a quick picture and hugs, I headed for the finish line. What a great feeling. I didn&#39;t expect to get emotional but it hit me when I saw the finish line. I had done it! My first marathon. What an experience.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>How to get started with OData</title>
+      <link>http://csim.me/2011/06/06/How-to-get-started-with-OData</link>
+      <pubDate>Mon, 06 Jun 2011 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>programming</category>
+      <guid isPermaLink="false">/2011/06/06/How-to-get-started-with-OData</guid>
+      <description><![CDATA[ <p>Open data protocol or OData is a new Microsoft technology standard which allows for simple data exchange over a REST style interface. The idea is to create a web based interface for complex data stores and in the process free data from silos. This will in theory create a data utopia complete with bunnies, fairies and a side of mash potatoes.</p>
+
+<p>There are a couple of intriguing facets to this proposition. First, since OData is purely REST based, data is available cross platform and also on the client side. JavaScript is a real possibility as a data consumer, mashups just got a whole lot better. To top it all off, natively you can get data in Atom or JSON formats, making JavaScript a first class consumer.</p>
+
+<p>Secondly, Microsoft has bundled a LINQ provider with the .Net Framework. This makes server side integration a snap. You can literal point to an OData endpoint and start writing a LINQ query against it. Bring on the fairies.</p>
+
+<p>To start out, download LINQPad. LINQPad is a lightweight tool that let&#39;s you query a LINQ data source in real-time with minimal setup necessary. It gives you a great interface to run quick LINQ based queries. LINQPad does not require an OData source in fact you can use LINQ to SQL or Entity Framework endpoints among others.</p>
+
+<p>Once you have installed LINQPad, click on new connection. For the data context user &quot;WCF Data Service (OData)&quot;. For the URI use http://odata.netflix.com/catalog. That&#39;s right the Netflix catalog has an OData interface!</p>
+
+<p>OData sources are broken into top level elements called collections. You can think of collections as two dimensional tables with columns and rows. A column can also represent a relationship between two collections.</p>
+
+<p>You can see that in our Netflix service endpoint there are several collections that define the dimensions tracked within the catalog. Genres, People, Titles, etc. This is where the cool starts. You can now construct LINQ queries against the Netflix catalog by typing some LINQ syntax into the main windows and hitting F5.</p>
+
+<p><img src="/images/image_thumb5.png" alt=""></p>
+
+<p>If you are unfamiliar with LINQ syntax, here are tons of examples: 
+http://msdn.microsoft.com/en-us/vcsharp/aa336746</p>
+
+<p>To use OData from Visual Studio, open a new project, add a new service reference and paste in the Netflix service endpoint URI. VS will automatically understand that this is an OData service and that it should generate a LINQ context class and all the associated classes that define the data collections and data types. Fairies!</p>
+
+<p>Now you can code against this new LINQ data source as you would any other. However, watch out for performance. Remember that you have taken an outside dependency into your project, anytime you do this there are inherent risks.</p>
+
+<p>Furthermore, LINQ makes the query process very transparent which means that you can flagrantly throw queries at you data source without regard for impact to the service. Bottom line is, think about what you are doing.  Do I really need to run this extra query? Can I consolidate this data pull into a single query?</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Bose IE2 Headphones</title>
+      <link>http://csim.me/2011/06/06/Bose-IE2-Headphones</link>
+      <pubDate>Mon, 06 Jun 2011 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <category>review</category>
+      <guid isPermaLink="false">/2011/06/06/Bose-IE2-Headphones</guid>
+      <description><![CDATA[ <p>A couple months ago, I found myself longing for a new set of headphones. I have a pair of Sennheiser headphones which are rather large but sound great and have a boom microphone. As I realized, those don&#39;t travel very well and I have recently started to work more onsite and in remote locations.</p>
+
+<p>So the search began for new set of quality headphones. I need something compact and with a built in microphone for VoIP calls (Skype, Communicator, etc.)</p>
+
+<p><img src="/images/bose1.png" alt=""></p>
+
+<p>I thought of using my apple ear buds but the sound quality is just not very good. Eventually I took a look at the <a href="http://www.amazon.com/Bose-326223-0030-Bose%C2%AEMIE2i-mobile-headset/dp/B0043WCH66/ref=pd_cp_e_1">Bose IE2 in-ear headphones</a>. At first I was a little skeptical with the design. Take a look at those large pieces of silicone that you need to shove into your ears. Can&#39;t be comfortable right?</p>
+
+<p>Wrong. After buying them I realized that the fit could not be better. I wear these things sometimes for 8 hours straight without any discomfort. Sometimes I even get up from my desk and forget that I have them on.</p>
+
+<p>I am a big fan. It&#39;s Bose, so the sound quality is great. I don&#39;t think the fit could be any better. The microphone works great on the PC or connect to my mobile phone.</p>
+
+<p><img src="/images/bose2.png" alt=""></p>
+
+<p>One other note, if you are thinking of using this for VoIP with your PC/MAC, look into the headset adapter buddy. This adapter let&#39;s you connect a conventional mobile phone headset into you PC or MAC with separate jacks for both the output sound and microphone.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>5 things you should do when estimating a technology project</title>
+      <link>http://csim.me/2011/03/04/5-things-you-should-do-when-a-technology-project</link>
+      <pubDate>Fri, 04 Mar 2011 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <category>consulting</category>
+      <guid isPermaLink="false">/2011/03/04/5-things-you-should-do-when-a-technology-project</guid>
+      <description><![CDATA[ <p>Estimating a project can be one of the hardest things you do as a technology consultant. Over the years I have done my share of estimation and one thing has become clear to me. Estimation accurately is almost impossible. With lots of experience and some hard knocks, you can accumulate the courage necessary to throw down an estimate. Here&#39;s a few tips that I think might help.</p>
+
+<p>Ask a lot of questions. The first thing you need to do is ask a ton of questions. The only way to get to the bone of the implementation is to understand all the information currently available about the project. Ask the WWWWH (Who, What, When, Where, Why, How) questions.</p>
+
+<p>When you think you have exhausted all the questions in your head, take a walk and forget about the estimation exercise. When you come back you will have more questions, no doubt. </p>
+
+<p>There may very well be details that haven&#39;t been discovered. As the estimator, it is your job to put down a valid estimate. This isn&#39;t the motivation of the sales person, your business lead or the client for that matter. Having a valid estimate creates a framework and a roadmap that the team will follow throughout the project. Without solid questions you are shooting in the dark.</p>
+
+<ol>
+<li><p>Be detailed. It&#39;s impossible to estimate any complex project by taking a high level view and throwing out numbers. You need to break the project down into digestible pieces in order to make sensible estimates that can hold water. For a budgetary estimate, I like to have my work broken down to no larger then 8 hour chunks. Based on this rule it is difficult to miss something entirely or overestimate something by more than 8 hours :)</p>
+
+<p>Most times, the deeper that you think about the work, the more you realize that there are intricacies that you may not have considered when thinking at a high level. You need to find the bottom of the rabbit hole.</p></li>
+<li><p>Assume away risk. One of the most important tools you have as an estimator is the assumption. The assumption is beautiful. It is the way that you politely tell a client no. Assumptions are effectively boundaries that define the border of the project scope. You can say what you will do all day, but that doesn&#39;t tell anyone what you won&#39;t do. Basically there is no good way to make the language around you requirements strong enough to stop a nefarious client from take you for a ride. Assumptions allow you to draw a clear line where the requirement stops.</p></li>
+<li><p>Understand your client. You need to understand the client&#39;s goals, motivation, risk and reward. This is the context that will make you successful in the estimate process and during the delivery phase. Is the client vague? Are they distracted? Are then detail oriented? Anything that will effect the delivery team should be taken into consideration.</p>
+
+<p>To a varied degree this can give you a &quot;gut feel&quot; for how the project will be run and communicated. If there are red flags, then you need to call those out, make assumptions and eliminate the perceived risk.</p></li>
+<li><p>Build an estimate capable of satisfaction. The idea here is to produce an estimate that will make a client happy. Things change over the course of a project - new requirements, shifting priorities, unknown hurdles. When these changes happen, it is important that your estimate is big enough that you can still make the client happy at the end of the day.</p></li>
+<li><p>You are probably thinking, &quot;well, why don&#39;t I just make the estimate huge?&quot;. The trick is to make the estimate big enough to accommodate the unknown but also fit into a logical and economical budget number. If you strike this balance it will allow the project team to manage the project to a happy conclusion because your estimates were large enough to make the client happy. Too small an estimate and there is no room for management.</p></li>
+</ol>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>What my guitar taught me</title>
+      <link>http://csim.me/2011/02/27/What-my-guitar-taught-me</link>
+      <pubDate>Sun, 27 Feb 2011 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <category>life</category>
+      <guid isPermaLink="false">/2011/02/27/What-my-guitar-taught-me</guid>
+      <description><![CDATA[ <p>It turns out that my guitar taught me a valuable lesson. Somehow in this crazy house that I live in, ago a week ago, my guitar spontaneously migrated out of my office. One of the kids moved it to the upstairs bonus room without my knowledge. I usually keep my acoustic guitar right next to my work desk. It sits there 99 percent of the time. Occasionally when the mode strikes, I pick it up and strum a tune. Maybe an old song I like or a totally random conglomeration of melodies that I have long forgotten. It&#39;s a little escape for me when my mind is consumed by heavier things It&#39;s always there for the taking at a moments notice.</p>
+
+<p>Well, not any more. An interesting thing happened over the next week. I didn&#39;t think of playing. Not even once. Nada.</p>
+
+<p>That got me thinking about immediacy and the modern world that we live in. We are constantly engaged with TV, movies, iPad, iPhone, DVR, Netflix, Facebook, twitter, foursquare, text messages,and on it goes. I&#39;m not sure if this is our primitive prey behavior coming to the limelight or if it&#39;s our technology fascination or some combination of both. Have you ever seen a cow sleep with its eyes open? That&#39;s because they are a prey animal and it&#39;s not a good thing to forget about your surroundings when you are on the menu.</p>
+
+<p>Here&#39;s the thing, just a few years ago I was just the opposite. Intently focused for hours on end. I remember on one occasion I totally ignored a colleague who was talking to me in at my desk because I was go engrossed in my work. I&#39;m not proud of that one. So what happened to me? At some point I started to change. My brain went from a calm river slowly but surely chugging along to a sprinkler flailing in all direction at once. It seems each of these states has some value depending on the task at hand.</p>
+
+<p>My guitar taunt me that immediacy is king.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Getting started with Windows Phone 7 application development</title>
+      <link>http://csim.me/2011/02/16/Getting-started-with-Windows-Phone-7-development</link>
+      <pubDate>Wed, 16 Feb 2011 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <category>windows phone</category>
+      <guid isPermaLink="false">/2011/02/16/Getting-started-with-Windows-Phone-7-development</guid>
+      <description><![CDATA[ <p>Get ready to create your first Windows Phone 7 (WP7) application! With only minimum software development skills, you can create your very own shiny new WP7 app.</p>
+
+<h3>Get the tools</h3>
+
+<p>The first step is to go get the tools you&#39;ll need to build your application. Microsoft has the best development tools in world (in my humble opinion). Since WP7 application development is an extension of general .NET platform development and Silverlight technology, you can use the standard .NET tools set to development WP7 apps. This includes visual studio 2010, C# or Visual Basic, and most of the .NET framework. This is a fantastic set of tools with a myriad of features design to make application development as easy as possible.</p>
+
+<p>Here&#39;s the kicker. For WP7, these tools are completely free. No need to shell out the green, Microsoft has you covered.</p>
+
+<p>First go here: 
+http://www.microsoft.com/downloads/en/details.aspx?FamilyID=04704acf-a63a-4f97-952c-8b51b34b00ce</p>
+
+<p>Download the installer and run it. The release to web (RTW) installer will download and install Visual Studio 2010, the WP7 emulator, Silverlight 4 tools for Visual Studio, XNA game studio tools and Microsoft Expression blend for Windows Phone. These are all the tools you need, the install is easier than Sunday morning.</p>
+
+<h3>Hello World</h3>
+
+<p>Now we can start to create our first project. Microsoft makes it super easy to create and run a WP7 project. Launch Visual Studio and go to: File -&gt; New Project</p>
+
+<p>Now pick the type of project you want to create. For now this is not an important choice, so just pick one. The most interesting choices are the Panorama application and the Pivot application. The Panorama is the nifty application where the view scrolls from left to right and the screen to the right has the edge showing. The Pivot application still scrolls but this more like a tabbed interface where all the tabs show up in the heading and you can swipe through the left and right.</p>
+
+<p>For you first project, choose the Panorama application, it&#39;s the best looking and you do want to impress your friends, right?</p>
+
+<div class="vinette">
+<img src=
+
+"http://csim.me/images/image2.png" />
+</div>
+
+<p><img src="/images/image1_1.png" alt=""></p>
+
+<p>Once you have created the project, take a look at the contents. Might familiar if you have done any work with C# projects. It&#39;s a basic Silverlight 3 application with some extra juice added to run on the phone. Don&#39;t worry about the juice for now. MainPage.xaml is the entry point for the application. My default it uses MVVM or the Model View View Model pattern. This pattern is somewhat new but it is a way to separate the presentation from the data and logic, which is a good thing. Nice to see the Microsoft is being a bit progressive.</p>
+
+<p>Drumroll please ...</p>
+
+<p>Just hit F5. You now have a running WP7 application in under 2 minutes. Notice all the details: fluid animations, scrolling, sample data. In short, this is a working application that you can simply start to customize. This could not be easier. To me this is the power of Microsoft at work in a real way. They have brought together a strong set of technologies here, dev tools,Silverlight and the phone OS. The OS still need to mature a bit, but I think you can see that this is a baseline for building great mobile applications.</p>
+
+<div class="vinette">
+<img src=
+
+"http://csim.me/images/image2_1.png" />
+</div>
+
+<h3>Will it blend?</h3>
+
+<p>One more thing (like that? I borrowed it from a famous guy I won&#39;t mention here), Expression Blend is in the mix also. For those unfamiliar, Expression Blend is like Visual Studio for designers. It lets creative types work on the same xaml file that developers work on, it understands visual studio projects and it can churn out all the animations, icons and motion that are available in Silverlight and WPF. If you want to develop WP7 applications, make Blend your friend.</p>
+
+<p><img src="/images/image_thumb3.png" alt=""></p>
+
+<p>To launch Blend, right click on the project inside Visual Studio and choose &quot;Open with Expression Blend&quot;.</p>
+
+<p>You will be greeted with a design surface with tons of bells and whistles. Blend can be daunting when you open it for the first time. It is one of those tools that you will probably never learn in totality because it is complex. The best way to learn is to tackle it.</p>
+
+<div class="vinette">
+<img src=
+
+"http://csim.me/images/image_thumb4.png" />
+</div>
+
+<h3>Building more complex apps</h3>
+
+<p>I am certain that there are application on the marketplace that were written in under 2 hours. If you already have a data source and you want to tie to a WP7 app as an alternate access method, general it is very easy. Microsoft gives you an exceptionally good starting point with the built-in WP7 project templates. I have only touched on the true potential here.</p>
+
+<p>Go make some apps!</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Code is Creative</title>
+      <link>http://csim.me/2011/02/14/Code-is-Creative</link>
+      <pubDate>Mon, 14 Feb 2011 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <category>programming</category>
+      <guid isPermaLink="false">/2011/02/14/Code-is-Creative</guid>
+      <description><![CDATA[ <p>Most people think of programmers as the guys guzzling mountain dew in a dark room where pizza slides under the door at around 6PM and a feature is built by 2AM. Although this is can be the case (we&#39;ve all been there), I have found that most of the people that I look up to are not at all like this. More often than not people who have influenced me over the years are people that show a genuine passion for software but also have massive creative energy and a social team mentality to boot. This is a paradox that defies stereotypes. It turns out that creativity is an essential ingredient if you want to make a good software developer.</p>
+
+<p>Starting out a career in technology is a steep mountain and the only way to get anywhere is to start grinding and never stop. It is an endless cycle of solving problems from the most mundane logic games to epic enterprise systems. At some point along the way we start to see patterns and recognize that it is possible to improve this cycle with a little planning and some creative thinking.</p>
+
+<p>Even today, 15 years in, I am still constantly looking to solve that next problem, my brain always straining to fit the puzzle pieces together in a way that will make the picture work. But what is my brain doing deep in the subconscious?</p>
+
+<p>I&#39;ve had this thought many times and while I have no real explanation, I have a good feeling that some creativity is at work. What else can explain it? I have experiences. I have facts. The only thing my brain has to do is fit those together in a way that solves the puzzle. In many ways this much more a creative exercise that an analytical exercise. Maybe analytical thinking is irrevocably tied to creativity in ways that we cannot yet understand.</p>
+
+<p>The true challenge as a software developer is to find creative solutions to daily problems. Learning APIs, patterns and systems is easy compared to applying those constructs to solve a real world problem. Creative thinking is what separates that average coder and the brilliant thinkers that bring us innovations that change our lives.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Using the SharePoint content database as a cache</title>
+      <link>http://csim.me/2008/09/12/Using-the-SharePoint-content-database-as-a-cache</link>
+      <pubDate>Fri, 12 Sep 2008 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <guid isPermaLink="false">/2008/09/12/Using-the-SharePoint-content-database-as-a-cache</guid>
+      <description><![CDATA[ <p>Data caching is a core concept in the web dominated world that we live in. The premise is that we should not have to go back to retrieve data from a data store for every single web request when the data is unchanged, thereby sharing data across web requests. This offers huge performance advantages because all latency related to data fetching, query processing and transmission is eliminated for requests that use the same data. In the SharePoint world this can be a very valuable technique when querying MOSS page libraries or any data stored in the content database. For high traffic sites, the performance of the SPQuery or SPSiteDataQuery api is not acceptable when executing queries for each request.</p>
+
+<p>The most common data caching implementation is using the HttpContext.Cache collection. This is an ASP.NET facility that allows as an in-memory object cache associated with the ASP.NET application domain (w3wp.exe). For SharePoint applications this cache works great when caching can be scoped to the HttpContext. For applications that need caching that is not scoped based on the HttpContext it is necessary find a different solution. The most common case non-HttpContext caching would be any instance where you are consuming data outside of the ASP.NET context such as SPTimer jobs, stsadm commands, winform applications or console applications. For these cases it is not possible to use the HttpContext cache.</p>
+
+<p>There are a few potential solutions to this problem including using the <a href="http://weblogs.asp.net/pjohnson/archive/2006/02/06/437559.aspx">HttpRuntime static cache</a>, but the best solution (in my opinion) is to use the SPSite instance as a data cache. The idea is that by using the SPSite.RootWeb.AllProperties hashtable, we can store cached data into the content database for later retrieval. This solves the HttpContext problem because for any application to operate it will need to have a SPSite object to provided context for it&#39;s operation no matter where it may be running. Because the SPSite object provides context, the data cache is always available.</p>
+
+<p>Here&#39;s the class signatures for my implementation of SPSite data caching. By creating a subclass from this base you can implement application independent caching of any data type. <a href="http://code.google.com/p/rapid-tools/source/browse/trunk/Rapid.Tools/Domain/RapidCachedDataAdapterBase.cs">The full implement can be found here</a>.</p>
+
+<div class="highlight"><pre><code class="csharp"><span class="lineno"> 1</span> <span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">RapidCachedDataAdapterBase</span><span class="p">&lt;</span><span class="n">TData</span><span class="p">&gt;</span> <span class="k">where</span> <span class="n">TData</span> <span class="p">:</span> <span class="k">class</span>
+<span class="lineno"> 2</span> <span class="err">{</span>
+<span class="lineno"> 3</span>  <span class="k">protected</span> <span class="n">Guid</span> <span class="n">SiteID</span><span class="p">;</span>
+<span class="lineno"> 4</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="kt">bool</span> <span class="n">AutoRefreshCache</span><span class="p">;</span>
+<span class="lineno"> 5</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="kt">string</span> <span class="n">CacheKey</span><span class="p">;</span>
+<span class="lineno"> 6</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="kt">string</span> <span class="n">CacheExpireKey</span><span class="p">;</span>
+<span class="lineno"> 7</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="kt">int</span> <span class="n">CacheTimeoutMinutes</span><span class="p">;</span>
+<span class="lineno"> 8</span> 
+<span class="lineno"> 9</span>  <span class="k">public</span> <span class="k">virtual</span> <span class="n">TData</span> <span class="n">CachedData</span><span class="p">;</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span>  <span class="k">public</span> <span class="nf">RapidCachedDataAdapterBase</span><span class="p">(</span><span class="n">Guid</span> <span class="n">siteID</span><span class="p">);</span>
+<span class="lineno">12</span>  <span class="k">public</span> <span class="nf">RapidCachedDataAdapterBase</span><span class="p">(</span><span class="n">SPSite</span> <span class="n">site</span><span class="p">);</span>
+<span class="lineno">13</span> 
+<span class="lineno">14</span>  <span class="k">protected</span> <span class="k">abstract</span> <span class="n">TData</span> <span class="nf">GetNativeData</span><span class="p">();</span>
+<span class="lineno">15</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="n">TData</span> <span class="nf">GetData</span><span class="p">();</span>
+<span class="lineno">16</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="n">TData</span> <span class="nf">GetCache</span><span class="p">();</span>
+<span class="lineno">17</span> 
+<span class="lineno">18</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="k">void</span> <span class="nf">SetCache</span><span class="p">(</span><span class="n">TData</span> <span class="n">data</span><span class="p">);</span>
+<span class="lineno">19</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="kt">string</span> <span class="nf">Serialize</span><span class="p">(</span><span class="n">TData</span> <span class="n">data</span><span class="p">);</span>
+<span class="lineno">20</span>  <span class="k">protected</span> <span class="k">virtual</span> <span class="n">TData</span> <span class="nf">Deserialize</span><span class="p">(</span><span class="kt">string</span> <span class="n">data</span><span class="p">);</span>
+<span class="lineno">21</span> 
+<span class="lineno">22</span>  <span class="k">protected</span> <span class="kt">string</span> <span class="nf">SerializeInternal</span><span class="p">(</span><span class="kt">object</span> <span class="n">data</span><span class="p">);</span>
+<span class="lineno">23</span>  <span class="k">protected</span> <span class="n">T</span> <span class="n">DeserializeInternal</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;(</span><span class="kt">string</span> <span class="n">data</span><span class="p">);</span>
+<span class="lineno">24</span> 
+<span class="lineno">25</span>  <span class="k">public</span> <span class="k">virtual</span> <span class="k">void</span> <span class="nf">InvalidateCache</span><span class="p">();</span>
+<span class="lineno">26</span> <span class="p">}</span>
+</code></pre></div>
+
+<p>Notes:</p>
+
+<ul>
+<li><strong>GetNativeData() is the only method you must override when creating a subclass.</strong> GetNaiveData() provides data from the native datastore to feed the cache, it is called any time that data needs to be retrieved from the native data store.</li>
+<li><strong>Serialization to a string is necessary for all cached data types.</strong> Since SPSite.RootWeb.AllProperties accepts only limited data types (date, int and string), it is necessary for us to convert our data into a string. My default the base class uses the standard XmlSerializer class. If you are caching a data type that is not xml serializable (such as Hashtable, Dictionary &amp; DataTable) then you need to implement the Serialize() and Deserialize() method within your subclass. You can choose to serialize your data any way you like as long as it can be represented as a string.</li>
+<li><strong>The CacheTimeoutMinutes property determines how long the cached data will live.</strong> An automatic refresh will be triggered when the timeout period expires. The timeout period is set to 20 minutes by default but you can override this in your subclass.</li>
+<li><strong>You need to handle cache invalidation when native data changes.</strong> Cache invalidation is supported by the base class, but it is only called automatically if the cache expires due to a cache timeout. You will need to identify the cases where you would like to invalidate the cache and call InvalidateCache() at the appropriated time. Usually you would invalidate the cache when you detect that data has changed, such as when a user changes a list item. In this case you would need to have a feature receiver to detect the change and call InvalidateCache().</li>
+<li><strong>The CachedData property used for data access.</strong> The CachedData property will either load the cache or retrieve the cache depending on the situation. You can use the CachedData property as the single access for data.</li>
+<li><strong>Using SPSite.RootWeb.AllProperties does carry a cost.</strong> Because we need to load and manipulate an SPSite object, there is an implied cost associated with this approach. Anytime SPSite is loaded or saved SharePoint needs to communicate with the content database and that takes cycles. This is in sharp contrast to the HttpContext.Cache approach where all data is stored in memory. To mitigate this cost the base class uses the HttpContext.Items collection to cache data for each http request. This means that the SPSite object will only be loaded used once per request.</li>
+</ul>
+
+<p>Here&#39;s a sample subclass:</p>
+
+<div class="highlight"><pre><code class="csharp"><span class="lineno"> 1</span> <span class="k">public</span> <span class="k">class</span> <span class="nc">FaqDataAdapter</span> <span class="p">:</span> <span class="n">RapidCachedDataAdapterBase</span><span class="p">&lt;</span><span class="n">DataTable</span><span class="p">&gt;</span>
+<span class="lineno"> 2</span> <span class="p">{</span>
+<span class="lineno"> 3</span>  <span class="k">public</span> <span class="nf">FaqDataAdapter</span><span class="p">()</span>    <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">SPContext</span><span class="p">.</span><span class="n">Current</span><span class="p">.</span><span class="n">Site</span><span class="p">.</span><span class="n">ID</span><span class="p">)</span>
+<span class="lineno"> 4</span>  <span class="p">{</span>
+<span class="lineno"> 5</span>  <span class="p">}</span>
+<span class="lineno"> 6</span> 
+<span class="lineno"> 7</span>  <span class="k">public</span> <span class="nf">FaqDataAdapter</span><span class="p">(</span><span class="n">Guid</span> <span class="n">siteID</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">siteID</span><span class="p">)</span>
+<span class="lineno"> 8</span>  <span class="p">{</span>
+<span class="lineno"> 9</span>  <span class="p">}</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span>  <span class="k">public</span> <span class="nf">FaqDataAdapter</span><span class="p">(</span><span class="n">SPSite</span> <span class="n">site</span><span class="p">)</span> <span class="p">:</span> <span class="k">base</span><span class="p">(</span><span class="n">site</span><span class="p">)</span>
+<span class="lineno">12</span>  <span class="p">{</span>
+<span class="lineno">13</span>  <span class="p">}</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span>  <span class="k">protected</span> <span class="k">override</span> <span class="n">DataTable</span> <span class="nf">GetNativeData</span><span class="p">()</span>
+<span class="lineno">16</span>  <span class="p">{</span>
+<span class="lineno">17</span>      <span class="n">DataTable</span> <span class="n">table</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="lineno">18</span> 
+<span class="lineno">19</span>      <span class="n">SPSecurity</span><span class="p">.</span><span class="n">RunWithElevatedPrivileges</span><span class="p">(()</span> <span class="p">=&gt;</span>
+<span class="lineno">20</span>      <span class="p">{</span>
+<span class="lineno">21</span>          <span class="k">using</span> <span class="p">(</span><span class="n">SPSite</span> <span class="n">esite</span> <span class="p">=</span> <span class="k">new</span> <span class="n">SPSite</span><span class="p">(</span><span class="n">SiteID</span><span class="p">))</span>
+<span class="lineno">22</span>          <span class="p">{</span>
+<span class="lineno">23</span>              <span class="n">SPList</span> <span class="n">list</span> <span class="p">=</span> <span class="n">esite</span><span class="p">.</span><span class="n">RootWeb</span><span class="p">.</span><span class="n">GetList</span><span class="p">(</span><span class="s">&quot;faq&quot;</span><span class="p">);</span>
+<span class="lineno">24</span>              <span class="n">table</span> <span class="p">=</span> <span class="n">list</span><span class="p">.</span><span class="n">Items</span><span class="p">.</span><span class="n">GetDataTable</span><span class="p">();</span>
+<span class="lineno">25</span>          <span class="p">}</span>
+<span class="lineno">26</span>      <span class="p">});</span>
+<span class="lineno">27</span> 
+<span class="lineno">28</span>      <span class="k">return</span> <span class="n">table</span><span class="p">;</span>
+<span class="lineno">29</span>  <span class="p">}</span>
+<span class="lineno">30</span> 
+<span class="lineno">31</span>  <span class="k">protected</span> <span class="k">override</span> <span class="kt">string</span> <span class="nf">Serialize</span><span class="p">(</span><span class="n">DataTable</span> <span class="n">data</span><span class="p">)</span>
+<span class="lineno">32</span>  <span class="p">{</span>
+<span class="lineno">33</span>      <span class="k">if</span> <span class="p">(</span><span class="n">data</span> <span class="p">==</span> <span class="k">null</span><span class="p">)</span>
+<span class="lineno">34</span>          <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="lineno">35</span> 
+<span class="lineno">36</span>      <span class="kt">var</span> <span class="n">ds</span> <span class="p">=</span> <span class="k">new</span> <span class="n">DataSet</span><span class="p">();</span>
+<span class="lineno">37</span>      <span class="n">ds</span><span class="p">.</span><span class="n">Tables</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
+<span class="lineno">38</span>      <span class="k">return</span> <span class="nf">SerializeInternal</span><span class="p">(</span><span class="n">ds</span><span class="p">);</span>
+<span class="lineno">39</span>  <span class="p">}</span>
+<span class="lineno">40</span> 
+<span class="lineno">41</span>  <span class="k">protected</span> <span class="k">override</span> <span class="n">DataTable</span> <span class="nf">Deserialize</span><span class="p">(</span><span class="kt">string</span> <span class="n">data</span><span class="p">)</span>
+<span class="lineno">42</span>  <span class="p">{</span>
+<span class="lineno">43</span>      <span class="k">if</span> <span class="p">(</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="lineno">44</span>          <span class="k">return</span> <span class="k">null</span><span class="p">;</span>
+<span class="lineno">45</span> 
+<span class="lineno">46</span>      <span class="kt">var</span> <span class="n">ds</span> <span class="p">=</span> <span class="n">DeserializeInternal</span><span class="p">&lt;</span><span class="n">DataSet</span><span class="p">&gt;(</span><span class="n">data</span><span class="p">);</span>
+<span class="lineno">47</span>      <span class="k">return</span> <span class="n">ds</span><span class="p">.</span><span class="n">Tables</span><span class="p">[</span><span class="m">0</span><span class="p">];</span>
+<span class="lineno">48</span>  <span class="p">}</span>
+<span class="lineno">49</span> <span class="p">}</span>
+</code></pre></div>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Customize the web.config with a SharePoint XML customization</title>
+      <link>http://csim.me/2008/08/16/Customize-the-web.config-with-a-SharePoint-customization</link>
+      <pubDate>Sat, 16 Aug 2008 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <guid isPermaLink="false">/2008/08/16/Customize-the-web.config-with-a-SharePoint-customization</guid>
+      <description><![CDATA[ <p>It is possible to manipulate the web.config file globally by using a little known feature in SharePoint that allows developers to describe a set of changes by using an XML customization file. In fact, both SharePoint and MOSS use this mechanism to publish web.config changes when a web application is created.</p>
+
+<h3>Create the customization file</h3>
+
+<p>The customization file is used by SharePoint to apply changes to the web.config file when a web application is created. Any changes that are inside the customization file will be applied to all web applications globally. This method of customization does not work for cases where you would like to apply web.config changes to only a specific web application. </p>
+
+<p>In this case I am adding a custom HttpModule to the web.config file. The web.config node will be appended as a child to the configuration/system.web/httpModules node. The id attribute needs to be unique. Everything inside the add node will be appened as a child to the node specified in the path attribute. </p>
+
+<div class="highlight"><pre><code class="xml"><span class="lineno"> 1</span> <span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot; ?&gt;</span>
+<span class="lineno"> 2</span> <span class="nt">&lt;actions&gt;</span>
+<span class="lineno"> 3</span> 
+<span class="lineno"> 4</span>  <span class="nt">&lt;add</span> <span class="na">path=</span><span class="s">&quot;configuration/system.web/httpModules&quot;</span> 
+<span class="lineno"> 5</span>      <span class="na">id=</span><span class="s">&quot;{8DD2A7B1-0223-4be8-B1B5-339B642EFB21}&quot;</span><span class="nt">&gt;</span>
+<span class="lineno"> 6</span>      <span class="nt">&lt;add</span> <span class="na">name=</span><span class="s">&quot;MyHttpModule&quot;</span> 
+<span class="lineno"> 7</span>      <span class="na">type=</span><span class="s">&quot;MyHttpModule, MyAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a1df43608d33992f&quot;</span> <span class="nt">/&gt;</span>
+<span class="lineno"> 8</span>  <span class="nt">&lt;/add&gt;</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span> <span class="nt">&lt;/actions&gt;</span>
+</code></pre></div>
+
+<h3>Copy the customization file to the web front-end</h3>
+
+<p>The xml customization file needs to be placed the <sharepoint install root>\12\Config directory and it needs to be named webconfig.<custom name>.xml where <custom name> is a name specified to your customization. </p>
+
+<p>You can take a look at the 12\Config directory to see examples of web.config customizations that are applied by SharePoint and MOSS. You will see that you can not only add nodes to the web.config but also remove or update nodes that exist in the web.config file. </p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Anonymous access and item level permissions</title>
+      <link>http://csim.me/2008/04/03/Anonymous-access-and-item-level-permissions</link>
+      <pubDate>Thu, 03 Apr 2008 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <guid isPermaLink="false">/2008/04/03/Anonymous-access-and-item-level-permissions</guid>
+      <description><![CDATA[ <p>You are probably familiar with the fact that SharePoint now has the capability to host site with anonymous access turned on. I learned the hard way that item level permissions do not participate in the anonymous access behavior the way you might expect. When an item <strong>does not</strong> inherit permissions, it is not possible to enable anonymous access on that item.
+Note the document library permission settings menu:</p>
+
+<div class="vinette">
+<img src=
+
+"http://csim.me/images/sp1.png" />
+</div>
+
+<p>Here&#39;s the same menu for an item which is not inheriting permissions from the parent library:</p>
+
+<div class="vinette">
+<img src=" /images/sp2.png" />
+</div>
+
+<p>I found an <a href="http://yvonneharryman.wordpress.com/2007/11/23/follow-up-on-anonymous-access-and-item-level-permissions-from-sharepoint-connections-07/">interesting post</a> that quotes <a href="http://blogs.msdn.com/thomriz/">Tom Rizzo</a> on the subject. He explains that this behavior is by design and due to the fact that the product team feels that it is important that anonymous access setting should always cascade and child node should never have a higher degree of anonymous access than it&#39;s parent.</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>Custom Field control implemented as a User Control</title>
+      <link>http://csim.me/2008/03/13/Custom-Field-control-implemented-as-a-User-Control</link>
+      <pubDate>Thu, 13 Mar 2008 00:00:00 +0100</pubDate>
+      <dc:creator></dc:creator>
+      <guid isPermaLink="false">/2008/03/13/Custom-Field-control-implemented-as-a-User-Control</guid>
+      <description><![CDATA[ <p>When creating custom controls it is often must easier to create a control using the &quot;User Control&quot; development model instead of the &quot;Server Control&quot; model. <a href="http://msdn.microsoft.com/en-us/library/zt27tfhy.aspx">Server controls</a> generally have a more &quot;low level&quot; feel and dictate that the developer build the control&#39;s rendering from scratch. Either by building a control tree or by constructing the rendered output in code.</p>
+
+<p>Alternatively <a href="http://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx">user controls</a> have nice separation of code and presentation by virtue of having a markup file (.ascx) and a code behind file; much like a standard aspx page. User controls can be created and developed using the same standard approaches and processes that we all know and love from the aspx page model.</p>
+
+<p>When implementing a custom field control for SharePoint, the development experience can be streamlined to a large degree by utilizing a user control. Traditionally field controls are created using the server control model but with a few tricks you can implement a custom field control with a user control.</p>
+
+<p>First, here is the base class used for the field control. It has a virtual property used to set the user control path. A property override for the value of the field which is read from the user control. On initialization it loads the user control and sets the context.</p>
+
+<div class="highlight"><pre><code class="csharp"><span class="lineno"> 1</span> <span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
+<span class="lineno"> 2</span> <span class="k">using</span> <span class="nn">System.Web.UI</span><span class="p">;</span>
+<span class="lineno"> 3</span> <span class="k">using</span> <span class="nn">Microsoft.SharePoint.WebControls</span><span class="p">;</span>
+<span class="lineno"> 4</span> 
+<span class="lineno"> 5</span> <span class="k">namespace</span> <span class="nn">MyProject.Web.UI.FieldControls</span>
+<span class="lineno"> 6</span> <span class="p">{</span>
+<span class="lineno"> 7</span>     <span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">UserControlFieldBase</span> <span class="p">:</span> <span class="n">BaseFieldControl</span>
+<span class="lineno"> 8</span>     <span class="p">{</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span>         <span class="k">private</span> <span class="n">SPFieldUserControlBase</span> <span class="n">_usercontrol</span><span class="p">;</span>
+<span class="lineno">11</span> 
+<span class="lineno">12</span>         <span class="k">public</span> <span class="k">virtual</span> <span class="kt">string</span> <span class="n">UserControlPath</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+<span class="lineno">13</span> 
+<span class="lineno">14</span>         <span class="k">public</span> <span class="k">override</span> <span class="kt">object</span> <span class="n">Value</span>
+<span class="lineno">15</span>         <span class="p">{</span>
+<span class="lineno">16</span>             <span class="k">get</span>
+<span class="lineno">17</span>             <span class="p">{</span>
+<span class="lineno">18</span>                 <span class="k">return</span> <span class="n">_usercontrol</span> <span class="p">==</span> <span class="k">null</span> <span class="p">?</span> <span class="k">base</span><span class="p">.</span><span class="n">Value</span> <span class="p">:</span> <span class="n">_usercontrol</span><span class="p">.</span><span class="n">Value</span><span class="p">;</span>
+<span class="lineno">19</span>             <span class="p">}</span>
+<span class="lineno">20</span>             <span class="k">set</span>
+<span class="lineno">21</span>             <span class="p">{</span>
+<span class="lineno">22</span>                 <span class="k">base</span><span class="p">.</span><span class="n">ItemFieldValue</span> <span class="p">=</span> <span class="k">value</span><span class="p">;</span>
+<span class="lineno">23</span>             <span class="p">}</span>
+<span class="lineno">24</span>         <span class="p">}</span>
+<span class="lineno">25</span> 
+<span class="lineno">26</span>         <span class="k">public</span> <span class="nf">UserControlFieldBase</span><span class="p">()</span> <span class="p">:</span> <span class="k">base</span><span class="p">()</span>
+<span class="lineno">27</span>         <span class="p">{</span>
+<span class="lineno">28</span>         <span class="p">}</span>
+<span class="lineno">29</span> 
+<span class="lineno">30</span>         <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">OnInit</span><span class="p">(</span><span class="n">EventArgs</span> <span class="n">e</span><span class="p">)</span>
+<span class="lineno">31</span>         <span class="p">{</span>
+<span class="lineno">32</span>             <span class="k">base</span><span class="p">.</span><span class="n">OnInit</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="lineno">33</span>             <span class="n">UserControlPath</span> <span class="p">=</span> <span class="k">null</span><span class="p">;</span>
+<span class="lineno">34</span>         <span class="p">}</span>
+<span class="lineno">35</span> 
+<span class="lineno">36</span>         <span class="k">protected</span> <span class="k">override</span> <span class="k">void</span> <span class="nf">CreateChildControls</span><span class="p">()</span>
+<span class="lineno">37</span>         <span class="p">{</span>
+<span class="lineno">38</span>             <span class="n">Controls</span><span class="p">.</span><span class="n">Clear</span><span class="p">();</span>
+<span class="lineno">39</span>             <span class="k">base</span><span class="p">.</span><span class="n">CreateChildControls</span><span class="p">();</span>
+<span class="lineno">40</span> 
+<span class="lineno">41</span>             <span class="k">if</span> <span class="p">(!</span><span class="kt">string</span><span class="p">.</span><span class="n">IsNullOrEmpty</span><span class="p">(</span><span class="n">UserControlPath</span><span class="p">))</span>
+<span class="lineno">42</span>             <span class="p">{</span>
+<span class="lineno">43</span>             <span class="n">_usercontrol</span> <span class="p">=</span> <span class="p">(</span><span class="n">SPFieldUserControlBase</span><span class="p">)</span><span class="n">Page</span><span class="p">.</span><span class="n">LoadControl</span><span class="p">(</span><span class="n">UserControlPath</span><span class="p">);</span>
+<span class="lineno">44</span>             <span class="n">_usercontrol</span><span class="p">.</span><span class="n">FieldControl</span> <span class="p">=</span> <span class="k">this</span><span class="p">;</span>
+<span class="lineno">45</span> 
+<span class="lineno">46</span>             <span class="n">Controls</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">_usercontrol</span><span class="p">);</span>
+<span class="lineno">47</span>         <span class="p">}</span>
+<span class="lineno">48</span>     <span class="p">}</span>
+<span class="lineno">49</span> <span class="p">}</span>
+</code></pre></div>
+
+<p>Here&#39;s an example field control subclass. This class simply specifies the user control path and let&#39;s the base class handle all the details of loading the user control and setting the context. This is the server control that you will embed into you page layouts.</p>
+
+<div class="highlight"><pre><code class="csharp"><span class="lineno"> 1</span> <span class="k">using</span> <span class="nn">System.Web.UI</span><span class="p">;</span>
+<span class="lineno"> 2</span> <span class="k">namespace</span> <span class="nn">MyProject.Web.UI.FieldControls</span>
+<span class="lineno"> 3</span> <span class="p">{</span>
+<span class="lineno"> 4</span>     <span class="k">public</span> <span class="k">class</span> <span class="nc">MyFieldContol</span> <span class="p">:</span> <span class="n">UserControlFieldBase</span>
+<span class="lineno"> 5</span>     <span class="p">{</span>
+<span class="lineno"> 6</span>         <span class="k">public</span> <span class="k">override</span> <span class="kt">string</span> <span class="n">UserControlPath</span>
+<span class="lineno"> 7</span>         <span class="p">{</span>
+<span class="lineno"> 8</span>             <span class="k">get</span>
+<span class="lineno"> 9</span>             <span class="p">{</span>
+<span class="lineno">10</span>             <span class="k">return</span> <span class="s">&quot;~/_controltemplates/MyFieldControl.ascx&quot;</span><span class="p">;</span>
+<span class="lineno">11</span>             <span class="p">}</span>
+<span class="lineno">12</span>         <span class="p">}</span>
+<span class="lineno">13</span>     <span class="p">}</span>
+<span class="lineno">14</span> <span class="p">}</span>
+</code></pre></div>
+
+<p>Next, is the abstract base class for the user control. This class provides a property for a reference to the parent field control and an abstract property for the field value. The field control property is important because our user control will need to know all the information about the field it is attached to. This includes the SPField context and control mode among other things.</p>
+
+<div class="highlight"><pre><code class="csharp"><span class="lineno"> 1</span> <span class="k">using</span> <span class="nn">System.Web.UI</span><span class="p">;</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="k">namespace</span> <span class="nn">MyProject.Web.UI.FieldControls</span>
+<span class="lineno"> 4</span> <span class="p">{</span>
+<span class="lineno"> 5</span>     <span class="k">public</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">SPFieldUserControlBase</span> <span class="p">:</span> <span class="n">UserControl</span>
+<span class="lineno"> 6</span>     <span class="p">{</span>
+<span class="lineno"> 7</span>         <span class="k">protected</span> <span class="nf">SPFieldUserControlBase</span><span class="p">();</span>
+<span class="lineno"> 8</span> 
+<span class="lineno"> 9</span>         <span class="k">public</span> <span class="n">BaseFieldControl</span> <span class="n">FieldControl</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="k">set</span><span class="p">;</span> <span class="p">}</span>
+<span class="lineno">10</span>         <span class="k">public</span> <span class="k">abstract</span> <span class="kt">object</span> <span class="n">Value</span> <span class="p">{</span> <span class="k">get</span><span class="p">;</span> <span class="p">}</span>
+<span class="lineno">11</span>     <span class="p">}</span>
+<span class="lineno">12</span> <span class="p">}</span>
+</code></pre></div>
+
+<p>Lastly you can create a user control that inherits from the SPFieldUserControlBase class and implement the specific UI that is necessary for you field control to function. See my pervious post on how to create a custom field control for further direction on creating field controls from scratch.
+This technique also you to have easiest possible development process while leveraging the SharePoint field control infrastructure. Any questions or comments, please let me know!</p>
+ ]]></description>
+  </item>
+  
+    <item>
+      <title>SharePoint Custom Application Development Methodologies</title>
+      <link>http://csim.me/2008/01/07/SharePoint-Custom-Application-Development-Methodologies</link>
+      <pubDate>Mon, 07 Jan 2008 00:00:00 +0000</pubDate>
+      <dc:creator></dc:creator>
+      <guid isPermaLink="false">/2008/01/07/SharePoint-Custom-Application-Development-Methodologies</guid>
+      <description><![CDATA[ <p>As SharePoint becomes more prevalent in the custom application development realm, there has been some friction and malcontent expressed in relation to deployment processes, team development methods and application upgrade paths. I believe that Microsoft has fallen short on providing the tools necessary to promote and support custom application development on the SharePoint platform.</p>
+
+<p>In my opinion, the SharePoint platform should not limit nor impede my ability as a custom application developer to deliver solutions that follow the same deployment principals as any other custom asp.net application. As some readers may be aware, at present the standard Microsoft guidance is flawed because it does not fully support repeatable build processes. This is a huge barrier for custom application developers who are accustom to building applications using source control for all assets, build automation and continuous integration. SharePoint as a lot to offer but taking advantage of the platform as a vehicle for custom applications should be more congruent with standard software development practices.</p>
+
+<h3>The Microsoft approach</h3>
+
+<p>The Microsoft approach dictates that for team development environments, artifacts such as aspx, html, css files or any other file that lives in the content database should be created, stored and version controlled in a SharePoint authoring environment. These artifacts are created and maintained by &quot;content developers&quot;. These content developers use SharePoint designer to create and propagate changes to production.</p>
+
+<p>In parallel, custom application developers are to use standard team development principals (source control, etc) to create assemblies that are then promoted to the authoring environment where they are tested and eventually deployed to the production environment.</p>
+
+<p>Read more:
+http://msdn2.microsoft.com/en-us/library/bb428899.aspx</p>
+
+<h3>Where the Microsoft approach falters</h3>
+
+<p>The primary problem with the Microsoft approach is that in many cases there is a <em>hard dependency</em> between artifacts and assemblies. You need to have the same version of artifacts and assemblies to be able to test in any environment and it is not possible get a synchronized version of both sets of assets from a single source. This relegates developers to constantly migrating and updating both content and assemblies to get a consistent version to test. The problem is only compounded because content authors may not be technically able to update assemblies in the authoring environment.</p>
+
+<p>For a custom application of any complexity you need to be able to build and deploy a set of files that work as a unit. For a standard data-driven (SQL Server) asp.net application that means you would have your database creation scripts in source control and when deploying to a new environment (or upgrading an environment), you would run your scripts to create a new copy of the database for that environment. This way, deploying to a test environment becomes easy because you have a repeatable process. Why treat a SharePoint site any differently? You will of course need to use the SharePoint API instead of a SQL database creation script, but the basic function is the same.</p>
+
+<h2>A Solution</h2>
+
+<p>After working with SharePoint for 6+ years I have found that it is possible to treat a SharePoint custom application as you would any other asp.net custom application. The Microsoft tools (and therefore the approach) fall short on these topics but with some motivation and know-how you can achieve substantial benefits by following these steps:</p>
+
+<h3>Use <a href="http://rapid-tools.googlecode.com">SPDeploy</a></h3>
+
+<p>Ok, this is shamefully self promotional. What I really mean is that you should be using a deployment tool that can support creating customizations inside Visual Studio and deploying those customization via a SharePoint Solution Package (.wsp) to a remote server. There are a few tools that compile a wsp from Visual Studio such as WSPBuilder or Andrew Connell&#39;s custom approach. In my opinion SPDeploy is the most complete and easily repeatable solution to solve this problem, but I am biased :)</p>
+
+<h3>Create all your SharePoint customizations inside Visual Studio.</h3>
+
+<p>We are custom application developers and we use Visual Studio solutions. This should not change when you are working on a SharePoint project.</p>
+
+<h3>Use source control</h3>
+
+<p>Because we now have all of our SharePoint customizations inside Visual Studio, the next logical step is to commit that solution to source control. Read more about the benefits of source control:
+http://msdn2.microsoft.com/en-us/library/ms173539.aspx</p>
+
+<h3>Design your solution to provision all site collection assets from source control</h3>
+
+<p>Provisioning all site collection assets enables you to create your projects site collection from source control at will. This means that when a new developer steps onto your project, he or she can pull a copy of the files from source control and create a site collection that is identical to your site collection. Furthermore because you now have a repeatable site collection provisioning process, when deploying to test you can hand-off your wsp and have a tester create a site instance in no time at all.</p>
+
+<p>Implementing this can be a bit tricky. For a brute force approach you can create a feature that lives at the site level that will provision all sub sites, files, etc. Or if you are adventurous you can create an XML configurable feature that will provision all assets according to a configurable XML file.</p>
+
+<h3>Use developer isolated environments</h3>
+
+<p>Because we have the infrastructure in place to provision all site collection assets, it is possible to create isolated developer environments. This is the standard development method for any asp.net application and it should not change when developing a custom application on top of SharePoint.</p>
+
+<h3>Use continuous integration</h3>
+
+<p>This one is somewhat optional but I would strongly recommend using continuous integration on any project. Because of the previous points, continuous integration for a SharePoint project becomes possible. Read more about continuous integration:
+http://en.wikipedia.org/wiki/Continuous_integration</p>
+
+<h3>Use SharePoint Designer only as a &quot;Immediate Feedback&quot; tool</h3>
+
+<p>SharePoint designer should not be used as a primary development tool (as MS suggests) but rather as a tool to quickly and conveniently see changes inside your site instance. Once you are happy with a change, then it should be placed in your Visual Studio solution so that it can participate in source control.</p>
+
+<p>This is usually helpful with rendering assets such as page layouts, XML files, XSLT transforms and stylesheets. It sure is nice to be able to see changes immediately, but be sure to commit your changes to your Visual Studio project (and hence source control) so that they are visible to other developers on the project.</p>
+ ]]></description>
+  </item>
+  
+</channel>
+</rss>

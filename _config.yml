@@ -9,5 +9,6 @@ timezone: "US/Pacific"
 exclude: ['README.md']
 
 twitter_username: "clintsim"
+facebook_username: "csim74"
 github_username: "csim"
 disqus_shortname: "csimme"

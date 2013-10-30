@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        Personal Backup Strategy - csim
+    </title>
+    <!-- generated 2013-10-30T18:59:28+01:00 -->
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="http://lh3.googleusercontent.com/-Ea8xoWWt_P8/ToKxKe5jkjI/AAAAAAAAC24/4pXdtIm0k7E/techhike_favicon.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Clint Simon">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="google-site-verification" content="9122UHrLTdTksyNCp_xG5dypMZu2evQmgwu43GVHjOo" />
+
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Ubuntu+Condensed|Orbitron:400" rel="stylesheet" type="text/css" />
+
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/base.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="masthead">
+        <div id="masthead-inner">
+            <a class="title" href="/">csim</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="span9 content">
+              <a name="/2011/10/03/Personal-backup-Strategy"></a>
+<h1><a href="/2011/10/03/Personal-backup-Strategy">Personal Backup Strategy</a></h1>
+<div class="post-date">3 October 2011</div>
+
+<p>There are a million and one ways to backup files from your hard drive. For me, the most important things are making sure that the files that cannot be replaced are safe. </p>
+
+<p>Rather than opt for a relatively complicated system image based backup system such as <a href="http://www.microsoft.com/windows/products/winfamily/windowshomeserver/default.mspx">Windows Home Server</a> or a automated file copy utility such <a href="https://www.sugarsync.com/">SugarSync</a>, I instead prefer good old fashioned <a href="http://en.wikipedia.org/wiki/Robocopy">Robocopy</a> and physical DVD media. This might sound archaic in the age of cloud computing but I have found it to be the best way to ensure that I will not lose the most important files and have the least amount of headaches.</p>
+
+<h3>My setup</h3>
+
+<p>I have a portable 1TB drive which holds all of my media and working files. This includes family pictures, videos and virtual machines. I also have a non-portable 1TB drive that I use for only backups. </p>
+
+<p>For everyday files like word docs, excel spreadsheets, etc. I use <a href="http://dropbox.com">Dropbox</a>. These files are important enough that I want then accessible anywhere, anytime but they are not important enough to warrant a physical copy on DVD. <a href="http://dropbox.com">Dropbox</a> is great for this purpose, but it&#39;s a big pricey when you go above the 2GB free limit. It runs $99 for 50GB/year and $199 for 100GB/year.</p>
+
+<h3>My strategy</h3>
+
+<p>Once a week I use <a href="http://en.wikipedia.org/wiki/Robocopy">Robocopy</a> to backup all important files from my laptop and the portable drive to the backup drive. When a backup is done, all important files are duplicated to the desktop drive. This covers the potential case where my portable drive is either lost or stolen.</p>
+
+<p>Once a month I copy all the very important files to physical DVD discs. These include family photos and videos. I use <a href="http://hcidesign.com/dvdspan/">DVDSpan</a> to burn a set of folders a set of DVD discs. This utility is rather old but it is very useful and has worked fantastically for me. It takes a folder or set of folders and writes them across a set of DVD discs. Granted this won&#39;t work if you have hundreds of Gigabytes to backup.</p>
+
+<p>In my case I am only looking to backup around 50GB of media files. To make things even easier the media files don&#39;t change over time. once a file is archive, it does not need to be archived again.</p>
+
+<p>Then writing files using <a href="http://hcidesign.com/dvdspan/">DVDSpan</a>, it helps to have the files organized into date folders. For example /Photos/2011/2011-01. This way when it&#39;s time to write DVDs, I can simply burn the recent files that have not been archived and ignore the files that I have already archived.</p>
+
+<p>The new discs get sent to the safe-deposit box for safe keeping. I have researched various methods of storing files off site such as <a href="http://aws.amazon.com/s3/">Amazon S3</a> or <a href="http://www.keepvault.com/">KeepVault</a>. So far nothing beats driving down to the safe deposit box at the local bank. I have around 60GB of Gigabytes of photos and videos, but the net new data is less than 10GB per month. That means that I can get away with burning roughly 2 DVD discs for each month.</p>
+
+<p>As cloud backup system mature, I may change my approach but for now I&#39;m staying old school.</p>
+
+	
+<div class="post-separator"></div>
+
+
+          </div>
+
+          <div class="span3 sidebar">
+            <div class="well sidebar-nav">
+                <ul class="nav nav-list">
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/archive/">Archive</a></li>
+                    <li><a href="/topics/">Topics</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="http://www.facebook.com/techhike">
+                        <img src="/images/facebook.png" style="width: 30px;" alt="Facebook" /></a>
+                        <a href="http://www.twitter.com/clintsim">
+                            <img src="/images/twitter.png" style="width: 30px;" alt="Twitter" /></a>
+                            <br />
+                            <a href="http://www.linkedin.com/profile/view?id=2238939&amp;trk=tab_pro">
+                                <img src="/images/linkedin.png" style="width: 30px;" alt="Linkedin" /></a>
+                                <a href="http://github.com/csim">
+                                    <img src="/images/github.png" style="width: 30px;" alt="GitHub" /></a>
+                                    <br />
+                                    <a href="/feed.xml"><img src="/images/rss.gif" style="width: 29px; height: 31px;" alt="Feed" /></a>
+                                </div>
+                    <!--<a class="twitter-timeline" href="https://twitter.com/TechHike" data-widget-id="250295447481098241">Tweets by @@TechHike</a>
+                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>-->
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="//code.jquery.com/jquery-1.6.2.min.js"></script>
+    <script src="/base.js"></script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-25860409-1']);
+        _gaq.push(['_setDomainName', 'techhike.net']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+</html>

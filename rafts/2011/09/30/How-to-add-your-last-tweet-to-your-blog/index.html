@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        How to add your last tweet to your blog - csim
+    </title>
+    <!-- generated 2013-10-30T18:59:28+01:00 -->
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="http://lh3.googleusercontent.com/-Ea8xoWWt_P8/ToKxKe5jkjI/AAAAAAAAC24/4pXdtIm0k7E/techhike_favicon.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Clint Simon">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="google-site-verification" content="9122UHrLTdTksyNCp_xG5dypMZu2evQmgwu43GVHjOo" />
+
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Ubuntu+Condensed|Orbitron:400" rel="stylesheet" type="text/css" />
+
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/base.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="masthead">
+        <div id="masthead-inner">
+            <a class="title" href="/">csim</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="span9 content">
+              <a name="/2011/09/30/How-to-add-your-last-tweet-to-your-blog"></a>
+<h1><a href="/2011/09/30/How-to-add-your-last-tweet-to-your-blog">How to add your last tweet to your blog</a></h1>
+<div class="post-date">30 September 2011</div>
+
+<p>I thought it would be nice to see my last tweet on my blog. It turns out that there is an easy way to do this using jquery and the twitter api. These instructions may not work for you if your blogging platform does not allow embedded JavaScript (wordpress.com does not).</p>
+
+<p>To get the tweets for any user in JSON format you can visit http://api.twitter.com/1/statuses/user_timeline/username.json?callback=?</p>
+
+<p>Where username is the twitter username.</p>
+
+<p>Make sure that you first have jquery included in your page like this:</p>
+
+<div class="highlight"><pre><code class="xml"><span class="lineno">1</span>     <span class="nt">&lt;script</span> <span class="na">src=</span><span class="s">&quot;http://code.jquery.com/jquery-1.6.2.min.js&quot;</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div>
+
+<p>Then add this script to pull the last tweet for a username:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno"> 1</span> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+<span class="lineno"> 2</span>     <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+<span class="lineno"> 3</span>      <span class="kd">var</span> <span class="nx">u</span> <span class="o">=</span> <span class="s1">&#39;techhike&#39;</span><span class="p">;</span>
+<span class="lineno"> 4</span>      <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;http://api.twitter.com/1/statuses/user_timeline/&#39;</span>
+<span class="lineno"> 5</span>              <span class="o">+</span> <span class="nx">u</span> <span class="o">+</span> <span class="s1">&#39;.json?callback=?&#39;</span><span class="p">;</span>
+<span class="lineno"> 6</span>      <span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>       
+<span class="lineno"> 7</span>          <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#tweet&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">text</span><span class="p">));</span>
+<span class="lineno"> 8</span>      <span class="p">});</span> 
+<span class="lineno"> 9</span>     <span class="p">});</span>
+<span class="lineno">10</span> <span class="o">&lt;</span><span class="err">/script&gt;</span>
+</code></pre></div>
+
+<p>Replace techhike with the twitter username that you are interested in.</p>
+
+<p>Next add this markup to your page:</p>
+
+<div class="highlight"><pre><code class="html"><span class="lineno">1</span> <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;tweet&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</code></pre></div>
+
+<p>This will act as a container for your last tweet.</p>
+
+<p>As an added bonus I decided to write a little javascript to convert URLs in the tweet to hyperlinks. This mimics the behavior on twitter.com. Also, I added a function that creates hyperlinks for twitter handles such as (@TechHike). This link points to the appropriate profile on twitter.com.</p>
+
+<div class="highlight"><pre><code class="csharp"><span class="lineno"> 1</span> <span class="p">&lt;</span><span class="n">script</span> <span class="n">type</span><span class="p">=</span><span class="s">&quot;text/javascript&quot;</span><span class="p">&gt;</span>
+<span class="lineno"> 2</span>     <span class="n">function</span> <span class="nf">urlize</span><span class="p">(</span><span class="n">input</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 3</span>      <span class="kt">var</span> <span class="n">exp</span> <span class="p">=</span> <span class="p">/(</span><span class="err">\</span><span class="n">b</span><span class="p">(</span><span class="n">https</span><span class="p">?|</span><span class="n">ftp</span><span class="p">|</span><span class="n">file</span><span class="p">):</span><span class="err">\</span><span class="p">/</span><span class="err">\</span><span class="p">/([-</span><span class="n">A</span><span class="p">-</span><span class="n">Z0</span><span class="p">-</span><span class="m">9</span><span class="p">+&amp;</span><span class="err">@#\</span><span class="p">/%?=~</span><span class="n">_</span><span class="p">|!:,.;]*[-</span><span class="n">A</span><span class="p">-</span><span class="n">Z0</span><span class="p">-</span><span class="m">9</span><span class="p">+&amp;</span><span class="err">@#\</span><span class="p">/%=~</span><span class="n">_</span><span class="p">|]))/</span><span class="n">ig</span><span class="p">;</span>
+<span class="lineno"> 4</span>      <span class="n">output</span> <span class="p">=</span> <span class="n">input</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">exp</span><span class="p">,</span><span class="err">&#39;</span><span class="p">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="p">=</span><span class="s">&quot;$1&quot;</span><span class="p">&gt;</span><span class="err">$</span><span class="m">3</span><span class="p">&lt;/</span><span class="n">a</span><span class="p">&gt;</span><span class="err">&#39;</span><span class="p">);</span>
+<span class="lineno"> 5</span>      <span class="k">return</span> <span class="n">output</span><span class="p">;</span>
+<span class="lineno"> 6</span>     <span class="p">}</span>
+<span class="lineno"> 7</span>  
+<span class="lineno"> 8</span>     <span class="n">function</span> <span class="nf">tweep</span><span class="p">(</span><span class="n">input</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 9</span>      <span class="kt">var</span> <span class="n">exp</span> <span class="p">=</span> <span class="p">/(</span><span class="err">\@</span><span class="p">(</span><span class="err">\</span><span class="n">w</span><span class="p">+?))</span> <span class="p">/</span><span class="n">ig</span><span class="p">;</span>
+<span class="lineno">10</span>      <span class="n">output</span> <span class="p">=</span> <span class="n">input</span><span class="p">.</span><span class="n">replace</span><span class="p">(</span><span class="n">exp</span><span class="p">,</span><span class="err">&#39;</span><span class="p">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="p">=</span><span class="s">&quot;http://www.twitter.com/$2&quot;</span><span class="p">&gt;</span><span class="err">$</span><span class="m">1</span><span class="p">&lt;/</span><span class="n">a</span><span class="p">&gt;</span> <span class="err">&#39;</span><span class="p">);</span>
+<span class="lineno">11</span>      <span class="k">return</span> <span class="n">output</span><span class="p">;</span>
+<span class="lineno">12</span>     <span class="p">}</span>
+<span class="lineno">13</span> <span class="p">&lt;/</span><span class="n">script</span><span class="p">&gt;</span>
+</code></pre></div>
+
+<p>The final javascript looks like this:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="lineno">1</span> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
+<span class="lineno">2</span>     <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>     
+<span class="lineno">3</span>       <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="s1">&#39;http://api.twitter.com/1/statuses/user_timeline/&lt;username&gt;.json?callback=?&#39;</span>
+<span class="lineno">4</span>       <span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>       
+<span class="lineno">5</span>           <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#tweet&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="nx">tweep</span><span class="p">(</span><span class="nx">urlize</span><span class="p">(</span><span class="nx">data</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">text</span><span class="p">)));</span>    
+<span class="lineno">6</span>       <span class="p">});</span> 
+<span class="lineno">7</span>     <span class="p">});</span>
+<span class="lineno">8</span> <span class="o">&lt;</span><span class="err">/script&gt;</span>
+</code></pre></div>
+
+<p>Cheers!</p>
+
+	
+<div class="post-separator"></div>
+
+
+          </div>
+
+          <div class="span3 sidebar">
+            <div class="well sidebar-nav">
+                <ul class="nav nav-list">
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/archive/">Archive</a></li>
+                    <li><a href="/topics/">Topics</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="http://www.facebook.com/techhike">
+                        <img src="/images/facebook.png" style="width: 30px;" alt="Facebook" /></a>
+                        <a href="http://www.twitter.com/clintsim">
+                            <img src="/images/twitter.png" style="width: 30px;" alt="Twitter" /></a>
+                            <br />
+                            <a href="http://www.linkedin.com/profile/view?id=2238939&amp;trk=tab_pro">
+                                <img src="/images/linkedin.png" style="width: 30px;" alt="Linkedin" /></a>
+                                <a href="http://github.com/csim">
+                                    <img src="/images/github.png" style="width: 30px;" alt="GitHub" /></a>
+                                    <br />
+                                    <a href="/feed.xml"><img src="/images/rss.gif" style="width: 29px; height: 31px;" alt="Feed" /></a>
+                                </div>
+                    <!--<a class="twitter-timeline" href="https://twitter.com/TechHike" data-widget-id="250295447481098241">Tweets by @@TechHike</a>
+                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>-->
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="//code.jquery.com/jquery-1.6.2.min.js"></script>
+    <script src="/base.js"></script>
+
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-25860409-1']);
+        _gaq.push(['_setDomainName', 'techhike.net']);
+        _gaq.push(['_setAllowLinker', true]);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+</body>
+</html>

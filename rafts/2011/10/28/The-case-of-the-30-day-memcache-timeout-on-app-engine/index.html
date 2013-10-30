@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <title>
-        {% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}
+        The case of the 30 day memcache timeout on app engine - csim
     </title>
-    <!-- generated {{ site.time | date_to_xmlschema  }} -->
+    <!-- generated 2013-10-30T18:59:28+01:00 -->
 
     <link rel="icon" href="/favicon.ico">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -29,14 +29,31 @@
 
     <div id="masthead">
         <div id="masthead-inner">
-            <a class="title" href="/">{{ site.name }}</a>
+            <a class="title" href="/">csim</a>
         </div>
     </div>
 
     <div class="container">
         <div class="row">
             <div class="span9 content">
-              {{ content }}
+              <a name="/2011/10/28/The-case-of-the-30-day-memcache-timeout-on-app-engine"></a>
+<h1><a href="/2011/10/28/The-case-of-the-30-day-memcache-timeout-on-app-engine">The case of the 30 day memcache timeout on app engine</a></h1>
+<div class="post-date">28 October 2011</div>
+
+<p>I ran into an interesting problem with Google app engine. It seems that the memcache time limit is enforced differently on the development server versus the production servers.</p>
+
+<p><a href="http://code.google.com/p/memcached/wiki/FAQ#What_are_the_limits_on_setting_expire_time?_(why_is_there_a_30_d">The documentation</a> says that the time limit for a memcache key is 30 days. The behavior that I have observed is that if you set a memcache key to timeout at 30 days, the development server (on windows) will happily persist the data as expected.</p>
+
+<p>On the production servers, it seems that the behavior is much different. I have notice with a timeout of 30 days, that memcache will not only ignore the persisted key but it will also cause erratic behavior for instances in your application.</p>
+
+<p>Under these conditions a new instance of my application was start for each request! Obviously this adversely effects performance.</p>
+
+<p>Once I changed the memcache timeout to a lesser value (under 30 days), the problem stopped.</p>
+
+	
+<div class="post-separator"></div>
+
+
           </div>
 
           <div class="span3 sidebar">
@@ -47,14 +64,14 @@
                     <li><a href="/topics/">Topics</a></li>
                 </ul>
                 <div class="social-icons">
-                    <a href="http://www.facebook.com/{{ site.facebook_username }}">
+                    <a href="http://www.facebook.com/techhike">
                         <img src="/images/facebook.png" style="width: 30px;" alt="Facebook" /></a>
-                        <a href="http://www.twitter.com/{{ site.twitter_username }}">
+                        <a href="http://www.twitter.com/clintsim">
                             <img src="/images/twitter.png" style="width: 30px;" alt="Twitter" /></a>
                             <br />
                             <a href="http://www.linkedin.com/profile/view?id=2238939&amp;trk=tab_pro">
                                 <img src="/images/linkedin.png" style="width: 30px;" alt="Linkedin" /></a>
-                                <a href="http://github.com/{{ site.github_username }}">
+                                <a href="http://github.com/csim">
                                     <img src="/images/github.png" style="width: 30px;" alt="GitHub" /></a>
                                     <br />
                                     <a href="/feed.xml"><img src="/images/rss.gif" style="width: 29px; height: 31px;" alt="Feed" /></a>
