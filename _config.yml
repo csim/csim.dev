@@ -10,6 +10,7 @@ timezone: "US/Pacific"
 exclude: ['README.md']
 
 analytics_id: UA-25860409-1
+webmaster_key: 9122UHrLTdTksyNCp_xG5dypMZu2evQmgwu43GVHjOo
 
 twitter_username: "clintsim"
 facebook_username: "csim74"
