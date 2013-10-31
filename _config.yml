@@ -2,11 +2,14 @@ name: csim
 title: Clint Simon
 author: Clint Simon
 url: http://csim.me
+domain: csim.me
 
 markdown: redcarpet
 permalink: /:year/:month/:day/:title
 timezone: "US/Pacific"
 exclude: ['README.md']
+
+analytics_id: UA-25860409-1
 
 twitter_username: "clintsim"
 facebook_username: "csim74"
