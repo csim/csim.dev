@@ -2,7 +2,6 @@
 title: "Data Migration is Hard"
 layout: post
 categories: [ "Consulting", "Programming" ]
-comments: true
 ---
 
 Data migration can sink your project. It lurks around the edges of your estimation model, hiding deep dark secrets that will only be uncovered at the very end of the project. Nothing could be worse. Discovering that you need to increase the migration schedule 5 fold at the 11th hour can not only derail your project but if it happens too often it might derail your career.
