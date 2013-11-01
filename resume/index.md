@@ -61,5 +61,3 @@ Bachelor of Science in Electrical Engineering - 1998
 Completed projects of interest:
 
 * Web-based public transportation information system able to deliver data on location, speed and direction of city buses, trains, taxicabs, etc. Engineered infrastructure to transmit GPS data from a mobile unit to a central server location where relevant data could be retrieved from bus stops, dispatch centers or any HTTP enabled client.
-
-
