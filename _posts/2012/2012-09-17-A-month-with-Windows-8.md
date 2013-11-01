@@ -1,7 +1,7 @@
 ---
 title: 	"A Month with Windows 8"
 layout: post
-categories: [ "Windows 8" ]
+tags: [ "Windows 8" ]
 --- 
 
 I got my hands on a copy of Windows 8 through [MSDN](http://msdn.com) about a month ago and installed it immediately. I've used it since then as my daily working machine on my main laptop.

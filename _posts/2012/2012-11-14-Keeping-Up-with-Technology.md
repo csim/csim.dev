@@ -1,7 +1,7 @@
 ---
 title: Keeping Up with Technology
 layout: post
-categories: [ Consulting, Programming ]
+tags: [ Consulting, Programming ]
 --- 
 
 

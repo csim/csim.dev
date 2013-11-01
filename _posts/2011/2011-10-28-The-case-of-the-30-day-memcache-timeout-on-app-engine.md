@@ -1,7 +1,7 @@
 ---
 title: "The case of the 30 day memcache timeout on app engine"
 layout: post
-categories: [ "App Engine", "Programming" ]
+tags: [ "App Engine", "Programming" ]
 ---
 
 I ran into an interesting problem with Google app engine. It seems that the memcache time limit is enforced differently on the development server versus the production servers.

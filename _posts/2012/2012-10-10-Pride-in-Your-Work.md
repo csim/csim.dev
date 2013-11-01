@@ -1,7 +1,7 @@
 ---
 title: "Take Pride in Your Work"
 layout: post
-categories: [ "Consulting", "Programming" ]
+tags: [ "Consulting", "Programming" ]
 --- 
 
 In my daily work, I lead teams that build software. These are "line of business" or "enterprise" software systems. I come into contact with a lot of developers, all with differing backgrounds, experience levels and personalities. I see the good and the bad. Pride generally stands out as the most accurate quality indicator of the individual developer.

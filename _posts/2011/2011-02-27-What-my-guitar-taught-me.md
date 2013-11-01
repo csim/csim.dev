@@ -1,7 +1,7 @@
 ---
 title: "What my guitar taught me"
 layout: post
-categories: [ "Life" ]
+tags: [ "Life" ]
 ---
 
 It turns out that my guitar taught me a valuable lesson. Somehow in this crazy house that I live in, ago a week ago, my guitar spontaneously migrated out of my office. One of the kids moved it to the upstairs bonus room without my knowledge. I usually keep my acoustic guitar right next to my work desk. It sits there 99 percent of the time. Occasionally when the mode strikes, I pick it up and strum a tune. Maybe an old song I like or a totally random conglomeration of melodies that I have long forgotten. It's a little escape for me when my mind is consumed by heavier things It's always there for the taking at a moments notice.

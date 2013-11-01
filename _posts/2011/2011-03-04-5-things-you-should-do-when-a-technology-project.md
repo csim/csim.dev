@@ -1,7 +1,7 @@
 ---
 title: "5 things you should do when estimating a technology project"
 layout: post
-categories: [ "Consulting" ]
+tags: [ "Consulting" ]
 ---
 
 Estimating a project can be one of the hardest things you do as a technology consultant. Over the years I have done my share of estimation and one thing has become clear to me. Estimation accurately is almost impossible. With lots of experience and some hard knocks, you can accumulate the courage necessary to throw down an estimate. Here's a few tips that I think might help.

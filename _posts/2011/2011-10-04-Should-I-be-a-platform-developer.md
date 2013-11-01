@@ -1,7 +1,7 @@
 ---
 title: "Should you be a platform developer?"
 layout: post
-categories: [ "Consulting", "Programming" ]
+tags: [ "Consulting", "Programming" ]
 ---
 
 Over the past few years I have seen many developers struggle with a growing dilemma, do I devote my time to platform development?

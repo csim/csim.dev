@@ -1,7 +1,7 @@
 ---
 title: "If This then That"
 layout: post
-categories: [ "Review" ]
+tags: [ "Review" ]
 ---
 
 I just started to use a new service that allows you to automate your social life. It's called "If this then that" ([http://ifttt.com](http://ifttt.com)). 

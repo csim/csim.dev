@@ -1,7 +1,7 @@
 ---
 title:  "How I learned to code"
 layout: post
-categories: [ "Programming" ]
+tags: [ "Programming" ]
 ---
 
 I'm not a long-term planner. I've never made a "5 year plan" or thought about where I want to be 10 years from now. I simply look at what my options are and make a decision about what to do next. 

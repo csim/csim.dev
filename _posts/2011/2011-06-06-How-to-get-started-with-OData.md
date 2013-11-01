@@ -1,7 +1,7 @@
 ---
 title: "How to get started with OData"
 layout: post
-categories: [ "Programming" ]
+tags: [ "Programming" ]
 ---
 
 Open data protocol or OData is a new Microsoft technology standard which allows for simple data exchange over a REST style interface. The idea is to create a web based interface for complex data stores and in the process free data from silos. This will in theory create a data utopia complete with bunnies, fairies and a side of mash potatoes.

@@ -1,7 +1,7 @@
 ---
 title: "Windows 8 Developer Messaging"
 layout: post
-categories: [ "Windows 8" ]
+tags: [ "Windows 8" ]
 --- 
 
 Bit of a rant here. I received this message today Microsoft.

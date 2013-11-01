@@ -1,7 +1,7 @@
 ---
 title: Remember, Software is Soft
 layout: post
-categories: [ Programming ]
+tags: [ Programming ]
 ---
 
 There are times when I have witness (and participated in) arguments about trade-offs between scope and effort. Sometimes developers tend to push back fairly hard with the perception is that the effort is too high for a particular feature change.

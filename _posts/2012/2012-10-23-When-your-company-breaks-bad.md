@@ -1,7 +1,7 @@
 ---
 title: "When your company breaks bad"
 layout: post
-categories: [ "Consulting" ]
+tags: [ "Consulting" ]
 ---
 
 You have been working here for about 3 years. Life is good. You come in as late as you like and leave late because the work is challenging and rewarding. No one is watching over your shoulder, most days you sling code until your mind goes numb. At any moment a nerf gun war can break out in the office. When Halo 3 was released, all work stopped and there was an all-nighter in the game room. Company parties are amazing, the Christmas party was at a rock-n-roll museum last year and you have an annual company awards ceremony at a hot night club.

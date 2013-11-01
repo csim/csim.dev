@@ -1,7 +1,7 @@
 ---
 title: "Google's new App Engine pricing"
 layout: post
-categories: [ "App Engine" ]
+tags: [ "App Engine" ]
 ---
 
 Google App engine is in the process of changing it's pricing model. At present this new pricing model goes into effect on December 1, 2011. There has been quite an uproar among App engine developers. In some cases the new billing model raises monthly costs by more than 300%. This has cause quite a reaction among the community and the backlash is very real

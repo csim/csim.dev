@@ -1,7 +1,7 @@
 ---
 title: "Link Roundup"
 layout: post
-categories: [ "Links" ]
+tags: [ "Links" ]
 --- 
 
 ### [Microsoft employees getting free Surface tablets, new work PCs, Windows Phone 8](http://www.geekwire.com/2012/microsoft-employees-surface-tablets-work-pcs-windows-phone-8/)

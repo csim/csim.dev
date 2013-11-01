@@ -1,7 +1,7 @@
 ---
 title: Be Lazy and Smart
 layout: post
-categories: [ Consulting, Programming ]
+tags: [ Consulting, Programming ]
 ---
 
 One of the best things that you can do as a developer is to be equal parts lazy and smart. This is an art that can be mastered to great effect. I don't mean that you should abandon your passion for programming or stop being focused and goal driven. I mean that you should avoid work that is not absolutely necessary. To do that you need to be both lazy and smart in equal parts.

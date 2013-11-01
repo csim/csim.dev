@@ -1,7 +1,7 @@
 ---
 title: "Code is Creative"
 layout: post
-categories: [ "Programming" ]
+tags: [ "Programming" ]
 ---
 
 Most people think of programmers as the guys guzzling mountain dew in a dark room where pizza slides under the door at around 6PM and a feature is built by 2AM. Although this is can be the case (we've all been there), I have found that most of the people that I look up to are not at all like this. More often than not people who have influenced me over the years are people that show a genuine passion for software but also have massive creative energy and a social team mentality to boot. This is a paradox that defies stereotypes. It turns out that creativity is an essential ingredient if you want to make a good software developer.

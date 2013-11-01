@@ -1,7 +1,7 @@
 ---
 title: "First Marathon Complete"
 layout: post
-categories: [ "Fitness" ]
+tags: [ "Fitness" ]
 ---
 
 My marathon journey started in the summer of 2009. I got pneumonia and spent 3 days in the hospital. After recovering, I knew that I needed to get fit and running seemed like a good idea. I started to run regularly, not really thinking that I would get involved in long distance competitive running.

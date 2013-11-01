@@ -1,7 +1,7 @@
 ---
 title: "Good Addictions"
 layout: post
-categories: [ "Life" ]
+tags: [ "Life" ]
 --- 
 
 Ever since I can remember I have been an addict. Over the years my addictions have come and gone. But one thing has always remained: I have an addictive personality. Luckily for me all my addictions have been mostly productive.

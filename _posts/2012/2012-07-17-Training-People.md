@@ -1,6 +1,6 @@
 ---
 title: "Training People"
-categories: [ "Consulting" ]
+tags: [ "Consulting" ]
 layout: post
 --- 
 

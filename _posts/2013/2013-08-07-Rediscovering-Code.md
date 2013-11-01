@@ -1,6 +1,6 @@
 ---
 title: "Rediscovering Code"
-categories:  [ "Programming" ]
+tags:  [ "Programming" ]
 layout: post
 comments: true
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Spotify First impressions"
 layout: post
-categories: [ "Review" ]
+tags: [ "Review" ]
 ---
 
 [Spotify](http://spotify.com) launched in the U.S. on July 14th. Given the hoopla around the service I decided to give it a try. Spotify is a music service that allows users to stream or download music, includes social integration and has support for offline listening. Many people have raved about the service in Europe and there has been a constant chorus for an american launch.

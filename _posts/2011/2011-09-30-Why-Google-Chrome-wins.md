@@ -1,7 +1,7 @@
 ---
 title: "Why Google Chrome wins"
 layout: post
-categories: [ "Review" ]
+tags: [ "Review" ]
 ---
 
 Google's chrome browser is quickly gaining momentum and market share. Recently it has even been projected the before the end of 2011 chrome will surpass firefox as the second most used browser, behind Internet Explorer. 

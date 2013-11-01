@@ -1,7 +1,7 @@
 ---
 title: "How to add your last tweet to your blog"
 layout: post
-categories: [ "Programming" ]
+tags: [ "Programming" ]
 ---
 
 I thought it would be nice to see my last tweet on my blog. It turns out that there is an easy way to do this using jquery and the twitter api. These instructions may not work for you if your blogging platform does not allow embedded JavaScript (wordpress.com does not).

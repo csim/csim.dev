@@ -1,7 +1,7 @@
 ---
 title: "Types of consultancies and how to pick one"
 layout: post
-categories: [ "Consulting" ]
+tags: [ "Consulting" ]
 ---
 
 Over the years I have come across software consulting companies in various states. It occurs to me that there must be a finite set of categories that defines the culture of a consultancy. Here's a few that I have recognized.

@@ -1,7 +1,7 @@
 ---
 title: "Link Roundup"
 layout: post
-categories: [ "Links" ]
+tags: [ "Links" ]
 --- 
 
 ### [My Favorite Features: Entity Framework Code First and ASP.NET Web API](http://blogs.msdn.com/b/jasonz/archive/2012/07/23/my-favorite-features-entity-framework-code-first-and-asp-net-web-api.aspx) 

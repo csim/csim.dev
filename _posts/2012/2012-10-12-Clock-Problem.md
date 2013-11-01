@@ -1,7 +1,7 @@
 ---
 title: "Tech Interview Question: The Clock Problem"
 layout: post
-categories:  [ "Programming", "Interviews" ]
+tags:  [ "Programming", "Interviews" ]
 --- 
 
 "The Clock Problem" is an interview question that I have been using for a few years. I first learned about it when I was being interviewed. I have now adopted it as my first line of defense against imposters. :)
@@ -40,7 +40,7 @@ Write a function that can compute the angle between the hands of a clock given a
 {% endhighlight %}
 
 ### Likely outcomes
-After giving this problem dozens of times, I have noticed responses that roughly fall into these categories:
+After giving this problem dozens of times, I have noticed responses that roughly fall into these tags:
 
 1. Candidate goes quiet for about 5 minutes. Then says that he/she would create a lookup table where given an hour or minute, they would retrieve the angle. This is skirting the exercise entirely, my response is that we should take a few minutes and compute some of the lookup values. If this doesn't work then I ask if there is a mathematical way to relate the hand position to an angle. 
 

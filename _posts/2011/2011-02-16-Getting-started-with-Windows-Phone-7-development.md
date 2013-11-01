@@ -1,7 +1,7 @@
 ---
 title: "Getting started with Windows Phone 7 application development"
 layout: post
-categories: [ "Windows Phone" ]
+tags: [ "Windows Phone" ]
 ---
 
 Get ready to create your first Windows Phone 7 (WP7) application! With only minimum software development skills, you can create your very own shiny new WP7 app.
