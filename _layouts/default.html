@@ -3,13 +3,16 @@
 <head>
     <meta charset="utf-8">
     <title>
-        {% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}
+        {% capture browser_title %}{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}{% endcapture %}
+        {{ browser_title }}
     </title>
     <!-- generated {{ site.time | date_to_xmlschema  }} -->
 
     <link rel="icon" href="/favicon.ico">
     <link rel="shortcut icon" href="/favicon.ico">
     <link rel="apple-touch-icon" href="http://lh3.googleusercontent.com/-Ea8xoWWt_P8/ToKxKe5jkjI/AAAAAAAAC24/4pXdtIm0k7E/techhike_favicon.png" />
+
+    <link rel="alternate" type="application/rss+xml" title="{{ browser_title }}" href="/feed.xml" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
