@@ -2,7 +2,7 @@
 title:  "resume"
 layout: post
 date:   2013-10-20 08:00:00
-permalink: /resume/
+permalink: /resume
 ---
 
 <div style="float: right"><a href="http://pdfmyurl.com?url=www.techhike.net/resume.html&amp;--filename=Clint%20Simon%20Resume.pdf">Download as PDF</a></div>
