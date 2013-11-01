@@ -1,7 +1,6 @@
 ---
 title:  "about"
 layout: page
-permalink: /about
 ---
 
 !(right)/images/profile.png!
