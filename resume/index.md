@@ -2,7 +2,6 @@
 title:  "resume"
 layout: post
 date:   2013-10-20 08:00:00
-permalink: /resume/
 ---
 
 <div style="float: right"><a href="http://pdfmyurl.com?url=www.techhike.net/resume.html&amp;--filename=Clint%20Simon%20Resume.pdf">Download as PDF</a></div>
@@ -62,5 +61,3 @@ Bachelor of Science in Electrical Engineering - 1998
 Completed projects of interest:
 
 * Web-based public transportation information system able to deliver data on location, speed and direction of city buses, trains, taxicabs, etc. Engineered infrastructure to transmit GPS data from a mobile unit to a central server location where relevant data could be retrieved from bus stops, dispatch centers or any HTTP enabled client.
-
-
