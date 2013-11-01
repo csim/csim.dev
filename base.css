@@ -39,10 +39,6 @@ body
 			text-decoration: none;
 		}
 
-ul li, ol li {
-	margin-bottom: 10px;
-}
-
 
 .sidebar
 {
@@ -67,6 +63,11 @@ ul li, ol li {
 {
 	clear: both;
 }
+
+.content .post ul li, .content .post ol li {
+	margin-bottom: 10px;
+}
+
 
 .post-date
 {
