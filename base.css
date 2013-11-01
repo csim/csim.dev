@@ -64,7 +64,7 @@ body
 	clear: both;
 }
 
-.content .post ul li, .content .post ol li {
+.content ul li, .content ol li {
 	margin-bottom: 10px;
 }
 

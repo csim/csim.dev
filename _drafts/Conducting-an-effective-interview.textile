@@ -5,6 +5,8 @@ tags: [ Consulting ]
 --- 
 
 
+"$":http://google.com
+
 # *Experience.* Nothing trumps experience. The more times you are "at-bat", the more lessons you learn. Particularly experience at progressively higher levels responsibility is desirable. Challenging yourself is ultimately the only way to grow and learn.
 # *Technology aptitude.* I necessarily mean reciting minute technical details from memory. I mean _understand_ the underlying principles of technology. Abstraction, service oriented architecture, componentization, dependency injection, user experience design. Deep understand of these topics are what separates the great consultants from the rest.
 # *Consulting IQ.* Soft skill are where we make our money. Reading a room, understanding the motivations involved, working toward a common goal while avoiding or minimizing conflicts. These are things that a consultant does every day. It is hard to judge this quality 
