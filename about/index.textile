@@ -1,6 +1,7 @@
 ---
-title:  "about"
+title: about
 layout: page
+published: true
 ---
 
 !(right)/images/profile.png!
@@ -23,7 +24,7 @@ h2. Play
 
 Outside of work I love guitar, golf, football and being a dad to my 2 daughters. "Hiking is also a passion":cj. I ran "my first marathon":m on June 26, 2011 in a time of 4 hours and 55 minutes.
 
-!>{width: 200px}/images/crossfit_afro.jpg!
+!(right){width: 200px}/images/crossfit_afro.jpg!
 
 My most recent addiction is "Crossfit":http://games.crossfit.com. After about an 18 year hiatus from organized physical activity, I started Crossfit in July of 2011. For the first 3 months I proceeded to try my hardest but constantly felt like a used dish towel. I stuck with it and I have seen huge improvement in my physical fitness level. Although the path is difficult, I would not change a thing.
 
