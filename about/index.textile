@@ -56,7 +56,7 @@ I built Tiger WCM to run "TechHike.net":techhike and decided to make it an open 
 
 h3. "Cajun Journeymen":cj
 
-!>/images/cajunjourneymen.jpg!
+!(right)/images/cajunjourneymen.jpg!
 
 Enough with the software projects already. These are certifiable adventures. Since 2001, our illustrious band of misfits have thrown caution into the wind and trekked through some of the most beautiful wilderness areas in the world. Check out our stories.
 
