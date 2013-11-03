@@ -1,0 +1,89 @@
+<!-- generated {{ site.time | date_to_xmlschema  }} -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% capture browser_title %}{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}{% endcapture %}
+        {{ browser_title }}
+    </title>
+<<<<<<< HEAD
+    <!-- generated {{ site.time | date_to_xmlschema  }} -->
+    <!-- test -->
+=======
+>>>>>>> changed layout
+
+    <link rel="icon" href="/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="http://lh3.googleusercontent.com/-Ea8xoWWt_P8/ToKxKe5jkjI/AAAAAAAAC24/4pXdtIm0k7E/techhike_favicon.png" />
+
+
+    <link rel="alternate" type="application/rss+xml" title="{{ browser_title }}" href="/feed.xml" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Clint Simon">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="google-site-verification" content="{{ site.webmaster_key }}" />
+
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Ubuntu+Condensed|Orbitron:400" rel="stylesheet" type="text/css" />
+
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/base.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="masthead">
+        <div id="masthead-inner">
+            <a class="title" href="/">{{ site.title }}</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="span9 content">
+              {{ content }}
+          </div>
+
+          <div class="span3 sidebar">
+            <div class="well sidebar-nav">
+                <ul class="nav nav-list">
+                    <li><a href="/about/">About</a></li>
+                    <li><a href="/archive/">Archive</a></li>
+                    <li><a href="/topics/">Topics</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="http://www.facebook.com/{{ site.facebook_username }}">
+                        <img src="/images/facebook.png" style="width: 30px;" alt="Facebook" /></a>
+                        <a href="http://www.twitter.com/{{ site.twitter_username }}">
+                            <img src="/images/twitter.png" style="width: 30px;" alt="Twitter" /></a>
+                            <br />
+                            <a href="http://www.linkedin.com/in/{{ site.linkedin_username }}">
+                                <img src="/images/linkedin.png" style="width: 30px;" alt="Linkedin" /></a>
+                                <a href="http://github.com/{{ site.github_username }}">
+                                    <img src="/images/github.png" style="width: 30px;" alt="GitHub" /></a>
+                                    <br />
+                                    <a href="/feed.xml"><img src="/images/rss.gif" style="width: 29px; height: 31px;" alt="Feed" /></a>
+                                </div>
+                    <!--<a class="twitter-timeline" href="https://twitter.com/TechHike" data-widget-id="250295447481098241">Tweets by @@TechHike</a>
+                    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>-->
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="//code.jquery.com/jquery-1.6.2.min.js"></script>
+    <script src="/base.js"></script>
+
+    {% include analytics.html %}
+
+</body>
+</html>
