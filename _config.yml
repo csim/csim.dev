@@ -17,3 +17,8 @@ facebook_username: "csim74"
 linkedin_username: "clintsimon"
 github_username: "csim"
 disqus_shortname: "csimme"
+
+navigation:
+    - { title: "About", url: "/about/" }
+    - { title: "Archive", url: "/blog/archive/" }
+    - { title: "Topics", url: "/blog/topics/" }

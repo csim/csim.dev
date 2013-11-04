@@ -46,9 +46,9 @@
           <div class="span3 sidebar">
             <div class="well sidebar-nav">
                 <ul class="nav nav-list">
-                    <li><a href="/about/">About</a></li>
-                    <li><a href="/archive/">Archive</a></li>
-                    <li><a href="/topics/">Topics</a></li>
+                    {% for key in site.navigation %}
+                        <li><a href="{{ key.url }}">{{ key.title }}</a></li>
+                    {% endfor %}
                 </ul>
                 <div class="social-icons">
                     <a href="http://www.facebook.com/{{ site.facebook_username }}">
