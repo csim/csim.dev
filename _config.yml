@@ -5,7 +5,7 @@ url: http://csim.me
 domain: csim.me
 
 markdown: redcarpet
-permalink: /:year/:month/:day/:title
+permalink: /blog/:year/:month/:day/:title
 timezone: "US/Pacific"
 exclude: ['README.md']
 
