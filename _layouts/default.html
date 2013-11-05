@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
     <title>
         {{ browser_title }}
     </title>
@@ -15,20 +14,21 @@
 
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml" />
 
-    <meta name="title" content="{% if page.meta.title %}{{ page.meta.title }}{% else %}{{ page.title }}{% endif %}">
-    <meta name="author" content="{{ site.author }}">
-    <meta name="description" content="{{ page.meta.description }}">
+    <meta charset="utf-8" />
+    <meta name="title" content="{% if page.meta.title %}{{ page.meta.title }}{% else %}{{ page.title }}{% endif %}" />
+    <meta name="author" content="{{ site.author }}" />
+    <meta name="description" content="{{ page.meta.description }}" />
 
-    <meta name="viewport" content="width=device-width,user-scalable=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="google-site-verification" content="{{ site.webmaster_key }}" />
 
     <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Ubuntu+Condensed|Orbitron:400" rel="stylesheet" type="text/css" />
 
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="/base.css" />
 </head>
 
 <body>
