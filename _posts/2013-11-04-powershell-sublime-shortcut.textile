@@ -1,5 +1,5 @@
 ---
-title: PowerShell Sublime Shortcut
+title: PowerShell Sublime Text Shortcut
 layout: post
 tags: 
   - Programming
