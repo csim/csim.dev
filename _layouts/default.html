@@ -1,32 +1,34 @@
 <!-- generated {{ site.time | date_to_xmlschema  }} -->
+{% capture browser_title %}{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}{% endcapture %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
     <title>
-        {% capture browser_title %}{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}{% endcapture %}
         {{ browser_title }}
     </title>
 
-    <link rel="icon" href="/favicon.ico">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" href="http://lh3.googleusercontent.com/-Ea8xoWWt_P8/ToKxKe5jkjI/AAAAAAAAC24/4pXdtIm0k7E/techhike_favicon.png" />
+    <!-- <link rel="icon" href="/favicon.ico"> -->
+    <!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+    <!-- <link rel="apple-touch-icon" href="/favicon" /> -->
 
-    <link rel="alternate" type="application/rss+xml" title="{{ browser_title }}" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Clint Simon">
+    <meta charset="utf-8" />
+    <meta name="title" content="{% if page.meta.title %}{{ page.meta.title }}{% else %}{{ page.title }}{% endif %}" />
+    <meta name="author" content="{{ site.author }}" />
+    <meta name="description" content="{{ page.meta.description }}" />
+
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="google-site-verification" content="{{ site.webmaster_key }}" />
 
     <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Ubuntu+Condensed|Orbitron:400" rel="stylesheet" type="text/css" />
 
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="/base.css" />
 </head>
 
 <body>
