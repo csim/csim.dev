@@ -19,10 +19,11 @@ I recently had to embed a full-screen video into a SharePoint 2010 page (don't a
     <a href="http://go.microsoft.com/fwlink/?LinkID=124807" style="text-decoration: none;">
         <img src="http://go.microsoft.com/fwlink/?LinkId=108181" 
             alt="Get Microsoft Silverlight" 
-            style="border-style: none" /></a>
-        <a href="{VIDEO URL}" class="media-link" 
-            title="Open a media player on your client to play audio or video file.">
-            <span class="media-title">Video</span>
-        </a>
+            style="border-style: none" />
+    </a>
+    <a href="{VIDEO URL}" class="media-link" 
+        title="Open a media player on your client to play audio or video file.">
+        <span class="media-title">Video</span>
+    </a>
 </object>
 {% endhighlight %}
