@@ -14,9 +14,9 @@ One very handy shortcut is the ability to launch the "sublime text editor":http:
 function Edit { 
     $SublimePath = "{your path}\sublime_text.exe"
     if ($args.length -eq 0) {
-        &$SublimePath $pwd
+        & $SublimePath $pwd
     } else {
-        &$SublimePath $args 
+        & $SublimePath $args 
     }
 }
 {% endhighlight %}
