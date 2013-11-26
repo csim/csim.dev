@@ -1,4 +1,4 @@
-<!-- generated {{ site.time | date_to_xmlschema  }} -->
+﻿<!-- generated {{ site.time | date_to_xmlschema  }} -->
 {% capture browser_title %}{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}{% endcapture %}
 
 <!DOCTYPE html>
@@ -48,8 +48,8 @@
           <div class="span3 sidebar">
             <div class="well sidebar-nav">
                 <ul class="nav nav-list">
-                    {% for key in site.navigation %}
-                        <li><a href="{{ key.url }}">{{ key.title }}</a></li>
+                    {% for item in site.navigation %}
+                        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
                     {% endfor %}
                 </ul>
                 <div class="social-icons">

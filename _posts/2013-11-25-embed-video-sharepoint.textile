@@ -7,14 +7,22 @@ tags: [ SharePoint, Programming ]
 I recently had to embed a full-screen video into a SharePoint 2010 page (don't ask). Here is the solution using the default silverlight embeded video player which is packaged with SharePoint 2010.
 
 {% highlight html %}
-<object id="video" type="application/x-silverlight-2" data="data:application/x-silverlight-2," width="100%" height="100%">
-<param name="source" value="/_layouts/clientbin/mediaplayer.xap" />
-<param name="enableHtmlAccess" value="true" />
-<param name="windowless" value="true" />
-<param name="background" value="#80808080" />
-<param name="initParams" value="mediaTitle=,mediaSource={VIDEO URL},previewImageSource={VIDEO PREVIEW IMAGE},autoPlay=true" />
-<param name="onresize" value="video" />
-<a href="http://go.microsoft.com/fwlink/?LinkID=124807" style="text-decoration: none;">
-<img src="http://go.microsoft.com/fwlink/?LinkId=108181" alt="Get Microsoft Silverlight" style="border-style: none" /></a><a href="' + url + '" class="media-link" title="Open a media player on your client to play audio or video file."><span class="media-title">Media Web Part</span></a>
+<object id="video" type="application/x-silverlight-2" 
+        data="data:application/x-silverlight-2," width="100%" height="100%">
+    <param name="source" value="/_layouts/clientbin/mediaplayer.xap" />
+    <param name="enableHtmlAccess" value="true" />
+    <param name="windowless" value="true" />
+    <param name="background" value="#80808080" />
+    <param name="initParams" 
+        value="mediaTitle=,mediaSource={VIDEO URL},previewImageSource={VIDEO PREVIEW IMAGE},autoPlay=true" />
+    <param name="onresize" value="video" />
+    <a href="http://go.microsoft.com/fwlink/?LinkID=124807" style="text-decoration: none;">
+        <img src="http://go.microsoft.com/fwlink/?LinkId=108181" 
+            alt="Get Microsoft Silverlight" 
+            style="border-style: none" /></a>
+        <a href="{VIDEO URL}" class="media-link" 
+            title="Open a media player on your client to play audio or video file.">
+            <span class="media-title">Video</span>
+        </a>
 </object>
 {% endhighlight %}

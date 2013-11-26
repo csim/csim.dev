@@ -17,6 +17,6 @@ Windows Registry Editor Version 5.00
 "Flags"="59"
 {% endhighlight %}
 
-Play around with the AutoRepeatDelay and AutoRepeatRate settings, these are the ones that work for me.
+Play around with AutoRepeatDelay and AutoRepeatRate, these are the settings that work for me.
 
 Don't set the AutoRepeatDelay too fast, it will make it so that when you type letters they are repeated immediately. Makes it really hard to type your password :)
