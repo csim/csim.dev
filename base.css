@@ -71,6 +71,7 @@ body
 
 .post-date
 {
+	display: none;
     text-align: right;
 	font-size: 11px;
 	color: #666;
