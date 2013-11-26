@@ -8,7 +8,7 @@ published: true
 
 Hi, I am Clint. I'm a technology enthusiast, "software developer":http://www.cartoonstock.com/directory/s/software_engineer.asp, father, husband, "cajun":http://en.wikipedia.org/wiki/Cajun, worrywart and sometimes "grouch":http://en.wikipedia.org/wiki/Oscar_the_Grouch. I live in the suburbs of Seattle where I watch "LSU football":http://www.lsusports.net/ and enjoy our annual crawfish boil. I have 2 daughters which leaves me as the only man in the house. Even the dog is female.
 
-h2. Work
+h2. work
 
 I have worked in the technology consulting industry for roughly 15 years as a software engineer and architect. Much of my career has be devoted to Microsoft, building business applications that help to keep the wheels turning in Redmond.
 
@@ -20,7 +20,7 @@ In my spare time, I've built a bunch of "side projects":#projects. Most are toys
 
 If you are interested in more information about my work, "take a look at my resume":r.
 
-h2. Play
+h2. play
 
 Outside of work I love guitar, golf, football and being a dad to my 2 daughters. "Hiking is also a passion":cj. I ran "my first marathon":m on June 26, 2011 in a time of 4 hours and 55 minutes.
 
@@ -31,7 +31,7 @@ My most recent addiction is "Crossfit":http://games.crossfit.com. After about an
 <div class="clear"></div>
 <a name="projects"></a>
 
-h2. Projects
+h2. projects
 
 h3. "Mole":mole
 

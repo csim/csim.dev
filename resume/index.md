@@ -1,5 +1,5 @@
 ---
-title:  "resume"
+title:  "Clint Simon"
 layout: post
 date:   2013-10-20 08:00:00
 ---
