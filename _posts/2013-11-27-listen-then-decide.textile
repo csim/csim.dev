@@ -1,0 +1,8 @@
+---
+title: "Listen then decide"
+layout: post
+tags: [ "Consulting" ]
+published: false
+--- 
+
+
