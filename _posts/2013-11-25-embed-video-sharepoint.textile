@@ -6,7 +6,7 @@ tags: [ SharePoint, Programming ]
 
 I recently had to embed a full-screen video into a SharePoint 2010 page (don't ask). Here is the solution using the default silverlight embeded video player which is packaged with SharePoint 2010.
 
-{% highlight html%}
+{% highlight html %}
 <object id="video" type="application/x-silverlight-2" data="data:application/x-silverlight-2," width="100%" height="100%">
 <param name="source" value="/_layouts/clientbin/mediaplayer.xap" />
 <param name="enableHtmlAccess" value="true" />

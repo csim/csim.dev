@@ -1,0 +1,22 @@
+---
+title: "Keyboard Manual Registry Settings"
+layout: post
+tags: [ "Computers", "Programming" ]
+--- 
+
+I have always had a sneaking suspicion that my keyboard repeat rate and repeat delay settings were a little too slow for my taste. Windows only lets to you increase the values in a fixed range but with a registry change, you can adjust as you please.
+
+{% highlight text %}
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Control Panel\Accessibility\Keyboard Response]
+"AutoRepeatDelay"="250"
+"AutoRepeatRate"="20"
+"BounceTime"="0"
+"DelayBeforeAcceptance"="0"
+"Flags"="59"
+{% endhighlight %}
+
+Play around with the AutoRepeatDelay and AutoRepeatRate settings, these are the ones that work for me.
+
+Don't set the AutoRepeatDelay too fast, it will make it so that when you type letters they are repeated immediately. Makes it really hard to type your password :)
