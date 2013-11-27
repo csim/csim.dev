@@ -92,7 +92,7 @@ body
 .content strong a:hover,
 .content strong a:visited
 {
-	font-weight: bold;
+	font-weight:bold;
 }
 
 .content ul,
@@ -177,6 +177,12 @@ body
 		text-decoration: none;
 		border-bottom: none;
 	}
+
+.content h2, .content h2 a
+{
+	font-size: 23px;
+	font-weight: normal;
+}
 
 .content h3, .content h3 a
 {
