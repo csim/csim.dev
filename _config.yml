@@ -7,7 +7,7 @@ domain: csim.me
 markdown: redcarpet
 permalink: /blog/:year/:month/:day/:title
 timezone: "US/Pacific"
-exclude: ['README.md']
+exclude: [ 'README.md', '*.sln', '*.suo' ]
 
 analytics_id: UA-25860409-1
 webmaster_key: 9122UHrLTdTksyNCp_xG5dypMZu2evQmgwu43GVHjOo
