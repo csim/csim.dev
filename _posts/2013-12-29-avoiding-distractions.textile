@@ -2,7 +2,7 @@
 title: "Avoiding Distractions"
 layout: post
 tags: [ Consulting, Programming ]
-publish: false
+published: false
 --- 
 
 
