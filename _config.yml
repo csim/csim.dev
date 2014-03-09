@@ -1,9 +1,10 @@
 name: csim
 title: "Clint Simon"
 author: "Clint Simon"
-url: http://csim.me
+url: "http://csim.me"
 domain: csim.me
 
+encoding: UTF-8
 markdown: redcarpet
 permalink: /blog/:year/:month/:day/:title
 timezone: "US/Pacific"
@@ -11,12 +12,12 @@ exclude: [ 'README.md', '*.sln', '*.suo' ]
 
 analytics_id: UA-25860409-1
 webmaster_key: 9122UHrLTdTksyNCp_xG5dypMZu2evQmgwu43GVHjOo
-
 twitter_username: "clintsim"
 facebook_username: "csim74"
 linkedin_username: "clintsimon"
 github_username: "csim"
 disqus_shortname: "csimme"
+instagram_username: "csim74"
 
 navigation:
     - { title: "About", url: "/about/" }
