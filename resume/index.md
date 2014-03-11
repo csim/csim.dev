@@ -4,31 +4,32 @@ layout: post
 date:   2013-10-20 08:00:00
 ---
 
-<div style="float: right"><a href="http://pdfmyurl.com?url=csim.me/resume.html&amp;--filename=Clint%20Simon%20Resume.pdf">Download as PDF</a></div>
+<div style="float: right"><a href="http://pdfmyurl.com?url=csim.me/resume&amp;--filename=Clint%20Simon%20Resume.pdf">Download as PDF</a></div>
 
 [me@clintsimon.com](mailto:me@clintsimon.com), (425) 785-8007
 
 * Highly motivated individual with deep technology understanding, capable of learning and digesting new technologies rapidly.
 * Ability to communicate complex ideas clearly in a team environment with team members of various technical skill levels.
-* 15 years of industry experience analyzing business problems, formulating solutions and executing on those solutions to produce high value results delivered on time and on budget.
+* 16 years of industry experience analyzing business problems, formulating solutions and executing on those solutions to produce high value results delivered on time and on budget.
 * Strong leadership skills related to execution, mentorship and team building.
-* Object oriented programming in C#, ASP.NET, MVC, WCF and Silverlight. Strong object oriented pattern-based design and development skills acquired from real world deployments.
-* 9 years experience with SharePoint Portal Server and Windows SharePoint Services (2001, 2003, 2007 & 2010). Publishing Solutions, Collaboration, Site Templates, WebParts, Content Management Solutions, Custom Workflow.
-* 12 years of experience with SQL Server database design, development, deployment and maintenance. Complex stored procedure development, Data Warehousing, Data Analysis.
-* Strong background in interactive user experience implementation using client side technologies such as JavaScript, Ajax and jQuery.
+* Deep experience in object oriented programming (C#, ASP.NET, MVC, WCF). Strong object oriented pattern based design and development skills acquired from real world deployments.
+* 9 years of experience with SharePoint (2001, 2003, 2007, 2010 & 2013). Publishing Solutions, Collaboration, Site Templates, WebParts, Content Management Solutions, Custom Workflow.
+* 14 years of experience with SQL Server technologies. Design, development, deployment and maintenance. Transactional, Data Warehousing, Data Analysis, SSRS, SSIS.
+* Strong background in interactive user experience implementation using client side technologies (jQuery).
 * References available upon request.
 
 ## Avanade
-Architect, CRM Service Line - May 2010 to Present
+Architect, Dynamics CRM Service Line - May 2010 to Present
 
-* Acted as architect on engagements for both CRM on-premise and CRM Online working closely with clients, business analysts and program management in all phases of delivery.
+* Architect on engagements for both CRM on-premise and CRM Online working closely with clients, business analysts and program management in all phases of delivery.
 * Team lead responsible for mentorship and team building.
-* Designed and lead delivery for a 500 seat MS CRM deployment. Project involved complex data schema, data migration from 20 disparate sources and complex 3rd party system integration. Integration is capable of processing 3.5 million records per hour.
-* Designed and lead delivery for a customer service portal responsible for full service care to the US Military. Includes partner extranet collaboration module and content delivery tools. Deployed using SharePoint Server 2010.
+* Produced technical guidance on strategic consulting engagements to support large scale business decisions. Includes technology selection, high-level design guidance and value proposition.
+* Designed and lead implementation of multiple large Dynamics CRM deployments including sales force automation, call center and incident management solutions.
+* 
 
 
 ## Ascentium
-Solution Architect & Associate Partner - August 2004 to May 2010
+Solution Architect & Associate Partner - Aug 2004 to May 2010
 
 * Technology discipline lead for the Portal & Collaboration practice responsible for people development, resourcing, recruiting, and technology leadership.
 * Functioned as foremost expert and mentor with regard to SharePoint custom application development.
@@ -41,14 +42,14 @@ Solution Architect & Associate Partner - August 2004 to May 2010
 
 
 ## Hunt Interactive
-Technology Lead - April 2000 to August 2004
+Technology Lead - Apr 2000 to Aug 2004
 
 * Technical lead responsible for solution architecture and development execution on a variety of solutions: Productivity Portals, Business Intelligence, Data Warehousing, and Business Automation.
 * Acted as mentor to junior developers to provide guidance on emerging technologies and best practices.
 * Responsible for providing technical support to sales and marketing efforts including project planning, new technology evaluation and technology recommendations.
 
 ## Brightstar Information Technology Group
-Senior Developer & Technology Lead - December 1997 to April 2000
+Senior Developer & Technology Lead - Dec 1997 to Apr 2000
 
 * Acted as team lead working closely with graphic design staff, project managers and clients to produce numerous successful solutions focused on e-commerce, content management, data collection and automated content delivery.
 * Designed, developed and deployed a content management solution capable of managing hundreds of web site instances each with a customizable templates. Supports rich content including images, streaming media and formatted text. Developed custom content insertion ActiveX control allowing the site administrator to format and upload content with minimal HTML awareness.
