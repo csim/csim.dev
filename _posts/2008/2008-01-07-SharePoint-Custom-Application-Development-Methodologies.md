@@ -1,7 +1,7 @@
 ---
 title: "SharePoint Custom Application Development Methodologies"
 layout: post
-topics: [ "SharePoint", "Programming" ]
+tags: [ "SharePoint", "Programming" ]
 ---
 
 As SharePoint becomes more prevalent in the custom application development realm, there has been some friction and malcontent expressed in relation to deployment processes, team development methods and application upgrade paths. I believe that Microsoft has fallen short on providing the tools necessary to promote and support custom application development on the SharePoint platform.

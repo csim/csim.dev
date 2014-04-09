@@ -1,7 +1,7 @@
 ---
 title: "Anonymous access and item level permissions"
 layout: post
-topics: [ "SharePoint" ]
+tags: [ "SharePoint" ]
 ---
 
 You are probably familiar with the fact that SharePoint now has the capability to host site with anonymous access turned on. I learned the hard way that item level permissions do not participate in the anonymous access behavior the way you might expect. When an item **does not** inherit permissions, it is not possible to enable anonymous access on that item.

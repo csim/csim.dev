@@ -12,7 +12,7 @@ layout: default
     </ul>
 
     <div class="archive" style="clear: both;">
-        {% for tag in site.tags %}
+        {% for tag in site.tags order:ascending %}
             {% capture cat %}{{ tag | first }}{% endcapture %}
             <a name="{{ cat | slugify }}"></a>
             <h1>{{ cat }}</h1>

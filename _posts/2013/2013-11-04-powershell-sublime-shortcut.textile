@@ -9,16 +9,6 @@ Lately I have been learning about "Git":http://git-scm.org and "GitHub":http://g
 
 One very handy shortcut is the ability to launch the "sublime text editor":http://www.sublimetext.com and open the current directory as a project. Or alternately passing in a file to edit.
 
-
-{% highlight powershell %}
-function Edit { 
-    $SublimePath = "{your path}\sublime_text.exe"
-    if ($args.length -eq 0) {
-        & $SublimePath $pwd
-    } else {
-        & $SublimePath $args 
-    }
-}
-{% endhighlight %}
+<script src="https://gist.github.com/csim/10286154.js"></script>
 
 Once this function is in your powershell profile, just type "edit" at the command prompt and sublime will open the current folder.

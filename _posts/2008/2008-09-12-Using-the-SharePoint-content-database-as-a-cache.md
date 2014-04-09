@@ -1,7 +1,7 @@
 ---
 title: "Using the SharePoint content database as a cache"
 layout: post
-topics: [ "SharePoint", "Programming" ]
+tags: [ "SharePoint", "Programming" ]
 ---
 
 Data caching is a core concept in the web dominated world that we live in. The premise is that we should not have to go back to retrieve data from a data store for every single web request when the data is unchanged, thereby sharing data across web requests. This offers huge performance advantages because all latency related to data fetching, query processing and transmission is eliminated for requests that use the same data. In the SharePoint world this can be a very valuable technique when querying MOSS page libraries or any data stored in the content database. For high traffic sites, the performance of the SPQuery or SPSiteDataQuery api is not acceptable when executing queries for each request.
@@ -12,34 +12,7 @@ There are a few potential solutions to this problem including using the [HttpRun
 
 Here's the class signatures for my implementation of SPSite data caching. By creating a subclass from this base you can implement application independent caching of any data type. [The full implement can be found here](http://code.google.com/p/rapid-tools/source/browse/trunk/Rapid.Tools/Domain/RapidCachedDataAdapterBase.cs).
 
-{% highlight csharp linenos %}
-public abstract class RapidCachedDataAdapterBase<TData> where TData : class
-{
-	protected Guid SiteID;
-	protected virtual bool AutoRefreshCache;
-	protected virtual string CacheKey;
-	protected virtual string CacheExpireKey;
-	protected virtual int CacheTimeoutMinutes;
-
-	public virtual TData CachedData;
-
-	public RapidCachedDataAdapterBase(Guid siteID);
-	public RapidCachedDataAdapterBase(SPSite site);
-
-	protected abstract TData GetNativeData();
-	protected virtual TData GetData();
-	protected virtual TData GetCache();
-
-	protected virtual void SetCache(TData data);
-	protected virtual string Serialize(TData data);
-	protected virtual TData Deserialize(string data);
-
-	protected string SerializeInternal(object data);
-	protected T DeserializeInternal<T>(string data);
-
-	public virtual void InvalidateCache();
-}
-{% endhighlight %}
+<script src="https://gist.github.com/csim/10284798.js?file=RapidCachedDataAdapterBase.cs"></script>
 
 Notes:
 
@@ -52,54 +25,4 @@ Notes:
 
 Here's a sample subclass:
 
-{% highlight csharp linenos %}
-public class FaqDataAdapter : RapidCachedDataAdapterBase<DataTable>
-{
-	public FaqDataAdapter()    : base(SPContext.Current.Site.ID)
-	{
-	}
-
-	public FaqDataAdapter(Guid siteID) : base(siteID)
-	{
-	}
-
-	public FaqDataAdapter(SPSite site) : base(site)
-	{
-	}
-
-	protected override DataTable GetNativeData()
-	{
-		DataTable table = null;
-
-		SPSecurity.RunWithElevatedPrivileges(() =>
-		{
-			using (SPSite esite = new SPSite(SiteID))
-			{
-				SPList list = esite.RootWeb.GetList("faq");
-				table = list.Items.GetDataTable();
-			}
-		});
-
-		return table;
-	}
-
-	protected override string Serialize(DataTable data)
-	{
-		if (data == null)
-			return null;
-
-		var ds = new DataSet();
-		ds.Tables.Add(data);
-		return SerializeInternal(ds);
-	}
-
-	protected override DataTable Deserialize(string data)
-	{
-		if (string.IsNullOrEmpty(data))
-			return null;
-
-		var ds = DeserializeInternal<DataSet>(data);
-		return ds.Tables[0];
-	}
-}
-{% endhighlight %}
+<script src="https://gist.github.com/csim/10284798.js?file=RapidCachedDataAdapterBase2.cs"></script>

@@ -23,21 +23,7 @@ Write a function that can compute the angle between the hands of a clock given a
 
 [http://jsfiddle.net/ctrl1024/2Mk24/](http://jsfiddle.net/ctrl1024/2Mk24/)
 
-{% highlight javascript linenos %}
-    var angle = function(hour, minute) {
-        var hourAngle = parseFloat(hour * 30);
-        // take into account the movement of the hour hand between hours
-        hourAngle = hourAngle + parseFloat((minute / 60) * 5);
-        var minuteAngle = parseFloat(minute * 6);
-        var angle = Math.abs(hourAngle - minuteAngle);
-        return (angle > 180) ? 360 - angle : angle;
-    };
-    alert(angle(3, 0));
-    alert(angle(3, 10));
-    alert(angle(3, 30));
-    alert(angle(3, 40));
-    alert(angle(8, 33));
-{% endhighlight %}
+<script src="https://gist.github.com/csim/10286010.js"></script>
 
 ### Likely outcomes
 After giving this problem dozens of times, I have noticed responses that roughly fall into these tags:

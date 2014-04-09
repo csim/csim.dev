@@ -1,6 +1,7 @@
 ---
 title: "Personal Backup Strategy"
 layout: post
+tags: Life
 ---
 
 There are a million and one ways to backup files from your hard drive. For me, the most important things are making sure that the files that cannot be replaced are safe. 
