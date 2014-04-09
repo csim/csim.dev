@@ -246,6 +246,7 @@ body
 {
 	padding-top: 30px;
 }
+	.archive ul li { list-style-type: none; }
 
 	.archive td
 	{
