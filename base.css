@@ -377,6 +377,14 @@ ul.nav li a {
 	background-color: transparent;
 }
 
+.gravatar {
+	float: right;
+	width: 80px;
+	margin-right: 20px;
+	-moz-border-radius: 40px;
+    -khtml-border-radius: 40px;
+	-webkit-border-radius: 40px;
+}
 
 @media (min-width: 797px) and (max-width: 1215px)
 {
