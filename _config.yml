@@ -10,7 +10,7 @@ permalink: /blog/:year/:month/:day/:title
 timezone: "US/Pacific"
 exclude: [ "README.md", "*.sln", "*.suo" ]
 
-gravatar_url: "https://s.gravatar.com/avatar/6704ccdc544cd27a8445429aea61947e"
+gravatar_url: "http://s.gravatar.com/avatar/6704ccdc544cd27a8445429aea61947e"
 analytics_id: UA-25860409-1
 webmaster_key: 9122UHrLTdTksyNCp_xG5dypMZu2evQmgwu43GVHjOo
 twitter_username: "clintsim"
