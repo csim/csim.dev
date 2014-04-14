@@ -3,5 +3,6 @@ layout: default
 ---
 
 {% for page in site.posts limit:3 %}
+	{% assign index = true %}
 	{% include post.html %}
 {% endfor %}
