@@ -5,5 +5,3 @@ tags: [ Consulting, Programming ]
 published: false
 --- 
 
-
-
