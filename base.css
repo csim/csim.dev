@@ -68,6 +68,9 @@ body
 	margin-bottom: 10px;
 }
 
+.content p {
+	margin: 0 0 18px;
+}
 
 .post-date
 {
@@ -98,19 +101,15 @@ body
 .content ul,
 .content ol
 {
-	margin: 0 0 20px 20px;
+	margin: 10px 10px 20px 20px;
 }
 
 	.content ul li
 	{
-		list-style: disc;
-		list-style-position: outside;
 	}
 
 	.content ol li
 	{
-		list-style: decimal;
-		list-style-position: outside;
 	}
 
 .content blockquote

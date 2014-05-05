@@ -8,7 +8,7 @@ encoding: UTF-8
 markdown: redcarpet
 permalink: /blog/:year/:month/:day/:title
 timezone: "US/Pacific"
-exclude: [ "README.md", "*.sln", "*.suo" ]
+exclude: [ "README.md", "*.sln", "*.suo", "~$*" ]
 
 gravatar_url: "http://s.gravatar.com/avatar/6704ccdc544cd27a8445429aea61947e"
 analytics_id: UA-25860409-1
