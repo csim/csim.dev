@@ -2,7 +2,7 @@
 title: "Keyboard Manual Registry Settings"
 layout: post
 tags: [ "Computers", "Programming" ]
-comments: true
+comments: false
 --- 
 
 I have always had a sneaking suspicion that my keyboard repeat rate and repeat delay settings were a little too slow for my taste. Windows only lets to you increase the values in a fixed range but with a registry change, you can adjust as you please.

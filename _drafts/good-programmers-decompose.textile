@@ -6,7 +6,7 @@ comments: false
 
 
 
-----
+---
 
 * complexity is the enemy but it exists all around us
 * abstraction helps to build a model, humans think based on models
