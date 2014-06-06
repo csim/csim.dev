@@ -9,3 +9,4 @@ I have been doing work with [Boostrap 3](http://getbootstrap.com) as of late. Wh
 
 <script src="https://gist.github.com/csim/30aed7384208a76f6a07.js"></script>
 
+This is especially helpful when view a page from a mobile device or table. You can easily deduce which size group maps to a particular device in each orientation.
