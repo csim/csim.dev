@@ -4,7 +4,8 @@ layout: post
 tags: [ SharePoint, Programming ]
 ---
 
-When creating custom controls it is often must easier to create a control using the "User Control" development model instead of the "Server Control" model. [Server controls](http://msdn.microsoft.com/en-us/library/zt27tfhy.aspx) generally have a more "low level" feel and dictate that the developer build the control's rendering from scratch. Either by building a control tree or by constructing the rendered output in code.
+When creating custom controls it is often must easier to create a control using
+the "User Control" development model instead of the "Server Control" model. [Server controls](http://msdn.microsoft.com/en-us/library/zt27tfhy.aspx) generally have a more "low level" feel and dictate that the developer build the control's rendering from scratch. Either by building a control tree or by constructing the rendered output in code.
 
 Alternatively [user controls](http://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) have nice separation of code and presentation by virtue of having a markup file (.ascx) and a code behind file; much like a standard aspx page. User controls can be created and developed using the same standard approaches and processes that we all know and love from the aspx page model.
 
