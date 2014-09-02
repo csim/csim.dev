@@ -13,9 +13,9 @@ permalink: /feed.xml
     xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
 >
     <channel>
-        <title xml:lang="en">TechHike</title>
+        <title xml:lang="en">{{ site.title }}</title>
         <atom:link type="application/atom+xml" href="{{ site.url }}}/feed.xml" rel="self"/>
-        <link>http://techhike.net</link>
+        <link>{{ site.url }}</link>
         <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
         <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
         <language>en-US</language>
