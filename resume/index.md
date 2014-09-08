@@ -4,7 +4,7 @@ layout: post
 date:   2013-10-20 08:00:00
 ---
 
-<div style="float: right"><a href="http://pdfmyurl.com?url=csim.me/resume&amp;--filename=Clint%20Simon%20Resume.pdf">Download as PDF</a></div>
+<div style="float: right"><a href="http://pdfmyurl.com?url=clintsimon.me/resume&amp;--filename=Clint%20Simon%20Resume.pdf">Download as PDF</a></div>
 
 [me@clintsimon.com](mailto:me@clintsimon.com), (425) 785-8007
 

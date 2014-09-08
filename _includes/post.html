@@ -1,6 +1,7 @@
 {% capture target_url %}{% if page.link %}{{ page.link }}{% else %}{{ page.url }}{% endif %}{% endcapture %}
 
-<li class="post">
+
+<div class="post">
     <a name="{{ page.url }}"></a>
     <h1>
         <a href="{{ target_url }}">{{ page.title }}</a>
@@ -19,4 +20,4 @@
     <hr />
 
     {% include comments.html %}
-</li>
+</div>

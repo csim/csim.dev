@@ -185,6 +185,24 @@ ul.topic-toc
 }
 
 
+ul.nav.navbar-nav.navbar-right.social {
+    margin-right: 10px;
+}
+
+ul.nav.navbar-nav.navbar-right.social li a {
+    padding: 10px 3px 0 3px;
+}
+
+ul.nav.navbar-nav.navbar-right.social li img {
+    width: 30px;
+    opacity: 0.7;
+}
+
+ul.nav.navbar-nav.navbar-right.social li img:hover {
+    opacity: 1;
+}
+
+
 /* Better styles for embedding GitHub Gists https://gist.github.com/jnrbsn/578379 */
 .gist{font-size:13px;line-height:18px;margin-top:20px;margin-bottom:20px;width:100%}
 .gist .gist-file .gist-data{background-color:transparent !important;}
