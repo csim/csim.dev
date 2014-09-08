@@ -1,0 +1,118 @@
+﻿<!-- generated {{ site.time | date_to_xmlschema  }} -->
+{% capture browser_title %}{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}{% endcapture %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        {{ browser_title }}
+    </title>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <!-- <link rel="icon" href="/favicon.ico"> -->
+    <!-- <link rel="shortcut icon" href="/favicon.ico"> -->
+    <!-- <link rel="apple-touch-icon" href="/favicon" /> -->
+
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="/feed.xml" />
+
+    <meta charset="utf-8" />
+    <meta name="title" content="{% if page.meta.title %}{{ page.meta.title }}{% else %}{{ page.title }}{% endif %}" />
+    <meta name="author" content="{{ site.author }}" />
+    <meta name="description" content="{{ page.meta.description }}" />
+
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="google-site-verification" content="{{ site.webmaster_key }}" />
+
+    <link rel="stylesheet" href="/base.css" />
+</head>
+
+<body>
+
+    <div id="masthead">
+        <div id="masthead-inner">
+            <a href="/"><img class="gravatar" src="{{ site.gravatar_url }}?s=80" /></a>
+            <a class="title" href="/">{{ site.title }}</a>
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="">Link</a></li>
+                <li><a href="">Link</a></li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="">Action</a></li>
+                        <li><a href="">Another action</a></li>
+                        <li><a href="">Something else here</a></li>
+                        <li><a href="">Separated link</a></li>
+                        <li><a href="">One more separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="">Link</a></li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="">Action</a></li>
+                        <li><a href="">Another action</a></li>
+                        <li><a href="">Something else here</a></li>
+                        <li><a href="">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+
+    <div class="container content">
+        <div class="row">
+            <div class="col-sm-9">
+                {{ content }}
+            </div>
+            <div class="col-sm-3 sidebar">
+                <div class="well sidebar-nav">
+                    <ul class="nav nav-list">
+                        {% for item in site.navigation %}
+                        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                    <div class="social-icons">
+                        <a href="http://www.facebook.com/{{ site.facebook_username }}"><img src="/images/facebook.png" style="width: 30px;" alt="Facebook" /></a>
+                        <a href="http://www.twitter.com/{{ site.twitter_username }}"><img src="/images/twitter.png" style="width: 30px;" alt="Twitter" /></a>
+                        <br />
+                        <a href="http://www.linkedin.com/in/{{ site.linkedin_username }}"><img src="/images/linkedin.png" style="width: 30px;" alt="Linkedin" /></a>
+                        <a href="http://github.com/{{ site.github_username }}"><img src="/images/github.png" style="width: 30px;" alt="GitHub" /></a>
+                        <br />
+                        <a href="http://instagram.com/{{ site.instagram_username }}?ref=badge"><img src="/images/instagram.png" alt="Instagram" /></a>
+                        <a href="/feed.xml"><img src="/images/rss.gif" style="width: 29px; height: 31px;" alt="Feed" /></a>
+                        <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include analytics.html %}
+
+</body>
+</html>

@@ -4,7 +4,7 @@ layout: post
 tags: [ Consulting, Interviews ]
 --- 
 
-h2. Must have
+## Must have
 
 *Experience.* Nothing trumps experience. The more times you are "at-bat", the more lessons you learn. Particularly experience at progressively higher of levels responsibility is desirable. Challenging yourself is ultimately the only way to grow and learn.
 
@@ -21,7 +21,7 @@ h2. Must have
 *Honesty.* Look, I know that things go sideways on projects. In fact, I would venture to say that every single project has a "sideways" phase at some point in the process. An honest candidate will talk intelligently about these situations and recognize that we do a difficult job and sometimes things don't work out as expected.
 
 
-h2. Deal breakers
+## Deal breakers
 
 *Candidate is too nervous to talk.* It's sad to say but if a candidate is too nervous to speak in an interview, there is no way that he will be able to meet with a client in unfamiliar environment. I usually go out of my way to have some small talk at the start of the interview, just to set the tone and send a message that I am approachable and we are going to have a pleasant conversation.
 

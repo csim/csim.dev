@@ -1,18 +1,22 @@
 {% capture target_url %}{% if page.link %}{{ page.link }}{% else %}{{ page.url }}{% endif %}{% endcapture %}
 
-<a name="{{ page.url }}"></a>
-<h1>
-    <a href="{{ target_url }}">{{ page.title }}</a>
-    {% if page.link %}&#8640; <a style="float: right; margin-right: 10px;" href="{{ page.url }}">&#8734;</a>{% endif %}
-</h1>
-<div class="post-date">{{ page.date | date: "%-d %B %Y" }}</div>
+<li class="post">
+    <a name="{{ page.url }}"></a>
+    <h1>
+        <a href="{{ target_url }}">{{ page.title }}</a>
+        {% if page.link %}&#8640; <a style="float: right; margin-right: 10px;" href="{{ page.url }}">&#8734;</a>{% endif %}
+    </h1>
+    <div class="post-date hidden">{{ page.date | date: "%-d %B %Y" }}</div>
 
-{% if content %}
-	{{ content }}
-{% else %}
-	{{ page.content }}
-{% endif %}
-	
-<div class="post-separator"></div>
+    <div class="post-body">
+        {% if content %}
+        {{ content }}
+        {% else %}
+        {{ page.content }}
+        {% endif %}
+    </div>
 
-{% include comments.html %}
+    <hr />
+
+    {% include comments.html %}
+</li>
