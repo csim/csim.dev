@@ -4,30 +4,50 @@
    Author's custom styles
    ========================================================================== */
 
-.post {
-    font-family: 'Droid Sans'
+.container {
+    font-family: 'Droid Sans';
 	clear: both;
 	font-size: 15px;
 	line-height: 1.7em;
+    color: #383838;
 }
 
-.post .post-body {
+.container p {
+    margin-bottom: 20px;
+}
+
+.container .post-body {
     line-height: 1.9;
     font-size: 16px;
 }
 
-	.post a, .post a:active, .post a:visited
-	{
+    .container a, .container a:link, .container a:active, .container a:visited {
 		font-weight: normal;
-		color: #222;
 		text-decoration: none;
-		border-bottom: 1px dotted black;
+		color: #383838;
+    }
+    	
+    .container .post-body a, .container a:link, .container a:active, .container a:visited 
+    {
+        border-bottom: 1px dotted #383838;
+    }
+
+    .container .post h1 a, .container .post h1  a:link, .container .post h1  a:active, .container .post h1 a:visited 
+    {
+        text-decoration: none;
+        border-bottom: none;
+    }
+
+    .container a:hover
+	{
+		border-bottom: 1px dotted #383838;
 	}
 
 .archive
 {
 	padding-top: 30px;
 }
+
 	.archive ul li { list-style-type: none; }
 
 	.archive td
@@ -43,7 +63,7 @@
 
 		.archive td.year
 		{
-			font-size: 20px;
+			font-size: 16px;
 			line-height: 20px;
 			text-align: right;
 			width: 40px;
@@ -51,14 +71,13 @@
 
 		.archive td.month
 		{
-			font-size: 18px;
+			font-size: 16px;
 			font-weight: normal;
 			line-height: 20px;
 			padding-right: 10px;
 			padding-bottom: 5px;
 			text-align: right;
-			padding-top: 8px;
-			width: 90px;
+			width: 100px;
 		}
 
 		.archive td.day
@@ -78,7 +97,6 @@
 
 		.archive td.link
 		{
-			padding-top: 7px;
             font-size: 16px;
 		}
 
