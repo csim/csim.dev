@@ -5,6 +5,7 @@ published: true
 ---
 
 <img src="/images/profile.png" class="pull-right img-responsive img-rounded" />
+test
 
 Hi, I am Clint. I'm a technology enthusiast, [software developer](http://www.cartoonstock.com/directory/s/software_engineer.asp), father, husband, [cajun](http://en.wikipedia.org/wiki/Cajun), worrywart and sometimes ["grouch"](http://en.wikipedia.org/wiki/Oscar_the_Grouch). I live in the suburbs of Seattle where I watch [LSU football](http://www.lsusports.net/) and enjoy our annual crawfish boil. I have 2 daughters which leaves me as the only man in the house. Even the dog is female.
 
