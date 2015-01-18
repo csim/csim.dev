@@ -3,7 +3,7 @@ title: Dropzone knockout binding
 layout: post
 tags: Programming
 comments: false
-published: false
+published: true
 ---
 
 A very simple knockout binding for <a href="http://www.dropzonejs.com/">dropzone.js</a>.
