@@ -1,5 +1,8 @@
 ---
 published: false
+layout: post
+tags: Programming
+comments: false
 ---
 
 ## A New Post
