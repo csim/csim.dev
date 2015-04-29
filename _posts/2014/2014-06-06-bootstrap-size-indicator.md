@@ -3,7 +3,7 @@ title: "Bootstrap size indicator"
 layout: post
 tags: Programming
 comments: false
---- 
+---
 
 I have been doing work with [Bootstrap 3](http://getbootstrap.com) as of late. When building responsive layouts, I find it very handy to immediately see which predefined size group you are currently viewing. Here’s a little snippet that shows the current Bootstrap size modifier.
 
