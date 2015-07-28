@@ -31,3 +31,4 @@ defaults:
       path: "" # empty string for all files
     values:
       layout: "post"
+      comments: true
