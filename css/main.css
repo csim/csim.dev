@@ -43,6 +43,17 @@
 		border-bottom: 1px dotted #383838;
 	}
 
+.forkme {
+	position: fixed; 
+	top: 0; 
+	right: 0; 
+	border: 0;
+}
+
+@media (min-width: 1200px) {
+	top: 50px;
+}
+
 .archive
 {
 	padding-top: 30px;
