@@ -1,4 +1,4 @@
-name: csim
+name: clintsimon
 title: "Clint Simon"
 author: "Clint Simon"
 url: "http://clintsimon.com"
@@ -11,13 +11,13 @@ timezone: "US/Pacific"
 exclude: [ "README.md", "*.sln", "*.suo", "~$*" ]
 
 gravatar_url: "http://s.gravatar.com/avatar/6704ccdc544cd27a8445429aea61947e"
-analytics_id: UA-25860409-1
+analytics_id: "UA-25860409-1"
 webmaster_key: 9122UHrLTdTksyNCp_xG5dypMZu2evQmgwu43GVHjOo
 twitter_username: "clintsim"
 facebook_username: "csim74"
 linkedin_username: "clintsimon"
 github_username: "csim"
-disqus_shortname: "csimme"
+disqus_shortname: "clintsimon"
 instagram_username: "csim74"
 
 navigation:
