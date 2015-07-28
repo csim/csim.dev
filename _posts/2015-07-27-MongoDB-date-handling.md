@@ -1,6 +1,9 @@
 ---
 title: MongoDB .Net Driver date handling
 published: true
+tags: 
+  - MongoDB
+  - Programming
 ---
 
 I ran into an interesting situation when saving dated to MongoDB using the Mongo .Net driver (version 2.0).
