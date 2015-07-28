@@ -24,3 +24,10 @@ navigation:
     - { title: "About", url: "/about/" }
     - { title: "Archive", url: "/blog/archive/" }
     - { title: "Topics", url: "/blog/topics/" }
+
+defaults:
+  -
+    scope:
+      path: "" # empty string for all files
+    values:
+      layout: "post"
