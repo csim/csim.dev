@@ -16,7 +16,7 @@ Moral of the story: if you are converting data from SQL Server to MongoDB, make 
 
 EDIT: As Robert suggests below, it is better to set the Kind on the DateTime because of possible UTC/Local conversion issues. Sample:
 
-`
+```
 var unspecifiedDateTime = ...; // returned by Entity Framework
 var utcDateTime = DateTime.SpecifyKind(unspecifiedDateTime, DateTimeKind.Utc);
-`
+```
