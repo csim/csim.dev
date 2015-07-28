@@ -1,8 +1,6 @@
 ---
-title: "[object Object]"
-layout: post
-comments: false
-published: true
+title: ""
+published: false
 ---
 
 test
