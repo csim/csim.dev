@@ -51,7 +51,15 @@
 }
 
 @media (max-width: 1200px) {
-	top: 50px;
+	.forkme {
+		top: 50px;
+	}
+}
+
+@media (max-width: 700px) {
+	.forkme {
+		display: none;
+	}
 }
 
 .archive
