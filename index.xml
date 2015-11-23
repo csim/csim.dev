@@ -304,30 +304,6 @@ I am certain that there are application on the marketplace that were written in 
     </item>
     
     <item>
-      <title>Keeping Up with Technology</title>
-      <link>http://clintsimon.com/blog/2012/2012-11-14-Keeping-Up-with-Technology/</link>
-      <pubDate>Wed, 14 Nov 2012 08:00:00 -0800</pubDate>
-      
-      <guid>http://clintsimon.com/blog/2012/2012-11-14-Keeping-Up-with-Technology/</guid>
-      <description>&lt;p&gt;Learning new technologies and techniques is a part of life for any software developer. Programming is a quest for knowledge and understanding which lasts your entire lifetime. No other profession has a more dynamic working environment. Tools change and evolve on a daily basis it seems.  Learning is incumbent on all developers. Darwin&amp;rsquo;s law applies, adapt or perish.&lt;/p&gt;
-
-&lt;p&gt;Luckily most of us are used to this environment and thrive on the constantly changing landscape. I have found over my career that the pace of change has only increased, particularly in the past few years. The move to cloud computing is a big driver and the open source movement is creating a climate of rapid discovery and change. Thousands of new approaches to old problems are being forged this very moment.&lt;/p&gt;
-
-&lt;p&gt;Benefits can be reaped if you are efficient with your time and energy. Your value as an employee can be traced back to your technology aptitude and that aptitude is greatly affected by your knowledge of the technology spectrum which you apply to a project. This doesn&amp;rsquo;t mean that you need to have the deepest knowledge on a particular technology but instead you need a broad view of how technology fits together and how to choose the right pieces to solve a problem. Suggesting the pieces can be more important that understanding how each pieces works.&lt;/p&gt;
-
-&lt;p&gt;Generally I try to follow a few key rules which keep me in touch with new technology:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Find quality sources.&lt;/strong&gt; Find the best possible sources which apply to the technology space where you work. Each source should have excellent content covering a set of topics that could potentially apply to your daily work.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Organize the channels.&lt;/strong&gt; Create channels to monitor your sources, &lt;a href=&#34;http://reader.google.com&#34;&gt;Google reader&lt;/a&gt; works well, &lt;a href=&#34;http://twitter.com&#34;&gt;twitter&lt;/a&gt; a bit noisy. You want these streams to have a high signal to noise ratio. Don&amp;rsquo;t add pundits or 24-hour tech news into this mix. They are too noisy. Add sources that you know produce great topical content. For me, technology specific tech blogs work best.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Read your channels regularly.&lt;/strong&gt; I try to read through my sources at least once per day. Some days there isn&amp;rsquo;t much to learn but other days I have multiple &amp;ldquo;holy cow&amp;rdquo; moments. If this becomes a chore then you might want to look for a new line of work :)&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Using IE10 with Dynamics CRM Online</title>
       <link>http://clintsimon.com/blog/2012/2012-11-14-CRM-IE10/</link>
       <pubDate>Wed, 14 Nov 2012 08:00:00 -0800</pubDate>
@@ -350,6 +326,30 @@ I am certain that there are application on the marketplace that were written in 
 &lt;/div&gt;
 
 &lt;p&gt;Maybe Microsoft should make dynamics.com automatically render in compatibility mode? Or would that be too big of a black eye?&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Keeping Up with Technology</title>
+      <link>http://clintsimon.com/blog/2012/2012-11-14-Keeping-Up-with-Technology/</link>
+      <pubDate>Wed, 14 Nov 2012 08:00:00 -0800</pubDate>
+      
+      <guid>http://clintsimon.com/blog/2012/2012-11-14-Keeping-Up-with-Technology/</guid>
+      <description>&lt;p&gt;Learning new technologies and techniques is a part of life for any software developer. Programming is a quest for knowledge and understanding which lasts your entire lifetime. No other profession has a more dynamic working environment. Tools change and evolve on a daily basis it seems.  Learning is incumbent on all developers. Darwin&amp;rsquo;s law applies, adapt or perish.&lt;/p&gt;
+
+&lt;p&gt;Luckily most of us are used to this environment and thrive on the constantly changing landscape. I have found over my career that the pace of change has only increased, particularly in the past few years. The move to cloud computing is a big driver and the open source movement is creating a climate of rapid discovery and change. Thousands of new approaches to old problems are being forged this very moment.&lt;/p&gt;
+
+&lt;p&gt;Benefits can be reaped if you are efficient with your time and energy. Your value as an employee can be traced back to your technology aptitude and that aptitude is greatly affected by your knowledge of the technology spectrum which you apply to a project. This doesn&amp;rsquo;t mean that you need to have the deepest knowledge on a particular technology but instead you need a broad view of how technology fits together and how to choose the right pieces to solve a problem. Suggesting the pieces can be more important that understanding how each pieces works.&lt;/p&gt;
+
+&lt;p&gt;Generally I try to follow a few key rules which keep me in touch with new technology:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Find quality sources.&lt;/strong&gt; Find the best possible sources which apply to the technology space where you work. Each source should have excellent content covering a set of topics that could potentially apply to your daily work.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Organize the channels.&lt;/strong&gt; Create channels to monitor your sources, &lt;a href=&#34;http://reader.google.com&#34;&gt;Google reader&lt;/a&gt; works well, &lt;a href=&#34;http://twitter.com&#34;&gt;twitter&lt;/a&gt; a bit noisy. You want these streams to have a high signal to noise ratio. Don&amp;rsquo;t add pundits or 24-hour tech news into this mix. They are too noisy. Add sources that you know produce great topical content. For me, technology specific tech blogs work best.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Read your channels regularly.&lt;/strong&gt; I try to read through my sources at least once per day. Some days there isn&amp;rsquo;t much to learn but other days I have multiple &amp;ldquo;holy cow&amp;rdquo; moments. If this becomes a chore then you might want to look for a new line of work :)&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
 </description>
     </item>
     
