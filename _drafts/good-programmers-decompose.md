@@ -1,7 +1,5 @@
 ---
 title: Good Programmers Decompose
-layout: post
-comments: false
 --- 
 
 
