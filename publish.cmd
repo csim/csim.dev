@@ -2,7 +2,7 @@ rmdir /S /Q public
 
 hugo
 
-xcopy CNAME "public/CNAME"
+xcopy /crydifs CNAME "public/CNAME"
 
 git add -A
 git commit -m "Updates"
