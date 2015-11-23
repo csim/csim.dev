@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+<section class="article-list">
+  {{ if eq .Title "Blogs" }}
+      <h1>Archive</h1>
+      {{ range .Data.Pages.GroupByDate "2006" }}
+      <h2>{{ .Key }}</h2>
+      <!-- ANOTHER WAY: <div style="margin-left: 2em" id="list"></div> -->
+      <ul id="list">
+          {{ range .Pages }}
+              <a href="{{ .Permalink }}">{{ .Title }}</a><br/>
+          {{ end }}
+      </ul>
+      {{ end }}    
+  {{ else }}
+  <h1>{{ .Title }}</h1>
+  {{ range .Data.Pages }}
+  <hr/>
+  {{ .Render "li" }}
+  {{ end }}
+  {{ end }}
+</section>
+{{ partial "footer.html" . }}
+

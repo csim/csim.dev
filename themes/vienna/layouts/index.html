@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+<div class="article-list">
+  {{ $paginator := .Paginate (where .Site.Pages "Section" "blog") }}
+  {{ range $index, $page := $paginator.Pages }}
+  {{ if ne $index 0 }}
+  <hr/>
+  {{ end }}
+  {{ .Render "li" }}
+  {{ end }}
+</div>
+{{ partial "pagination.html" .Paginator }}
+{{ partial "footer.html" . }}
