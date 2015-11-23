@@ -1,1 +1,0 @@
-start cmd.exe /c "ws -d _site"
