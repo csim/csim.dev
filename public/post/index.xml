@@ -249,9 +249,15 @@ I am certain that there are application on the marketplace that were written in 
       <pubDate>Mon, 04 Nov 2013 08:00:00 -0800</pubDate>
       
       <guid>http://clintsimon.com/post/2013/2013-11-04-powershell-sublime-shortcut/</guid>
+<<<<<<< HEAD
       <description>&lt;p&gt;Lately I have been learning about &lt;a href=&#34;http://git-scm.org&#34;&gt;Git&lt;/a&gt; and &lt;a href=&#34;http://github.com&#34;&gt;GitHub&lt;/a&gt;. Most of this work is done at the command line, I have found myself quickly amassing PowerShell functions that acts as shortcuts.&lt;/p&gt;
 
 &lt;p&gt;One very handy shortcut is the ability to launch the &lt;a href=&#34;http://www.sublimetext.com&#34;&gt;sublime text editor&lt;/a&gt; and open the current directory as a project. Or alternately passing in a file to edit.&lt;/p&gt;
+=======
+      <description>&lt;p&gt;Lately I have been learning about &amp;ldquo;Git&amp;rdquo;:&lt;a href=&#34;http://git-scm.org&#34;&gt;http://git-scm.org&lt;/a&gt; and &amp;ldquo;GitHub&amp;rdquo;:&lt;a href=&#34;http://github.com&#34;&gt;http://github.com&lt;/a&gt;. Most of this work is done at the command line, I have found myself quickly amassing PowerShell functions that acts as shortcuts.&lt;/p&gt;
+
+&lt;p&gt;One very handy shortcut is the ability to launch the &amp;ldquo;sublime text editor&amp;rdquo;:&lt;a href=&#34;http://www.sublimetext.com&#34;&gt;http://www.sublimetext.com&lt;/a&gt; and open the current directory as a project. Or alternately passing in a file to edit.&lt;/p&gt;
+>>>>>>> 28306c32e5056e761f20231ef984db9306c0bfe5
 
 &lt;script src=&#34;https://gist.github.com/csim/10286154.js&#34;&gt;&lt;/script&gt;
 
