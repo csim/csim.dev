@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content=" App Engine &middot;  Clint Simon" />
+  
+  <meta name="theme-color" content="#af200a" />
+ 
+  <meta property="og:site_name" content="Clint Simon" />
+  <meta property="og:url" content="http://clintsimon.com/tags/app-engine/" />
+  
+  
+  <meta property="og:type" content="website" />
+  
+
+  <title>
+     App Engine &middot;  Clint Simon
+  </title>
+
+  <link rel="stylesheet" href="http://clintsimon.comcss/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://clintsimon.comcss/main.css" />
+  <link rel="stylesheet" href="http://clintsimon.comcss/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://clintsimon.comcss/github.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="http://clintsimon.comimages/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://clintsimon.comimages/apple-touch-icon.png" />
+  
+</head>
+<body>
+    
+    <header class="global-header">
+    <section class="header-text">
+      <h1><a href="http://clintsimon.com">Clint Simon</a></h1>
+      
+      <div class="tag-line">
+        Find a way.
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/clintsim" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://facebook.com/csim74" target="_blank">
+    <i class="fa fa-facebook"></i>
+  </a>
+  
+  
+  <a href="https://github.com/csim" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  <a href="https://linkedin.com/in/clintsimon" target="_blank">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  <a href="/index.xml" target="_blank">
+    <i class="fa fa-rss"></i>
+  </a>
+</div>
+
+      
+      <a href="http://clintsimon.com" class="btn-header btn-back hidden-xs"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;Home</a>
+      
+      <a href="/tags" class="btn-header btn-topics hidden-xs"><i class="fa fa-tags"></i>&nbsp; Topics</a>
+      <a href="/blog" class="btn-header btn-archive hidden-xs"><i class="fa fa-archive"></i>&nbsp; Archive</a>
+    </section>
+  </header>
+  <main class="container">
+
+<section class="article-list">
+  
+  <h1>App Engine</h1>
+  
+  <hr/>
+  <article>
+  <header>
+    <h2><a href="http://clintsimon.com/blog/2011/2011-10-28-The-case-of-the-30-day-memcache-timeout-on-app-engine/">The case of the 30 day memcache timeout on app engine</a></h2>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2011-10-28T08:00:00-08:00">
+          Oct 28, 2011
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    <p>I ran into an interesting problem with Google app engine. It seems that the memcache time limit is enforced differently on the development server versus the production servers.</p>
+
+<p><a href="http://code.google.com/p/memcached/wiki/FAQ#What_are_the_limits_on_setting_expire_time?_(why_is_there_a_30_d">The documentation</a> says that the time limit for a memcache key is 30 days. The behavior that I have observed is that if you set a memcache key to timeout at 30 days, the development server (on windows) will happily persist the data as expected.</p>
+
+<p>On the production servers, it seems that the behavior is much different. I have notice with a timeout of 30 days, that memcache will not only ignore the persisted key but it will also cause erratic behavior for instances in your application.</p>
+
+<p>Under these conditions a new instance of my application was start for each request! Obviously this adversely effects performance.</p>
+
+<p>Once I changed the memcache timeout to a lesser value (under 30 days), the problem stopped.</p>
+
+  </div>
+  
+  <footer>
+    <ul class="pager">
+      <li class="next"><a href="http://clintsimon.com/blog/2011/2011-10-28-The-case-of-the-30-day-memcache-timeout-on-app-engine/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+  </footer>
+  
+</article>
+
+  
+  <hr/>
+  <article>
+  <header>
+    <h2><a href="http://clintsimon.com/blog/2011/2011-09-29-Googles-new-App-Engine-pricing/">Google&#39;s new App Engine pricing</a></h2>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2011-09-29T08:00:00-08:00">
+          Sep 29, 2011
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    
+
+<p>Google App engine is in the process of changing it&rsquo;s pricing model. At present this new pricing model goes into effect on December 1, 2011. There has been quite an uproar among App engine developers. In some cases the new billing model raises monthly costs by more than 300%. This has cause quite a reaction among the community and the backlash is very real</p>
+
+<h3 id="what-is-changing:9829541407e1bc2b452f513247e9d720">What is changing?</h3>
+
+<p>The primary change is that Google is moving from a model where you are charged by CPU time to a model where you are charged by &ldquo;instance time&rdquo;. This means that google charges are not necessarily based on pure CPU use but rather on the amount of instances of your application the Google scheduler decides to run. To magnify matters, most web applications are IO bound and the current version of Python supported by App Engine is single threaded.</p>
+
+<p>That means that your application is probably using more instances that you think. Because one instance can only handle a fixed amount of traffic based on IO and threading, the scheduler is forced to create instances more often for Python applications. All of these circumstances add up to a much higher cost for developers.</p>
+
+<p>Google has added sliders that allow you to tweak the scheduler behavior. You can now change the maximum number of idle instances and the minimum pending wait time. This allow us to dictate how long is a acceptable waiting time per request and how many instances show be available for traffic spikes.</p>
+
+<p>I&rsquo;m personally glad these are available, although others disagree. I have found them to be helpful for my small(ish) application because latency is not a concern, so I can set the min latency up to around 700ms. This means that requests can wait to be served from an <em>existing</em> instance. Basically all output from my application is cached, so my request processing time is under 100ms. Setting the min pending latency to 700ms basically means that my application can remain free. I like free.</p>
+
+<p>It appears as though CPU billing was a bad idea in the first place and Google is now correcting for this by changing to instance based billing. In the end, Google needs to pay for the physical resources an application uses and as it turns out web applications use very little CPU as compared to IO with the datastore or other APIs.</p>
+
+<p>So, is the dream of a true &ldquo;Platform as a Service&rdquo; dead? Yes and No. The precise billing aspect of PaaS is dead at Google for the moment, but App Engine (and PaaS for that matter) is not defined by this shortcoming. Ultimately Google has recognized that having an instance running costs money even if the CPU usage for that instance is zero. Said another way, memory costs money. An instance will always consume memory if it is running. And not only will it consume memory but Google will need to reserve all the memory that it <em>may</em> need. This is a reality of physics.</p>
+
+<p>I think we have become a little spoiled in that we have come to expect that computing will always become cheaper over time. I wonder how much it would cost to build your own ultra scalable, redundant, highly replicated system?</p>
+
+<h3 id="optimization:9829541407e1bc2b452f513247e9d720">Optimization</h3>
+
+<p>In the new world of App Engine where instances are charged, the emphasis is now on eliminating IO bound activities. That means eliminate datastore calls, URL fetch call, etc. If you have instances that are waiting around for IO activities to complete, then you are running to many instances.</p>
+
+<p>Here are a few ideas:</p>
+
+<ul>
+<li>Don&rsquo;t pull more data than you need for the data store. Use &ldquo;Select <em>key</em>&rdquo; where possible. Limit your fetches to the smallest possible row sets.</li>
+<li>Cache results when ever possible. If you are displaying the same data, then cache it per page, per user or per application.</li>
+<li>Use a Task Queue. Can this operation run in the background? Task queues can eliminate instances by way of pushing work for a dedicated backend.</li>
+</ul>
+
+<h3 id="the-good-news:9829541407e1bc2b452f513247e9d720">The good news&hellip;</h3>
+
+<p>App Engine was not decommissioned. I know this sounds like little consolation, but many Google projects have been scrapped over the past 6 months and App Engine is not one of them. This shows that Google is willing to make difficult decisions when it comes to App Engine and that they are committed to having a PaaS offering for the long term.</p>
+
+<p>The bottom line is that Google has a right to at least break even on App Engine. The service is incredible, the free tier still exists and the new <a href="http://code.google.com/appengine/sla.html">SLA terms</a> are top notch. App Engine is still a worth competitor in the PaaS market, even with the new pricing.</p>
+
+  </div>
+  
+  <footer>
+    <ul class="pager">
+      <li class="next"><a href="http://clintsimon.com/blog/2011/2011-09-29-Googles-new-App-Engine-pricing/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+  </footer>
+  
+</article>
+
+  
+  
+</section>
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      &copy; Copyright
+    </div>
+    <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/clintsim" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://facebook.com/csim74" target="_blank">
+    <i class="fa fa-facebook"></i>
+  </a>
+  
+  
+  <a href="https://github.com/csim" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  <a href="https://linkedin.com/in/clintsimon" target="_blank">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  <a href="/index.xml" target="_blank">
+    <i class="fa fa-rss"></i>
+  </a>
+</div>
+
+  </footer>
+
+  <script src="http://clintsimon.comjs/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-25860409-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+  
+</body>
+</html>
+
+

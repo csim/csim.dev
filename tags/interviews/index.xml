@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Interviews on Clint Simon</title>
+    <link>http://clintsimon.com/tags/interviews/</link>
+    <description>Recent content in Interviews on Clint Simon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright</copyright>
+    <lastBuildDate>Sun, 10 Nov 2013 08:00:00 -0800</lastBuildDate>
+    <atom:link href="http://clintsimon.com/tags/interviews/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>What I look for in a Candidate</title>
+      <link>http://clintsimon.com/blog/2013/2013-11-10-candidate/</link>
+      <pubDate>Sun, 10 Nov 2013 08:00:00 -0800</pubDate>
+      
+      <guid>http://clintsimon.com/blog/2013/2013-11-10-candidate/</guid>
+      <description>
+
+&lt;h2 id=&#34;must-have:31c69a2a81f7ad881c9a2895581cad31&#34;&gt;Must have&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Experience.&lt;/em&gt; Nothing trumps experience. The more times you are &amp;ldquo;at-bat&amp;rdquo;, the more lessons you learn. Particularly experience at progressively higher of levels responsibility is desirable. Challenging yourself is ultimately the only way to grow and learn.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Technology aptitude.&lt;/em&gt; I don&amp;rsquo;t necessarily mean reciting minute technical details from memory. I mean &lt;em&gt;understanding&lt;/em&gt; the underlying principles of technology. Abstraction, service oriented architecture, componentization, dependency injection, user experience design. Deep understand of these topics are what separates the great consultants from the rest.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Consulting IQ.&lt;/em&gt; Soft skills are where we make our money. Reading a room, understanding the motivations involved, working toward a common goal while avoiding or minimizing conflicts. These are things that a consultant does every day. It is hard to judge this quality&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Confidence.&lt;/em&gt; Nothing sells a candidate like the combination of confidence &lt;em&gt;and skills&lt;/em&gt;. When someone is comfortable in their own skin, everyone around them can also be at easy with any situation. Usually confidence comes from a solid history of delivery experience and the understanding that the candidate can overcome any impediments to success.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Inquisitive nature.&lt;/em&gt; Every single person on this planet should be constantly asking questions and learning. If the candidate is not asking questions (and hopefully intelligent questions), how can I hope to send that person into an unknown client situation and expect good results?&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Personality and likability.&lt;/em&gt; Ultimately our clients are people and people form relationships with others and those relationships affect important decisions. Likability goes a long way toward forging relationships. Simple things, like mentioning a hobby or sharing a laugh about some common interest can add up to extremely valuable relationships over time. Some of this comes from simply liking what you do for a living, but I think mostly it comes from a positive outlook.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Honesty.&lt;/em&gt; Look, I know that things go sideways on projects. In fact, I would venture to say that every single project has a &amp;ldquo;sideways&amp;rdquo; phase at some point in the process. An honest candidate will talk intelligently about these situations and recognize that we do a difficult job and sometimes things don&amp;rsquo;t work out as expected.&lt;/p&gt;
+
+&lt;h2 id=&#34;deal-breakers:31c69a2a81f7ad881c9a2895581cad31&#34;&gt;Deal breakers&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Candidate is too nervous to talk.&lt;/em&gt; It&amp;rsquo;s sad to say but if a candidate is too nervous to speak in an interview, there is no way that he will be able to meet with a client in unfamiliar environment. I usually go out of my way to have some small talk at the start of the interview, just to set the tone and send a message that I am approachable and we are going to have a pleasant conversation.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I don&amp;rsquo;t hear excitement.&lt;/em&gt; It&amp;rsquo;s a job interview. Tell me why you are excited about this job. What you want to accomplish in your career and how you feel about seizing this opportunity. At a bare minimum, win me over with enthusiasm. Sometimes I will take someone who is excited and will work really hard over someone who has more skill.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tech Interview Question: The Clock Problem</title>
+      <link>http://clintsimon.com/blog/2012/2012-10-12-Clock-Problem/</link>
+      <pubDate>Fri, 12 Oct 2012 08:00:00 -0800</pubDate>
+      
+      <guid>http://clintsimon.com/blog/2012/2012-10-12-Clock-Problem/</guid>
+      <description>
+
+&lt;p&gt;&amp;ldquo;The Clock Problem&amp;rdquo; is an interview question that I have been using for a few years. I first learned about it when I was being interviewed. I have now adopted it as my first line of defense against imposters. :)&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s a simple problem that can be used to determine a candidate&amp;rsquo;s capacity for analytical problem solving. The beauty is that the problem has a simple and elegant solution which can be found in less than 10 minutes. More importantly it forces the candidate to think about a problem that he or she has not likely considered before. The problem domain is also easily understood, everyone knows how a clock works.&lt;/p&gt;
+
+&lt;h3 id=&#34;problem-statement:748ed73ae35f87e2d44e98b83303e427&#34;&gt;Problem Statement&lt;/h3&gt;
+
+&lt;p&gt;Write a function that can compute the angle between the hands of a clock given a time of day. Take your time and think it through, then we will walk-through your solution.&lt;/p&gt;
+
+&lt;h3 id=&#34;solution:748ed73ae35f87e2d44e98b83303e427&#34;&gt;Solution&lt;/h3&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Deduce that for each hour on the clock there are 30 degrees. 360 degrees divided by 12 hours.&lt;/li&gt;
+&lt;li&gt;Deduce that for each minute on the clock there are 6 degrees. 360 degrees divided by 60 minutes.&lt;/li&gt;
+&lt;li&gt;Compute the angle with respect to 12 o&amp;rsquo;clock for both the hour hand and the minute hand. For the hour hand the formula is: hour * 30, for the minute hand: minute * 6&lt;/li&gt;
+&lt;li&gt;Subtract the hour angle from the minute angle to get the solution. Ensure that the result is less than 180 degrees.&lt;/li&gt;
+&lt;li&gt;Extra Credit: The hour hand doesn&amp;rsquo;t point directly to the hour, it moves proportionally to the minute value between hours. This can be computed by adding a factor to the hour hand position. This factor is computed based on the minute value and added to the hour hand angle (see solution below).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;full-solution-in-javascript:748ed73ae35f87e2d44e98b83303e427&#34;&gt;Full solution in JavaScript&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://jsfiddle.net/ctrl1024/2Mk24/&#34;&gt;http://jsfiddle.net/ctrl1024/2Mk24/&lt;/a&gt;&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/csim/10286010.js&#34;&gt;&lt;/script&gt;
+
+&lt;h3 id=&#34;likely-outcomes:748ed73ae35f87e2d44e98b83303e427&#34;&gt;Likely outcomes&lt;/h3&gt;
+
+&lt;p&gt;After giving this problem dozens of times, I have noticed responses that roughly fall into these tags:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Candidate goes quiet for about 5 minutes. Then says that he/she would create a lookup table where given an hour or minute, they would retrieve the angle. This is skirting the exercise entirely, my response is that we should take a few minutes and compute some of the lookup values. If this doesn&amp;rsquo;t work then I ask if there is a mathematical way to relate the hand position to an angle.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Candidate understands that there is a mathematical solution but struggles to find the relationship between hand position and angle. I wait about 10 minutes, then start to give hints like: How many minutes per rotation? How many degrees per rotation? The important thing here is not to give away the solution but just enough information to direct the candidate towards the solution.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Candidate struggles at each stage. I give small hints and eventually the solution is found. I try to determine if nerves are a factor or if there is a lack of skill. Usually I would pass on the candidate unless there are other factors at play. I may give another coding problem to find a pattern if one exists.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Candidate gives up after about 10 minutes of floundering. This is a total fail and I usually end the interview politely but quickly.  In my opinion this problem can be solved by 8th grader (without coding) and any developer with some experience should be able to solve.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;conclusion:748ed73ae35f87e2d44e98b83303e427&#34;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;This may sound like a simple problem but I believe it really does show analytical ability. Most importantly it allows for discussion and discourse in the context of an interview. This will tell you how the candidate reacts to a real-time challenge.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
