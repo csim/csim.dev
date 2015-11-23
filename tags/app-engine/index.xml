@@ -12,10 +12,10 @@
     
     <item>
       <title>The case of the 30 day memcache timeout on app engine</title>
-      <link>http://clintsimon.com/blog/2011/2011-10-28-The-case-of-the-30-day-memcache-timeout-on-app-engine/</link>
+      <link>http://clintsimon.com/post/2011/2011-10-28-The-case-of-the-30-day-memcache-timeout-on-app-engine/</link>
       <pubDate>Fri, 28 Oct 2011 08:00:00 -0800</pubDate>
       
-      <guid>http://clintsimon.com/blog/2011/2011-10-28-The-case-of-the-30-day-memcache-timeout-on-app-engine/</guid>
+      <guid>http://clintsimon.com/post/2011/2011-10-28-The-case-of-the-30-day-memcache-timeout-on-app-engine/</guid>
       <description>&lt;p&gt;I ran into an interesting problem with Google app engine. It seems that the memcache time limit is enforced differently on the development server versus the production servers.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;http://code.google.com/p/memcached/wiki/FAQ#What_are_the_limits_on_setting_expire_time?_(why_is_there_a_30_d&#34;&gt;The documentation&lt;/a&gt; says that the time limit for a memcache key is 30 days. The behavior that I have observed is that if you set a memcache key to timeout at 30 days, the development server (on windows) will happily persist the data as expected.&lt;/p&gt;
@@ -30,10 +30,10 @@
     
     <item>
       <title>Google&#39;s new App Engine pricing</title>
-      <link>http://clintsimon.com/blog/2011/2011-09-29-Googles-new-App-Engine-pricing/</link>
+      <link>http://clintsimon.com/post/2011/2011-09-29-Googles-new-App-Engine-pricing/</link>
       <pubDate>Thu, 29 Sep 2011 08:00:00 -0800</pubDate>
       
-      <guid>http://clintsimon.com/blog/2011/2011-09-29-Googles-new-App-Engine-pricing/</guid>
+      <guid>http://clintsimon.com/post/2011/2011-09-29-Googles-new-App-Engine-pricing/</guid>
       <description>
 
 &lt;p&gt;Google App engine is in the process of changing it&amp;rsquo;s pricing model. At present this new pricing model goes into effect on December 1, 2011. There has been quite an uproar among App engine developers. In some cases the new billing model raises monthly costs by more than 300%. This has cause quite a reaction among the community and the backlash is very real&lt;/p&gt;

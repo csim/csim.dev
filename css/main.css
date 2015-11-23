@@ -38,7 +38,7 @@ main {
     width: 30px;
     height: 30px;
     border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 15px;
+    border-radius: 5px;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     font-size: 20px;
@@ -86,22 +86,23 @@ a.btn-topics, a.btn-archive, a.btn-back {
     background-color:rgba(256, 256, 256, 0.1);
 }
 
-a.btn-topics, a.btn-archive {
+a.btn-back, a.btn-topics, a.btn-archive {
     right: 20px;
     width: 102px;
 }
 
-a.btn-topics {
+a.btn-back {
     top: 40px;
 }
 
-a.btn-archive {
+a.btn-topics {
     top: 80px;
 }
 
-a.btn-back {
-    left: 20px;
+a.btn-archive {
+    top: 120px;
 }
+
 
 /* Footer */
 

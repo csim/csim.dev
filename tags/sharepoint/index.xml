@@ -12,10 +12,10 @@
     
     <item>
       <title>Embed video in SharePoint</title>
-      <link>http://clintsimon.com/blog/2013/2013-11-25-embed-video-sharepoint/</link>
+      <link>http://clintsimon.com/post/2013/2013-11-25-embed-video-sharepoint/</link>
       <pubDate>Mon, 25 Nov 2013 08:00:00 -0800</pubDate>
       
-      <guid>http://clintsimon.com/blog/2013/2013-11-25-embed-video-sharepoint/</guid>
+      <guid>http://clintsimon.com/post/2013/2013-11-25-embed-video-sharepoint/</guid>
       <description>&lt;p&gt;I recently had to embed a full-screen video into a SharePoint 2010 page (don&amp;rsquo;t ask). Here is the solution using the default silverlight embeded video player which is packaged with SharePoint 2010.&lt;/p&gt;
 
 &lt;script src=&#34;https://gist.github.com/csim/10283199.js&#34;&gt;&lt;/script&gt;
@@ -24,10 +24,10 @@
     
     <item>
       <title>Using the SharePoint content database as a cache</title>
-      <link>http://clintsimon.com/blog/2008/2008-09-12-Using-the-SharePoint-content-database-as-a-cache/</link>
+      <link>http://clintsimon.com/post/2008/2008-09-12-Using-the-SharePoint-content-database-as-a-cache/</link>
       <pubDate>Fri, 12 Sep 2008 08:00:00 -0800</pubDate>
       
-      <guid>http://clintsimon.com/blog/2008/2008-09-12-Using-the-SharePoint-content-database-as-a-cache/</guid>
+      <guid>http://clintsimon.com/post/2008/2008-09-12-Using-the-SharePoint-content-database-as-a-cache/</guid>
       <description>&lt;p&gt;Data caching is a core concept in the web dominated world that we live in. The premise is that we should not have to go back to retrieve data from a data store for every single web request when the data is unchanged, thereby sharing data across web requests. This offers huge performance advantages because all latency related to data fetching, query processing and transmission is eliminated for requests that use the same data. In the SharePoint world this can be a very valuable technique when querying MOSS page libraries or any data stored in the content database. For high traffic sites, the performance of the SPQuery or SPSiteDataQuery api is not acceptable when executing queries for each request.&lt;/p&gt;
 
 &lt;p&gt;The most common data caching implementation is using the HttpContext.Cache collection. This is an ASP.NET facility that allows as an in-memory object cache associated with the ASP.NET application domain (w3wp.exe). For SharePoint applications this cache works great when caching can be scoped to the HttpContext. For applications that need caching that is not scoped based on the HttpContext it is necessary find a different solution. The most common case non-HttpContext caching would be any instance where you are consuming data outside of the ASP.NET context such as SPTimer jobs, stsadm commands, winform applications or console applications. For these cases it is not possible to use the HttpContext cache.&lt;/p&gt;
@@ -57,10 +57,10 @@
     
     <item>
       <title>Customize the web.config with a SharePoint XML customization</title>
-      <link>http://clintsimon.com/blog/2008/2008-08-16-Customize-the-web.config-with-a-SharePoint-customization/</link>
+      <link>http://clintsimon.com/post/2008/2008-08-16-Customize-the-web.config-with-a-SharePoint-customization/</link>
       <pubDate>Sat, 16 Aug 2008 08:00:00 -0800</pubDate>
       
-      <guid>http://clintsimon.com/blog/2008/2008-08-16-Customize-the-web.config-with-a-SharePoint-customization/</guid>
+      <guid>http://clintsimon.com/post/2008/2008-08-16-Customize-the-web.config-with-a-SharePoint-customization/</guid>
       <description>
 
 &lt;p&gt;It is possible to manipulate the web.config file globally by using a little known feature in SharePoint that allows developers to describe a set of changes by using an XML customization file. In fact, both SharePoint and MOSS use this mechanism to publish web.config changes when a web application is created.&lt;/p&gt;
@@ -83,10 +83,10 @@
     
     <item>
       <title>Anonymous access and item level permissions</title>
-      <link>http://clintsimon.com/blog/2008/2008-04-03-Anonymous-access-and-item-level-permissions/</link>
+      <link>http://clintsimon.com/post/2008/2008-04-03-Anonymous-access-and-item-level-permissions/</link>
       <pubDate>Thu, 03 Apr 2008 08:00:00 -0800</pubDate>
       
-      <guid>http://clintsimon.com/blog/2008/2008-04-03-Anonymous-access-and-item-level-permissions/</guid>
+      <guid>http://clintsimon.com/post/2008/2008-04-03-Anonymous-access-and-item-level-permissions/</guid>
       <description>&lt;p&gt;You are probably familiar with the fact that SharePoint now has the capability to host site with anonymous access turned on. I learned the hard way that item level permissions do not participate in the anonymous access behavior the way you might expect. When an item &lt;strong&gt;does not&lt;/strong&gt; inherit permissions, it is not possible to enable anonymous access on that item.
 Note the document library permission settings menu:&lt;/p&gt;
 
@@ -108,10 +108,10 @@ Note the document library permission settings menu:&lt;/p&gt;
     
     <item>
       <title>Custom Field control implemented as a User Control</title>
-      <link>http://clintsimon.com/blog/2008/2008-03-13-Custom-Field-control-implemented-as-a-User-Control/</link>
+      <link>http://clintsimon.com/post/2008/2008-03-13-Custom-Field-control-implemented-as-a-User-Control/</link>
       <pubDate>Thu, 13 Mar 2008 08:00:00 -0800</pubDate>
       
-      <guid>http://clintsimon.com/blog/2008/2008-03-13-Custom-Field-control-implemented-as-a-User-Control/</guid>
+      <guid>http://clintsimon.com/post/2008/2008-03-13-Custom-Field-control-implemented-as-a-User-Control/</guid>
       <description>&lt;p&gt;When creating custom controls it is often must easier to create a control using
 the &amp;ldquo;User Control&amp;rdquo; development model instead of the &amp;ldquo;Server Control&amp;rdquo; model. &lt;a href=&#34;http://msdn.microsoft.com/en-us/library/zt27tfhy.aspx&#34;&gt;Server controls&lt;/a&gt; generally have a more &amp;ldquo;low level&amp;rdquo; feel and dictate that the developer build the control&amp;rsquo;s rendering from scratch. Either by building a control tree or by constructing the rendered output in code.&lt;/p&gt;
 
@@ -138,10 +138,10 @@ This technique also you to have easiest possible development process while lever
     
     <item>
       <title>SharePoint Custom Application Development Methodologies</title>
-      <link>http://clintsimon.com/blog/2008/2008-01-07-SharePoint-Custom-Application-Development-Methodologies/</link>
+      <link>http://clintsimon.com/post/2008/2008-01-07-SharePoint-Custom-Application-Development-Methodologies/</link>
       <pubDate>Mon, 07 Jan 2008 08:00:00 -0800</pubDate>
       
-      <guid>http://clintsimon.com/blog/2008/2008-01-07-SharePoint-Custom-Application-Development-Methodologies/</guid>
+      <guid>http://clintsimon.com/post/2008/2008-01-07-SharePoint-Custom-Application-Development-Methodologies/</guid>
       <description>
 
 &lt;p&gt;As SharePoint becomes more prevalent in the custom application development realm, there has been some friction and malcontent expressed in relation to deployment processes, team development methods and application upgrade paths. I believe that Microsoft has fallen short on providing the tools necessary to promote and support custom application development on the SharePoint platform.&lt;/p&gt;
