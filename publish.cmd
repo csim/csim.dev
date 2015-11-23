@@ -1,4 +1,4 @@
-rmdir /S /Q public
+::rmdir /S /Q public
 
 hugo
 
