@@ -10,7 +10,7 @@ I only learned to code because my dad needed a problem solved. He ran a consulti
 
 I was young and foolish, so I started right away. I knew very little about programming having only built very simple programs in basic on my commodore 64 roughly 10 years earlier. I picked Perl because it was available with my college computer lab account which was the right price (free). I could also expose the script to the web, score!
 
-Looking back, I was a pretty awful programmer at that time. I had about 5 tricks in my bag and writing a function was not one of them. The Perl script became one long if statement with print statements to emit HTML. Around 800 lines of code with no functions. Wow, does this seem backwards to me now. To top it off, I wrote a rudimentary serialization process to save my in-memory Hashtable to a text file. 
+Looking back, I was a pretty awful programmer at that time. I had about 5 tricks in my bag and writing a function was not one of them. The Perl script became one long if statement with print statements to emit HTML. Around 800 lines of code with no functions. Wow, does this seem backwards to me now. To top it off, I wrote a rudimentary serialization process to save my in-memory HashTable to a text file. 
 
 To be fair, I did not know the word "serialization" at the time. I just knew that I needed to save some data and have it available on the next web request. I happily wrote some code at the end of my script to store the text file after each request was rendered and some code at the top to read the file. Done.
 
