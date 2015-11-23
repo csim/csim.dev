@@ -12,10 +12,10 @@
     
     <item>
       <title>Using IE10 with Dynamics CRM Online</title>
-      <link>http://clintsimon.com/blog/2012/2012-11-14-CRM-IE10/</link>
+      <link>http://clintsimon.com/post/2012/2012-11-14-CRM-IE10/</link>
       <pubDate>Wed, 14 Nov 2012 08:00:00 -0800</pubDate>
       
-      <guid>http://clintsimon.com/blog/2012/2012-11-14-CRM-IE10/</guid>
+      <guid>http://clintsimon.com/post/2012/2012-11-14-CRM-IE10/</guid>
       <description>&lt;p&gt;It appears that &lt;a href=&#34;http://crm.dynamics.com&#34;&gt;Dynamics CRM Online&lt;/a&gt; does not play well with Internet Explorer 10. In fact, it downright does not work with IE10. Many of the web dialogs are unusable and when you receive an error, the error dialog exhibits bazaar behavior.&lt;/p&gt;
 
 &lt;p&gt;This is an absolute tragedy. Windows 8 launched 3 weeks ago with IE10 included and the Dynamics product team was not prepared. The user experience on a windows 8 machine for Dynamics CRM is basically unusable.&lt;/p&gt;

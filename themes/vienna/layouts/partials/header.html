@@ -52,10 +52,10 @@
       {{ end }}
       {{ partial "link.html" . }}
       {{ if ne .URL "/" }}
-      <a href="{{ .Site.BaseURL }}" class="btn-header btn-back hidden-xs"><i class="fa fa-angle-left" aria-hidden="true"></i>&nbsp;Home</a>
+      <a href="{{ .Site.BaseURL }}" class="btn-header btn-back hidden-xs"><i class="fa fa-home"></i>&nbsp; Home</a>
       {{ end }}
       <a href="/tags" class="btn-header btn-topics hidden-xs"><i class="fa fa-tags"></i>&nbsp; Topics</a>
-      <a href="/blog" class="btn-header btn-archive hidden-xs"><i class="fa fa-archive"></i>&nbsp; Archive</a>
+      <a href="/post" class="btn-header btn-archive hidden-xs"><i class="fa fa-archive"></i>&nbsp; Archive</a>
     </section>
   </header>
   <main class="container">

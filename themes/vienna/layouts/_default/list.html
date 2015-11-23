@@ -1,6 +1,6 @@
 {{ partial "header.html" . }}
 <section class="article-list">
-  {{ if eq .Title "Blogs" }}
+  {{ if eq .Title "Posts" }}
       <h1>Archive</h1>
       {{ range .Data.Pages.GroupByDate "2006" }}
       <h2>{{ .Key }}</h2>
