@@ -4,7 +4,7 @@ hugo
 
 xcopy /crydif "CNAME" "public"
 
-git add -A --quiet
+git add -A
 git commit -qam "Updates"
 git push origin master
 
