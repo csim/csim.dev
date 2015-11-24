@@ -13,17 +13,9 @@
   <div>
     {{ .Content }}
   </div>
-  {{ if .Truncated }}
-  <footer>
-    <ul class="pager">
-      <li class="next"><a href="{{ .Permalink }}">Read more <span aria-hidden="true">&raquo;</span></a></li>
-    </ul>
-  </footer>
-  {{ else }}
   <footer>
     <ul class="pager">
       <li class="next"><a href="{{ .Permalink }}">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  {{ end }}
 </article>

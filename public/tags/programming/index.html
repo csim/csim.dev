@@ -83,6 +83,43 @@
   <hr/>
   <article>
   <header>
+    <h2><a href="http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling/">MongoDB .Net Driver date handling</a></h2>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2015-07-27T08:23:36-08:00">
+          Jul 27, 2015
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    <p>I ran into an interesting situation when saving dated to MongoDB using the Mongo .Net driver (version 2.0).</p>
+
+<p>When saving a date with <a href="https://msdn.microsoft.com/en-us/library/system.datetime.kind%28v=vs.110%29.aspx">unspecified kind</a>, the driver converts the date to a universal datetime. It appears that the driver will assume that a DateTime object with an unspecified kind is a local time, and convert it to universal time (UTC) before committing it to the database.</p>
+
+<p>In my particular case, my origin date was UTC and was read from SQL server. Because entity framework does not set the Kind property on DateTime fields, MongoDB assuming these dates are local and performed a conversion to UTC. (Arrghhh)</p>
+
+<p>Moral of the story: if you are converting data from SQL Server to MongoDB, make sure to call .ToLocalTime() on all dates even if they are stored as UTC. This will set the DateTime kind to local and avoid an inadvertent conversion by MongoDB on commit.</p>
+
+<p>EDIT: As Robert suggests below, it is better to set the Kind on the DateTime because of possible UTC/Local conversion issues. Sample:</p>
+
+<pre><code>var unspecifiedDateTime = ...; // returned by Entity Framework
+var utcDateTime = DateTime.SpecifyKind(unspecifiedDateTime, DateTimeKind.Utc);
+</code></pre>
+
+  </div>
+  <footer>
+    <ul class="pager">
+      <li class="next"><a href="http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling/">Comments <span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+  </footer>
+</article>
+
+  
+  <hr/>
+  <article>
+  <header>
     <h2><a href="http://clintsimon.com/post/2014/2014-10-17-dropzone-knockout-binding/">Dropzone knockout binding</a></h2>
     <div class="post-meta clearfix">
       <div class="post-date pull-left">
@@ -101,13 +138,11 @@
 <script src="https://gist.github.com/csim/4513ae3316104e6f474d.js?file=usage.html"></script>
 
   </div>
-  
   <footer>
     <ul class="pager">
       <li class="next"><a href="http://clintsimon.com/post/2014/2014-10-17-dropzone-knockout-binding/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -168,13 +203,11 @@
 <p>I have seen one scope reduction approach work, which is to propose the reduction of data volume by the process of archiving old data. This does not reduce the data mapping scope but reduces the timeline because migration execution time is reduced.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2013/2013-08-06-Data-Migration-is-Hard/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2013/2013-08-06-Data-Migration-is-Hard/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -199,13 +232,11 @@
 <p>This is especially helpful when viewing a page from a mobile device or table. You can easily deduce which size group maps to a particular device in each orientation.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
       <li class="next"><a href="http://clintsimon.com/post/2014/2014-06-06-bootstrap-size-indicator/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -228,13 +259,11 @@
 <script src="https://gist.github.com/csim/10283199.js"></script>
 
   </div>
-  
   <footer>
     <ul class="pager">
       <li class="next"><a href="http://clintsimon.com/post/2013/2013-11-25-embed-video-sharepoint/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -261,13 +290,11 @@
 <p>Don&rsquo;t set the AutoRepeatDelay too fast, it will make it so that when you type letters they are repeated immediately. Makes it really hard to type your password :)</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2013/2013-11-25-keyboard-registry-settings/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2013/2013-11-25-keyboard-registry-settings/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -294,13 +321,11 @@
 <p>Once this function is in your powershell profile, just type &ldquo;edit&rdquo; at the command prompt and sublime will open the current folder.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
       <li class="next"><a href="http://clintsimon.com/post/2013/2013-11-04-powershell-sublime-shortcut/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -337,13 +362,11 @@
 <p>That little application that I built went on to run a substantial part of my dad&rsquo;s business for a few years until I replaced it with a new version that was more professional. It was great to see it work for so long but the larger net effect was that I was hooked on coding. I haven&rsquo;t looked back once.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2013/2013-08-10-how-I-learned-to-code/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2013/2013-08-10-how-I-learned-to-code/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -372,13 +395,11 @@
 <p>It&rsquo;s a skill that feels intrinsic, not a learned behavior but something must have been inside you from the beginning. How lucky am I that I get paid to do this? Pretty cool.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2013/2013-08-07-Rediscovering-Code/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2013/2013-08-07-Rediscovering-Code/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -413,13 +434,11 @@
 </ol>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2012/2012-11-14-Keeping-Up-with-Technology/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2012/2012-11-14-Keeping-Up-with-Technology/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -446,13 +465,11 @@
 <p>By the way, we are <em>paid</em> to make these changes.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2012/2012-11-09-Remember-Software-is-Soft/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2012/2012-11-09-Remember-Software-is-Soft/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -490,13 +507,11 @@
 </ul>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2012/2012-11-07-Be-Lazy-and-Smart/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2012/2012-11-07-Be-Lazy-and-Smart/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -525,13 +540,11 @@
 <p>There are some exceptions to this. When there is a hard problem that I can&rsquo;t seem to solve with conventional methods, I sometimes allow myself to completely forget about the topic altogether. This is not procrastination but rather a way to utilize my sub-conscious mind. My letting the topic ferment in the deep recesses of my mind I can afford</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2012/2012-10-30-Start-Now/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2012/2012-10-30-Start-Now/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -594,13 +607,11 @@
 <p>This may sound like a simple problem but I believe it really does show analytical ability. Most importantly it allows for discussion and discourse in the context of an interview. This will tell you how the candidate reacts to a real-time challenge.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2012/2012-10-12-Clock-Problem/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2012/2012-10-12-Clock-Problem/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -641,13 +652,11 @@
 <p>All of this ultimately forms your reputation as a developer. All you have is your reputation. I have moved jobs a fews times in my career and I can tell you that having a network of people who are aware of your capabilities is the best possible resource when it&rsquo;s time for job hunting.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2012/2012-10-10-Pride-in-Your-Work/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2012/2012-10-10-Pride-in-Your-Work/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -676,13 +685,11 @@
 <p>Once I changed the memcache timeout to a lesser value (under 30 days), the problem stopped.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-10-28-The-case-of-the-30-day-memcache-timeout-on-app-engine/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-10-28-The-case-of-the-30-day-memcache-timeout-on-app-engine/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -731,13 +738,11 @@
 <p>I&rsquo;ve seen too many people struggle through the transition. Always battling to get the custom application development work on any project and generally hating life. Don&rsquo;t get swept away in the idealized vision that you can buck the trend. See this transition for what it is to you, either a way to move in a new direction or get out before you cause yourself a lot of heartache.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-10-04-Should-I-be-a-platform-developer/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-10-04-Should-I-be-a-platform-developer/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -788,13 +793,11 @@
 <p>Cheers!</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-09-30-How-to-add-your-last-tweet-to-your-blog/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-09-30-How-to-add-your-last-tweet-to-your-blog/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -839,13 +842,11 @@
 <p>Furthermore, LINQ makes the query process very transparent which means that you can flagrantly throw queries at you data source without regard for impact to the service. Bottom line is, think about what you are doing.  Do I really need to run this extra query? Can I consolidate this data pull into a single query?</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-06-06-How-to-get-started-with-OData/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-06-06-How-to-get-started-with-OData/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -874,13 +875,11 @@
 <p>The true challenge as a software developer is to find creative solutions to daily problems. Learning APIs, patterns and systems is easy compared to applying those constructs to solve a real world problem. Creative thinking is what separates that average coder and the brilliant thinkers that bring us innovations that change our lives.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-02-14-Code-is-Creative/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-02-14-Code-is-Creative/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -924,13 +923,11 @@
 <script src="https://gist.github.com/csim/10284798.js?file=RapidCachedDataAdapterBase2.cs"></script>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2008/2008-09-12-Using-the-SharePoint-content-database-as-a-cache/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2008/2008-09-12-Using-the-SharePoint-content-database-as-a-cache/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -971,13 +968,11 @@ the &ldquo;User Control&rdquo; development model instead of the &ldquo;Server Co
 This technique also you to have easiest possible development process while leveraging the SharePoint field control infrastructure. Any questions or comments, please let me know!</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2008/2008-03-13-Custom-Field-control-implemented-as-a-User-Control/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2008/2008-03-13-Custom-Field-control-implemented-as-a-User-Control/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -1055,13 +1050,11 @@ This technique also you to have easiest possible development process while lever
 <p>This is usually helpful with rendering assets such as page layouts, XML files, XSLT transforms and stylesheets. It sure is nice to be able to see changes immediately, but be sure to commit your changes to your Visual Studio project (and hence source control) so that they are visible to other developers on the project.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2008/2008-01-07-SharePoint-Custom-Application-Development-Methodologies/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2008/2008-01-07-SharePoint-Custom-Application-Development-Methodologies/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
