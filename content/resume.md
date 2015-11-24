@@ -1,6 +1,7 @@
-+++
-title = "Clint Simon"
-+++
+---
+title: "Clint Simon"
+type: "cpage"
+---
 
 
 <div style="float: right"><a href="http://pdfmyurl.com?url=clintsimon.me/resume&amp;--filename=Clint%20Simon%20Resume.pdf">Download as PDF</a></div>

@@ -1,5 +1,6 @@
 ---
 title: About
+type: "cpage"
 ---
 
 <img src="/images/profile.png" class="pull-right img-responsive img-rounded" />
