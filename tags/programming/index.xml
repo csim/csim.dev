@@ -16,7 +16,7 @@
       <pubDate>Fri, 17 Oct 2014 08:00:00 -0800</pubDate>
       
       <guid>http://clintsimon.com/post/2014/2014-10-17-dropzone-knockout-binding/</guid>
-      <description>&lt;p&gt;A very simple knockout binding for &lt;a href=&#34;http://www.dropzonejs.com/&#34;&gt;dropzone.js&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;A very simple knockout binding for &lt;a href=&#34;http://www.dropzonejs.com/&#34;&gt;dropzone.js&lt;/a&gt;&lt;/p&gt;
 
 &lt;script src=&#34;https://gist.github.com/csim/4513ae3316104e6f474d.js?file=dropzone.knockout.js&#34;&gt;&lt;/script&gt;
 

@@ -91,9 +91,7 @@
 Note the document library permission settings menu:&lt;/p&gt;
 
 &lt;div class=&#34;vinette&#34;&gt;
-&lt;img src=
-
-&#34;{{ site.url }}/images/sp1.png&#34; /&gt;
+&lt;img src=&#34;http://clintsimon.com/images/sp1.png&#34; /&gt;
 &lt;/div&gt;
 
 &lt;p&gt;Here&amp;rsquo;s the same menu for an item which is not inheriting permissions from the parent library:&lt;/p&gt;

@@ -18,9 +18,7 @@
       <guid>http://clintsimon.com/post/2012/2012-09-19-Windows-8-Developer-Messaging/</guid>
       <description>&lt;p&gt;Bit of a rant here. I received this message today Microsoft.&lt;/p&gt;
 
-&lt;div class=&#34;vinette&#34;&gt;&lt;img src=
-
-&#34;{{ site.url }}/images/ms_win8_dev_marketing.png&#34; /&gt;&lt;/div&gt;
+&lt;div class=&#34;vinette&#34;&gt;&lt;img src=&#34;http://clintsimon.com/images/ms_win8_dev_marketing.png&#34; /&gt;&lt;/div&gt;
 
 &lt;p&gt;Do you think the average developer knows that &amp;ldquo;Windows 8 GA&amp;rdquo; means?&lt;/p&gt;
 
@@ -50,9 +48,7 @@
 
 &lt;p&gt;The start menu is full-screen now and it has some animation built into it. It did take me a little while to get used to it but really this is just a new UI on top of the same start menu that we are all used to. As a developer I stay mostly in the desktop but the metro start screen is a necessary evil once in a while.&lt;/p&gt;
 
-&lt;div class=&#34;vinette&#34;&gt;&lt;img src=
-
-&#34;{{ site.url }}/images/start_screen.png&#34; /&gt;&lt;/div&gt;
+&lt;div class=&#34;vinette&#34;&gt;&lt;img src=&#34;http://clintsimon.com/images/start_screen.png&#34; /&gt;&lt;/div&gt;
 
 &lt;p&gt;I&amp;rsquo;ll admit it took me a few days to get used to it. My advice is to embrace this right away and enjoy it for what it is - some UI sugar that plays nicely with tablets. It still works well with mouse and keyboard. You can still search for applications or settings by simply typing and you can still pin your most used applications. Once there are more useful metro apps, the start screen will be much more useful.&lt;/p&gt;
 
@@ -66,9 +62,7 @@
 
 &lt;p&gt;Secondly, the task manager has been completely rebuilt and redesigned. This thing is awesome. A quantum leap upgrade. You can now see disk usage, app history, startup cost for apps and services. Remember all those time you thought &amp;ldquo;What the hell is going on with my machine?&amp;rdquo;. Well, now you can answer that question.&lt;/p&gt;
 
-&lt;div class=&#34;vinette&#34;&gt;&lt;img src=
-
-&#34;{{ site.url }}/images/task_manager.png&#34; /&gt;&lt;/div&gt;
+&lt;div class=&#34;vinette&#34;&gt;&lt;img src=&#34;http://clintsimon.com/images/task_manager.png&#34; /&gt;&lt;/div&gt;
 
 &lt;h3 id=&#34;metro-apps:6fa5ce79b6dcd2d1ab38561ddccaf0fe&#34;&gt;Metro Apps&lt;/h3&gt;
 
@@ -84,9 +78,7 @@
 
 &lt;p&gt;The file copy dialog is a thing of beauty. Notice the transfer graph over time and the spark line for the current transfer speed. Very cool. You can also pause the file copy which is really convenient when you need to go offline temporarily.&lt;/p&gt;
 
-&lt;div class=&#34;vinette&#34;&gt;&lt;img src=
-
-&#34;{{ site.url }}/images/file_copy_dialog.png&#34; /&gt;&lt;/div&gt;
+&lt;div class=&#34;vinette&#34;&gt;&lt;img src=&#34;http://clintsimon.com/images/file_copy_dialog.png&#34; /&gt;&lt;/div&gt;
 
 &lt;p&gt;Windows 8 is noticeable faster in almost all aspects. Boot times are particularly impressive. I have seen at least a 50% increase in startup speed. Everything is snappy - changing windows, opening applications&lt;/p&gt;
 
