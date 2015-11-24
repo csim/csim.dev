@@ -16,7 +16,7 @@
       <pubDate>Fri, 17 Oct 2014 08:00:00 -0800</pubDate>
       
       <guid>http://clintsimon.com/post/2014/2014-10-17-dropzone-knockout-binding/</guid>
-      <description>&lt;p&gt;A very simple knockout binding for &lt;a href=&#34;http://www.dropzonejs.com/&#34;&gt;dropzone.js&lt;/a&gt;.&lt;/p&gt;
+      <description>&lt;p&gt;A very simple knockout binding for &lt;a href=&#34;http://www.dropzonejs.com/&#34;&gt;dropzone.js&lt;/a&gt;&lt;/p&gt;
 
 &lt;script src=&#34;https://gist.github.com/csim/4513ae3316104e6f474d.js?file=dropzone.knockout.js&#34;&gt;&lt;/script&gt;
 
@@ -140,9 +140,7 @@ Now we can start to create our first project. Microsoft makes it super easy to c
 &lt;p&gt;For you first project, choose the Panorama application, it&amp;rsquo;s the best looking and you do want to impress your friends, right?&lt;/p&gt;
 
 &lt;div class=&#34;vinette&#34;&gt;
-&lt;img src=
-
-&#34;{{ site.url }}/images/image2.png&#34; /&gt;
+&lt;img src=&#34;http://clintsimon.com/images/image2.png&#34; /&gt;
 &lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://clintsimon.com/images/image1_1.png&#34; alt=&#34;&#34; /&gt;
@@ -155,9 +153,7 @@ Now we can start to create our first project. Microsoft makes it super easy to c
 &lt;p&gt;Just hit F5. You now have a running WP7 application in under 2 minutes. Notice all the details: fluid animations, scrolling, sample data. In short, this is a working application that you can simply start to customize. This could not be easier. To me this is the power of Microsoft at work in a real way. They have brought together a strong set of technologies here, dev tools,Silverlight and the phone OS. The OS still need to mature a bit, but I think you can see that this is a baseline for building great mobile applications.&lt;/p&gt;
 
 &lt;div class=&#34;vinette&#34;&gt;
-&lt;img src=
-
-&#34;{{ site.url }}/images/image2_1.png&#34; /&gt;
+&lt;img src=&#34;http://clintsimon.com/images/image2_1.png&#34; /&gt;
 &lt;/div&gt;
 
 &lt;p&gt;###Will it blend?
@@ -171,9 +167,7 @@ One more thing (like that? I borrowed it from a famous guy I won&amp;rsquo;t men
 &lt;p&gt;You will be greeted with a design surface with tons of bells and whistles. Blend can be daunting when you open it for the first time. It is one of those tools that you will probably never learn in totality because it is complex. The best way to learn is to tackle it.&lt;/p&gt;
 
 &lt;div class=&#34;vinette&#34;&gt;
-&lt;img src=
-
-&#34;{{ site.url }}/images/image_thumb4.png&#34; /&gt;
+&lt;img src=&#34;http://clintsimon.com/images/image_thumb4.png&#34; /&gt;
 &lt;/div&gt;
 
 &lt;p&gt;###Building more complex apps

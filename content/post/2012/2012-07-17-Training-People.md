@@ -8,9 +8,7 @@ Whether you know it or not, you are training everyone you interact with each day
 
 In typical over-achiever fashion, you are reacting to each request without regard for your personal well-being. After following this pattern for years, I have realized that I need to stop the vicious cycle.
 
-<div class="vinette"><img src=
-
-"{{ site.url }}/images/vicious-cycle-Zzbbc.jpg" />you can't win</div>
+<div class="vinette"><img src="/images/vicious-cycle-Zzbbc.jpg" />you can't win</div>
 
 Here are a few things that I have learned:
 
