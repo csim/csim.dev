@@ -16,10 +16,13 @@
       <pubDate>Sun, 16 Feb 2014 08:00:00 -0800</pubDate>
       
       <guid>http://clintsimon.com/post/2011/2011-02-16-Getting-started-with-Windows-Phone-7-development/</guid>
-      <description>&lt;p&gt;Get ready to create your first Windows Phone 7 (WP7) application! With only minimum software development skills, you can create your very own shiny new WP7 app.&lt;/p&gt;
+      <description>
 
-&lt;p&gt;###Get the tools
-The first step is to go get the tools you&amp;rsquo;ll need to build your application. Microsoft has the best development tools in world (in my humble opinion). Since WP7 application development is an extension of general .NET platform development and Silverlight technology, you can use the standard .NET tools set to development WP7 apps. This includes visual studio 2010, C# or Visual Basic, and most of the .NET framework. This is a fantastic set of tools with a myriad of features design to make application development as easy as possible.&lt;/p&gt;
+&lt;p&gt;Get ready to create your first Windows Phone 7 (WP7) application! With only minimum software development skills, you can create your very own shiny new WP7 app.&lt;/p&gt;
+
+&lt;h3 id=&#34;get-the-tools:4a24e5d9c6b9571ca22b580723fd26f6&#34;&gt;Get the tools&lt;/h3&gt;
+
+&lt;p&gt;The first step is to go get the tools you&amp;rsquo;ll need to build your application. Microsoft has the best development tools in world (in my humble opinion). Since WP7 application development is an extension of general .NET platform development and Silverlight technology, you can use the standard .NET tools set to development WP7 apps. This includes visual studio 2010, C# or Visual Basic, and most of the .NET framework. This is a fantastic set of tools with a myriad of features design to make application development as easy as possible.&lt;/p&gt;
 
 &lt;p&gt;Here&amp;rsquo;s the kicker. For WP7, these tools are completely free. No need to shell out the green, Microsoft has you covered.&lt;/p&gt;
 
@@ -28,8 +31,9 @@ The first step is to go get the tools you&amp;rsquo;ll need to build your applic
 
 &lt;p&gt;Download the installer and run it. The release to web (RTW) installer will download and install Visual Studio 2010, the WP7 emulator, Silverlight 4 tools for Visual Studio, XNA game studio tools and Microsoft Expression blend for Windows Phone. These are all the tools you need, the install is easier than Sunday morning.&lt;/p&gt;
 
-&lt;p&gt;###Hello World
-Now we can start to create our first project. Microsoft makes it super easy to create and run a WP7 project. Launch Visual Studio and go to: File -&amp;gt; New Project&lt;/p&gt;
+&lt;h3 id=&#34;hello-world:4a24e5d9c6b9571ca22b580723fd26f6&#34;&gt;Hello World&lt;/h3&gt;
+
+&lt;p&gt;Now we can start to create our first project. Microsoft makes it super easy to create and run a WP7 project. Launch Visual Studio and go to: File -&amp;gt; New Project&lt;/p&gt;
 
 &lt;p&gt;Now pick the type of project you want to create. For now this is not an important choice, so just pick one. The most interesting choices are the Panorama application and the Pivot application. The Panorama is the nifty application where the view scrolls from left to right and the screen to the right has the edge showing. The Pivot application still scrolls but this more like a tabbed interface where all the tabs show up in the heading and you can swipe through the left and right.&lt;/p&gt;
 
@@ -52,8 +56,9 @@ Now we can start to create our first project. Microsoft makes it super easy to c
 &lt;img src=&#34;http://clintsimon.com/images/image2_1.png&#34; /&gt;
 &lt;/div&gt;
 
-&lt;p&gt;###Will it blend?
-One more thing (like that? I borrowed it from a famous guy I won&amp;rsquo;t mention here), Expression Blend is in the mix also. For those unfamiliar, Expression Blend is like Visual Studio for designers. It lets creative types work on the same xaml file that developers work on, it understands visual studio projects and it can churn out all the animations, icons and motion that are available in Silverlight and WPF. If you want to develop WP7 applications, make Blend your friend.&lt;/p&gt;
+&lt;h3 id=&#34;will-it-blend:4a24e5d9c6b9571ca22b580723fd26f6&#34;&gt;Will it blend?&lt;/h3&gt;
+
+&lt;p&gt;One more thing (like that? I borrowed it from a famous guy I won&amp;rsquo;t mention here), Expression Blend is in the mix also. For those unfamiliar, Expression Blend is like Visual Studio for designers. It lets creative types work on the same xaml file that developers work on, it understands visual studio projects and it can churn out all the animations, icons and motion that are available in Silverlight and WPF. If you want to develop WP7 applications, make Blend your friend.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&#34;http://clintsimon.com/images/image_thumb3.png&#34; alt=&#34;&#34; /&gt;
 &lt;/p&gt;
@@ -66,8 +71,9 @@ One more thing (like that? I borrowed it from a famous guy I won&amp;rsquo;t men
 &lt;img src=&#34;http://clintsimon.com/images/image_thumb4.png&#34; /&gt;
 &lt;/div&gt;
 
-&lt;p&gt;###Building more complex apps
-I am certain that there are application on the marketplace that were written in under 2 hours. If you already have a data source and you want to tie to a WP7 app as an alternate access method, general it is very easy. Microsoft gives you an exceptionally good starting point with the built-in WP7 project templates. I have only touched on the true potential here.&lt;/p&gt;
+&lt;h3 id=&#34;building-more-complex-apps:4a24e5d9c6b9571ca22b580723fd26f6&#34;&gt;Building more complex apps&lt;/h3&gt;
+
+&lt;p&gt;I am certain that there are application on the marketplace that were written in under 2 hours. If you already have a data source and you want to tie to a WP7 app as an alternate access method, general it is very easy. Microsoft gives you an exceptionally good starting point with the built-in WP7 project templates. I have only touched on the true potential here.&lt;/p&gt;
 
 &lt;p&gt;Go make some apps!&lt;/p&gt;
 </description>
