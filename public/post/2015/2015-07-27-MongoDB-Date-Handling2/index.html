@@ -3,19 +3,28 @@
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <meta property="og:title" content=" Tags &middot;  Clint Simon" />
+  <meta property="og:title" content=" MongoDB .Net Driver date handling22 &middot;  Clint Simon" />
   
   <meta name="theme-color" content="#af200a" />
  
   <meta property="og:site_name" content="Clint Simon" />
-  <meta property="og:url" content="http://clintsimon.com/tags/" />
+  <meta property="og:url" content="http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling2/" />
   
   
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:author" content="https://facebook.com/csim74" />
+  
+  <meta property="og:article:published_time" content="2015-07-27T08:23:36-08:00" />
+  
+  <meta property="og:article:tag" content="MongoDB" />
+  
+  <meta property="og:article:tag" content="Programming" />
+  
   
 
   <title>
-     Tags &middot;  Clint Simon
+     MongoDB .Net Driver date handling22 &middot;  Clint Simon
   </title>
 
   <link rel="stylesheet" href="http://clintsimon.com/css/bootstrap.min.css" />
@@ -78,41 +87,59 @@
   <main class="container">
 
 
-<section class="taxonomy-terms">
-  <h1>Topics</h1>
-  <ul>
+<article>
+  <header>
+    <h1 class="text-primary">MongoDB .Net Driver date handling22</h1>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2015-07-27T08:23:36-08:00">
+          Jul 27, 2015
+        </time>
+      </div>
+      <div class="pull-right">
+        
+        <span class="post-tag small"><a href="http://clintsimon.com//tags/mongodb">#MongoDB</a></span>
+        
+        <span class="post-tag small"><a href="http://clintsimon.com//tags/programming">#Programming</a></span>
+        
+      </div>
+    </div>
+  </header>
+  <section>
+    <p>I ran into an interesting situation when saving dated to MongoDB using the Mongo .Net driver (version 2.0).</p>
+
+<p>When saving a date with <a href="https://msdn.microsoft.com/en-us/library/system.datetime.kind%28v=vs.110%29.aspx">unspecified kind</a>, the driver converts the date to a universal datetime. It appears that the driver will assume that a DateTime object with an unspecified kind is a local time, and convert it to universal time (UTC) before committing it to the database.</p>
+
+<p>In my particular case, my origin date was UTC and was read from SQL server. Because entity framework does not set the Kind property on DateTime fields, MongoDB assuming these dates are local and performed a conversion to UTC. (Arrghhh)</p>
+
+<p>Moral of the story: if you are converting data from SQL Server to MongoDB, make sure to call .ToLocalTime() on all dates even if they are stored as UTC. This will set the DateTime kind to local and avoid an inadvertent conversion by MongoDB on commit.</p>
+
+<p>EDIT: As Robert suggests below, it is better to set the Kind on the DateTime because of possible UTC/Local conversion issues. Sample:</p>
+
+<pre><code>var unspecifiedDateTime = ...; // returned by Entity Framework
+var utcDateTime = DateTime.SpecifyKind(unspecifiedDateTime, DateTimeKind.Utc);
+</code></pre>
+
+  </section>
+  <footer>
+    
+    <hr/>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'clintsimon';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     
     
-    <li style="list-style-type: none;"><a href="http://clintsimon.com//tags/app-engine">app-engine</a> (2)</li>
-    
-    <li style="list-style-type: none;"><a href="http://clintsimon.com//tags/computers">computers</a> (1)</li>
-    
-    <li style="list-style-type: none;"><a href="http://clintsimon.com//tags/consulting">consulting</a> (11)</li>
-    
-    <li style="list-style-type: none;"><a href="http://clintsimon.com//tags/crm">crm</a> (1)</li>
-    
-    <li style="list-style-type: none;"><a href="http://clintsimon.com//tags/fitness">fitness</a> (1)</li>
-    
-    <li style="list-style-type: none;"><a href="http://clintsimon.com//tags/interviews">interviews</a> (2)</li>
-    
-    <li style="list-style-type: none;"><a href="http://clintsimon.com//tags/life">life</a> (3)</li>
-    
-    <li style="list-style-type: none;"><a href="http://clintsimon.com//tags/links">links</a> (4)</li>
-    
-    <li style="list-style-type: none;"><a href="http://clintsimon.com//tags/mongodb">mongodb</a> (2)</li>
-    
-    <li style="list-style-type: none;"><a href="http://clintsimon.com//tags/programming">programming</a> (24)</li>
-    
-    <li style="list-style-type: none;"><a href="http://clintsimon.com//tags/review">review</a> (2)</li>
-    
-    <li style="list-style-type: none;"><a href="http://clintsimon.com//tags/sharepoint">sharepoint</a> (6)</li>
-    
-    <li style="list-style-type: none;"><a href="http://clintsimon.com//tags/windows-8">windows-8</a> (2)</li>
-    
-    <li style="list-style-type: none;"><a href="http://clintsimon.com//tags/windows-phone">windows-phone</a> (1)</li>
-    
-  </ul>
-</section>
+  </footer>
+</article>
+
   </main>
   <footer class="container global-footer">
     <div class="copyright-note pull-left">
@@ -168,5 +195,4 @@
   
 </body>
 </html>
-
 

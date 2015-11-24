@@ -11,6 +11,28 @@
     <atom:link href="http://clintsimon.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>MongoDB .Net Driver date handling22</title>
+      <link>http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling2/</link>
+      <pubDate>Mon, 27 Jul 2015 08:23:36 -0800</pubDate>
+      
+      <guid>http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling2/</guid>
+      <description>&lt;p&gt;I ran into an interesting situation when saving dated to MongoDB using the Mongo .Net driver (version 2.0).&lt;/p&gt;
+
+&lt;p&gt;When saving a date with &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/system.datetime.kind%28v=vs.110%29.aspx&#34;&gt;unspecified kind&lt;/a&gt;, the driver converts the date to a universal datetime. It appears that the driver will assume that a DateTime object with an unspecified kind is a local time, and convert it to universal time (UTC) before committing it to the database.&lt;/p&gt;
+
+&lt;p&gt;In my particular case, my origin date was UTC and was read from SQL server. Because entity framework does not set the Kind property on DateTime fields, MongoDB assuming these dates are local and performed a conversion to UTC. (Arrghhh)&lt;/p&gt;
+
+&lt;p&gt;Moral of the story: if you are converting data from SQL Server to MongoDB, make sure to call .ToLocalTime() on all dates even if they are stored as UTC. This will set the DateTime kind to local and avoid an inadvertent conversion by MongoDB on commit.&lt;/p&gt;
+
+&lt;p&gt;EDIT: As Robert suggests below, it is better to set the Kind on the DateTime because of possible UTC/Local conversion issues. Sample:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var unspecifiedDateTime = ...; // returned by Entity Framework
+var utcDateTime = DateTime.SpecifyKind(unspecifiedDateTime, DateTimeKind.Utc);
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
       <title>MongoDB .Net Driver date handling</title>
       <link>http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling/</link>
       <pubDate>Mon, 27 Jul 2015 08:23:36 -0800</pubDate>
@@ -372,22 +394,6 @@ var utcDateTime = DateTime.SpecifyKind(unspecifiedDateTime, DateTimeKind.Utc);
 
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;Read your channels regularly.&lt;/strong&gt; I try to read through my sources at least once per day. Some days there isn&amp;rsquo;t much to learn but other days I have multiple &amp;ldquo;holy cow&amp;rdquo; moments. If this becomes a chore then you might want to look for a new line of work :)&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Remember, Software is Soft</title>
-      <link>http://clintsimon.com/post/2012/2012-11-09-Remember-Software-is-Soft/</link>
-      <pubDate>Fri, 09 Nov 2012 08:00:00 -0800</pubDate>
-      
-      <guid>http://clintsimon.com/post/2012/2012-11-09-Remember-Software-is-Soft/</guid>
-      <description>&lt;p&gt;There are times when I have witness (and participated in) arguments about trade-offs between scope and effort. Sometimes developers tend to push back fairly hard with the perception is that the effort is too high for a particular feature change.&lt;/p&gt;
-
-&lt;p&gt;Coders can become downright defensive when you are talking about changing the fundamentals of an application. After all, this is their baby and someone just through it out with the bathwater.&lt;/p&gt;
-
-&lt;p&gt;As programmers, we need to remember that software is soft. Meaning that it can be changed and it should be changed to conform to whatever the application requirements dictate. We are not talking about destroying a building to change the wall color. We are talking about changing &lt;strong&gt;soft&lt;/strong&gt;ware to meet new requirements.&lt;/p&gt;
-
-&lt;p&gt;By the way, we are &lt;em&gt;paid&lt;/em&gt; to make these changes.&lt;/p&gt;
 </description>
     </item>
     
