@@ -7,8 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright</copyright>
-    <lastBuildDate>Fri, 17 Oct 2014 08:00:00 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2015 08:23:36 -0800</lastBuildDate>
     <atom:link href="http://clintsimon.com/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>MongoDB .Net Driver date handling</title>
+      <link>http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling/</link>
+      <pubDate>Mon, 27 Jul 2015 08:23:36 -0800</pubDate>
+      
+      <guid>http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling/</guid>
+      <description>&lt;p&gt;I ran into an interesting situation when saving dated to MongoDB using the Mongo .Net driver (version 2.0).&lt;/p&gt;
+
+&lt;p&gt;When saving a date with &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/system.datetime.kind%28v=vs.110%29.aspx&#34;&gt;unspecified kind&lt;/a&gt;, the driver converts the date to a universal datetime. It appears that the driver will assume that a DateTime object with an unspecified kind is a local time, and convert it to universal time (UTC) before committing it to the database.&lt;/p&gt;
+
+&lt;p&gt;In my particular case, my origin date was UTC and was read from SQL server. Because entity framework does not set the Kind property on DateTime fields, MongoDB assuming these dates are local and performed a conversion to UTC. (Arrghhh)&lt;/p&gt;
+
+&lt;p&gt;Moral of the story: if you are converting data from SQL Server to MongoDB, make sure to call .ToLocalTime() on all dates even if they are stored as UTC. This will set the DateTime kind to local and avoid an inadvertent conversion by MongoDB on commit.&lt;/p&gt;
+
+&lt;p&gt;EDIT: As Robert suggests below, it is better to set the Kind on the DateTime because of possible UTC/Local conversion issues. Sample:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var unspecifiedDateTime = ...; // returned by Entity Framework
+var utcDateTime = DateTime.SpecifyKind(unspecifiedDateTime, DateTimeKind.Utc);
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Dropzone knockout binding</title>
@@ -340,24 +362,6 @@
 &lt;p&gt;Use descriptive variable names (even on private / local members). Add comments to code that is not obviously understood. Use the built-in documentation conventions of your language. Name classes, properties and methods in a &lt;em&gt;logical and consistent&lt;/em&gt; way.&lt;/p&gt;
 
 &lt;p&gt;All of this ultimately forms your reputation as a developer. All you have is your reputation. I have moved jobs a fews times in my career and I can tell you that having a network of people who are aware of your capabilities is the best possible resource when it&amp;rsquo;s time for job hunting.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>The case of the 30 day memcache timeout on app engine</title>
-      <link>http://clintsimon.com/post/2011/2011-10-28-The-case-of-the-30-day-memcache-timeout-on-app-engine/</link>
-      <pubDate>Fri, 28 Oct 2011 08:00:00 -0800</pubDate>
-      
-      <guid>http://clintsimon.com/post/2011/2011-10-28-The-case-of-the-30-day-memcache-timeout-on-app-engine/</guid>
-      <description>&lt;p&gt;I ran into an interesting problem with Google app engine. It seems that the memcache time limit is enforced differently on the development server versus the production servers.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://code.google.com/p/memcached/wiki/FAQ#What_are_the_limits_on_setting_expire_time?_(why_is_there_a_30_d&#34;&gt;The documentation&lt;/a&gt; says that the time limit for a memcache key is 30 days. The behavior that I have observed is that if you set a memcache key to timeout at 30 days, the development server (on windows) will happily persist the data as expected.&lt;/p&gt;
-
-&lt;p&gt;On the production servers, it seems that the behavior is much different. I have notice with a timeout of 30 days, that memcache will not only ignore the persisted key but it will also cause erratic behavior for instances in your application.&lt;/p&gt;
-
-&lt;p&gt;Under these conditions a new instance of my application was start for each request! Obviously this adversely effects performance.&lt;/p&gt;
-
-&lt;p&gt;Once I changed the memcache timeout to a lesser value (under 30 days), the problem stopped.&lt;/p&gt;
 </description>
     </item>
     

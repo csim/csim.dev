@@ -3,19 +3,28 @@
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-  <meta property="og:title" content=" Crm &middot;  Clint Simon" />
+  <meta property="og:title" content=" MongoDB .Net Driver date handling &middot;  Clint Simon" />
   
   <meta name="theme-color" content="#af200a" />
  
   <meta property="og:site_name" content="Clint Simon" />
-  <meta property="og:url" content="http://clintsimon.com/tags/crm/" />
+  <meta property="og:url" content="http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling/" />
   
   
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:author" content="https://facebook.com/csim74" />
+  
+  <meta property="og:article:published_time" content="2015-07-27T08:23:36-08:00" />
+  
+  <meta property="og:article:tag" content="MongoDB" />
+  
+  <meta property="og:article:tag" content="Programming" />
+  
   
 
   <title>
-     Crm &middot;  Clint Simon
+     MongoDB .Net Driver date handling &middot;  Clint Simon
   </title>
 
   <link rel="stylesheet" href="http://clintsimon.com/css/bootstrap.min.css" />
@@ -77,51 +86,60 @@
   </header>
   <main class="container">
 
-<section class="article-list">
-  <h1>Crm</h1>
-  
-  <hr/>
-  <article>
+
+<article>
   <header>
-    <h2><a href="http://clintsimon.com/post/2012/2012-11-14-CRM-IE10/">Using IE10 with Dynamics CRM Online</a></h2>
+    <h1 class="text-primary">MongoDB .Net Driver date handling</h1>
     <div class="post-meta clearfix">
       <div class="post-date pull-left">
         Posted on
-        <time datetime="2012-11-14T08:00:00-08:00">
-          Nov 14, 2012
+        <time datetime="2015-07-27T08:23:36-08:00">
+          Jul 27, 2015
         </time>
+      </div>
+      <div class="pull-right">
+        
+        <span class="post-tag small"><a href="http://clintsimon.com//tags/mongodb">#MongoDB</a></span>
+        
+        <span class="post-tag small"><a href="http://clintsimon.com//tags/programming">#Programming</a></span>
+        
       </div>
     </div>
   </header>
-  <div>
-    <p>It appears that <a href="http://crm.dynamics.com">Dynamics CRM Online</a> does not play well with Internet Explorer 10. In fact, it downright does not work with IE10. Many of the web dialogs are unusable and when you receive an error, the error dialog exhibits bazaar behavior.</p>
+  <section>
+    <p>I ran into an interesting situation when saving dated to MongoDB using the Mongo .Net driver (version 2.0).</p>
 
-<p>This is an absolute tragedy. Windows 8 launched 3 weeks ago with IE10 included and the Dynamics product team was not prepared. The user experience on a windows 8 machine for Dynamics CRM is basically unusable.</p>
+<p>When saving a date with <a href="https://msdn.microsoft.com/en-us/library/system.datetime.kind%28v=vs.110%29.aspx">unspecified kind</a>, the driver converts the date to a universal datetime. It appears that the driver will assume that a DateTime object with an unspecified kind is a local time, and convert it to universal time (UTC) before committing it to the database.</p>
 
-<p>However, there is an easy way to fix this. For IE10, hit ALT. Then go to Tools -&gt; Compatibility View Settings.</p>
+<p>In my particular case, my origin date was UTC and was read from SQL server. Because entity framework does not set the Kind property on DateTime fields, MongoDB assuming these dates are local and performed a conversion to UTC. (Arrghhh)</p>
 
-<div class="vinette">
-<img src="/images/ie10_1.png" width="325" height="514" />
-</div>
+<p>Moral of the story: if you are converting data from SQL Server to MongoDB, make sure to call .ToLocalTime() on all dates even if they are stored as UTC. This will set the DateTime kind to local and avoid an inadvertent conversion by MongoDB on commit.</p>
 
-<p>Then add your CRM Online URL to the list. Below I am using the default dynamics.com domain. This will force IE10 to render the CRM application in compatibility mode.</p>
+<p>EDIT: As Robert suggests below, it is better to set the Kind on the DateTime because of possible UTC/Local conversion issues. Sample:</p>
 
-<div class="vinette">
-<img src="/images/ie10_2.png" width="391" height="488" />
-</div>
+<pre><code>var unspecifiedDateTime = ...; // returned by Entity Framework
+var utcDateTime = DateTime.SpecifyKind(unspecifiedDateTime, DateTimeKind.Utc);
+</code></pre>
 
-<p>Maybe Microsoft should make dynamics.com automatically render in compatibility mode? Or would that be too big of a black eye?</p>
-
-  </div>
+  </section>
   <footer>
-    <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2012/2012-11-14-CRM-IE10/">Comments <span aria-hidden="true">&raquo;</span></a></li>
-    </ul>
+    
+    <hr/>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'clintsimon';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+    
   </footer>
 </article>
 
-  
-</section>
   </main>
   <footer class="container global-footer">
     <div class="copyright-note pull-left">
@@ -177,5 +195,4 @@
   
 </body>
 </html>
-
 
