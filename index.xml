@@ -7,8 +7,30 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright</copyright>
-    <lastBuildDate>Fri, 17 Oct 2014 08:00:00 -0800</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2015 08:23:36 -0800</lastBuildDate>
     <atom:link href="http://clintsimon.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>MongoDB .Net Driver date handling</title>
+      <link>http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling/</link>
+      <pubDate>Mon, 27 Jul 2015 08:23:36 -0800</pubDate>
+      
+      <guid>http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling/</guid>
+      <description>&lt;p&gt;I ran into an interesting situation when saving dated to MongoDB using the Mongo .Net driver (version 2.0).&lt;/p&gt;
+
+&lt;p&gt;When saving a date with &lt;a href=&#34;https://msdn.microsoft.com/en-us/library/system.datetime.kind%28v=vs.110%29.aspx&#34;&gt;unspecified kind&lt;/a&gt;, the driver converts the date to a universal datetime. It appears that the driver will assume that a DateTime object with an unspecified kind is a local time, and convert it to universal time (UTC) before committing it to the database.&lt;/p&gt;
+
+&lt;p&gt;In my particular case, my origin date was UTC and was read from SQL server. Because entity framework does not set the Kind property on DateTime fields, MongoDB assuming these dates are local and performed a conversion to UTC. (Arrghhh)&lt;/p&gt;
+
+&lt;p&gt;Moral of the story: if you are converting data from SQL Server to MongoDB, make sure to call .ToLocalTime() on all dates even if they are stored as UTC. This will set the DateTime kind to local and avoid an inadvertent conversion by MongoDB on commit.&lt;/p&gt;
+
+&lt;p&gt;EDIT: As Robert suggests below, it is better to set the Kind on the DateTime because of possible UTC/Local conversion issues. Sample:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var unspecifiedDateTime = ...; // returned by Entity Framework
+var utcDateTime = DateTime.SpecifyKind(unspecifiedDateTime, DateTimeKind.Utc);
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Dropzone knockout binding</title>
@@ -184,6 +206,18 @@
     </item>
     
     <item>
+      <title>Embed video in SharePoint</title>
+      <link>http://clintsimon.com/post/2013/2013-11-25-embed-video-sharepoint/</link>
+      <pubDate>Mon, 25 Nov 2013 08:00:00 -0800</pubDate>
+      
+      <guid>http://clintsimon.com/post/2013/2013-11-25-embed-video-sharepoint/</guid>
+      <description>&lt;p&gt;I recently had to embed a full-screen video into a SharePoint 2010 page (don&amp;rsquo;t ask). Here is the solution using the default silverlight embeded video player which is packaged with SharePoint 2010.&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/csim/10283199.js&#34;&gt;&lt;/script&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Keyboard Manual Registry Settings</title>
       <link>http://clintsimon.com/post/2013/2013-11-25-keyboard-registry-settings/</link>
       <pubDate>Mon, 25 Nov 2013 08:00:00 -0800</pubDate>
@@ -196,18 +230,6 @@
 &lt;p&gt;Play around with AutoRepeatDelay and AutoRepeatRate, these are the settings that work for me.&lt;/p&gt;
 
 &lt;p&gt;Don&amp;rsquo;t set the AutoRepeatDelay too fast, it will make it so that when you type letters they are repeated immediately. Makes it really hard to type your password :)&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Embed video in SharePoint</title>
-      <link>http://clintsimon.com/post/2013/2013-11-25-embed-video-sharepoint/</link>
-      <pubDate>Mon, 25 Nov 2013 08:00:00 -0800</pubDate>
-      
-      <guid>http://clintsimon.com/post/2013/2013-11-25-embed-video-sharepoint/</guid>
-      <description>&lt;p&gt;I recently had to embed a full-screen video into a SharePoint 2010 page (don&amp;rsquo;t ask). Here is the solution using the default silverlight embeded video player which is packaged with SharePoint 2010.&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/csim/10283199.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -304,30 +326,6 @@
     </item>
     
     <item>
-      <title>Keeping Up with Technology</title>
-      <link>http://clintsimon.com/post/2012/2012-11-14-Keeping-Up-with-Technology/</link>
-      <pubDate>Wed, 14 Nov 2012 08:00:00 -0800</pubDate>
-      
-      <guid>http://clintsimon.com/post/2012/2012-11-14-Keeping-Up-with-Technology/</guid>
-      <description>&lt;p&gt;Learning new technologies and techniques is a part of life for any software developer. Programming is a quest for knowledge and understanding which lasts your entire lifetime. No other profession has a more dynamic working environment. Tools change and evolve on a daily basis it seems.  Learning is incumbent on all developers. Darwin&amp;rsquo;s law applies, adapt or perish.&lt;/p&gt;
-
-&lt;p&gt;Luckily most of us are used to this environment and thrive on the constantly changing landscape. I have found over my career that the pace of change has only increased, particularly in the past few years. The move to cloud computing is a big driver and the open source movement is creating a climate of rapid discovery and change. Thousands of new approaches to old problems are being forged this very moment.&lt;/p&gt;
-
-&lt;p&gt;Benefits can be reaped if you are efficient with your time and energy. Your value as an employee can be traced back to your technology aptitude and that aptitude is greatly affected by your knowledge of the technology spectrum which you apply to a project. This doesn&amp;rsquo;t mean that you need to have the deepest knowledge on a particular technology but instead you need a broad view of how technology fits together and how to choose the right pieces to solve a problem. Suggesting the pieces can be more important that understanding how each pieces works.&lt;/p&gt;
-
-&lt;p&gt;Generally I try to follow a few key rules which keep me in touch with new technology:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Find quality sources.&lt;/strong&gt; Find the best possible sources which apply to the technology space where you work. Each source should have excellent content covering a set of topics that could potentially apply to your daily work.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Organize the channels.&lt;/strong&gt; Create channels to monitor your sources, &lt;a href=&#34;http://reader.google.com&#34;&gt;Google reader&lt;/a&gt; works well, &lt;a href=&#34;http://twitter.com&#34;&gt;twitter&lt;/a&gt; a bit noisy. You want these streams to have a high signal to noise ratio. Don&amp;rsquo;t add pundits or 24-hour tech news into this mix. They are too noisy. Add sources that you know produce great topical content. For me, technology specific tech blogs work best.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;Read your channels regularly.&lt;/strong&gt; I try to read through my sources at least once per day. Some days there isn&amp;rsquo;t much to learn but other days I have multiple &amp;ldquo;holy cow&amp;rdquo; moments. If this becomes a chore then you might want to look for a new line of work :)&lt;/p&gt;&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Using IE10 with Dynamics CRM Online</title>
       <link>http://clintsimon.com/post/2012/2012-11-14-CRM-IE10/</link>
       <pubDate>Wed, 14 Nov 2012 08:00:00 -0800</pubDate>
@@ -354,6 +352,30 @@
     </item>
     
     <item>
+      <title>Keeping Up with Technology</title>
+      <link>http://clintsimon.com/post/2012/2012-11-14-Keeping-Up-with-Technology/</link>
+      <pubDate>Wed, 14 Nov 2012 08:00:00 -0800</pubDate>
+      
+      <guid>http://clintsimon.com/post/2012/2012-11-14-Keeping-Up-with-Technology/</guid>
+      <description>&lt;p&gt;Learning new technologies and techniques is a part of life for any software developer. Programming is a quest for knowledge and understanding which lasts your entire lifetime. No other profession has a more dynamic working environment. Tools change and evolve on a daily basis it seems.  Learning is incumbent on all developers. Darwin&amp;rsquo;s law applies, adapt or perish.&lt;/p&gt;
+
+&lt;p&gt;Luckily most of us are used to this environment and thrive on the constantly changing landscape. I have found over my career that the pace of change has only increased, particularly in the past few years. The move to cloud computing is a big driver and the open source movement is creating a climate of rapid discovery and change. Thousands of new approaches to old problems are being forged this very moment.&lt;/p&gt;
+
+&lt;p&gt;Benefits can be reaped if you are efficient with your time and energy. Your value as an employee can be traced back to your technology aptitude and that aptitude is greatly affected by your knowledge of the technology spectrum which you apply to a project. This doesn&amp;rsquo;t mean that you need to have the deepest knowledge on a particular technology but instead you need a broad view of how technology fits together and how to choose the right pieces to solve a problem. Suggesting the pieces can be more important that understanding how each pieces works.&lt;/p&gt;
+
+&lt;p&gt;Generally I try to follow a few key rules which keep me in touch with new technology:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Find quality sources.&lt;/strong&gt; Find the best possible sources which apply to the technology space where you work. Each source should have excellent content covering a set of topics that could potentially apply to your daily work.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Organize the channels.&lt;/strong&gt; Create channels to monitor your sources, &lt;a href=&#34;http://reader.google.com&#34;&gt;Google reader&lt;/a&gt; works well, &lt;a href=&#34;http://twitter.com&#34;&gt;twitter&lt;/a&gt; a bit noisy. You want these streams to have a high signal to noise ratio. Don&amp;rsquo;t add pundits or 24-hour tech news into this mix. They are too noisy. Add sources that you know produce great topical content. For me, technology specific tech blogs work best.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;Read your channels regularly.&lt;/strong&gt; I try to read through my sources at least once per day. Some days there isn&amp;rsquo;t much to learn but other days I have multiple &amp;ldquo;holy cow&amp;rdquo; moments. If this becomes a chore then you might want to look for a new line of work :)&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Remember, Software is Soft</title>
       <link>http://clintsimon.com/post/2012/2012-11-09-Remember-Software-is-Soft/</link>
       <pubDate>Fri, 09 Nov 2012 08:00:00 -0800</pubDate>
@@ -366,33 +388,6 @@
 &lt;p&gt;As programmers, we need to remember that software is soft. Meaning that it can be changed and it should be changed to conform to whatever the application requirements dictate. We are not talking about destroying a building to change the wall color. We are talking about changing &lt;strong&gt;soft&lt;/strong&gt;ware to meet new requirements.&lt;/p&gt;
 
 &lt;p&gt;By the way, we are &lt;em&gt;paid&lt;/em&gt; to make these changes.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Be Lazy and Smart</title>
-      <link>http://clintsimon.com/post/2012/2012-11-07-Be-Lazy-and-Smart/</link>
-      <pubDate>Wed, 07 Nov 2012 08:00:00 -0800</pubDate>
-      
-      <guid>http://clintsimon.com/post/2012/2012-11-07-Be-Lazy-and-Smart/</guid>
-      <description>&lt;p&gt;One of the best things that you can do as a developer is to be equal parts lazy and smart. This is an art that can be mastered to great effect. I don&amp;rsquo;t mean that you should abandon your passion for programming or stop being focused and goal driven. I mean that you should avoid work that is not absolutely necessary. To do that you need to be both lazy and smart in equal parts.&lt;/p&gt;
-
-&lt;p&gt;There are pitfalls. Laziness without being smart leads to inaction. Being smart without laziness leads to constantly reinventing the wheel. Ultimately the value you deliver needs to increase as a result of being lazy and smart.&lt;/p&gt;
-
-&lt;p&gt;Laziness means that you don&amp;rsquo;t want to do work that is unnecessary. You would rather copy and paste a known good solution rather than write it from scratch. You would rather ask a colleague for a quick answer than search for the same answer for hours. You would rather do a quick prototype rather than spending days in meetings arguing about how the application should look.&lt;/p&gt;
-
-&lt;p&gt;Being lazy means that you are constantly looking for &lt;em&gt;congruent efficiency&lt;/em&gt;. You want to find a better way to get a goal accomplished with the same quality but less effort. You want to spend more time making great software with great user experiences, and less time doing mundane tasks. Mundane tasks are like the scourge of software development. Luckily new tools and techniques are eliminating mundane tasks but there are still area where you can make significant time savings.&lt;/p&gt;
-
-&lt;p&gt;Being smart is the most important part of the equation. If you are just lazy, then you really don&amp;rsquo;t get anywhere quickly. But put lazy and smart together, and you get magic. That elusive balance where you are practically cheating. Things are so easy and yet so effective. Smart makes your laziness seem like genius.&lt;/p&gt;
-
-&lt;p&gt;Some Ideas:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Eliminate unnecessary meetings.&lt;/strong&gt; Keep meetings short and to the point. Focus meetings on working software with demos.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Have a code library for common patterns.&lt;/strong&gt; Copy/paste from the library when you come across a pattern that you have used before. Keep the library up to date with latest practices and new patterns.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Leverage co-workers.&lt;/strong&gt; When you have a hard problem, you may be surprised to learn that your colleagues have solved this problem in the past. Ask early in the cycle to avoid duplicate work and potential mistakes based on a potentially flawed approach. Hold code reviews so that you can validate your solutions.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Search the internet.&lt;/strong&gt; Sounds silly but I&amp;rsquo;ve seen people plug away at a problem without looking for a solution online first. Google is your friend.&lt;/li&gt;
-&lt;/ul&gt;
 </description>
     </item>
     

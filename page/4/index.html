@@ -83,44 +83,49 @@
   
   <article>
   <header>
-    <h2><a href="http://clintsimon.com/post/2011/2011-09-30-Why-Google-Chrome-wins/">Why Google Chrome wins</a></h2>
+    <h2><a href="http://clintsimon.com/post/2011/2011-10-03-Personal-backup-Strategy/">Personal Backup Strategy</a></h2>
     <div class="post-meta clearfix">
       <div class="post-date pull-left">
         Posted on
-        <time datetime="2011-09-30T08:00:00-08:00">
-          Sep 30, 2011
+        <time datetime="2011-10-03T08:00:00-08:00">
+          Oct 3, 2011
         </time>
       </div>
     </div>
   </header>
   <div>
-    <p>Google&rsquo;s chrome browser is quickly gaining momentum and market share. Recently it has even been projected the before the end of 2011 chrome will surpass firefox as the second most used browser, behind Internet Explorer.</p>
+    
 
-<p>Here&rsquo;s what I think is great about Google Chrome:</p>
+<p>There are a million and one ways to backup files from your hard drive. For me, the most important things are making sure that the files that cannot be replaced are safe.</p>
 
-<ul>
-<li><strong>It gets out of your way</strong>. As the name indicates, the browser is not in your way at all. The content is front and center and the browser is an afterthought.</li>
-<li><strong>Excellent JavaScript performance</strong>. JavaScript has become the way all web applications are written. <em>In practice</em>, chrome has the best JavaScript performance that I have seen. It blows away Internet explorer, event IE9 (although IE9 has come a long way).</li>
-<li><strong>The release schedule rocks.</strong> Major versions are released every 6 months and the upgrade process is completely seamless. Chrome is already on version 14. Granted the major releases are not as major as a new IE release, but it is clear that Google is committed to an aggressive release schedule.</li>
-<li><strong>Great development tools</strong>. The developer tools in Chrome are second only to <a href="http://getfirebug.com/">Firebug</a>. That&rsquo;s saying a lot, firebug is incredible but Chrome is a close second. In some ways I like Chrome better, especially the DOM explorer.</li>
-<li><strong>Sync everything</strong>. All browser settings, bookmarks and passwords can be stored in the Google cloud. If you roam across machines or rebuild your machines often, this is a big time saver.</li>
-<li><strong>HTML5 and CSS3 support</strong>. Support for new technologies is great in Chrome, thanks in part to the fact that it is built on top of the popular open source <a href="http://www.webkit.org/">WebKit</a> framework.</li>
-</ul>
+<p>Rather than opt for a relatively complicated system image based backup system such as <a href="http://www.microsoft.com/windows/products/winfamily/windowshomeserver/default.mspx">Windows Home Server</a> or a automated file copy utility such <a href="https://www.sugarsync.com/">SugarSync</a>, I instead prefer good old fashioned <a href="http://en.wikipedia.org/wiki/Robocopy">Robocopy</a> and physical DVD media. This might sound archaic in the age of cloud computing but I have found it to be the best way to ensure that I will not lose the most important files and have the least amount of headaches.</p>
 
-<p>This is interesting in a lot of ways. First, Google is not generally thought of as a desktop software company. This is changing and Chrome is a part of that.</p>
+<h3 id="my-setup:11f6dbaeda945b330401dc8c51a0a477">My setup</h3>
 
-<p>For Google, Chrome is strategic in that it gives Google some control (and consistency) over how their services are presented on the desktop. Google is a web software company and Chrome is an attempt at controlling the &ldquo;<a href="http://en.wikipedia.org/wiki/Last_mile">last mile</a>&rdquo; problem. This is important as it gives Google a foot hold on the desktop and a fighting chance against Microsoft.</p>
+<p>I have a portable 1TB drive which holds all of my media and working files. This includes family pictures, videos and virtual machines. I also have a non-portable 1TB drive that I use for only backups.</p>
 
-<p><a href="http://www.google.com/chromebook/">Chromebooks</a> are also an interesting concept. A computer that is basically just a browser, in a lightweight package. Chrome is obviously a huge part of these machines and Google is banking on the fact that Chrome can become an everyday part of your web experience.</p>
+<p>For everyday files like word docs, excel spreadsheets, etc. I use <a href="http://dropbox.com">Dropbox</a>. These files are important enough that I want then accessible anywhere, anytime but they are not important enough to warrant a physical copy on DVD. <a href="http://dropbox.com">Dropbox</a> is great for this purpose, but it&rsquo;s a big pricey when you go above the 2GB free limit. It runs $99 for 50GB/year and $199 for 100GB/year.</p>
+
+<h3 id="my-strategy:11f6dbaeda945b330401dc8c51a0a477">My strategy</h3>
+
+<p>Once a week I use <a href="http://en.wikipedia.org/wiki/Robocopy">Robocopy</a> to backup all important files from my laptop and the portable drive to the backup drive. When a backup is done, all important files are duplicated to the desktop drive. This covers the potential case where my portable drive is either lost or stolen.</p>
+
+<p>Once a month I copy all the very important files to physical DVD discs. These include family photos and videos. I use <a href="http://hcidesign.com/dvdspan/">DVDSpan</a> to burn a set of folders a set of DVD discs. This utility is rather old but it is very useful and has worked fantastically for me. It takes a folder or set of folders and writes them across a set of DVD discs. Granted this won&rsquo;t work if you have hundreds of Gigabytes to backup.</p>
+
+<p>In my case I am only looking to backup around 50GB of media files. To make things even easier the media files don&rsquo;t change over time. once a file is archive, it does not need to be archived again.</p>
+
+<p>Then writing files using <a href="http://hcidesign.com/dvdspan/">DVDSpan</a>, it helps to have the files organized into date folders. For example /Photos/2011/2011-01. This way when it&rsquo;s time to write DVDs, I can simply burn the recent files that have not been archived and ignore the files that I have already archived.</p>
+
+<p>The new discs get sent to the safe-deposit box for safe keeping. I have researched various methods of storing files off site such as <a href="http://aws.amazon.com/s3/">Amazon S3</a> or <a href="http://www.keepvault.com/">KeepVault</a>. So far nothing beats driving down to the safe deposit box at the local bank. I have around 60GB of Gigabytes of photos and videos, but the net new data is less than 10GB per month. That means that I can get away with burning roughly 2 DVD discs for each month.</p>
+
+<p>As cloud backup system mature, I may change my approach but for now I&rsquo;m staying old school.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-09-30-Why-Google-Chrome-wins/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-10-03-Personal-backup-Strategy/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -173,13 +178,55 @@
 <p>Cheers!</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-09-30-How-to-add-your-last-tweet-to-your-blog/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-09-30-How-to-add-your-last-tweet-to-your-blog/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
+</article>
+
   
+  
+  <hr/>
+  
+  <article>
+  <header>
+    <h2><a href="http://clintsimon.com/post/2011/2011-09-30-Why-Google-Chrome-wins/">Why Google Chrome wins</a></h2>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2011-09-30T08:00:00-08:00">
+          Sep 30, 2011
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    <p>Google&rsquo;s chrome browser is quickly gaining momentum and market share. Recently it has even been projected the before the end of 2011 chrome will surpass firefox as the second most used browser, behind Internet Explorer.</p>
+
+<p>Here&rsquo;s what I think is great about Google Chrome:</p>
+
+<ul>
+<li><strong>It gets out of your way</strong>. As the name indicates, the browser is not in your way at all. The content is front and center and the browser is an afterthought.</li>
+<li><strong>Excellent JavaScript performance</strong>. JavaScript has become the way all web applications are written. <em>In practice</em>, chrome has the best JavaScript performance that I have seen. It blows away Internet explorer, event IE9 (although IE9 has come a long way).</li>
+<li><strong>The release schedule rocks.</strong> Major versions are released every 6 months and the upgrade process is completely seamless. Chrome is already on version 14. Granted the major releases are not as major as a new IE release, but it is clear that Google is committed to an aggressive release schedule.</li>
+<li><strong>Great development tools</strong>. The developer tools in Chrome are second only to <a href="http://getfirebug.com/">Firebug</a>. That&rsquo;s saying a lot, firebug is incredible but Chrome is a close second. In some ways I like Chrome better, especially the DOM explorer.</li>
+<li><strong>Sync everything</strong>. All browser settings, bookmarks and passwords can be stored in the Google cloud. If you roam across machines or rebuild your machines often, this is a big time saver.</li>
+<li><strong>HTML5 and CSS3 support</strong>. Support for new technologies is great in Chrome, thanks in part to the fact that it is built on top of the popular open source <a href="http://www.webkit.org/">WebKit</a> framework.</li>
+</ul>
+
+<p>This is interesting in a lot of ways. First, Google is not generally thought of as a desktop software company. This is changing and Chrome is a part of that.</p>
+
+<p>For Google, Chrome is strategic in that it gives Google some control (and consistency) over how their services are presented on the desktop. Google is a web software company and Chrome is an attempt at controlling the &ldquo;<a href="http://en.wikipedia.org/wiki/Last_mile">last mile</a>&rdquo; problem. This is important as it gives Google a foot hold on the desktop and a fighting chance against Microsoft.</p>
+
+<p><a href="http://www.google.com/chromebook/">Chromebooks</a> are also an interesting concept. A computer that is basically just a browser, in a lightweight package. Chrome is obviously a huge part of these machines and Google is banking on the fact that Chrome can become an everyday part of your web experience.</p>
+
+  </div>
+  <footer>
+    <ul class="pager">
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-09-30-Why-Google-Chrome-wins/">Comments <span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+  </footer>
 </article>
 
   
@@ -238,13 +285,11 @@
 <p>The bottom line is that Google has a right to at least break even on App Engine. The service is incredible, the free tier still exists and the new <a href="http://code.google.com/appengine/sla.html">SLA terms</a> are top notch. App Engine is still a worth competitor in the PaaS market, even with the new pricing.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-09-29-Googles-new-App-Engine-pricing/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-09-29-Googles-new-App-Engine-pricing/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -275,13 +320,11 @@
 <p><strong>The Corporation.</strong> They are Enterprise. They are monumental. They will put a complex plan into place and deliver solid results on time and on budget through deliberate and consistent execution. You&rsquo;ll excel here if you enjoy structure and thrive when things are planned out to microscopic detail. Here&rsquo;s to &ldquo;synergy&rdquo;!</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-07-21-Types-of-consultancies-and-how-to-pick-one/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-07-21-Types-of-consultancies-and-how-to-pick-one/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -327,13 +370,11 @@
 </ul>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-07-19-Spotify-First-Imperessions/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-07-19-Spotify-First-Imperessions/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -410,13 +451,11 @@
 <p>After a quick picture and hugs, I headed for the finish line. What a great feeling. I didn&rsquo;t expect to get emotional but it hit me when I saw the finish line. I had done it! My first marathon. What an experience.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-07-01-First-Marathon-Complete/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-07-01-First-Marathon-Complete/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -463,13 +502,11 @@
 <p>Furthermore, LINQ makes the query process very transparent which means that you can flagrantly throw queries at you data source without regard for impact to the service. Bottom line is, think about what you are doing.  Do I really need to run this extra query? Can I consolidate this data pull into a single query?</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-06-06-How-to-get-started-with-OData/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-06-06-How-to-get-started-with-OData/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -514,13 +551,11 @@
 </ol>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-03-04-5-things-you-should-do-when-a-technology-project/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-03-04-5-things-you-should-do-when-a-technology-project/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -551,50 +586,11 @@
 <p>My guitar taunt me that immediacy is king.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-02-27-What-my-guitar-taught-me/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-02-27-What-my-guitar-taught-me/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
-</article>
-
-  
-  
-  <hr/>
-  
-  <article>
-  <header>
-    <h2><a href="http://clintsimon.com/post/2011/2011-02-14-Code-is-Creative/">Code is Creative</a></h2>
-    <div class="post-meta clearfix">
-      <div class="post-date pull-left">
-        Posted on
-        <time datetime="2011-02-14T08:00:00-08:00">
-          Feb 14, 2011
-        </time>
-      </div>
-    </div>
-  </header>
-  <div>
-    <p>Most people think of programmers as the guys guzzling mountain dew in a dark room where pizza slides under the door at around 6PM and a feature is built by 2AM. Although this is can be the case (we&rsquo;ve all been there), I have found that most of the people that I look up to are not at all like this. More often than not people who have influenced me over the years are people that show a genuine passion for software but also have massive creative energy and a social team mentality to boot. This is a paradox that defies stereotypes. It turns out that creativity is an essential ingredient if you want to make a good software developer.</p>
-
-<p>Starting out a career in technology is a steep mountain and the only way to get anywhere is to start grinding and never stop. It is an endless cycle of solving problems from the most mundane logic games to epic enterprise systems. At some point along the way we start to see patterns and recognize that it is possible to improve this cycle with a little planning and some creative thinking.</p>
-
-<p>Even today, 15 years in, I am still constantly looking to solve that next problem, my brain always straining to fit the puzzle pieces together in a way that will make the picture work. But what is my brain doing deep in the subconscious?</p>
-
-<p>I&rsquo;ve had this thought many times and while I have no real explanation, I have a good feeling that some creativity is at work. What else can explain it? I have experiences. I have facts. The only thing my brain has to do is fit those together in a way that solves the puzzle. In many ways this much more a creative exercise that an analytical exercise. Maybe analytical thinking is irrevocably tied to creativity in ways that we cannot yet understand.</p>
-
-<p>The true challenge as a software developer is to find creative solutions to daily problems. Learning APIs, patterns and systems is easy compared to applying those constructs to solve a real world problem. Creative thinking is what separates that average coder and the brilliant thinkers that bring us innovations that change our lives.</p>
-
-  </div>
-  
-  <footer>
-    <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-02-14-Code-is-Creative/">Read more <span aria-hidden="true">&raquo;</span></a></li>
-    </ul>
-  </footer>
-  
 </article>
 
   

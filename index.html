@@ -83,6 +83,45 @@
   
   <article>
   <header>
+    <h2><a href="http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling/">MongoDB .Net Driver date handling</a></h2>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2015-07-27T08:23:36-08:00">
+          Jul 27, 2015
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    <p>I ran into an interesting situation when saving dated to MongoDB using the Mongo .Net driver (version 2.0).</p>
+
+<p>When saving a date with <a href="https://msdn.microsoft.com/en-us/library/system.datetime.kind%28v=vs.110%29.aspx">unspecified kind</a>, the driver converts the date to a universal datetime. It appears that the driver will assume that a DateTime object with an unspecified kind is a local time, and convert it to universal time (UTC) before committing it to the database.</p>
+
+<p>In my particular case, my origin date was UTC and was read from SQL server. Because entity framework does not set the Kind property on DateTime fields, MongoDB assuming these dates are local and performed a conversion to UTC. (Arrghhh)</p>
+
+<p>Moral of the story: if you are converting data from SQL Server to MongoDB, make sure to call .ToLocalTime() on all dates even if they are stored as UTC. This will set the DateTime kind to local and avoid an inadvertent conversion by MongoDB on commit.</p>
+
+<p>EDIT: As Robert suggests below, it is better to set the Kind on the DateTime because of possible UTC/Local conversion issues. Sample:</p>
+
+<pre><code>var unspecifiedDateTime = ...; // returned by Entity Framework
+var utcDateTime = DateTime.SpecifyKind(unspecifiedDateTime, DateTimeKind.Utc);
+</code></pre>
+
+  </div>
+  <footer>
+    <ul class="pager">
+      <li class="next"><a href="http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling/">Comments <span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+  </footer>
+</article>
+
+  
+  
+  <hr/>
+  
+  <article>
+  <header>
     <h2><a href="http://clintsimon.com/post/2014/2014-10-17-dropzone-knockout-binding/">Dropzone knockout binding</a></h2>
     <div class="post-meta clearfix">
       <div class="post-date pull-left">
@@ -101,13 +140,11 @@
 <script src="https://gist.github.com/csim/4513ae3316104e6f474d.js?file=usage.html"></script>
 
   </div>
-  
   <footer>
     <ul class="pager">
       <li class="next"><a href="http://clintsimon.com/post/2014/2014-10-17-dropzone-knockout-binding/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -170,13 +207,11 @@
 <p>I have seen one scope reduction approach work, which is to propose the reduction of data volume by the process of archiving old data. This does not reduce the data mapping scope but reduces the timeline because migration execution time is reduced.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2013/2013-08-06-Data-Migration-is-Hard/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2013/2013-08-06-Data-Migration-is-Hard/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -203,13 +238,11 @@
 <p>This is especially helpful when viewing a page from a mobile device or table. You can easily deduce which size group maps to a particular device in each orientation.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
       <li class="next"><a href="http://clintsimon.com/post/2014/2014-06-06-bootstrap-size-indicator/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -248,13 +281,11 @@
 </ul>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2014/2014-05-05-Mountain/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2014/2014-05-05-Mountain/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -336,13 +367,40 @@
 <p>Go make some apps!</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2011/2011-02-16-Getting-started-with-Windows-Phone-7-development/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2011/2011-02-16-Getting-started-with-Windows-Phone-7-development/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
+</article>
+
   
+  
+  <hr/>
+  
+  <article>
+  <header>
+    <h2><a href="http://clintsimon.com/post/2013/2013-11-25-embed-video-sharepoint/">Embed video in SharePoint</a></h2>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2013-11-25T08:00:00-08:00">
+          Nov 25, 2013
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    <p>I recently had to embed a full-screen video into a SharePoint 2010 page (don&rsquo;t ask). Here is the solution using the default silverlight embeded video player which is packaged with SharePoint 2010.</p>
+
+<script src="https://gist.github.com/csim/10283199.js"></script>
+
+  </div>
+  <footer>
+    <ul class="pager">
+      <li class="next"><a href="http://clintsimon.com/post/2013/2013-11-25-embed-video-sharepoint/">Comments <span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+  </footer>
 </article>
 
   
@@ -371,44 +429,11 @@
 <p>Don&rsquo;t set the AutoRepeatDelay too fast, it will make it so that when you type letters they are repeated immediately. Makes it really hard to type your password :)</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2013/2013-11-25-keyboard-registry-settings/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2013/2013-11-25-keyboard-registry-settings/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
-</article>
-
-  
-  
-  <hr/>
-  
-  <article>
-  <header>
-    <h2><a href="http://clintsimon.com/post/2013/2013-11-25-embed-video-sharepoint/">Embed video in SharePoint</a></h2>
-    <div class="post-meta clearfix">
-      <div class="post-date pull-left">
-        Posted on
-        <time datetime="2013-11-25T08:00:00-08:00">
-          Nov 25, 2013
-        </time>
-      </div>
-    </div>
-  </header>
-  <div>
-    <p>I recently had to embed a full-screen video into a SharePoint 2010 page (don&rsquo;t ask). Here is the solution using the default silverlight embeded video player which is packaged with SharePoint 2010.</p>
-
-<script src="https://gist.github.com/csim/10283199.js"></script>
-
-  </div>
-  
-  <footer>
-    <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2013/2013-11-25-embed-video-sharepoint/">Comments <span aria-hidden="true">&raquo;</span></a></li>
-    </ul>
-  </footer>
-  
 </article>
 
   
@@ -453,13 +478,11 @@
 <p><em>I don&rsquo;t hear excitement.</em> It&rsquo;s a job interview. Tell me why you are excited about this job. What you want to accomplish in your career and how you feel about seizing this opportunity. At a bare minimum, win me over with enthusiasm. Sometimes I will take someone who is excited and will work really hard over someone who has more skill.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2013/2013-11-10-candidate/">Read more <span aria-hidden="true">&raquo;</span></a></li>
+      <li class="next"><a href="http://clintsimon.com/post/2013/2013-11-10-candidate/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
 </article>
 
   
@@ -488,58 +511,11 @@
 <p>Once this function is in your powershell profile, just type &ldquo;edit&rdquo; at the command prompt and sublime will open the current folder.</p>
 
   </div>
-  
   <footer>
     <ul class="pager">
       <li class="next"><a href="http://clintsimon.com/post/2013/2013-11-04-powershell-sublime-shortcut/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
-  
-</article>
-
-  
-  
-  <hr/>
-  
-  <article>
-  <header>
-    <h2><a href="http://clintsimon.com/post/2013/2013-08-10-how-I-learned-to-code/">How I learned to code</a></h2>
-    <div class="post-meta clearfix">
-      <div class="post-date pull-left">
-        Posted on
-        <time datetime="2013-08-10T08:00:00-08:00">
-          Aug 10, 2013
-        </time>
-      </div>
-    </div>
-  </header>
-  <div>
-    <p>I&rsquo;m not a long-term planner. I&rsquo;ve never made a &ldquo;5 year plan&rdquo; or thought about where I want to be 10 years from now. I simply look at what my options are and make a decision about what to do next.</p>
-
-<p>I only learned to code because my dad needed a problem solved. He ran a consulting business where he needed to perform regular equipment maintenance. It was 1996 and the web was new. It seemed like it might be possible to track schedules and log maintenance activities via the World Wide Web.</p>
-
-<p>I was young and foolish, so I started right away. I knew very little about programming having only built very simple programs in basic on my commodore 64 roughly 10 years earlier. I picked Perl because it was available with my college computer lab account which was the right price (free). I could also expose the script to the web, score!</p>
-
-<p>Looking back, I was a pretty awful programmer at that time. I had about 5 tricks in my bag and writing a function was not one of them. The Perl script became one long if statement with print statements to emit HTML. Around 800 lines of code with no functions. Wow, does this seem backwards to me now. To top it off, I wrote a rudimentary serialization process to save my in-memory HashTable to a text file.</p>
-
-<p>To be fair, I did not know the word &ldquo;serialization&rdquo; at the time. I just knew that I needed to save some data and have it available on the next web request. I happily wrote some code at the end of my script to store the text file after each request was rendered and some code at the top to read the file. Done.</p>
-
-<p>I was absolutely intoxicated by the process of coding my first web application. I literally could not get enough. I worked on the script with every sliver of free time that I had and when I wasn&rsquo;t working on it, I was thinking about it or dreaming about it.</p>
-
-<p>How could I get this element to render? How could I get the code to run faster? What do I do with this data? Can I build a calendar?</p>
-
-<p>I was great. I probably learned more in those 6 weeks than at any other time in my career. But more than that, it forged my desire to be a programmer. I am still chasing the high that I felt over 15 years ago on the first project. There is nothing like having an idea, building it and watching it grow into something valuable.</p>
-
-<p>That little application that I built went on to run a substantial part of my dad&rsquo;s business for a few years until I replaced it with a new version that was more professional. It was great to see it work for so long but the larger net effect was that I was hooked on coding. I haven&rsquo;t looked back once.</p>
-
-  </div>
-  
-  <footer>
-    <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2013/2013-08-10-how-I-learned-to-code/">Read more <span aria-hidden="true">&raquo;</span></a></li>
-    </ul>
-  </footer>
-  
 </article>
 
   
