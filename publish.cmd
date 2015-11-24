@@ -5,11 +5,11 @@ hugo
 xcopy /crydif "CNAME" "public"
 
 git add -A
-git commit -qam "Updates"
+git commit -m "Updates"
 git push origin master
 
 ::git subtree pull --prefix public origin gh-pages
-git subtree push --prefix public origin gh-pages
+git subtree push --prefix public origin gh-pages --squash
 
 
 
