@@ -2,7 +2,7 @@ rmdir /S /Q public
 
 git checkout master
 git add -A
-git commit "Reset publishing suubtree"
+git commit -m "Reset publishing suubtree"
 git push
 
 git subtree add --prefix public origin gh-pages --squash
