@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta property="og:title" content=" SharePoint Custom Application Development Methodologies &middot;  Clint Simon" />
+  
+  <meta name="theme-color" content="#af200a" />
+ 
+  <meta property="og:site_name" content="Clint Simon" />
+  <meta property="og:url" content="http://clintsimon.com/post/2008/2008-01-07-SharePoint-Custom-Application-Development-Methodologies/" />
+  
+  
+  <meta property="og:type" content="article" />
+  
+  <meta property="og:article:author" content="https://facebook.com/csim74" />
+  
+  <meta property="og:article:published_time" content="2008-01-07T08:00:00-08:00" />
+  
+  <meta property="og:article:tag" content="SharePoint" />
+  
+  <meta property="og:article:tag" content="Programming" />
+  
+  
+
+  <title>
+     SharePoint Custom Application Development Methodologies &middot;  Clint Simon
+  </title>
+
+  <link rel="stylesheet" href="http://clintsimon.com/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://clintsimon.com/css/main.css" />
+  <link rel="stylesheet" href="http://clintsimon.com/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://clintsimon.com/css/github.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="http://clintsimon.com/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://clintsimon.com/images/apple-touch-icon.png" />
+  
+</head>
+<body>
+    
+    <header class="global-header">
+    <section class="header-text">
+      <h1><a href="http://clintsimon.com/">Clint Simon</a></h1>
+      
+      <div class="tag-line">
+        Find a way.
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/clintsim" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://facebook.com/csim74" target="_blank">
+    <i class="fa fa-facebook"></i>
+  </a>
+  
+  
+  <a href="https://github.com/csim" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  <a href="https://linkedin.com/in/clintsimon" target="_blank">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  <a href="/index.xml" target="_blank">
+    <i class="fa fa-rss"></i>
+  </a>
+</div>
+
+      
+      <a href="http://clintsimon.com/" class="btn-header btn-back hidden-xs"><i class="fa fa-home"></i>&nbsp; Home</a>
+      
+      <a href="/tags" class="btn-header btn-topics hidden-xs"><i class="fa fa-tags"></i>&nbsp; Topics</a>
+      <a href="/post" class="btn-header btn-archive hidden-xs"><i class="fa fa-archive"></i>&nbsp; Archive</a>
+    </section>
+  </header>
+  <main class="container">
+
+
+<article>
+  <header>
+    <h1 class="text-primary">SharePoint Custom Application Development Methodologies</h1>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2008-01-07T08:00:00-08:00">
+          Jan 7, 2008
+        </time>
+      </div>
+      <div class="pull-right">
+        
+        <span class="post-tag small"><a href="http://clintsimon.com//tags/sharepoint">#SharePoint</a></span>
+        
+        <span class="post-tag small"><a href="http://clintsimon.com//tags/programming">#Programming</a></span>
+        
+      </div>
+    </div>
+  </header>
+  <section>
+    
+
+<p>As SharePoint becomes more prevalent in the custom application development realm, there has been some friction and malcontent expressed in relation to deployment processes, team development methods and application upgrade paths. I believe that Microsoft has fallen short on providing the tools necessary to promote and support custom application development on the SharePoint platform.</p>
+
+<p>In my opinion, the SharePoint platform should not limit nor impede my ability as a custom application developer to deliver solutions that follow the same deployment principals as any other custom asp.net application. As some readers may be aware, at present the standard Microsoft guidance is flawed because it does not fully support repeatable build processes. This is a huge barrier for custom application developers who are accustom to building applications using source control for all assets, build automation and continuous integration. SharePoint as a lot to offer but taking advantage of the platform as a vehicle for custom applications should be more congruent with standard software development practices.</p>
+
+<h3 id="the-microsoft-approach:eef21bfca27a4a657aef9dd8922e15d2">The Microsoft approach</h3>
+
+<p>The Microsoft approach dictates that for team development environments, artifacts such as aspx, html, css files or any other file that lives in the content database should be created, stored and version controlled in a SharePoint authoring environment. These artifacts are created and maintained by &ldquo;content developers&rdquo;. These content developers use SharePoint designer to create and propagate changes to production.</p>
+
+<p>In parallel, custom application developers are to use standard team development principals (source control, etc) to create assemblies that are then promoted to the authoring environment where they are tested and eventually deployed to the production environment.</p>
+
+<p>Read more:
+<a href="http://msdn2.microsoft.com/en-us/library/bb428899.aspx">http://msdn2.microsoft.com/en-us/library/bb428899.aspx</a></p>
+
+<h3 id="where-the-microsoft-approach-falters:eef21bfca27a4a657aef9dd8922e15d2">Where the Microsoft approach falters</h3>
+
+<p>The primary problem with the Microsoft approach is that in many cases there is a <em>hard dependency</em> between artifacts and assemblies. You need to have the same version of artifacts and assemblies to be able to test in any environment and it is not possible get a synchronized version of both sets of assets from a single source. This relegates developers to constantly migrating and updating both content and assemblies to get a consistent version to test. The problem is only compounded because content authors may not be technically able to update assemblies in the authoring environment.</p>
+
+<p>For a custom application of any complexity you need to be able to build and deploy a set of files that work as a unit. For a standard data-driven (SQL Server) asp.net application that means you would have your database creation scripts in source control and when deploying to a new environment (or upgrading an environment), you would run your scripts to create a new copy of the database for that environment. This way, deploying to a test environment becomes easy because you have a repeatable process. Why treat a SharePoint site any differently? You will of course need to use the SharePoint API instead of a SQL database creation script, but the basic function is the same.</p>
+
+<h2 id="a-solution:eef21bfca27a4a657aef9dd8922e15d2">A Solution</h2>
+
+<p>After working with SharePoint for 6+ years I have found that it is possible to treat a SharePoint custom application as you would any other asp.net custom application. The Microsoft tools (and therefore the approach) fall short on these topics but with some motivation and know-how you can achieve substantial benefits by following these steps:</p>
+
+<h3 id="use-spdeploy-http-rapid-tools-googlecode-com:eef21bfca27a4a657aef9dd8922e15d2">Use <a href="http://rapid-tools.googlecode.com">SPDeploy</a></h3>
+
+<p>Ok, this is shamefully self promotional. What I really mean is that you should be using a deployment tool that can support creating customizations inside Visual Studio and deploying those customization via a SharePoint Solution Package (.wsp) to a remote server. There are a few tools that compile a wsp from Visual Studio such as WSPBuilder or Andrew Connell&rsquo;s custom approach. In my opinion SPDeploy is the most complete and easily repeatable solution to solve this problem, but I am biased :)</p>
+
+<h3 id="create-all-your-sharepoint-customizations-inside-visual-studio:eef21bfca27a4a657aef9dd8922e15d2">Create all your SharePoint customizations inside Visual Studio.</h3>
+
+<p>We are custom application developers and we use Visual Studio solutions. This should not change when you are working on a SharePoint project.</p>
+
+<h3 id="use-source-control:eef21bfca27a4a657aef9dd8922e15d2">Use source control</h3>
+
+<p>Because we now have all of our SharePoint customizations inside Visual Studio, the next logical step is to commit that solution to source control. Read more about the benefits of source control:
+<a href="http://msdn2.microsoft.com/en-us/library/ms173539.aspx">http://msdn2.microsoft.com/en-us/library/ms173539.aspx</a></p>
+
+<h3 id="design-your-solution-to-provision-all-site-collection-assets-from-source-control:eef21bfca27a4a657aef9dd8922e15d2">Design your solution to provision all site collection assets from source control</h3>
+
+<p>Provisioning all site collection assets enables you to create your projects site collection from source control at will. This means that when a new developer steps onto your project, he or she can pull a copy of the files from source control and create a site collection that is identical to your site collection. Furthermore because you now have a repeatable site collection provisioning process, when deploying to test you can hand-off your wsp and have a tester create a site instance in no time at all.</p>
+
+<p>Implementing this can be a bit tricky. For a brute force approach you can create a feature that lives at the site level that will provision all sub sites, files, etc. Or if you are adventurous you can create an XML configurable feature that will provision all assets according to a configurable XML file.</p>
+
+<h3 id="use-developer-isolated-environments:eef21bfca27a4a657aef9dd8922e15d2">Use developer isolated environments</h3>
+
+<p>Because we have the infrastructure in place to provision all site collection assets, it is possible to create isolated developer environments. This is the standard development method for any asp.net application and it should not change when developing a custom application on top of SharePoint.</p>
+
+<h3 id="use-continuous-integration:eef21bfca27a4a657aef9dd8922e15d2">Use continuous integration</h3>
+
+<p>This one is somewhat optional but I would strongly recommend using continuous integration on any project. Because of the previous points, continuous integration for a SharePoint project becomes possible. Read more about continuous integration:
+<a href="http://en.wikipedia.org/wiki/Continuous_integration">http://en.wikipedia.org/wiki/Continuous_integration</a></p>
+
+<h3 id="use-sharepoint-designer-only-as-a-immediate-feedback-tool:eef21bfca27a4a657aef9dd8922e15d2">Use SharePoint Designer only as a &ldquo;Immediate Feedback&rdquo; tool</h3>
+
+<p>SharePoint designer should not be used as a primary development tool (as MS suggests) but rather as a tool to quickly and conveniently see changes inside your site instance. Once you are happy with a change, then it should be placed in your Visual Studio solution so that it can participate in source control.</p>
+
+<p>This is usually helpful with rendering assets such as page layouts, XML files, XSLT transforms and stylesheets. It sure is nice to be able to see changes immediately, but be sure to commit your changes to your Visual Studio project (and hence source control) so that they are visible to other developers on the project.</p>
+
+  </section>
+  <footer>
+    
+    <hr/>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname = 'clintsimon';
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+    
+  </footer>
+</article>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      &copy; Copyright
+    </div>
+    <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/clintsim" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://facebook.com/csim74" target="_blank">
+    <i class="fa fa-facebook"></i>
+  </a>
+  
+  
+  <a href="https://github.com/csim" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  <a href="https://linkedin.com/in/clintsimon" target="_blank">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  <a href="/index.xml" target="_blank">
+    <i class="fa fa-rss"></i>
+  </a>
+</div>
+
+  </footer>
+
+  <script src="http://clintsimon.com/js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-25860409-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+  
+</body>
+</html>
+
