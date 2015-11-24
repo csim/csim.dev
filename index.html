@@ -83,6 +83,45 @@
   
   <article>
   <header>
+    <h2><a href="http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling2/">MongoDB .Net Driver date handling22</a></h2>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        Posted on
+        <time datetime="2015-07-27T08:23:36-08:00">
+          Jul 27, 2015
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    <p>I ran into an interesting situation when saving dated to MongoDB using the Mongo .Net driver (version 2.0).</p>
+
+<p>When saving a date with <a href="https://msdn.microsoft.com/en-us/library/system.datetime.kind%28v=vs.110%29.aspx">unspecified kind</a>, the driver converts the date to a universal datetime. It appears that the driver will assume that a DateTime object with an unspecified kind is a local time, and convert it to universal time (UTC) before committing it to the database.</p>
+
+<p>In my particular case, my origin date was UTC and was read from SQL server. Because entity framework does not set the Kind property on DateTime fields, MongoDB assuming these dates are local and performed a conversion to UTC. (Arrghhh)</p>
+
+<p>Moral of the story: if you are converting data from SQL Server to MongoDB, make sure to call .ToLocalTime() on all dates even if they are stored as UTC. This will set the DateTime kind to local and avoid an inadvertent conversion by MongoDB on commit.</p>
+
+<p>EDIT: As Robert suggests below, it is better to set the Kind on the DateTime because of possible UTC/Local conversion issues. Sample:</p>
+
+<pre><code>var unspecifiedDateTime = ...; // returned by Entity Framework
+var utcDateTime = DateTime.SpecifyKind(unspecifiedDateTime, DateTimeKind.Utc);
+</code></pre>
+
+  </div>
+  <footer>
+    <ul class="pager">
+      <li class="next"><a href="http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling2/">Comments <span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+  </footer>
+</article>
+
+  
+  
+  <hr/>
+  
+  <article>
+  <header>
     <h2><a href="http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling/">MongoDB .Net Driver date handling</a></h2>
     <div class="post-meta clearfix">
       <div class="post-date pull-left">
@@ -481,39 +520,6 @@ var utcDateTime = DateTime.SpecifyKind(unspecifiedDateTime, DateTimeKind.Utc);
   <footer>
     <ul class="pager">
       <li class="next"><a href="http://clintsimon.com/post/2013/2013-11-10-candidate/">Comments <span aria-hidden="true">&raquo;</span></a></li>
-    </ul>
-  </footer>
-</article>
-
-  
-  
-  <hr/>
-  
-  <article>
-  <header>
-    <h2><a href="http://clintsimon.com/post/2013/2013-11-04-powershell-sublime-shortcut/">PowerShell Sublime Text Shortcut</a></h2>
-    <div class="post-meta clearfix">
-      <div class="post-date pull-left">
-        Posted on
-        <time datetime="2013-11-04T08:00:00-08:00">
-          Nov 4, 2013
-        </time>
-      </div>
-    </div>
-  </header>
-  <div>
-    <p>Lately I have been learning about <a href="http://git-scm.org">Git</a> and <a href="http://github.com">GitHub</a>. Most of this work is done at the command line, I have found myself quickly amassing PowerShell functions that acts as shortcuts.</p>
-
-<p>One very handy shortcut is the ability to launch the <a href="http://www.sublimetext.com">sublime text editor</a> and open the current directory as a project. Or alternately passing in a file to edit.</p>
-
-<script src="https://gist.github.com/csim/10286154.js"></script>
-
-<p>Once this function is in your powershell profile, just type &ldquo;edit&rdquo; at the command prompt and sublime will open the current folder.</p>
-
-  </div>
-  <footer>
-    <ul class="pager">
-      <li class="next"><a href="http://clintsimon.com/post/2013/2013-11-04-powershell-sublime-shortcut/">Comments <span aria-hidden="true">&raquo;</span></a></li>
     </ul>
   </footer>
 </article>
