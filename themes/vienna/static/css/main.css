@@ -234,7 +234,7 @@ a.btn-archive {
 
 .pagination
 {
-	width: 720px;
+	width: 100%;
 	text-align: center;
 }
 
@@ -245,7 +245,7 @@ a.btn-archive {
 	border-radius: 15px;
 	text-decoration: none;
 	transition: border .3s ease;
-	padding: 5px 14px;
+	padding: 5px 5px;
 }
 
 .page-number
