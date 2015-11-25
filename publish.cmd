@@ -14,7 +14,7 @@ git push
 
 cd ..
 git commit -am "Content Updates"
-
+git push
 
 ::git subtree pull --prefix public origin gh-pages
 ::git subtree push --prefix public origin gh-pages --squash
