@@ -6,8 +6,6 @@ tags:
   - Programming
 ---
 
-testxx
-
 I ran into an interesting situation when saving dated to MongoDB using the Mongo .Net driver (version 2.0).
 
 When saving a date with [unspecified kind](https://msdn.microsoft.com/en-us/library/system.datetime.kind%28v=vs.110%29.aspx), the driver converts the date to a universal datetime. It appears that the driver will assume that a DateTime object with an unspecified kind is a local time, and convert it to universal time (UTC) before committing it to the database.
