@@ -6,6 +6,8 @@ xcopy /crydif "CNAME" "public"
 
 cd public
 
+git checkout gh-pages
+::git pull
 git commit -am "Publish"
 git push
 
