@@ -206,18 +206,6 @@ var utcDateTime = DateTime.SpecifyKind(unspecifiedDateTime, DateTimeKind.Utc);
     </item>
     
     <item>
-      <title>Embed video in SharePoint</title>
-      <link>http://clintsimon.com/post/2013/2013-11-25-embed-video-sharepoint/</link>
-      <pubDate>Mon, 25 Nov 2013 08:00:00 -0800</pubDate>
-      
-      <guid>http://clintsimon.com/post/2013/2013-11-25-embed-video-sharepoint/</guid>
-      <description>&lt;p&gt;I recently had to embed a full-screen video into a SharePoint 2010 page (don&amp;rsquo;t ask). Here is the solution using the default silverlight embeded video player which is packaged with SharePoint 2010.&lt;/p&gt;
-
-&lt;script src=&#34;https://gist.github.com/csim/10283199.js&#34;&gt;&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Keyboard Manual Registry Settings</title>
       <link>http://clintsimon.com/post/2013/2013-11-25-keyboard-registry-settings/</link>
       <pubDate>Mon, 25 Nov 2013 08:00:00 -0800</pubDate>
@@ -230,6 +218,18 @@ var utcDateTime = DateTime.SpecifyKind(unspecifiedDateTime, DateTimeKind.Utc);
 &lt;p&gt;Play around with AutoRepeatDelay and AutoRepeatRate, these are the settings that work for me.&lt;/p&gt;
 
 &lt;p&gt;Don&amp;rsquo;t set the AutoRepeatDelay too fast, it will make it so that when you type letters they are repeated immediately. Makes it really hard to type your password :)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Embed video in SharePoint</title>
+      <link>http://clintsimon.com/post/2013/2013-11-25-embed-video-sharepoint/</link>
+      <pubDate>Mon, 25 Nov 2013 08:00:00 -0800</pubDate>
+      
+      <guid>http://clintsimon.com/post/2013/2013-11-25-embed-video-sharepoint/</guid>
+      <description>&lt;p&gt;I recently had to embed a full-screen video into a SharePoint 2010 page (don&amp;rsquo;t ask). Here is the solution using the default silverlight embeded video player which is packaged with SharePoint 2010.&lt;/p&gt;
+
+&lt;script src=&#34;https://gist.github.com/csim/10283199.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
