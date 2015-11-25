@@ -1,5 +1,3 @@
-::rmdir /S /Q public
-
 hugo
 
 xcopy /crydif "CNAME" "public"
