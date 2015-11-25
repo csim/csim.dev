@@ -8,7 +8,8 @@ cd public
 
 git checkout gh-pages
 ::git pull
-git commit -am "Publish"
+git add -A
+git commit -m "Publish"
 git push
 
 cd ..
