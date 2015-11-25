@@ -1,11 +1,15 @@
 rmdir /S /Q public
 
-git checkout master
+git submodule add http://github.com/csim/clintsimon.com.git public
+
+cd public
+
+git checkout gh-pages
 git add -A
-git commit -m "Reset publishing suubtree"
+git commit -m "Setup publishing"
 git push
 
-git subtree add --prefix public origin gh-pages --squash
+cd ..
 
 .\publish.cmd
 
@@ -13,6 +17,7 @@ git subtree add --prefix public origin gh-pages --squash
 
 ::xcopy /crydif "CNAME" "public"
 
+::git subtree add --prefix public origin gh-pages --squash
 ::git add -A
 ::git commit -qam "Updates"
 ::git push origin master

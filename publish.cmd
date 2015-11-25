@@ -5,15 +5,15 @@ hugo
 xcopy /crydif "CNAME" "public"
 
 cd public
-
 git checkout gh-pages
 ::git pull
 git add -A
 git commit -m "Publish"
-git push
+git push --force
 
 cd ..
-git commit -am "Content Updates"
+git add -A
+git commit -m "Content Updates"
 git push
 
 ::git subtree pull --prefix public origin gh-pages
