@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta property="og:title" content=" Clint Simon" />
+  
+  <meta name="theme-color" content="#af200a" />
+ 
+  <meta property="og:site_name" content="Clint Simon" />
+  <meta property="og:url" content="http://clintsimon.com/" />
+  
+  
+  <meta property="og:type" content="website" />
+  
+
+  <title>
+     Clint Simon
+  </title>
+
+  <link rel="stylesheet" href="http://clintsimon.com/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://clintsimon.com/css/main.css" />
+  <link rel="stylesheet" href="http://clintsimon.com/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="http://clintsimon.com/css/github.css" />
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" type="text/css">
+  <link rel="shortcut icon" href="http://clintsimon.com/images/favicon.ico" />
+  <link rel="apple-touch-icon" href="http://clintsimon.com/images/apple-touch-icon.png" />
+  
+  <link href="http://clintsimon.com/index.xml" rel="alternate" type="application/rss+xml" title="Clint Simon" />
+  
+</head>
+<body>
+    
+    <header class="global-header">
+    <section class="header-text">
+      <h1><a href="http://clintsimon.com/">Clint Simon</a></h1>
+      
+      <div class="tag-line">
+        Find a way.
+      </div>
+      
+      <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/clintsim" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://facebook.com/csim74" target="_blank">
+    <i class="fa fa-facebook"></i>
+  </a>
+  
+  
+  <a href="https://github.com/csim" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  <a href="https://linkedin.com/in/clintsimon" target="_blank">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  <a href="/index.xml" target="_blank">
+    <i class="fa fa-rss"></i>
+  </a>
+</div>
+
+      
+      <a href="/tags" class="btn-header btn-topics hidden-xs"><i class="fa fa-tags"></i>&nbsp; Topics</a>
+      <a href="/post" class="btn-header btn-archive hidden-xs"><i class="fa fa-archive"></i>&nbsp; Archive</a>
+    </section>
+  </header>
+  <main class="container">
+
+<div class="article-list">
+  
+  
+  
+  <article>
+  <header>
+    <h2><a href="http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling/">MongoDB .Net Driver date handling</a></h2>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        <time datetime="2015-07-27T08:23:36-08:00">
+          Jul 27, 2015
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    <p>I ran into an interesting situation when saving dated to MongoDB using the Mongo .Net driver (version 2.0).</p>
+
+<p>When saving a date with <a href="https://msdn.microsoft.com/en-us/library/system.datetime.kind%28v=vs.110%29.aspx">unspecified kind</a>, the driver converts the date to a universal datetime. It appears that the driver will assume that a DateTime object with an unspecified kind is a local time, and convert it to universal time (UTC) before committing it to the database.</p>
+
+<p>In my particular case, my origin date was UTC and was read from SQL server. Because entity framework does not set the Kind property on DateTime fields, MongoDB assuming these dates are local and performed a conversion to UTC. (Arrghhh)</p>
+
+<p>Moral of the story: if you are converting data from SQL Server to MongoDB, make sure to call .ToLocalTime() on all dates even if they are stored as UTC. This will set the DateTime kind to local and avoid an inadvertent conversion by MongoDB on commit.</p>
+
+<p>EDIT: As Robert suggests below, it is better to set the Kind on the DateTime because of possible UTC/Local conversion issues. Sample:</p>
+
+<pre><code>var unspecifiedDateTime = ...; // returned by Entity Framework
+var utcDateTime = DateTime.SpecifyKind(unspecifiedDateTime, DateTimeKind.Utc);
+</code></pre>
+
+  </div>
+  <footer>
+    <ul class="pager">
+      <li class="next"><a href="http://clintsimon.com/post/2015/2015-07-27-MongoDB-Date-Handling/">Comments <span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+  </footer>
+</article>
+
+  
+  
+  <hr/>
+  
+  <article>
+  <header>
+    <h2><a href="http://clintsimon.com/post/2014/2014-10-17-dropzone-knockout-binding/">Dropzone knockout binding</a></h2>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        <time datetime="2014-10-17T08:00:00-08:00">
+          Oct 17, 2014
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    <p>A very simple knockout binding for <a href="http://www.dropzonejs.com/">dropzone.js</a></p>
+
+<script src="https://gist.github.com/csim/4513ae3316104e6f474d.js?file=dropzone.knockout.js"></script>
+
+<script src="https://gist.github.com/csim/4513ae3316104e6f474d.js?file=usage.html"></script>
+
+  </div>
+  <footer>
+    <ul class="pager">
+      <li class="next"><a href="http://clintsimon.com/post/2014/2014-10-17-dropzone-knockout-binding/">Comments <span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+  </footer>
+</article>
+
+  
+  
+  <hr/>
+  
+  <article>
+  <header>
+    <h2><a href="http://clintsimon.com/post/2013/2013-08-06-Data-Migration-is-Hard/">Data Migration is Hard</a></h2>
+    <div class="post-meta clearfix">
+      <div class="post-date pull-left">
+        <time datetime="2014-08-06T08:00:00-08:00">
+          Aug 6, 2014
+        </time>
+      </div>
+    </div>
+  </header>
+  <div>
+    <p>Data migration can sink your project. It lurks around the edges of your estimation model, hiding deep dark secrets that will only be uncovered at the very end of the project. Nothing could be worse. Discovering that you need to increase the migration schedule 5 fold at the 11th hour can not only derail your project but if it happens too often it might derail your career.</p>
+
+<p>I have learned a few lesson on this topic:</p>
+
+<p><strong>Re-estimate your migration scope of work when there are significant changes in the new application.</strong> At the beginning of the project, migration seems easy. A new system with like functionality should have a similar data model with a one-to-one mapping against the old data model.</p>
+
+<p>Often times the new system will morph into something completely different, creating complex transforms for the data migration process. Not only is this extra work for the data migration but you have to <em>define</em> this extra work.</p>
+
+<p>Ideally when changes creep into the new system build, the data migration estimates are updated and timelines are adjusted. Having a designated data migration subject matter expert helps to spot trouble on the horizon and alert the team to data migration impact.</p>
+
+<p><strong>Run your migration on the real data.</strong> There is no substitute for real migration data. Often times, sample data is used for too long which engenders a false sense of confidence. When you finally use the real data, there are a boat load of issues that you could not have predicted.</p>
+
+<p>Use the real customer data as soon as possible in the process. Look at the outcomes in the new application, run scenario testing early and often. You simply have no idea what issues you will bump into.</p>
+
+<p><strong>Think about performance.</strong> No matter how elegant your code or how perfect you attribute mappings are, there will come a time when performance is paramount. If the migration takes 10 days to complete, most likely you have failed.</p>
+
+<p>Have a focus on performance from the beginning of the development effort. Identify the total number of source records to be transformed. Then get some baseline throughput numbers from you migration process. This will tell you how long the migration execution will take. You can also use a known duration to calculate how many records per second you need to achieve.</p>
+
+<p>Once you know the desired parameters, you can start to optimize your code. Optimizing performance is an <a href="http://www.amazon.com/NET-Performance-Testing-Optimization-Complete/dp/1906434409">art form</a>.</p>
+
+<p>Multithread is a good way to improve performance but it comes with major pitfalls. The saying goes: You implemented multithreading to solve your problem, now you have two problems. If you understand thread safety and the basics of multithreaded software design, then multithreading is a good option, otherwise stay away from it.</p>
+
+<p><strong>Think about the execution plan &amp; timings.</strong> What time window is available to perform the migration? How much down time can you afford? Put together a timeline that clearly delineates the time allotted for each phase of the migration.</p>
+
+<p>Often times one way around performance and timing issues is to implement a &ldquo;delta&rdquo; load where only the changed data is migrated. First you run the full load, then the delta process moves only the data that has changed since the last migration pass. This breaks the migration process into smaller pieces and allows for those pieces to be spread across a longer period of time. When it&rsquo;s time to go live, you only need to run the delta process once more to bring the data into synchronization, then you can launch the new system.</p>
+
+<p><strong>Understand the differences between legacy and new systems with regard to business use cases.</strong> Don&rsquo;t just think about data model differences, think about business process differences. The business context around data attributes is important when the situation dictates a complex transformation.</p>
+
+<p><strong>Document all data gaps for the customer.</strong> Inevitably you will run into data that simple cannot be directly mapped, transformed or converted to the new system. It is of the utmost importance to document these gaps, triage these issues with the client and work toward some form of resolution.</p>
+
+<p>There are general three things that the client may decide:</p>
+
+<ol>
+<li>Ignore the data attribute. It is not important in the new system. Keep a backup of the old database just in case.</li>
+<li>Map the attribute to a different attribute in the new system. Things have been simplified or consolidated and the new system recognizes this attribute in a different way.</li>
+<li>Force the new system to consume the old attribute. Make a change request to add the old attribute to the new system. This usually stems from a mistake where important data attributes have been lost in the new system.</li>
+</ol>
+
+<p><strong>Plan for surprises.</strong> Your source and destination are fixed, therefore scope is fixed. The causes more timeline risk, therefore you need to counter with rigor in estimation, planning, engineering and additional timeline contingency. There is no room to remove features or functionality from the migration process.</p>
+
+<p>I have seen one scope reduction approach work, which is to propose the reduction of data volume by the process of archiving old data. This does not reduce the data mapping scope but reduces the timeline because migration execution time is reduced.</p>
+
+  </div>
+  <footer>
+    <ul class="pager">
+      <li class="next"><a href="http://clintsimon.com/post/2013/2013-08-06-Data-Migration-is-Hard/">Comments <span aria-hidden="true">&raquo;</span></a></li>
+    </ul>
+  </footer>
+</article>
+
+  
+</div>
+<nav class="pagination" role="navigation">
+
+  <hr />
+
+
+  <span class="page-number">Page 1 of 5</span>
+
+<a class="older-posts" href="/page/2/">Older Posts <span aria-hidden="true">&raquo;</span></a>
+
+</nav>
+
+  </main>
+  <footer class="container global-footer">
+    <div class="copyright-note pull-left">
+      &copy; Copyright
+    </div>
+    <div class="sns-links hidden-print">
+  
+  
+  <a href="https://twitter.com/clintsim" target="_blank">
+    <i class="fa fa-twitter"></i>
+  </a>
+  
+  
+  
+  
+  <a href="https://facebook.com/csim74" target="_blank">
+    <i class="fa fa-facebook"></i>
+  </a>
+  
+  
+  <a href="https://github.com/csim" target="_blank">
+    <i class="fa fa-github"></i>
+  </a>
+  
+  
+  
+  <a href="https://linkedin.com/in/clintsimon" target="_blank">
+    <i class="fa fa-linkedin"></i>
+  </a>
+  
+  
+  <a href="/index.xml" target="_blank">
+    <i class="fa fa-rss"></i>
+  </a>
+</div>
+
+  </footer>
+
+  <script src="http://clintsimon.com/js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-25860409-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  
+  
+</body>
+</html>
+

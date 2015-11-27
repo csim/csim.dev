@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pages on Clint Simon</title>
+    <link>http://clintsimon.com/page/</link>
+    <description>Recent content in Pages on Clint Simon</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright</copyright>
+    <atom:link href="http://clintsimon.com/page/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About</title>
+      <link>http://clintsimon.com/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://clintsimon.com/page/about/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://clintsimon.com/images/profile.png&#34; class=&#34;pull-right img-responsive img-rounded&#34; style=&#34;margin: 0 0 10px 10px;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hi, I am Clint. I&amp;rsquo;m a technology enthusiast, &lt;a href=&#34;http://www.cartoonstock.com/directory/s/software_engineer.asp&#34;&gt;software developer&lt;/a&gt;, father, husband, &lt;a href=&#34;http://en.wikipedia.org/wiki/Cajun&#34;&gt;cajun&lt;/a&gt;, worrywart and sometimes &lt;a href=&#34;http://en.wikipedia.org/wiki/Oscar_the_Grouch&#34;&gt;grouch&lt;/a&gt;. I live in the suburbs of Seattle where I watch &lt;a href=&#34;http://www.lsusports.net/&#34;&gt;LSU football&lt;/a&gt; and enjoy our annual crawfish boil. I have 2 daughters which leaves me as the only man in the house. Even the dog is female.&lt;/p&gt;
+
+&lt;h2 id=&#34;work:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;work&lt;/h2&gt;
+
+&lt;p&gt;I have worked in the technology consulting industry for roughly 15 years as a software engineer and architect. Much of my career has be devoted to Microsoft, building business applications that help to keep the wheels turning in Redmond.&lt;/p&gt;
+
+&lt;p&gt;I started out in the early days of the World Wide Web (remember that?!) when Mosaic and Gopher were all the rage. In college I discovered that I could write PERL scripts on my school account and have those run over the web. I was hooked! I quickly became addicted and that started the career that I have today. I got a web development job during college and that later turned into a software consulting career.&lt;/p&gt;
+
+&lt;p&gt;I worked for many years as a generalist doing Classic ASP, ColdFusion, ASP.net and SQL server. I later focused on platforms, spending a few years doing custom application development with SharePoint and most recently working with Dynamics CRM.&lt;/p&gt;
+
+&lt;p&gt;In my spare time, I&amp;rsquo;ve built a bunch of &lt;a href=&#34;#projects&#34;&gt;side projects&lt;/a&gt;. Most are toys that I have used to feed my coding addiction. Some are useful and others aren&amp;rsquo;t. I had fun building all of them.&lt;/p&gt;
+
+&lt;p&gt;If you are interested in more information about my work, &lt;a href=&#34;http://clintsimon.com/resume&#34;&gt;take a look at my resume&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;play:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;play&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;http://clintsimon.com/images/crossfit_afro.jpg&#34; class=&#34;pull-right img-responsive img-rounded&#34; style=&#34;width: 200px; padding-left: 20px;&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Outside of work I love guitar, golf, football and being a dad to my 2 daughters. &lt;a href=&#34;http://cajunjourneymen.com&#34;&gt;Hiking is also a passion&lt;/a&gt;. I ran &lt;a href=&#34;http://clintsimon.com/2011/07/01/first-marathon-complete&#34;&gt;my first marathon&lt;/a&gt; on June 26, 2011 in a time of 4 hours and 55 minutes.&lt;/p&gt;
+
+&lt;p&gt;My most recent addiction is &lt;a href=&#34;http://games.crossfit.com&#34;&gt;Crossfit&lt;/a&gt;. After about an 18 year hiatus from organized physical activity, I started Crossfit in July of 2011. For the first 3 months I proceeded to try my hardest but constantly felt like a used dish towel. I stuck with it and I have seen huge improvement in my physical fitness level. Although the path is difficult, I would not change a thing.&lt;/p&gt;
+
+&lt;div class=&#34;clearfix&#34;&gt;&lt;/div&gt;
+&lt;a name=&#34;projects&#34;&gt;&lt;/a&gt;
+
+## projects
+
+### [Mole][mole]
+
+Lightweight website generation utility. From a set of markdown files, Mole will generate a static HTML site suitable for any static hosting provider. Supports basic site functionality for a blog and a set of pages. Written in Powershell.
+
+### [Cruiser][cruiser]
+
+Lightweight continuous build integration server written in PowerShell.
+
+### [TechHike Extensions][ext]
+
+.Net extension methods and helpers that I have accumulated over the years. [Available on Nuget](https://www.nuget.org/packages/TechHikeExtensions).
+
+### [DataHike][datahike]
+
+DataHike is a service that provides simple, flexible, lightweight data storage through a RESTful api. Developers can use DataHike as persistent storage when building any application that requires data storage but DataHike is particularly useful for applications that need flexible ad-hoc storage such as javascript and mobile applications. DataHike is built on [google app engine][appengine].
+
+
+### [Cajun Journeymen][cj]
+
+![](/images/cajunjourneymen.jpg)
+
+Enough with the software projects already. These are certifiable adventures. Since 2001, our illustrious band of misfits have thrown caution into the wind and trekked through some of the most beautiful wilderness areas in the world. Check out our stories.
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;rapid-tools-for-sharepoint-rapidtools:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;&lt;a href=&#34;http://code.google.com/p/rapid-tools/&#34;&gt;Rapid Tools for SharePoint&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Rapid Tools for SharePoint 2007 is a set of developer tools that are dedicated to making SharePoint developers more productive. Rapid tools enables developers to build SharePoint custom applications using the full Software Development Life Cycle (SDLC). Traditionally using the SDL with the SharePoint platform has been a painful and awkward process, but with Rapid Tools for SharePoint, application developers are now in full control of SharePoint development and deployment in a way that was not possible before.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Clint Simon</title>
+      <link>http://clintsimon.com/page/resume/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://clintsimon.com/page/resume/</guid>
+      <description>
+
+&lt;div style=&#34;float: right&#34;&gt;&lt;a href=&#34;http://pdfmyurl.com?url=clintsimon.me/resume&amp;amp;--filename=Clint%20Simon%20Resume.pdf&#34;&gt;Download as PDF&lt;/a&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&#34;mailto:me@clintsimon.com&#34;&gt;me@clintsimon.com&lt;/a&gt;, (425) 785-8007&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Highly motivated individual with deep technology understanding, capable of learning and digesting new technologies rapidly.&lt;/li&gt;
+&lt;li&gt;Ability to communicate complex ideas clearly in a team environment with team members of various technical skill levels.&lt;/li&gt;
+&lt;li&gt;16 years of industry experience analyzing business problems, formulating solutions and executing on those solutions to produce high value results delivered on time and on budget.&lt;/li&gt;
+&lt;li&gt;Strong leadership skills related to execution, mentorship and team building.&lt;/li&gt;
+&lt;li&gt;Deep experience in object oriented programming (C#, ASP.NET, MVC, WCF). Strong object oriented pattern based design and development skills acquired from real world deployments.&lt;/li&gt;
+&lt;li&gt;9 years of experience with SharePoint (2001, 2003, 2007, 2010 &amp;amp; 2013). Publishing Solutions, Collaboration, Site Templates, WebParts, Content Management Solutions, Custom Workflow.&lt;/li&gt;
+&lt;li&gt;14 years of experience with SQL Server technologies. Design, development, deployment and maintenance. Transactional, Data Warehousing, Data Analysis, SSRS, SSIS.&lt;/li&gt;
+&lt;li&gt;Strong background in interactive user experience implementation using client side technologies (jQuery).&lt;/li&gt;
+&lt;li&gt;References available upon request.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;avanade:c59a67a3c7bc5faa453847420267045e&#34;&gt;Avanade&lt;/h2&gt;
+
+&lt;p&gt;Architect, Dynamics CRM Service Line - May 2010 to Present&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Architect on engagements for both CRM on-premise and CRM Online working closely with clients, business analysts and program management in all phases of delivery.&lt;/li&gt;
+&lt;li&gt;Team lead responsible for mentorship and team building.&lt;/li&gt;
+&lt;li&gt;Produced technical guidance on strategic consulting engagements to support large scale business decisions. Includes technology selection, high-level design guidance and value proposition.&lt;/li&gt;
+&lt;li&gt;Designed and lead implementation of multiple large Dynamics CRM deployments including sales force automation, call center and incident management solutions.&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;ascentium:c59a67a3c7bc5faa453847420267045e&#34;&gt;Ascentium&lt;/h2&gt;
+
+&lt;p&gt;Solution Architect &amp;amp; Associate Partner - Aug 2004 to May 2010&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Technology discipline lead for the Portal &amp;amp; Collaboration practice responsible for people development, resourcing, recruiting, and technology leadership.&lt;/li&gt;
+&lt;li&gt;Functioned as foremost expert and mentor with regard to SharePoint custom application development.&lt;/li&gt;
+&lt;li&gt;Technical lead responsible for solution architecture and development execution on high profile deliverables for internal Microsoft clients and Microsoft Partner engagements.&lt;/li&gt;
+&lt;li&gt;Company-wide leadership role regarding SharePoint technologies. Advocated SharePoint platform by conducting training and mentorship across 200+ employees.&lt;/li&gt;
+&lt;li&gt;Released Rapid Tools for SharePoint 2007, as an open source project (&lt;a href=&#34;http://rapid-tools.googlecode.com&#34;&gt;http://rapid-tools.googlecode.com&lt;/a&gt;). Rapid Tools for SharePoint is a set of developer productivity tools aimed at making the SharePoint platform more accessible to custom application developers. This includes a tool called SPDeploy which compiles a Visual Studio Project to a SharePoint solution package (wsp). This allows for the use of isolated development environments, automated deployment, continuous integration and unified source control. SPDeploy is used by Ascentium (and others) as a core development tool supporting custom application development projects on the SharePoint platform.&lt;/li&gt;
+&lt;li&gt;Developed a custom content management solution called Rapid WCM (RWCM).  RWCM is based on SharePoint and supports many of the features of SharePoint Server ECM such as in-line content editing, custom field controls, page templates, pages libraries and aggregation. RWCM is a lightweight alternate to SharePoint Server ECM which Ascentium markets as an entry level CMS tool.&lt;/li&gt;
+&lt;li&gt;Contributed to Ascentium win for Microsoft Information Worker Solutions, Portals and Collaboration Partner of the Year in 2008 (&lt;a href=&#34;http://tinyurl.com/3pzukp&#34;&gt;http://tinyurl.com/3pzukp&lt;/a&gt;). This is a global award from Microsoft recognizing achievement in technical implementation and overall business value delivered on the SharePoint platform.&lt;/li&gt;
+&lt;li&gt;Lead the technology team delivering the public presence we site for Frontier Bank (&lt;a href=&#34;http://www.frontierbank.com&#34;&gt;http://www.frontierbank.com&lt;/a&gt;). This site earned Ascentium a place on the Q2 2009 Forrester Wave for Interactive Marketing Agencies (&lt;a href=&#34;http://tinyurl.com/mkdbgg&#34;&gt;http://tinyurl.com/mkdbgg&lt;/a&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;hunt-interactive:c59a67a3c7bc5faa453847420267045e&#34;&gt;Hunt Interactive&lt;/h2&gt;
+
+&lt;p&gt;Technology Lead - Apr 2000 to Aug 2004&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Technical lead responsible for solution architecture and development execution on a variety of solutions: Productivity Portals, Business Intelligence, Data Warehousing, and Business Automation.&lt;/li&gt;
+&lt;li&gt;Acted as mentor to junior developers to provide guidance on emerging technologies and best practices.&lt;/li&gt;
+&lt;li&gt;Responsible for providing technical support to sales and marketing efforts including project planning, new technology evaluation and technology recommendations.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;brightstar-information-technology-group:c59a67a3c7bc5faa453847420267045e&#34;&gt;Brightstar Information Technology Group&lt;/h2&gt;
+
+&lt;p&gt;Senior Developer &amp;amp; Technology Lead - Dec 1997 to Apr 2000&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Acted as team lead working closely with graphic design staff, project managers and clients to produce numerous successful solutions focused on e-commerce, content management, data collection and automated content delivery.&lt;/li&gt;
+&lt;li&gt;Designed, developed and deployed a content management solution capable of managing hundreds of web site instances each with a customizable templates. Supports rich content including images, streaming media and formatted text. Developed custom content insertion ActiveX control allowing the site administrator to format and upload content with minimal HTML awareness.&lt;/li&gt;
+&lt;li&gt;Designed and developed a custom online real estate exposure and purchase solution. Project includes flexible object oriented framework built to support hundreds of thousands of real estate listings on a nation-wide basis. Online purchase process includes submissions of all documents necessary to place an offer on a home. Customizable content delivery for promotion of listings based on user preferences and online usage habits.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;university-of-louisiana-at-lafayette:c59a67a3c7bc5faa453847420267045e&#34;&gt;University of Louisiana at Lafayette&lt;/h2&gt;
+
+&lt;p&gt;Bachelor of Science in Electrical Engineering - 1998&lt;/p&gt;
+
+&lt;p&gt;Completed projects of interest:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Web-based public transportation information system able to deliver data on location, speed and direction of city buses, trains, taxicabs, etc. Engineered infrastructure to transmit GPS data from a mobile unit to a central server location where relevant data could be retrieved from bus stops, dispatch centers or any HTTP enabled client.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
