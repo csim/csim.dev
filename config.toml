@@ -1,7 +1,6 @@
 baseurl = "http://clintsimon.com/"
 languageCode = "en-us"
 title = "Clint Simon"
-theme = "vienna"
 # Copyright notice. This is displayer in the footer.
 copyright = "&copy; Copyright"
 
