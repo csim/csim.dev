@@ -1,4 +1,10 @@
-<div style="float: right"><a href="http://pdfmyurl.com?url=clintsimon.me/resume&amp;--filename=Clint%20Simon%20Resume.pdf">Download as PDF</a></div>
+# Clint Simon
+
+[download](http://pdfmyurl.com?url=clintsimon.me/resume&amp;--filename=Clint%20Simon%20Resume.pdf)
+
+<div style="float: right">
+    <a href="http://pdfmyurl.com?url=clintsimon.me/resume&amp;--filename=Clint%20Simon%20Resume.pdf">Download as PDF</a>
+</div>
 
 [me@clintsimon.com](mailto:me@clintsimon.com), (425) 785-8007
 
@@ -19,7 +25,6 @@ Architect, Dynamics CRM Service Line - May 2010 to Present
 * Team lead responsible for mentorship and team building.
 * Produced technical guidance on strategic consulting engagements to support large scale business decisions. Includes technology selection, high-level design guidance and value proposition.
 * Designed and lead implementation of multiple large Dynamics CRM deployments including sales force automation, call center and incident management solutions.
-* 
 
 
 ## Ascentium
