@@ -2,11 +2,11 @@
 
 [me@clintsimon.com](mailto:me@clintsimon.com) |
 (425) 785-8007 |
-[download](http://pdfmyurl.com?url=clintsimon.me/resume&amp;--filename=Clint%20Simon%20Resume.pdf) |
+[pdf](https://drive.google.com/open?id=0B2_Fd2o7bKtIbWJ2SEpUV2VXeHM) |
 [linkedin](https://www.linkedin.com/in/clintsimon) |
 [@clintsim](https://twitter.com/clintsim)
 
-First and foremost I excel at using technology to solve business problems. I've worked in technology for over 19 years, delivering projects ranging from simple websites to enterprise content management systems with various team sizes from 1 person all the way up to 120 people.
+First and foremost I excel at using technology to solve business problems. I've worked in technology for over 19 years, delivering custom application development projects ranging from simple websites to complex enterprise systems, with various team sizes from 1 person all the way up to 120 people.
 
 My core focus is technology leadership with an emphasis on user experience. My view is that technology itself is only as valuable as the experiences that it can create and the value that it can generate for businesses. My job is to enable these possibilities.
 
@@ -22,7 +22,7 @@ CTO, June 2014 to present
 * Owned product management, technology selection, architechture, infrastructure, development and development operations.
 * Responsibilities include: product feature selection, technical and visual design, user experience,  business process flow and customer service.
 * Built a robust online marketplace where event planners can find suppliers, compose a Request for Proposal (RFP), accept supplier proposals and present online reporting to the end customer.
-* Designed and built a scalable Hotel directory containing 70,000+ profiles with detailed search criteria, high performance characteristics and high quality visual design. [Try it now](https://www.scout20.com/app/search#!101/in/-/-/-/0/50).
+* Designed and implemented a scalable Hotel directory containing 70,000+ profiles with detailed search criteria, high performance characteristics and high quality user experience. [Try it now](https://www.scout20.com/app/search#!101/in/-/-/-/0/50).
 * Technologies include: C#, ASP.NET Web API, MongoDB, ElasticSearch, Knockout.js, Angular
 * External integrations: Foursquare, SendGrid, Stripe, Intercom, Google places
 
