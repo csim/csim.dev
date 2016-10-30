@@ -19,7 +19,7 @@ Specialties: C#, ASP.NET, ASP.NET MVC, ASP.NET Web API, SharePoint Technologies,
 
 CTO, June 2014 to present
 
-* Owned product management, technology selection, architechture, infrastructure, development and development operations.
+* Owned product management, technology selection, architecture, infrastructure, development and development operations.
 * Responsibilities include: product feature selection, technical and visual design, user experience,  business process flow and customer service.
 * Built a robust online marketplace where event planners can find suppliers, compose a Request for Proposal (RFP), accept supplier proposals and present online reporting to the end customer.
 * Designed and implemented a scalable Hotel directory containing 70,000+ profiles with detailed search criteria, high performance characteristics and high quality user experience. [Try it now](https://www.scout20.com/app/search#!101/in/-/-/-/0/50).
