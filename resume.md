@@ -8,7 +8,7 @@
 
 First and foremost I excel at using technology to solve business problems. I've worked in technology for over 19 years, delivering custom application development projects ranging from simple websites to complex enterprise systems, with various team sizes from 1 person all the way up to 120 people.
 
-My core focus is technology leadership with an emphasis on user experience. My view is that technology itself is only as valuable as the experiences that it can create and the value that it can generate for businesses. My job is to enable these possibilities.
+My core focus is technology leadership with an emphasis on user experience. My view is that technology itself is only as valuable as the experiences that it can create for users and the value that it can generate for businesses. My job is to enable these possibilities.
 
 I enjoy learning and applying new technologies at every opportunity. The technology landscape is rapidly expanding with entirely new solutions appearing daily. Using my expertise and experience, I am able to evaluate, digest and master new technologies quickly.
 
