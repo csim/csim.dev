@@ -1,4 +1,15 @@
 baseURL = 'https://csim.dev/'
 languageCode = 'en-us'
 title = 'csim.dev'
-theme = 'ananke'
+theme = 'hyde'
+
+[params]
+  description = "Your custom description"
+  layoutReverse = true
+  disqusShortname = "clintsim"
+
+[Menus]
+  main = [
+      {Name = "Github", URL = "https://github.com/csim/"},
+      {Name = "LinkedIn", URL = "https://www.linkedin.com/in/clintsimon/"}
+  ]
