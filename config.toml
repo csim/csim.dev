@@ -10,6 +10,7 @@ theme = 'hyde'
 
 [Menus]
   main = [
+      {Name = "About Me", URL = "/pages/about"},
       {Name = "Github", URL = "https://github.com/csim/"},
       {Name = "LinkedIn", URL = "https://www.linkedin.com/in/clintsimon/"}
   ]
