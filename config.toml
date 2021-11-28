@@ -1,4 +1,4 @@
-baseurl = "http://www.csim.dev/"
+baseurl = "https://csim.dev/"
 languageCode = "en-us"
 title = "Clint Simon"
 # Copyright notice. This is displayer in the footer.
