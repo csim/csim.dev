@@ -1,4 +1,4 @@
 baseURL = 'https://csim.dev/'
 languageCode = 'en-us'
 title = 'csim.dev'
-theme
+theme = 'ananke'
