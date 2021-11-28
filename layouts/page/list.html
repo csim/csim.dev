@@ -1,9 +1,0 @@
-{{ partial "header.html" . }}
-<section class="article-list">
-  <h1>Pages</h1>
-  {{ range .Data.Pages }}
-      <a href="{{ .Permalink }}">{{ .Title }}</a><br/>
-  {{ end }}
-</section>
-{{ partial "footer.html" . }}
-
