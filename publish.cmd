@@ -1,3 +1,5 @@
+
+git add .
 git commit -am "Content Updates"
 git push
 
