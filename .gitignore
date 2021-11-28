@@ -43,6 +43,7 @@ local.properties
 
 # Build results
 
+[Pp]ublic/
 [Dd]ebug/
 [Rr]elease/
 x64/
